@@ -21,6 +21,7 @@ activos que posee.
 a) Cliente con más avisos.
 b) Cantidad de avisos pausados.
 c) Rubro con mas avisos.
+
 Nota 0: El sistema soportará una capacidad máxima de 100 clientes y 1000 publicaciones
 Nota 1: Se deberán desarrollar bibliotecas por cada entidad las cuales contendrán las funciones (Alta, Baja, Modificar, etc.).
 Los informes deberán estar en una biblioteca aparte.
