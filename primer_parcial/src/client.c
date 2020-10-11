@@ -454,6 +454,7 @@ int client_remove(Client* client_list, int client_len,int id)
 			case 'Y':
 				client_list[indexToModify].client_isEmpty = TRUE;
 				printf("\nREGISTRO DE CLIENTE BORRADO CON EXITO.\n");
+				retorno = 0;
 				break;
 			case'N':
 				printf("\nREGISTRO NO BORRADO\n");
@@ -461,10 +462,7 @@ int client_remove(Client* client_list, int client_len,int id)
 			default:
 				printf("\nERROR, INGRESE 'Y' PARA BORRAR EL REGISTRO.\n");
 		}
-		retorno = 0;
-
 	}
-
 	return retorno;
 }
 
@@ -489,6 +487,8 @@ int client_printAll(Client* client_list, int client_len, int client_firstLoad)
 	{
 		if(client_list != NULL && client_len > 0)
 		{
+			printf("-------------------------------------------------------------\n");
+			printf("|                    LISTADO DE CLIENTES                    |\n");
 			printf("-------------------------------------------------------------\n");
 			printf("| APELLIDO        | NOMBRE          | CUIT            | ID  |\n");
 			printf("-------------------------------------------------------------\n");
@@ -525,13 +525,15 @@ int client_printById(Client* client_list, int client_len, int idClient)
 
 	if(client_list != NULL && client_len > 0)
 	{
-		printf("-------------------------------------------------------\n");
-		printf("| APELLIDO        | NOMBRE          | CUIT            |\n");
-		printf("-------------------------------------------------------\n");
 		for(int i=0;i< client_len ;i++)
 		{
 			if(client_list[i].client_isEmpty == FALSE && client_list[i].client_id == idClient)
 			{
+				printf("-------------------------------------------------------\n");
+				printf("| DATOS DEL CLIENTE ID: %d                            |\n",idClient);
+				printf("-------------------------------------------------------\n");
+				printf("| APELLIDO        | NOMBRE          | CUIT            |\n");
+				printf("-------------------------------------------------------\n");
 				printf("| %-16s| %-16s| %-16s|\n",
 						client_list[i].client_lastName,
 						client_list[i].client_name,

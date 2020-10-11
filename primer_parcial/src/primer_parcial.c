@@ -36,8 +36,8 @@ int main(void) {
 	publication_initArray(arrayPublications, QTY_PUBLICATIONS);
 
 
-	//client_addHardcode(arrayClients, QTY_CLIENTS, &client_firstLoad);
-	//publication_addHardcode(arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
+	client_addHardcode(arrayClients, QTY_CLIENTS, &client_firstLoad);
+	publication_addHardcode(arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
 
 	do
 		{
@@ -53,12 +53,12 @@ int main(void) {
 				case 3://BAJA CLIENTE (LISTO)
 					newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
 					break;
-				case 4://ALTA PUBLICACION (TEST ALTA PUBLICACION SOLA)
+				case 4://ALTA PUBLICACION (LISTO)
 					newspaper_addPublicationMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
 					break;
-				case 5://PAUSAR PUBLICACION (TEST MODIFICAR PUBLICACION)
-					break;
-				case 6://REANUDAR PUBLICACION (TEST BAJA PUBLICACION)
+				case 5://PAUSAR PUBLICACION
+				case 6://REANUDAR PUBLICACION
+					newspaper_publicationStatusMenu(arrayClients, QTY_CLIENTS, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad,choosenOption);
 					break;
 				case 7://IMPRIMIR CLIENTS (FALTA LINKEAR A PUBLICATIONS) (TEST IMPRIMIR AMBAS)
 					break;
@@ -70,7 +70,4 @@ int main(void) {
 		}while(choosenOption!=9);
 		printf("PROGRAMA TERMINADO");
 		return EXIT_SUCCESS;
-
-
-
 }
