@@ -1,0 +1,16 @@
+/*
+ ============================================================================
+ Name        : publicacion.h
+ Author      : Gonzalo Sinnott Segura
+ Version     :
+ Copyright   :
+ Description : Header for Library publicacion.c
+ ============================================================================
+ */
+
+#ifndef PUBLICACION_H_
+#define PUBLICACION_H_
+
+
+
+#endif /* PUBLICACION_H_ */

@@ -1,0 +1,64 @@
+/*
+ ============================================================================
+ Name        : primer_parcial.c
+ Author      : Sinnott Segura Gonzalo
+ Version     :
+ Copyright   : 
+ Description : Primer parcial Programacion - Laboratorio I
+ ============================================================================
+ */
+
+#include <stdio_ext.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include "utn.h"
+#include "diario.h"
+#include "cliente.h"
+
+#define TRUE 1
+#define FALSE 0
+#define QTY_CLIENTES 100
+#define QTY_PUBLICACIONES 1000
+
+
+int main(void) {
+
+	int choosenOption;
+	int cliente_firstLoad = FALSE;
+
+
+	Cliente arrayClientes[QTY_CLIENTES];
+	cliente_initArray(arrayClientes, QTY_CLIENTES);
+
+	do
+		{
+			diario_getMenu(&choosenOption);
+			switch(choosenOption)
+			{
+				case 1://ALTA CLIENTE
+					cliente_alta(arrayClientes, QTY_CLIENTES, &cliente_firstLoad);
+					break;
+				case 2://MODIFICAR CLIENTE
+					break;
+				case 3://BAJA CLIENTE
+					break;
+				case 4://ALTA PUBLICACION
+					break;
+				case 5://PAUSAR PUBLICACION
+					break;
+				case 6://REANUDAR PUBLICACION
+					break;
+				case 7://IMPRIMIR CLIENTES
+					cliente_print(cliente_list, cliente_len)
+					break;
+				case 8://INFORMES
+					break;
+			}
+		}while(choosenOption!=9);
+		printf("PROGRAMA TERMINADO");
+		return EXIT_SUCCESS;
+
+
+
+}

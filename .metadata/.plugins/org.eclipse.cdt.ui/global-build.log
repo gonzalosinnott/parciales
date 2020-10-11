@@ -1,0 +1,2816 @@
+12:38:47 **** Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘getMenu’:
+../src/diario.c:20:5: warning: implicit declaration of function ‘utn_getIntNumber’ [-Wimplicit-function-declaration]
+   20 |  if(utn_getIntNumber("\nIngrese una opción:"
+      |     ^~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:23:4: warning: implicit declaration of function ‘getMenu’; did you mean ‘getenv’? [-Wimplicit-function-declaration]
+   23 |    getMenu(&choosenOption);
+      |    ^~~~~~~
+      |    getenv
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/diario.o ./src/primer_parcial.o   
+/usr/bin/ld: ./src/diario.o: en la función `getMenu':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/diario.c:20: referencia a `utn_getIntNumber' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: primer_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:46:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘getMenu’:
+../src/diario.c:25:5: warning: implicit declaration of function ‘utn_getIntNumber’ [-Wimplicit-function-declaration]
+   25 |  if(utn_getIntNumber("\nIngrese una opción:"
+      |     ^~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:47:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:47:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:49:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:49:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:49:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:49:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:15:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:29:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_alta’:
+../src/cliente.c:60:72: warning: implicit declaration of function ‘cliente_checkFirstEmptyIndex’ [-Wimplicit-function-declaration]
+   60 |  if(cliente_list != NULL && cliente_len > 0 && cliente_firstLoad >0 && cliente_checkFirstEmptyIndex(cliente_list, cliente_len, &index)==0)
+      |                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:62:6: warning: implicit declaration of function ‘cliente_getForm’ [-Wimplicit-function-declaration]
+   62 |   if(cliente_getForm(cliente_name, cliente_lastName, cliente_cuit)== 0)
+      |      ^~~~~~~~~~~~~~~
+../src/cliente.c:65:7: warning: implicit declaration of function ‘cliente_addData’; did you mean ‘cliente_alta’? [-Wimplicit-function-declaration]
+   65 |    if(cliente_addData(cliente_list, cliente_len, cliente_id, cliente_name, cliente_lastName, cliente_cuit)==0)
+      |       ^~~~~~~~~~~~~~~
+      |       cliente_alta
+../src/cliente.c: In function ‘cliente_getForm’:
+../src/cliente.c:125:7: warning: implicit declaration of function ‘utn_getString’ [-Wimplicit-function-declaration]
+  125 |   if((utn_getString("Ingrese Nombre:", "Error. ", cliente_name, 3, LONG_NAME)==0) &&
+      |       ^~~~~~~~~~~~~
+../src/cliente.c: In function ‘cliente_addData’:
+../src/cliente.c:172:40: warning: format ‘%e’ expects argument of type ‘double’, but argument 3 has type ‘char *’ [-Wformat=]
+  172 |   printf("\nEl ID para la cliente %s % es: %ds\n", cliente_lastName, cliente_name, cliente_id);
+      |                                      ~~^                             ~~~~~~~~~~~~
+      |                                        |                             |
+      |                                        double                        char *
+      |                                      % s
+../src/cliente.c: In function ‘cliente_print’:
+../src/cliente.c:196:18: warning: unknown conversion type character ‘|’ in format [-Wformat=]
+  196 |     printf("|%-16|s%-16s|s%-16s|%d\n",
+      |                  ^
+../src/cliente.c:196:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘char *’ [-Wformat=]
+  196 |     printf("|%-16|s%-16s|s%-16s|%d\n",
+      |                                 ~^
+      |                                  |
+      |                                  int
+      |                                 %s
+......
+  199 |       cliente_list[i].cliente_cuit,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |
+      |                      char *
+../src/cliente.c:196:12: warning: too many arguments for format [-Wformat-extra-args]
+  196 |     printf("|%-16|s%-16s|s%-16s|%d\n",
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:32:2: warning: implicit declaration of function ‘cliente_initArray’ [-Wimplicit-function-declaration]
+   32 |  cliente_initArray(arrayClientes, QTY_CLIENTES);
+      |  ^~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:40:6: warning: implicit declaration of function ‘cliente_alta’ [-Wimplicit-function-declaration]
+   40 |      cliente_alta(arrayClientes, QTY_CLIENTES, &cliente_firstLoad);
+      |      ^~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘checkAlphaNum’:
+../src/utn.c:34:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   34 | {
+      | ^
+../src/utn.c:60:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   60 | {
+      | ^
+../src/utn.c:93:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   93 | {
+      | ^
+../src/utn.c:114:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  114 | {
+      | ^
+../src/utn.c:148:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  148 | {
+      | ^
+../src/utn.c:184:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  184 | {
+      | ^
+../src/utn.c:204: error: expected ‘{’ at end of input
+  204 | 
+      | 
+../src/utn.c:202:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  202 | }
+      | ^
+../src/utn.c: At top level:
+../src/utn.c:18:12: warning: ‘myGets’ declared ‘static’ but never defined [-Wunused-function]
+   18 | static int myGets(char *string, int len);
+      |            ^~~~~~
+../src/utn.c:19:12: warning: ‘getInt’ declared ‘static’ but never defined [-Wunused-function]
+   19 | static int getInt(int *pValue);
+      |            ^~~~~~
+../src/utn.c:20:12: warning: ‘isInt’ declared ‘static’ but never defined [-Wunused-function]
+   20 | static int isInt(char* string);
+      |            ^~~~~
+../src/utn.c:21:12: warning: ‘checkAlphaNum’ defined but not used [-Wunused-function]
+   21 | static int checkAlphaNum(char* string, int len)
+      |            ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/utn.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:33:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_getForm’:
+../src/cliente.c:129:7: warning: implicit declaration of function ‘utn_getString’ [-Wimplicit-function-declaration]
+  129 |   if((utn_getString("Ingrese Nombre:", "Error. ", cliente_name, 3, LONG_NAME)==0) &&
+      |       ^~~~~~~~~~~~~
+../src/cliente.c: In function ‘cliente_addData’:
+../src/cliente.c:176:40: warning: format ‘%e’ expects argument of type ‘double’, but argument 3 has type ‘char *’ [-Wformat=]
+  176 |   printf("\nEl ID para la cliente %s % es: %ds\n", cliente_lastName, cliente_name, cliente_id);
+      |                                      ~~^                             ~~~~~~~~~~~~
+      |                                        |                             |
+      |                                        double                        char *
+      |                                      % s
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+/usr/bin/ld: ./src/cliente.o: en la función `cliente_getForm':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/cliente.c:129: referencia a `utn_getString' sin definir
+/usr/bin/ld: /mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/cliente.c:130: referencia a `utn_getString' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: primer_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:37:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_addData’:
+../src/cliente.c:176:40: warning: format ‘%e’ expects argument of type ‘double’, but argument 3 has type ‘char *’ [-Wformat=]
+  176 |   printf("\nEl ID para la cliente %s % es: %d\n", cliente_lastName, cliente_name, cliente_id);
+      |                                      ~~^                            ~~~~~~~~~~~~
+      |                                        |                            |
+      |                                        double                       char *
+      |                                      % s
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:37:17 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:37:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:38:56 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_addData’:
+../src/cliente.c:176:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘char *’ [-Wformat=]
+  176 |   printf("\nEl ID para la cliente %s %s es: %d\n",
+      |                                             ~^
+      |                                              |
+      |                                              int
+      |                                             %s
+......
+  179 |     cliente_list[emptyIndex].cliente_cuit);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
+      |                             |
+      |                             char *
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:39:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:39:17 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:42:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:43:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:45:34 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:45:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:46:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:46:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:48:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:48:16 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:58:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:58:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:00:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c:224:59: error: unknown type name ‘cliente_firstLoad’
+  224 | int cliente_print(Cliente* cliente_list, int cliente_len, cliente_firstLoad)
+      |                                                           ^~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:01:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:53:6: error: too few arguments to function ‘cliente_print’
+   53 |      cliente_print(arrayClientes, QTY_CLIENTES);
+      |      ^~~~~~~~~~~~~
+In file included from ../src/primer_parcial.c:17:
+../src/cliente.h:31:5: note: declared here
+   31 | int cliente_print(Cliente* cliente_list, int cliente_len,int cliente_firstLoad);
+      |     ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/primer_parcial.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:01:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:01:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:02:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:03:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:34:2: warning: implicit declaration of function ‘cliente_addHardcode’ [-Wimplicit-function-declaration]
+   34 |  cliente_addHardcode(arrayClientes, QTY_CLIENTES, cliente_firstLoad);
+      |  ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:04:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:04:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:07:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:07:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:07:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:08:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:08:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:22:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_modifyMenu’:
+../src/cliente.c:271:6: warning: implicit declaration of function ‘cliente_modify’; did you mean ‘cliente_modifyMenu’? [-Wimplicit-function-declaration]
+  271 |      cliente_modify(cliente_list,cliente_len,idToSearch)== 0)
+      |      ^~~~~~~~~~~~~~
+      |      cliente_modifyMenu
+../src/cliente.c: In function ‘cliente_modify’:
+../src/cliente.c:322:24: warning: unknown escape sequence: '\A'
+  322 |       if(utn_getString("\Apellido:","\nError. ",bufferCliente.cliente_lastName,2,LONG_NAME)==0)
+      |                        ^~~~~~~~~~~~
+../src/cliente.c:328:26: warning: unknown escape sequence: '\N'
+  328 |       if(utn_getAlphaNum("\Nombre:","\nError. ",bufferCliente.cliente_name,2,LONG_NAME)==0)
+      |                          ^~~~~~~~~~
+../src/cliente.c:334:26: warning: unknown escape sequence: '\C'
+  334 |       if(utn_getAlphaNum("\CUIT (SIN GUIONES):","\nError. ",bufferCliente.cliente_cuit,2,LONG_CUIT==0)
+      |                          ^~~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:334:103: error: expected ‘)’ before ‘{’ token
+  334 |       if(utn_getAlphaNum("\CUIT (SIN GUIONES):","\nError. ",bufferCliente.cliente_cuit,2,LONG_CUIT==0)
+      |         ~                                                                                             ^
+      |                                                                                                       )
+  335 |       {
+      |       ~                                                                                                
+../src/cliente.c:339:5: error: expected expression before ‘}’ token
+  339 |     }
+      |     ^
+../src/cliente.c:341:4: warning: implicit declaration of function ‘utn_getChar’ [-Wimplicit-function-declaration]
+  341 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |    ^~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:35:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_modifyMenu’:
+../src/cliente.c:271:6: warning: implicit declaration of function ‘cliente_modify’; did you mean ‘cliente_modifyMenu’? [-Wimplicit-function-declaration]
+  271 |      cliente_modify(cliente_list,cliente_len,idToSearch)== 0)
+      |      ^~~~~~~~~~~~~~
+      |      cliente_modifyMenu
+../src/cliente.c: In function ‘cliente_modify’:
+../src/cliente.c:322:24: warning: unknown escape sequence: '\A'
+  322 |       if(utn_getString("\Apellido:","\nError. ",bufferCliente.cliente_lastName,2,LONG_NAME)==0)
+      |                        ^~~~~~~~~~~~
+../src/cliente.c:328:26: warning: unknown escape sequence: '\N'
+  328 |       if(utn_getAlphaNum("\Nombre:","\nError. ",bufferCliente.cliente_name,2,LONG_NAME)==0)
+      |                          ^~~~~~~~~~
+../src/cliente.c:334:26: warning: unknown escape sequence: '\C'
+  334 |       if(utn_getAlphaNum("\CUIT (SIN GUIONES):","\nError. ",bufferCliente.cliente_cuit,2,LONG_CUIT==0)
+      |                          ^~~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:334:103: error: expected ‘)’ before ‘{’ token
+  334 |       if(utn_getAlphaNum("\CUIT (SIN GUIONES):","\nError. ",bufferCliente.cliente_cuit,2,LONG_CUIT==0)
+      |         ~                                                                                             ^
+      |                                                                                                       )
+  335 |       {
+      |       ~                                                                                                
+../src/cliente.c:339:5: error: expected expression before ‘}’ token
+  339 |     }
+      |     ^
+../src/cliente.c:341:4: warning: implicit declaration of function ‘utn_getChar’ [-Wimplicit-function-declaration]
+  341 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |    ^~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:41:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:283:6: warning: unused variable ‘resultadoScan’ [-Wunused-variable]
+  283 |  int resultadoScan;
+      |      ^~~~~~~~~~~~~
+../src/utn.c: In function ‘checkChar’:
+../src/utn.c:321:13: warning: comparison between pointer and integer
+  321 |   if(string == valueOne || string == valueTwo)
+      |             ^~
+../src/utn.c:321:35: warning: comparison between pointer and integer
+  321 |   if(string == valueOne || string == valueTwo)
+      |                                   ^~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:41:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c:314:12: error: conflicting types for ‘checkChar’
+  314 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo)
+      |            ^~~~~~~~~
+../src/utn.c:23:12: note: previous declaration of ‘checkChar’ was here
+   23 | static int checkChar(char* string,int len,char valueOne, char valueTwo);
+      |            ^~~~~~~~~
+../src/utn.c:23:12: warning: ‘checkChar’ used but never defined
+../src/utn.c:314:12: warning: ‘checkChar’ defined but not used [-Wunused-function]
+  314 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo)
+      |            ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/utn.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:42:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_modify’:
+../src/cliente.c:345:4: warning: implicit declaration of function ‘utn_getChar’ [-Wimplicit-function-declaration]
+  345 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |    ^~~~~~~~~~~
+In file included from ../src/cliente.c:15:
+../src/cliente.c: At top level:
+../src/utn.h:17:12: warning: ‘checkChar’ declared ‘static’ but never defined [-Wunused-function]
+   17 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo);
+      |            ^~~~~~~~~
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+In file included from ../src/diario.c:15:
+../src/utn.h:17:12: warning: ‘checkChar’ declared ‘static’ but never defined [-Wunused-function]
+   17 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo);
+      |            ^~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+In file included from ../src/primer_parcial.c:15:
+../src/utn.h:17:12: warning: ‘checkChar’ declared ‘static’ but never defined [-Wunused-function]
+   17 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo);
+      |            ^~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c:314:12: error: conflicting types for ‘checkChar’
+  314 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo)
+      |            ^~~~~~~~~
+../src/utn.c:23:12: note: previous declaration of ‘checkChar’ was here
+   23 | static int checkChar(char* string,int len,char valueOne, char valueTwo);
+      |            ^~~~~~~~~
+../src/utn.c:23:12: warning: ‘checkChar’ used but never defined
+../src/utn.c:314:12: warning: ‘checkChar’ defined but not used [-Wunused-function]
+  314 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo)
+      |            ^~~~~~~~~
+make: *** [src/subdir.mk:29: src/utn.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:42:52 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:288:93: warning: passing argument 3 of ‘checkChar’ makes pointer from integer without a cast [-Wint-conversion]
+  288 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && checkChar(bufferChar, BUFFER_STRING_LEN, valueOne, valueTwo)==0)
+      |                                                                                             ^~~~~~~~
+      |                                                                                             |
+      |                                                                                             char
+../src/utn.c:23:49: note: expected ‘char *’ but argument is of type ‘char’
+   23 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo);
+      |                                           ~~~~~~^~~~~~~~
+../src/utn.c:288:103: warning: passing argument 4 of ‘checkChar’ makes pointer from integer without a cast [-Wint-conversion]
+  288 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && checkChar(bufferChar, BUFFER_STRING_LEN, valueOne, valueTwo)==0)
+      |                                                                                                       ^~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       char
+../src/utn.c:23:65: note: expected ‘char *’ but argument is of type ‘char’
+   23 | static int checkChar(char* string,int len,char* valueOne, char* valueTwo);
+      |                                                           ~~~~~~^~~~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:48:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘checkChar’:
+../src/utn.c:320:13: warning: comparison between pointer and integer
+  320 |   if(string == valueOne || string == valueTwo)
+      |             ^~
+../src/utn.c:320:35: warning: comparison between pointer and integer
+  320 |   if(string == valueOne || string == valueTwo)
+      |                                   ^~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:48:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:50:16 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:50:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:50:56 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:50:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:51:35 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:51:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:52:51 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:52:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:53:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:53:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:53:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:53:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:54:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:54:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:54:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:54:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:55:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:56:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:56:34 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:56:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:06:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_findById’:
+../src/cliente.c:23:12: error: storage class specified for parameter ‘cliente_findIndexById’
+   23 | static int cliente_findIndexById(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:24:12: error: storage class specified for parameter ‘cliente_modify’
+   24 | static int cliente_modify(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~
+../src/cliente.c:40:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   40 | {
+      | ^
+../src/cliente.c:78:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   78 | {
+      | ^
+../src/cliente.c:101:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  101 | {
+      | ^
+../src/cliente.c:146:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  146 | {
+      | ^
+../src/cliente.c:173:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  173 | {
+      | ^
+../src/cliente.c:193:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  193 | {
+      | ^
+../src/cliente.c:214:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  214 | {
+      | ^
+../src/cliente.c:239:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  239 | {
+      | ^
+../src/cliente.c:266:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  266 | {
+      | ^
+../src/cliente.c:293:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  293 | {
+      | ^
+../src/cliente.c:327:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  327 | {
+      | ^
+../src/cliente.c:393:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  393 | {
+      | ^
+../src/cliente.c:22:12: error: old-style parameter declarations in prototyped function definition
+   22 | static int cliente_findById(Cliente* cliente_list, int cliente_len,int id)
+      |            ^~~~~~~~~~~~~~~~
+../src/cliente.c:423: error: expected ‘{’ at end of input
+  423 | }
+      | 
+../src/cliente.c:423:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  423 | }
+      | ^
+../src/cliente.c: At top level:
+../src/cliente.c:18:12: warning: ‘cliente_generateNewId’ declared ‘static’ but never defined [-Wunused-function]
+   18 | static int cliente_generateNewId(void);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:19:12: warning: ‘cliente_checkFirstEmptyIndex’ declared ‘static’ but never defined [-Wunused-function]
+   19 | static int cliente_checkFirstEmptyIndex(Cliente* cliente_list, int cliente_len, int *emptyIndex);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:20:12: warning: ‘cliente_getForm’ declared ‘static’ but never defined [-Wunused-function]
+   20 | static int cliente_getForm(char *cliente_name, char *cliente_lastName, char *cliente_cuit);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:21:12: warning: ‘cliente_addData’ declared ‘static’ but never defined [-Wunused-function]
+   21 | static int cliente_addData(Cliente* cliente_list,int cliente_len,int cliente_id,char cliente_name[], char cliente_lastName[], char cliente_cuit[]);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:22:12: warning: ‘cliente_findById’ defined but not used [-Wunused-function]
+   22 | static int cliente_findById(Cliente* cliente_list, int cliente_len,int id)
+      |            ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:29: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:06:17 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:06:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:07:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:07:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:08:51 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:08:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:10:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘checkChar’:
+../src/utn.c:320:20: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                    ^~~~~~~~
+      |                    |
+      |                    char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:320:51: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                                                   ^~~~~~~~
+      |                                                   |
+      |                                                   char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:10:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:288:93: warning: passing argument 3 of ‘checkChar’ makes pointer from integer without a cast [-Wint-conversion]
+  288 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && checkChar(bufferChar, BUFFER_STRING_LEN, valueOne, valueTwo)==0)
+      |                                                                                             ^~~~~~~~
+      |                                                                                             |
+      |                                                                                             char
+../src/utn.c:23:49: note: expected ‘char *’ but argument is of type ‘char’
+   23 | static int checkChar(char* string,int len,char *valueOne, char *valueTwo);
+      |                                           ~~~~~~^~~~~~~~
+../src/utn.c:288:103: warning: passing argument 4 of ‘checkChar’ makes pointer from integer without a cast [-Wint-conversion]
+  288 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && checkChar(bufferChar, BUFFER_STRING_LEN, valueOne, valueTwo)==0)
+      |                                                                                                       ^~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       char
+../src/utn.c:23:65: note: expected ‘char *’ but argument is of type ‘char’
+   23 | static int checkChar(char* string,int len,char *valueOne, char *valueTwo);
+      |                                                           ~~~~~~^~~~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:11:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_modify’:
+../src/cliente.c:378:80: warning: passing argument 4 of ‘utn_getChar’ makes pointer from integer without a cast [-Wint-conversion]
+  378 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |                                                                                ^~~
+      |                                                                                |
+      |                                                                                int
+In file included from ../src/cliente.c:15:
+../src/utn.h:17:60: note: expected ‘char *’ but argument is of type ‘int’
+   17 | int utn_getChar(char* msj,char* errorMsj,char* pValue,char valueOne[],char valueTwo[],int retries);
+      |                                                       ~~~~~^~~~~~~~~~
+../src/cliente.c:378:85: warning: passing argument 5 of ‘utn_getChar’ makes pointer from integer without a cast [-Wint-conversion]
+  378 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |                                                                                     ^~~
+      |                                                                                     |
+      |                                                                                     int
+In file included from ../src/cliente.c:15:
+../src/utn.h:17:76: note: expected ‘char *’ but argument is of type ‘int’
+   17 | int utn_getChar(char* msj,char* errorMsj,char* pValue,char valueOne[],char valueTwo[],int retries);
+      |                                                                       ~~~~~^~~~~~~~~~
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:15:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_modify’:
+../src/cliente.c:378:80: warning: passing argument 4 of ‘utn_getChar’ makes pointer from integer without a cast [-Wint-conversion]
+  378 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |                                                                                ^~~
+      |                                                                                |
+      |                                                                                int
+In file included from ../src/cliente.c:15:
+../src/utn.h:17:61: note: expected ‘char *’ but argument is of type ‘int’
+   17 | int utn_getChar(char* msj,char* errorMsj,char* pValue,char *valueOne,char* valueTwo, int retries);
+      |                                                       ~~~~~~^~~~~~~~
+../src/cliente.c:378:85: warning: passing argument 5 of ‘utn_getChar’ makes pointer from integer without a cast [-Wint-conversion]
+  378 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |                                                                                     ^~~
+      |                                                                                     |
+      |                                                                                     int
+In file included from ../src/cliente.c:15:
+../src/utn.h:17:76: note: expected ‘char *’ but argument is of type ‘int’
+   17 | int utn_getChar(char* msj,char* errorMsj,char* pValue,char *valueOne,char* valueTwo, int retries);
+      |                                                                      ~~~~~~^~~~~~~~
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:15:51 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:15:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:16:35 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:16:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:18:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘checkChar’:
+../src/utn.c:320:20: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                    ^~~~~~~~
+      |                    |
+      |                    char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:320:51: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                                                   ^~~~~~~~
+      |                                                   |
+      |                                                   char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:18:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:18:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:20:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_modify’:
+../src/cliente.c:378:80: warning: passing argument 4 of ‘utn_getChar’ makes pointer from integer without a cast [-Wint-conversion]
+  378 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |                                                                                ^~~
+      |                                                                                |
+      |                                                                                int
+In file included from ../src/cliente.c:15:
+../src/utn.h:17:61: note: expected ‘char *’ but argument is of type ‘int’
+   17 | int utn_getChar(char* msj,char* errorMsj,char* pValue,char *valueOne,char *valueTwo, int retries);
+      |                                                       ~~~~~~^~~~~~~~
+../src/cliente.c:378:85: warning: passing argument 5 of ‘utn_getChar’ makes pointer from integer without a cast [-Wint-conversion]
+  378 |    utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+      |                                                                                     ^~~
+      |                                                                                     |
+      |                                                                                     int
+In file included from ../src/cliente.c:15:
+../src/utn.h:17:76: note: expected ‘char *’ but argument is of type ‘int’
+   17 | int utn_getChar(char* msj,char* errorMsj,char* pValue,char *valueOne,char *valueTwo, int retries);
+      |                                                                      ~~~~~~^~~~~~~~
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:288:93: warning: passing argument 3 of ‘checkChar’ makes integer from pointer without a cast [-Wint-conversion]
+  288 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && checkChar(bufferChar, BUFFER_STRING_LEN, valueOne, valueTwo)==0)
+      |                                                                                             ^~~~~~~~
+      |                                                                                             |
+      |                                                                                             char *
+../src/utn.c:23:48: note: expected ‘char’ but argument is of type ‘char *’
+   23 | static int checkChar(char* string,int len,char valueOne, char valueTwo);
+      |                                           ~~~~~^~~~~~~~
+../src/utn.c:288:103: warning: passing argument 4 of ‘checkChar’ makes integer from pointer without a cast [-Wint-conversion]
+  288 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && checkChar(bufferChar, BUFFER_STRING_LEN, valueOne, valueTwo)==0)
+      |                                                                                                       ^~~~~~~~
+      |                                                                                                       |
+      |                                                                                                       char *
+../src/utn.c:23:63: note: expected ‘char’ but argument is of type ‘char *’
+   23 | static int checkChar(char* string,int len,char valueOne, char valueTwo);
+      |                                                          ~~~~~^~~~~~~~
+../src/utn.c: In function ‘checkChar’:
+../src/utn.c:320:20: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                    ^~~~~~~~
+      |                    |
+      |                    char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:320:51: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                                                   ^~~~~~~~
+      |                                                   |
+      |                                                   char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:20:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:20:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:23:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘checkChar’:
+../src/utn.c:320:20: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                    ^~~~~~~~
+      |                    |
+      |                    char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:320:51: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                                                   ^~~~~~~~
+      |                                                   |
+      |                                                   char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+At top level:
+../src/utn.c:314:12: warning: ‘checkChar’ defined but not used [-Wunused-function]
+  314 | static int checkChar(char* string,int len,char valueOne, char valueTwo)
+      |            ^~~~~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:24:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:24:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:25:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:288:71: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  288 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,valueOne)== 0 || strcmp(bufferChar,valueTwo)== 0 ))
+      |                                                                       ^~~~~~~~
+      |                                                                       |
+      |                                                                       char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:288:106: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  288 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,valueOne)== 0 || strcmp(bufferChar,valueTwo)== 0 ))
+      |                                                                                                          ^~~~~~~~
+      |                                                                                                          |
+      |                                                                                                          char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c: In function ‘checkChar’:
+../src/utn.c:320:20: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                    ^~~~~~~~
+      |                    |
+      |                    char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:320:51: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  320 |   if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+      |                                                   ^~~~~~~~
+      |                                                   |
+      |                                                   char
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+At top level:
+../src/utn.c:314:12: warning: ‘checkChar’ defined but not used [-Wunused-function]
+  314 | static int checkChar(char* string,int len,char valueOne, char valueTwo)
+      |            ^~~~~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:25:51 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:31:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:284:38: warning: missing braces around initializer [-Wmissing-braces]
+  284 |  char value_One[][BUFFER_STRING_LEN]={valueOne};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:285:38: warning: missing braces around initializer [-Wmissing-braces]
+  285 |  char value_Two[][BUFFER_STRING_LEN]={valueTwo};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:291:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  291 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:291:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  291 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c: At top level:
+../src/utn.c:23:12: warning: ‘checkChar’ declared ‘static’ but never defined [-Wunused-function]
+   23 | static int checkChar(char* string,int len,char valueOne, char valueTwo);
+      |            ^~~~~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:32:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:32:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:32:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:35:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:35:35 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:36:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:36:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:37:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:51:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:406:6: warning: implicit declaration of function ‘cliente_remove’; did you mean ‘cliente_removeMenu’? [-Wimplicit-function-declaration]
+  406 |      cliente_remove(cliente_list,cliente_len,idToSearch)== 0)
+      |      ^~~~~~~~~~~~~~
+      |      cliente_removeMenu
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:52:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:18:12: error: storage class specified for parameter ‘cliente_generateNewId’
+   18 | static int cliente_generateNewId(void);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:19:12: error: storage class specified for parameter ‘cliente_checkFirstEmptyIndex’
+   19 | static int cliente_checkFirstEmptyIndex(Cliente* cliente_list, int cliente_len, int *emptyIndex);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:20:12: error: storage class specified for parameter ‘cliente_getForm’
+   20 | static int cliente_getForm(char *cliente_name, char *cliente_lastName, char *cliente_cuit);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:21:12: error: storage class specified for parameter ‘cliente_addData’
+   21 | static int cliente_addData(Cliente* cliente_list,int cliente_len,int cliente_id,char cliente_name[], char cliente_lastName[], char cliente_cuit[]);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:22:12: error: storage class specified for parameter ‘cliente_findById’
+   22 | static int cliente_findById(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~~~
+../src/cliente.c:23:12: error: storage class specified for parameter ‘cliente_findIndexById’
+   23 | static int cliente_findIndexById(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:24:12: error: storage class specified for parameter ‘cliente_modify’
+   24 | static int cliente_modify(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~
+../src/cliente.c:25:12: error: storage class specified for parameter ‘cliente_remove’
+   25 | static int cliente_remove(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~
+../src/cliente.c:38:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   38 | {
+      | ^
+../src/cliente.c:76:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   76 | {
+      | ^
+../src/cliente.c:99:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   99 | {
+      | ^
+../src/cliente.c:144:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  144 | {
+      | ^
+../src/cliente.c:171:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  171 | {
+      | ^
+../src/cliente.c:191:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  191 | {
+      | ^
+../src/cliente.c:212:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  212 | {
+      | ^
+../src/cliente.c:237:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  237 | {
+      | ^
+../src/cliente.c:264:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  264 | {
+      | ^
+../src/cliente.c:291:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  291 | {
+      | ^
+../src/cliente.c:325:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  325 | {
+      | ^
+../src/cliente.c:396:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  396 | {
+      | ^
+../src/cliente.c:437:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  437 | {
+      | ^
+../src/cliente.c:480:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  480 | {
+      | ^
+In file included from ../src/cliente.c:16:
+../src/cliente.h:33:5: error: old-style parameter declarations in prototyped function definition
+   33 | int cliente_removeMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad)
+      |     ^~~~~~~~~~~~~~~~~~
+../src/cliente.c:510: error: expected ‘{’ at end of input
+  510 | }
+      | 
+../src/cliente.c:510: warning: control reaches end of non-void function [-Wreturn-type]
+  510 | }
+      | 
+make: *** [src/subdir.mk:29: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:52:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:18:12: error: storage class specified for parameter ‘cliente_generateNewId’
+   18 | static int cliente_generateNewId(void);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:19:12: error: storage class specified for parameter ‘cliente_checkFirstEmptyIndex’
+   19 | static int cliente_checkFirstEmptyIndex(Cliente* cliente_list, int cliente_len, int *emptyIndex);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:20:12: error: storage class specified for parameter ‘cliente_getForm’
+   20 | static int cliente_getForm(char *cliente_name, char *cliente_lastName, char *cliente_cuit);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:21:12: error: storage class specified for parameter ‘cliente_addData’
+   21 | static int cliente_addData(Cliente* cliente_list,int cliente_len,int cliente_id,char cliente_name[], char cliente_lastName[], char cliente_cuit[]);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:22:12: error: storage class specified for parameter ‘cliente_findById’
+   22 | static int cliente_findById(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~~~
+../src/cliente.c:23:12: error: storage class specified for parameter ‘cliente_findIndexById’
+   23 | static int cliente_findIndexById(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:24:12: error: storage class specified for parameter ‘cliente_modify’
+   24 | static int cliente_modify(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~
+../src/cliente.c:37:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘int’
+   37 | int cliente_addHardcode(Cliente* cliente_list, int cliente_len, int *cliente_firstLoad)
+      | ^~~
+../src/cliente.c:76:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   76 | {
+      | ^
+../src/cliente.c:99:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   99 | {
+      | ^
+../src/cliente.c:144:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  144 | {
+      | ^
+../src/cliente.c:171:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  171 | {
+      | ^
+../src/cliente.c:191:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  191 | {
+      | ^
+../src/cliente.c:212:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  212 | {
+      | ^
+../src/cliente.c:237:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  237 | {
+      | ^
+../src/cliente.c:264:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  264 | {
+      | ^
+../src/cliente.c:291:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  291 | {
+      | ^
+../src/cliente.c:325:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  325 | {
+      | ^
+../src/cliente.c:396:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  396 | {
+      | ^
+../src/cliente.c:437:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  437 | {
+      | ^
+../src/cliente.c:480:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  480 | {
+      | ^
+In file included from ../src/cliente.c:16:
+../src/cliente.h:33:5: error: old-style parameter declarations in prototyped function definition
+   33 | int cliente_removeMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad)
+      |     ^~~~~~~~~~~~~~~~~~
+../src/cliente.c:510: error: expected ‘{’ at end of input
+  510 | }
+      | 
+../src/cliente.c:510: warning: control reaches end of non-void function [-Wreturn-type]
+  510 | }
+      | 
+make: *** [src/subdir.mk:29: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:53:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:18:12: error: storage class specified for parameter ‘cliente_generateNewId’
+   18 | static int cliente_generateNewId(void);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:19:12: error: storage class specified for parameter ‘cliente_checkFirstEmptyIndex’
+   19 | static int cliente_checkFirstEmptyIndex(Cliente* cliente_list, int cliente_len, int *emptyIndex);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:20:12: error: storage class specified for parameter ‘cliente_getForm’
+   20 | static int cliente_getForm(char *cliente_name, char *cliente_lastName, char *cliente_cuit);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:21:12: error: storage class specified for parameter ‘cliente_addData’
+   21 | static int cliente_addData(Cliente* cliente_list,int cliente_len,int cliente_id,char cliente_name[], char cliente_lastName[], char cliente_cuit[]);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:22:12: error: storage class specified for parameter ‘cliente_findById’
+   22 | static int cliente_findById(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~~~
+../src/cliente.c:23:12: error: storage class specified for parameter ‘cliente_findIndexById’
+   23 | static int cliente_findIndexById(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:24:12: error: storage class specified for parameter ‘cliente_modify’
+   24 | static int cliente_modify(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~
+../src/cliente.c:37:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   37 | {
+      | ^
+../src/cliente.c:75:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   75 | {
+      | ^
+../src/cliente.c:98:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   98 | {
+      | ^
+../src/cliente.c:143:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  143 | {
+      | ^
+../src/cliente.c:170:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  170 | {
+      | ^
+../src/cliente.c:190:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  190 | {
+      | ^
+../src/cliente.c:211:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  211 | {
+      | ^
+../src/cliente.c:236:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  236 | {
+      | ^
+../src/cliente.c:263:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  263 | {
+      | ^
+../src/cliente.c:290:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  290 | {
+      | ^
+../src/cliente.c:324:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  324 | {
+      | ^
+../src/cliente.c:395:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  395 | {
+      | ^
+../src/cliente.c:436:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  436 | {
+      | ^
+../src/cliente.c:479:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  479 | {
+      | ^
+In file included from ../src/cliente.c:16:
+../src/cliente.h:33:5: error: old-style parameter declarations in prototyped function definition
+   33 | int cliente_removeMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad)
+      |     ^~~~~~~~~~~~~~~~~~
+../src/cliente.c:509: error: expected ‘{’ at end of input
+  509 | }
+      | 
+../src/cliente.c:509: warning: control reaches end of non-void function [-Wreturn-type]
+  509 | }
+      | 
+make: *** [src/subdir.mk:29: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:53:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:406:6: warning: implicit declaration of function ‘cliente_remove’; did you mean ‘cliente_removeMenu’? [-Wimplicit-function-declaration]
+  406 |      cliente_remove(cliente_list,cliente_len,idToSearch)== 0)
+      |      ^~~~~~~~~~~~~~
+      |      cliente_removeMenu
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:00:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:00:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+20:01:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:48:73: error: expected ‘;’ before ‘break’
+   48 |      cliente_removeMenu(arrayClientes, QTY_CLIENTES, &cliente_firstLoad)
+      |                                                                         ^
+      |                                                                         ;
+   49 |      break;
+      |      ~~~~~                                                               
+make: *** [src/subdir.mk:29: src/primer_parcial.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:02:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:03:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+20:03:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+20:03:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:03:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+20:07:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:07:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+20:08:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:08:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+21:34:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:60:68: warning: passing argument 3 of ‘publicacion_modifyMenu’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |      publicacion_modifyMenu(arrayPublicaciones, QTY_PUBLICACIONES, &cliente_firstLoad);
+      |                                                                    ^~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    int *
+In file included from ../src/primer_parcial.c:18:
+../src/publicacion.h:34:84: note: expected ‘int’ but argument is of type ‘int *’
+   34 | int publicacion_modifyMenu(Publicacion* publicacion_list, int publicacion_len, int publicacion_firstLoad);
+      |                                                                                ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c: In function ‘publicacion_modify’:
+../src/publicacion.c:355:42: warning: passing argument 3 of ‘utn_getIntNumber’ makes pointer from integer without a cast [-Wint-conversion]
+  355 |              "Error, ", bufferPublicacion.publicacion_category, 3, 4, 1)==0)
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                          |
+      |                                          int
+In file included from ../src/publicacion.c:15:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘int’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+../src/publicacion.c:357:24: error: array subscript is not an integer
+  357 |        publicacion_list[bufferPublicacion].publicacion_category=bufferPublicacion.publicacion_category;
+      |                        ^
+../src/publicacion.c:367:81: warning: passing argument 3 of ‘utn_getIntNumber’ makes pointer from integer without a cast [-Wint-conversion]
+  367 |       if(utn_getIntNumber("Ingrese ID del Cliente:", "Error. ",bufferPublicacion.publicacion_idCliente, 3, INT_MAX, 1)==0)
+      |                                                                ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 int
+In file included from ../src/publicacion.c:15:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘int’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+../src/publicacion.c:369:24: error: array subscript is not an integer
+  369 |        publicacion_list[bufferPublicacion].publicacion_idCliente=bufferPublicacion.publicacion_idCliente;
+      |                        ^
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:37:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c: In function ‘publicacion_modify’:
+../src/publicacion.c:355:42: warning: passing argument 3 of ‘utn_getIntNumber’ makes pointer from integer without a cast [-Wint-conversion]
+  355 |              "Error, ", bufferPublicacion.publicacion_category, 3, 4, 1)==0)
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                          |
+      |                                          int
+In file included from ../src/publicacion.c:15:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘int’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+../src/publicacion.c:357:31: error: array subscript is not an integer
+  357 |        strcpy(publicacion_list[bufferPublicacion].publicacion_category,bufferPublicacion.publicacion_category);
+      |                               ^
+../src/publicacion.c:357:89: warning: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  357 |        strcpy(publicacion_list[bufferPublicacion].publicacion_category,bufferPublicacion.publicacion_category);
+      |                                                                        ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                                                                         |
+      |                                                                                         int
+In file included from ../src/publicacion.c:13:
+/usr/include/string.h:122:14: note: expected ‘const char * restrict’ but argument is of type ‘int’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publicacion.c:367:81: warning: passing argument 3 of ‘utn_getIntNumber’ makes pointer from integer without a cast [-Wint-conversion]
+  367 |       if(utn_getIntNumber("Ingrese ID del Cliente:", "Error. ",bufferPublicacion.publicacion_idCliente, 3, INT_MAX, 1)==0)
+      |                                                                ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 int
+In file included from ../src/publicacion.c:15:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘int’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+../src/publicacion.c:369:31: error: array subscript is not an integer
+  369 |        strcpy(publicacion_list[bufferPublicacion].publicacion_idCliente,bufferPublicacion.publicacion_idCliente);
+      |                               ^
+../src/publicacion.c:369:90: warning: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  369 |        strcpy(publicacion_list[bufferPublicacion].publicacion_idCliente,bufferPublicacion.publicacion_idCliente);
+      |                                                                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                          |
+      |                                                                                          int
+In file included from ../src/publicacion.c:13:
+/usr/include/string.h:122:14: note: expected ‘const char * restrict’ but argument is of type ‘int’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:39:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c: In function ‘publicacion_modify’:
+../src/publicacion.c:359:24: error: array subscript is not an integer
+  359 |        publicacion_list[bufferPublicacion].publicacion_category= publicacion_category;
+      |                        ^
+../src/publicacion.c:369:81: warning: passing argument 3 of ‘utn_getIntNumber’ makes pointer from integer without a cast [-Wint-conversion]
+  369 |       if(utn_getIntNumber("Ingrese ID del Cliente:", "Error. ",bufferPublicacion.publicacion_idCliente, 3, INT_MAX, 1)==0)
+      |                                                                ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 int
+In file included from ../src/publicacion.c:15:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘int’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+../src/publicacion.c:371:24: error: array subscript is not an integer
+  371 |        publicacion_list[bufferPublicacion].publicacion_idCliente= publicacion_idCliente;
+      |                        ^
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:01:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c: In function ‘publicacion_modify’:
+../src/publicacion.c:359:24: error: array subscript is not an integer
+  359 |        publicacion_list[bufferPublicacion].publicacion_category= publicacion_category;
+      |                        ^
+../src/publicacion.c:371:24: error: array subscript is not an integer
+  371 |        publicacion_list[bufferPublicacion].publicacion_idCliente= publicacion_idCliente;
+      |                        ^
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:01:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c: In function ‘publicacion_modify’:
+../src/publicacion.c:359:24: error: array subscript is not an integer
+  359 |        publicacion_list[bufferPublicacion].publicacion_category= publicacion_category;
+      |                        ^
+../src/publicacion.c:371:24: error: array subscript is not an integer
+  371 |        publicacion_list[bufferPublicacion].publicacion_idCliente= publicacion_idCliente;
+      |                        ^
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:05:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c: In function ‘publicacion_modify’:
+../src/publicacion.c:355:26: error: ‘publicacion_category’ undeclared (first use in this function); did you mean ‘publicacion_getForm’?
+  355 |              "Error, ", &publicacion_category, 3, 4, 1)==0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          publicacion_getForm
+../src/publicacion.c:355:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:06:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:6: warning: ‘publicacion_idCliente’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:6: warning: ‘publicacion_category’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:07:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:6: warning: ‘publicacion_idCliente’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:6: warning: ‘publicacion_category’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:08:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:282:38: warning: missing braces around initializer [-Wmissing-braces]
+  282 |  char value_One[][BUFFER_STRING_LEN]={valueOne};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:283:38: warning: missing braces around initializer [-Wmissing-braces]
+  283 |  char value_Two[][BUFFER_STRING_LEN]={valueTwo};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:289:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  289 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:289:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  289 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:08:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:08:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:08:17 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:08:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:08:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:08:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:09:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:09:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:09:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:57:23: error: ‘arrayPublicaciones’ undeclared (first use in this function)
+   57 |      publicacion_alta(arrayPublicaciones, QTY_PUBLICACIONES, &cliente_firstLoad);
+      |                       ^~~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:57:23: note: each undeclared identifier is reported only once for each function it appears in
+../src/primer_parcial.c:60:68: warning: passing argument 3 of ‘publicacion_modifyMenu’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |      publicacion_modifyMenu(arrayPublicaciones, QTY_PUBLICACIONES, &cliente_firstLoad);
+      |                                                                    ^~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    int *
+In file included from ../src/primer_parcial.c:18:
+../src/publicacion.h:34:84: note: expected ‘int’ but argument is of type ‘int *’
+   34 | int publicacion_modifyMenu(Publicacion* publicacion_list, int publicacion_len, int publicacion_firstLoad);
+      |                                                                                ~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:31:6: warning: unused variable ‘publicacion_firstLoad’ [-Wunused-variable]
+   31 |  int publicacion_firstLoad = FALSE;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/primer_parcial.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:10:17 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:31:6: warning: unused variable ‘publicacion_firstLoad’ [-Wunused-variable]
+   31 |  int publicacion_firstLoad = FALSE;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:10:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:10:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:10:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:36:14: warning: unused variable ‘arrayPublicaciones’ [-Wunused-variable]
+   36 |  Publicacion arrayPublicaciones[QTY_CLIENTES];
+      |              ^~~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:31:6: warning: unused variable ‘publicacion_firstLoad’ [-Wunused-variable]
+   31 |  int publicacion_firstLoad = FALSE;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:11:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:31:6: warning: unused variable ‘publicacion_firstLoad’ [-Wunused-variable]
+   31 |  int publicacion_firstLoad = FALSE;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:11:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:11:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:11:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:31:6: warning: unused variable ‘publicacion_firstLoad’ [-Wunused-variable]
+   31 |  int publicacion_firstLoad = FALSE;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:94:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:6: warning: ‘publicacion_idCliente’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   94 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:94:6: warning: ‘publicacion_category’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:14:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:14:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:95:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   95 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:95:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   95 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:95:6: warning: ‘publicacion_idCliente’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   95 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:95:6: warning: ‘publicacion_category’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:14:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:36:14: warning: unused variable ‘arrayPublicaciones’ [-Wunused-variable]
+   36 |  Publicacion arrayPublicaciones[QTY_CLIENTES];
+      |              ^~~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:31:6: warning: unused variable ‘publicacion_firstLoad’ [-Wunused-variable]
+   31 |  int publicacion_firstLoad = FALSE;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:14:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:15:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:15:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:15:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:16:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:16:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:16:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:18:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_initArray’:
+../src/publicacion.c:67:3: error: expected ‘;’ before ‘}’ token
+   67 |   }
+      |   ^
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:95:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   95 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:95:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   95 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:19:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘publicacion_alta’:
+../src/publicacion.c:95:26: warning: passing argument 1 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   95 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          int
+../src/publicacion.c:20:37: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                ~~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:95:73: warning: passing argument 3 of ‘publicacion_getForm’ makes pointer from integer without a cast [-Wint-conversion]
+   95 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int
+../src/publicacion.c:20:95: note: expected ‘int *’ but argument is of type ‘int’
+   20 | static int publicacion_getForm(int *publicacion_category, char *publicacion_description, int *publicacion_idCliente);
+      |                                                                                          ~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:95:6: warning: ‘publicacion_idCliente’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   95 |   if(publicacion_getForm(publicacion_category, publicacion_description, publicacion_idCliente)== 0)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/publicacion.c:95:6: warning: ‘publicacion_category’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:19:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:19:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:20:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:20:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:20:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:20:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:21:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:21:16 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:21:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:21:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:22:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:60:68: warning: passing argument 3 of ‘publicacion_modifyMenu’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |      publicacion_modifyMenu(arrayPublicaciones, QTY_PUBLICACIONES, &cliente_firstLoad);
+      |                                                                    ^~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    int *
+In file included from ../src/primer_parcial.c:18:
+../src/publicacion.h:33:84: note: expected ‘int’ but argument is of type ‘int *’
+   33 | int publicacion_modifyMenu(Publicacion* publicacion_list, int publicacion_len, int publicacion_firstLoad);
+      |                                                                                ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:22:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:23:52 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:60:68: warning: passing argument 3 of ‘publicacion_modifyMenu’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |      publicacion_modifyMenu(arrayPublicaciones, QTY_PUBLICACIONES, &cliente_firstLoad);
+      |                                                                    ^~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    int *
+In file included from ../src/primer_parcial.c:18:
+../src/publicacion.h:33:84: note: expected ‘int’ but argument is of type ‘int *’
+   33 | int publicacion_modifyMenu(Publicacion* publicacion_list, int publicacion_len, int publicacion_firstLoad);
+      |                                                                                ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:24:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:24:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:24:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:24:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+22:25:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+22:25:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
