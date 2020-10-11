@@ -39,7 +39,7 @@ int main(void) {
 
 	cliente_addHardcode(arrayClientes, QTY_CLIENTES, &cliente_firstLoad);
 	publicacion_addHardcode(arrayPublicaciones, QTY_PUBLICACIONES, &publicacion_firstLoad);
-	//ABM ANDANDO
+
 	do
 		{
 			diario_getMenu(&choosenOption);
