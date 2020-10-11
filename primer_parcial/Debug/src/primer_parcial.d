@@ -1,10 +1,10 @@
 src/primer_parcial.o: ../src/primer_parcial.c ../src/utn.h \
- ../src/diario.h ../src/cliente.h ../src/publicacion.h
+ ../src/newspaper.h ../src/client.h ../src/publication.h
 
 ../src/utn.h:
 
-../src/diario.h:
+../src/newspaper.h:
 
-../src/cliente.h:
+../src/client.h:
 
-../src/publicacion.h:
+../src/publication.h:

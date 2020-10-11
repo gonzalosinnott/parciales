@@ -1,0 +1,21 @@
+/*
+ ============================================================================
+ Name        : diario.h
+ Author      : Gonzalo Sinnott Segura
+ Version     :
+ Copyright   :
+ Description : Header for Library diario.c
+ ============================================================================
+ */
+
+#ifndef NEWSPAPER_H_
+#define NEWSPAPER_H_
+
+#include "client.h"
+#include "publicacion.h"
+
+int diario_getMenu(int* choosenOption);
+int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len);
+
+
+#endif /* NEWSPAPER_H_ */

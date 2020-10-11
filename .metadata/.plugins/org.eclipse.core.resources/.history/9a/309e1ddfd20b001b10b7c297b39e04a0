@@ -1,0 +1,96 @@
+/*
+ ============================================================================
+ Name        : diario.c
+ Author      : Gonzalo Sinnott Segura
+ Version     :
+ Copyright   :
+ Description : Library diario.c
+ ============================================================================
+ */
+
+#include <stdio_ext.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include "utn.h"
+#include "cliente.h"
+#include "publicacion.h"
+
+
+
+/**
+ * \brief getMenu: Menu for choosing options of the program,
+ * \param choosenOption* list: Pointer to variable that stores choosen option
+ * \return (-1) Error / (0) Ok
+ */
+
+int diario_getMenu(int* choosenOption)
+{
+	int retorno = -1;
+	if(utn_getIntNumber("\nIngrese una opción:"
+					   "\n 1-Alta de cliente."
+					   "\n 2-Modificar datos del cliente."
+					   "\n 3-Baja de cliente."
+					   "\n 4-Publicar."
+					   "\n 5-Pausar publicación."
+					   "\n 6-Reanudar publicación."
+					   "\n 7-Imprimir clientes."
+					   "\n 8-Informar."
+					   "\n 9-Salir."
+					   "\nOpcion:", "\nError.", choosenOption, 3, 9, 1)==0)
+	{
+		retorno =0;
+	}
+	else
+	{
+		*choosenOption = 9;
+	}
+	return retorno;
+}
+
+
+int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad)
+{
+	int retorno = -1;
+	int idToSearch;
+
+	if(*cliente_firstLoad == FALSE)
+	{
+		printf("\nERROR. NO HAY CLIENTES INGRESADOS.\n");
+	}
+	else
+	{
+		if(utn_getIntNumber("Ingrese el ID a eliminar:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
+		   cliente_findById(cliente_list, cliente_len, idToSearch)== 0 &&
+		   print_publicacionesByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch)== 0 &&
+		   cliente_remove(cliente_list,cliente_len,idToSearch)== 0)
+		{
+			for(int i = 0; i < cliente_len; i++)
+			{
+				if(cliente_list[i].cliente_isEmpty == TRUE)
+				{
+					*cliente_firstLoad = FALSE;
+				}
+				else
+				{
+					*cliente_firstLoad = TRUE;
+					break;
+				}
+			}
+			for(int i = 0; i < publicacion_len; i++)
+			{
+				if(publicacion_list[i].publicacion_isEmpty == TRUE)
+				{
+					*publicacion_firstLoad = FALSE;
+				}
+				else
+				{
+					*publicacion_firstLoad = TRUE;
+					break;
+				}
+			}
+			retorno = 0;
+		}
+	}
+	return retorno;
+}

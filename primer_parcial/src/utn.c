@@ -251,6 +251,9 @@ static int checkAlphaNum(char* string, int len)
 		for(int i=0; i<=len && string[i] != '\0';i++)
 		{
 			if((string[i] != ' ') &&
+			   (string[i] != '.') &&
+			   (string[i] != '-') &&
+			   (string[i] != '@') &&
 			   (string[i] < 'a' || string[i] > 'z') &&
 			   (string[i] < 'A' || string[i] > 'Z') &&
 			   (string[i] < '0' || string[i] > '9'))

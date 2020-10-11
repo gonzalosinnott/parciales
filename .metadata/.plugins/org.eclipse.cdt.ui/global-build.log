@@ -3067,3 +3067,1519 @@ Finished building target: primer_parcial
 23:32:36 **** Incremental Build of configuration Debug for project primer_parcial ****
 make all 
 make: No se hace nada para 'all'.
+23:39:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+23:43:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+23:45:52 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:285:38: warning: missing braces around initializer [-Wmissing-braces]
+  285 |  char value_One[][BUFFER_STRING_LEN]={valueOne};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:286:38: warning: missing braces around initializer [-Wmissing-braces]
+  286 |  char value_Two[][BUFFER_STRING_LEN]={valueTwo};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:292:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  292 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:292:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  292 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:13:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+23:45:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:54:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:65:71: warning: passing argument 3 of ‘print_publicacionesByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   65 |      print_publicacionesByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch)== 0 &&
+      |                                                                       ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                       |
+      |                                                                       int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:91: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int print_publicacionesByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                       ~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/diario.c:66:6: warning: implicit declaration of function ‘cliente_remove’; did you mean ‘cliente_removeMenu’? [-Wimplicit-function-declaration]
+   66 |      cliente_remove(cliente_list,cliente_len,idToSearch)== 0)
+      |      ^~~~~~~~~~~~~~
+      |      cliente_removeMenu
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:15:30: error: unknown type name ‘Cliente’
+   15 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad);
+      |                              ^~~~~~~
+../src/diario.h:15:93: error: unknown type name ‘Publicacion’
+   15 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad);
+      |                                                                                             ^~~~~~~~~~~
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:55:6: warning: implicit declaration of function ‘diario_removeClienteMenu’ [-Wimplicit-function-declaration]
+   55 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES, publicacion_firstLoad);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/primer_parcial.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:55:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:55:60: warning: passing argument 3 of ‘diario_removeClienteMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   55 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES, publicacion_firstLoad);
+      |                                                            ^~~~~~~~~~~~~~~~~
+      |                                                            |
+      |                                                            int
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:18:74: note: expected ‘int *’ but argument is of type ‘int’
+   18 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad);
+      |                                                                     ~~~~~^~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:55:118: warning: passing argument 6 of ‘diario_removeClienteMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   55 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES, publicacion_firstLoad);
+      |                                                                                                                      ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:18:149: note: expected ‘int *’ but argument is of type ‘int’
+   18 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad);
+      |                                                                                                                                                ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c:513:128: error: expected declaration specifiers or ‘...’ before ‘)’ token
+  513 | int print_publicacionesByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente, )
+      |                                                                                                                                ^
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:56:40 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘print_publicacionesByClienteId’:
+../src/publicacion.c:526:12: warning: too many arguments for format [-Wformat-extra-args]
+  526 |     printf("| PUBLICACIONES DEL ID : %d",idCliente,"                                                           |\n");
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+/usr/bin/ld: ./src/diario.o: en la función `diario_removeClienteMenu':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/diario.c:66: referencia a `cliente_remove' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: primer_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:57:52 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:65:71: warning: passing argument 3 of ‘print_publicacionesByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   65 |      print_publicacionesByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch)== 0 &&
+      |                                                                       ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                       |
+      |                                                                       int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:91: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int print_publicacionesByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                       ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:55:60: warning: passing argument 3 of ‘diario_removeClienteMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   55 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES, publicacion_firstLoad);
+      |                                                            ^~~~~~~~~~~~~~~~~
+      |                                                            |
+      |                                                            int
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:18:74: note: expected ‘int *’ but argument is of type ‘int’
+   18 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad);
+      |                                                                     ~~~~~^~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:55:118: warning: passing argument 6 of ‘diario_removeClienteMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   55 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES, publicacion_firstLoad);
+      |                                                                                                                      ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:18:149: note: expected ‘int *’ but argument is of type ‘int’
+   18 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad);
+      |                                                                                                                                                ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:57:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:57:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:03:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:66:69: warning: passing argument 3 of ‘print_publicacionesByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   66 |    print_publicacionesByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch)
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:91: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int print_publicacionesByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                       ~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/diario.c:66:102: error: expected ‘;’ before ‘cliente_remove’
+   66 |    print_publicacionesByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch)
+      |                                                                                                      ^
+      |                                                                                                      ;
+   67 |    cliente_remove(cliente_list,cliente_len,idToSearch)
+      |    ~~~~~~~~~~~~~~                                                                                     
+make: *** [src/subdir.mk:32: src/diario.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:03:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:66:69: warning: passing argument 3 of ‘print_publicacionesByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   66 |    print_publicacionesByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:91: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int print_publicacionesByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                       ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:55:60: warning: passing argument 3 of ‘diario_removeClienteMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   55 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES, publicacion_firstLoad);
+      |                                                            ^~~~~~~~~~~~~~~~~
+      |                                                            |
+      |                                                            int
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:18:74: note: expected ‘int *’ but argument is of type ‘int’
+   18 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad);
+      |                                                                     ~~~~~^~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:55:118: warning: passing argument 6 of ‘diario_removeClienteMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   55 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES, publicacion_firstLoad);
+      |                                                                                                                      ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                      |
+      |                                                                                                                      int
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:18:149: note: expected ‘int *’ but argument is of type ‘int’
+   18 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len,int *publicacion_firstLoad);
+      |                                                                                                                                                ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:04:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:04:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:08:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:10:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:11:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:66:69: warning: passing argument 3 of ‘print_publicacionesByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   66 |    print_publicacionesByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:91: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int print_publicacionesByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                       ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:12:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:12:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:22:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+../src/publicacion.c: In function ‘print_publicacionesByClienteId’:
+../src/publicacion.c:543:39: error: expected ‘;’ before ‘}’ token
+  543 |       printf("NO POSEE PUBLICACIONES")
+      |                                       ^
+      |                                       ;
+  544 |      }
+      |      ~                                 
+make: *** [src/subdir.mk:32: src/publicacion.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:22:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:22:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:22:51 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:22:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:24:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:24:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:24:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:25:16 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:25:56 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:67:69: warning: passing argument 3 of ‘print_publicacionesByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |    print_publicacionesByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:91: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int print_publicacionesByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                       ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:26:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:26:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:39:34 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:66:49: warning: passing argument 3 of ‘cliente_printById’ makes integer from pointer without a cast [-Wint-conversion]
+   66 |    cliente_printById(cliente_list, cliente_len, cliente_firstLoad, idToSearch);
+      |                                                 ^~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 int *
+In file included from ../src/diario.c:16:
+../src/cliente.h:37:67: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int cliente_printById(Cliente* cliente_list, int cliente_len, int cliente_firstLoad, int idCliente);
+      |                                                               ~~~~^~~~~~~~~~~~~~~~~
+../src/diario.c:67:67: warning: passing argument 3 of ‘publicacion_printByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |    publicacion_printByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:89: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int publicacion_printByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                     ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:39:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:39:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:43:40 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:43:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:45:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:66:49: warning: passing argument 3 of ‘cliente_printById’ makes integer from pointer without a cast [-Wint-conversion]
+   66 |    cliente_printById(cliente_list, cliente_len, cliente_firstLoad, idToSearch);
+      |                                                 ^~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 int *
+In file included from ../src/diario.c:16:
+../src/cliente.h:37:67: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int cliente_printById(Cliente* cliente_list, int cliente_len, int cliente_firstLoad, int idCliente);
+      |                                                               ~~~~^~~~~~~~~~~~~~~~~
+../src/diario.c:67:70: warning: passing argument 3 of ‘publicacion_printByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |    if(publicacion_printByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch)!=0)
+      |                                                                      ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                      |
+      |                                                                      int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:89: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int publicacion_printByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                     ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:46:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:46:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:53:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c:518:5: error: conflicting types for ‘cliente_printById’
+  518 | int cliente_printById(Cliente* cliente_list, int cliente_len, int cliente_firstLoad, int idCliente)
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ../src/cliente.c:16:
+../src/cliente.h:37:5: note: previous declaration of ‘cliente_printById’ was here
+   37 | int cliente_printById(Cliente* cliente_list, int cliente_len, int idCliente);
+      |     ^~~~~~~~~~~~~~~~~
+../src/cliente.c: In function ‘cliente_printById’:
+../src/cliente.c:534:36: error: expected ‘;’ before ‘printf’
+  534 |       cliente_list[i].cliente_cuit)
+      |                                    ^
+      |                                    ;
+  535 |     printf("-------------------------------------------------------\n");
+      |     ~~~~~~                          
+make: *** [src/subdir.mk:32: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:54:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_printById’:
+../src/cliente.c:18:12: error: storage class specified for parameter ‘cliente_generateNewId’
+   18 | static int cliente_generateNewId(void);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:19:12: error: storage class specified for parameter ‘cliente_checkFirstEmptyIndex’
+   19 | static int cliente_checkFirstEmptyIndex(Cliente* cliente_list, int cliente_len, int *emptyIndex);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:20:12: error: storage class specified for parameter ‘cliente_getForm’
+   20 | static int cliente_getForm(char *cliente_name, char *cliente_lastName, char *cliente_cuit);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:21:12: error: storage class specified for parameter ‘cliente_addData’
+   21 | static int cliente_addData(Cliente* cliente_list,int cliente_len,int cliente_id,char cliente_name[], char cliente_lastName[], char cliente_cuit[]);
+      |            ^~~~~~~~~~~~~~~
+../src/cliente.c:22:12: error: storage class specified for parameter ‘cliente_findIndexById’
+   22 | static int cliente_findIndexById(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../src/cliente.c:23:12: error: storage class specified for parameter ‘cliente_modify’
+   23 | static int cliente_modify(Cliente* cliente_list, int cliente_len,int id);
+      |            ^~~~~~~~~~~~~~
+../src/cliente.c:36:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   36 | {
+      | ^
+../src/cliente.c:74:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   74 | {
+      | ^
+../src/cliente.c:97:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   97 | {
+      | ^
+../src/cliente.c:142:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  142 | {
+      | ^
+../src/cliente.c:169:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  169 | {
+      | ^
+../src/cliente.c:189:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  189 | {
+      | ^
+../src/cliente.c:210:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  210 | {
+      | ^
+../src/cliente.c:235:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  235 | {
+      | ^
+../src/cliente.c:262:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  262 | {
+      | ^
+../src/cliente.c:289:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  289 | {
+      | ^
+../src/cliente.c:327:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  327 | {
+      | ^
+../src/cliente.c:398:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  398 | {
+      | ^
+../src/cliente.c:440:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  440 | {
+      | ^
+../src/cliente.c:477:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  477 | {
+      | ^
+../src/cliente.c:519:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  519 | {
+      | ^
+In file included from ../src/cliente.c:16:
+../src/cliente.h:37:5: error: old-style parameter declarations in prototyped function definition
+   37 | int cliente_printById(Cliente* cliente_list, int cliente_len, int idCliente)
+      |     ^~~~~~~~~~~~~~~~~
+../src/cliente.c:541: error: expected ‘{’ at end of input
+  541 | }
+      | 
+../src/cliente.c:541: warning: control reaches end of non-void function [-Wreturn-type]
+  541 | }
+      | 
+make: *** [src/subdir.mk:32: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:55:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:67:67: warning: passing argument 3 of ‘publicacion_printByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |    publicacion_printByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:89: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int publicacion_printByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                     ~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:55:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:55:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:00:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:410:6: error: too few arguments to function ‘cliente_remove’
+  410 |      cliente_remove(cliente_list,cliente_len,idToSearch)== 0)
+      |      ^~~~~~~~~~~~~~
+In file included from ../src/cliente.c:16:
+../src/cliente.h:35:5: note: declared here
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int cliente_firstLoad);
+      |     ^~~~~~~~~~~~~~
+../src/cliente.c: In function ‘cliente_remove’:
+../src/cliente.c:458:7: error: invalid type argument of unary ‘*’ (have ‘int’)
+  458 |       *cliente_firstLoad = FALSE;
+      |       ^~~~~~~~~~~~~~~~~~
+../src/cliente.c:462:7: error: invalid type argument of unary ‘*’ (have ‘int’)
+  462 |       *cliente_firstLoad = TRUE;
+      |       ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:01:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:410:57: warning: passing argument 4 of ‘cliente_remove’ makes integer from pointer without a cast [-Wint-conversion]
+  410 |      cliente_remove(cliente_list,cliente_len,idToSearch,&cliente_firstLoad)== 0)
+      |                                                         ^~~~~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         int **
+In file included from ../src/cliente.c:16:
+../src/cliente.h:35:71: note: expected ‘int’ but argument is of type ‘int **’
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int cliente_firstLoad);
+      |                                                                   ~~~~^~~~~~~~~~~~~~~~~
+../src/cliente.c: In function ‘cliente_remove’:
+../src/cliente.c:446:7: error: invalid type argument of unary ‘*’ (have ‘int’)
+  446 |       *cliente_firstLoad = FALSE;
+      |       ^~~~~~~~~~~~~~~~~~
+../src/cliente.c:450:7: error: invalid type argument of unary ‘*’ (have ‘int’)
+  450 |       *cliente_firstLoad = TRUE;
+      |       ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:02:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:413:57: warning: passing argument 4 of ‘cliente_remove’ makes integer from pointer without a cast [-Wint-conversion]
+  413 |      cliente_remove(cliente_list,cliente_len,idToSearch,&cliente_firstLoad)== 0)
+      |                                                         ^~~~~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         int **
+In file included from ../src/cliente.c:16:
+../src/cliente.h:35:71: note: expected ‘int’ but argument is of type ‘int **’
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int cliente_firstLoad);
+      |                                                                   ~~~~^~~~~~~~~~~~~~~~~
+../src/cliente.c: In function ‘cliente_remove’:
+../src/cliente.c:449:7: error: invalid type argument of unary ‘*’ (have ‘int’)
+  449 |       *cliente_firstLoad = FALSE;
+      |       ^~~~~~~~~~~~~~~~~~
+../src/cliente.c:453:7: error: invalid type argument of unary ‘*’ (have ‘int’)
+  453 |       *cliente_firstLoad = TRUE;
+      |       ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:02:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:410:57: warning: passing argument 4 of ‘cliente_remove’ from incompatible pointer type [-Wincompatible-pointer-types]
+  410 |      cliente_remove(cliente_list,cliente_len,idToSearch,&cliente_firstLoad)== 0)
+      |                                                         ^~~~~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         int **
+In file included from ../src/cliente.c:16:
+../src/cliente.h:35:72: note: expected ‘int *’ but argument is of type ‘int **’
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int *cliente_firstLoad);
+      |                                                                   ~~~~~^~~~~~~~~~~~~~~~~
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:67:67: warning: passing argument 3 of ‘publicacion_printByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |    publicacion_printByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:37:89: note: expected ‘int’ but argument is of type ‘int *’
+   37 | int publicacion_printByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                     ~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/diario.c:68:56: warning: passing argument 4 of ‘cliente_remove’ from incompatible pointer type [-Wincompatible-pointer-types]
+   68 |    cliente_remove(cliente_list,cliente_len,idToSearch, &cliente_firstLoad);
+      |                                                        ^~~~~~~~~~~~~~~~~~
+      |                                                        |
+      |                                                        int **
+In file included from ../src/diario.c:16:
+../src/cliente.h:35:72: note: expected ‘int *’ but argument is of type ‘int **’
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int *cliente_firstLoad);
+      |                                                                   ~~~~~^~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:02:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:02:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:16:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:410:57: warning: passing argument 4 of ‘cliente_remove’ from incompatible pointer type [-Wincompatible-pointer-types]
+  410 |      cliente_remove(cliente_list,cliente_len,idToSearch,&cliente_firstLoad)== 0)
+      |                                                         ^~~~~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         int **
+In file included from ../src/cliente.c:16:
+../src/cliente.h:35:72: note: expected ‘int *’ but argument is of type ‘int **’
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int *cliente_firstLoad);
+      |                                                                   ~~~~~^~~~~~~~~~~~~~~~~
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:67:67: warning: passing argument 3 of ‘publicacion_printByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |    publicacion_printByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:38:89: note: expected ‘int’ but argument is of type ‘int *’
+   38 | int publicacion_printByClienteId(Publicacion* publicacion_list, int publicacion_len,int publicacion_firstLoad,int idCliente);
+      |                                                                                     ~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/diario.c:68:56: warning: passing argument 4 of ‘cliente_remove’ from incompatible pointer type [-Wincompatible-pointer-types]
+   68 |    cliente_remove(cliente_list,cliente_len,idToSearch, &cliente_firstLoad);
+      |                                                        ^~~~~~~~~~~~~~~~~~
+      |                                                        |
+      |                                                        int **
+In file included from ../src/diario.c:16:
+../src/cliente.h:35:72: note: expected ‘int *’ but argument is of type ‘int **’
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int *cliente_firstLoad);
+      |                                                                   ~~~~~^~~~~~~~~~~~~~~~~
+../src/diario.c:69:81: warning: passing argument 4 of ‘publicacion_removebyClienteId’ from incompatible pointer type [-Wincompatible-pointer-types]
+   69 |    publicacion_removebyClienteId(publicacion_list, publicacion_len, idToSearch, &publicacion_firstLoad);
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 int **
+In file included from ../src/diario.c:17:
+../src/publicacion.h:36:106: note: expected ‘int *’ but argument is of type ‘int **’
+   36 | int publicacion_removebyClienteId(Publicacion* publicacion_list, int publicacion_len,int idCliente, int* publicacion_firstLoad);
+      |                                                                                                     ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:17:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:67:67: warning: passing argument 3 of ‘publicacion_printByClienteId’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |    publicacion_printByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   int *
+In file included from ../src/diario.c:17:
+../src/publicacion.h:38:89: note: expected ‘int’ but argument is of type ‘int *’
+   38 | int publicacion_printByClienteId(Publicacion* publicacion_list, int publicacion_len,int idCliente);
+      |                                                                                     ~~~~^~~~~~~~~
+../src/diario.c:67:4: error: too many arguments to function ‘publicacion_printByClienteId’
+   67 |    publicacion_printByClienteId(publicacion_list, publicacion_len,publicacion_firstLoad,idToSearch);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/diario.c:17:
+../src/publicacion.h:38:5: note: declared here
+   38 | int publicacion_printByClienteId(Publicacion* publicacion_list, int publicacion_len,int idCliente);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/diario.c:68:56: warning: passing argument 4 of ‘cliente_remove’ from incompatible pointer type [-Wincompatible-pointer-types]
+   68 |    cliente_remove(cliente_list,cliente_len,idToSearch, &cliente_firstLoad);
+      |                                                        ^~~~~~~~~~~~~~~~~~
+      |                                                        |
+      |                                                        int **
+In file included from ../src/diario.c:16:
+../src/cliente.h:35:72: note: expected ‘int *’ but argument is of type ‘int **’
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int *cliente_firstLoad);
+      |                                                                   ~~~~~^~~~~~~~~~~~~~~~~
+../src/diario.c:69:81: warning: passing argument 4 of ‘publicacion_removebyClienteId’ from incompatible pointer type [-Wincompatible-pointer-types]
+   69 |    publicacion_removebyClienteId(publicacion_list, publicacion_len, idToSearch, &publicacion_firstLoad);
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 int **
+In file included from ../src/diario.c:17:
+../src/publicacion.h:36:106: note: expected ‘int *’ but argument is of type ‘int **’
+   36 | int publicacion_removebyClienteId(Publicacion* publicacion_list, int publicacion_len,int idCliente, int* publicacion_firstLoad);
+      |                                                                                                     ~~~~~^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/diario.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:18:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:68:56: warning: passing argument 4 of ‘cliente_remove’ from incompatible pointer type [-Wincompatible-pointer-types]
+   68 |    cliente_remove(cliente_list,cliente_len,idToSearch, &cliente_firstLoad);
+      |                                                        ^~~~~~~~~~~~~~~~~~
+      |                                                        |
+      |                                                        int **
+In file included from ../src/diario.c:16:
+../src/cliente.h:35:72: note: expected ‘int *’ but argument is of type ‘int **’
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id, int *cliente_firstLoad);
+      |                                                                   ~~~~~^~~~~~~~~~~~~~~~~
+../src/diario.c:69:81: warning: passing argument 4 of ‘publicacion_removebyClienteId’ from incompatible pointer type [-Wincompatible-pointer-types]
+   69 |    publicacion_removebyClienteId(publicacion_list, publicacion_len, idToSearch, &publicacion_firstLoad);
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                 |
+      |                                                                                 int **
+In file included from ../src/diario.c:17:
+../src/publicacion.h:36:106: note: expected ‘int *’ but argument is of type ‘int **’
+   36 | int publicacion_removebyClienteId(Publicacion* publicacion_list, int publicacion_len,int idCliente, int* publicacion_firstLoad);
+      |                                                                                                     ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:18:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:18:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:24:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+../src/cliente.c: In function ‘cliente_removeMenu’:
+../src/cliente.c:410:6: error: too many arguments to function ‘cliente_remove’
+  410 |      cliente_remove(cliente_list,cliente_len,idToSearch,&cliente_firstLoad)== 0)
+      |      ^~~~~~~~~~~~~~
+In file included from ../src/cliente.c:16:
+../src/cliente.h:35:5: note: declared here
+   35 | int cliente_remove(Cliente* cliente_list, int cliente_len,int id);
+      |     ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/cliente.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:25:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cliente.d" -MT"src/cliente.o" -o "src/cliente.o" "../src/cliente.c"
+Finished building: ../src/cliente.c
+ 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publicacion.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publicacion.d" -MT"src/publicacion.o" -o "src/publicacion.o" "../src/publicacion.c"
+Finished building: ../src/publicacion.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:25:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:25:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:28:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:28:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:29:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:29:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+../src/diario.c: In function ‘diario_removeClienteMenu’:
+../src/diario.c:57:23: warning: comparison between pointer and integer
+   57 |  if(cliente_firstLoad == TRUE)
+      |                       ^~
+Finished building: ../src/diario.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:29:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:30:40 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:54:60: warning: passing argument 3 of ‘diario_removeClienteMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   54 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES);
+      |                                                            ^~~~~~~~~~~~~~~~~
+      |                                                            |
+      |                                                            int
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:18:74: note: expected ‘int *’ but argument is of type ‘int’
+   18 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len);
+      |                                                                     ~~~~~^~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:30:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:31:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:54:60: warning: passing argument 3 of ‘diario_removeClienteMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   54 |      diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES);
+      |                                                            ^~~~~~~~~~~~~~~~~
+      |                                                            |
+      |                                                            int
+In file included from ../src/primer_parcial.c:16:
+../src/diario.h:18:74: note: expected ‘int *’ but argument is of type ‘int’
+   18 | int diario_removeClienteMenu(Cliente* cliente_list, int cliente_len,int *cliente_firstLoad, Publicacion* publicacion_list, int publicacion_len);
+      |                                                                     ~~~~~^~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:31:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:31:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:32:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:32:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:33:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:33:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:34:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/diario.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/diario.d" -MT"src/diario.o" -o "src/diario.o" "../src/diario.c"
+Finished building: ../src/diario.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:34:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:36:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/cliente.o ./src/diario.o ./src/primer_parcial.o ./src/publicacion.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:37:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+14:52:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_removeClientMenu’:
+../src/newspaper.c:68:4: warning: implicit declaration of function ‘publication_printByClientId’; did you mean ‘publication_printByClienteId’? [-Wimplicit-function-declaration]
+   68 |    publication_printByClientId(publication_list, publication_len,idToSearch);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |    publication_printByClienteId
+../src/newspaper.c:70:4: warning: implicit declaration of function ‘publication_removebyClientId’; did you mean ‘publication_removebyClienteId’? [-Wimplicit-function-declaration]
+   70 |    publication_removebyClientId(publication_list, publication_len, idToSearch);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |    publication_removebyClienteId
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:54:6: warning: implicit declaration of function ‘newspaper_removeClientMenu’; did you mean ‘newspaper_removeClienteMenu’? [-Wimplicit-function-declaration]
+   54 |      newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      newspaper_removeClienteMenu
+../src/primer_parcial.c:57:6: error: ‘newspaper_addPublication’ undeclared (first use in this function)
+   57 |      newspaper_addPublication//ALTA PUBLICACION (TEST ALTA PUBLICACION SOLA)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:57:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/primer_parcial.c:57:30: error: expected ‘;’ before ‘break’
+   57 |      newspaper_addPublication//ALTA PUBLICACION (TEST ALTA PUBLICACION SOLA)
+      |                              ^
+      |                              ;
+   58 |      break;
+      |      ~~~~~                    
+make: *** [src/subdir.mk:32: src/primer_parcial.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:54:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:54:6: warning: implicit declaration of function ‘newspaper_removeClientMenu’; did you mean ‘newspaper_removeClienteMenu’? [-Wimplicit-function-declaration]
+   54 |      newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      newspaper_removeClienteMenu
+../src/primer_parcial.c:57:6: error: ‘newspaper_addPublication’ undeclared (first use in this function)
+   57 |      newspaper_addPublication//ALTA PUBLICACION (TEST ALTA PUBLICACION SOLA)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/primer_parcial.c:57:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/primer_parcial.c:57:30: error: expected ‘;’ before ‘break’
+   57 |      newspaper_addPublication//ALTA PUBLICACION (TEST ALTA PUBLICACION SOLA)
+      |                              ^
+      |                              ;
+   58 |      break;
+      |      ~~~~~                    
+make: *** [src/subdir.mk:32: src/primer_parcial.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:54:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:54:6: warning: implicit declaration of function ‘newspaper_removeClientMenu’; did you mean ‘newspaper_removeClienteMenu’? [-Wimplicit-function-declaration]
+   54 |      newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      newspaper_removeClienteMenu
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+/usr/bin/ld: ./src/newspaper.o: en la función `newspaper_removeClientMenu':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/newspaper.c:68: referencia a `publication_printByClientId' sin definir
+/usr/bin/ld: /mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/newspaper.c:70: referencia a `publication_removebyClientId' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: primer_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:56:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:54:6: warning: implicit declaration of function ‘newspaper_removeClientMenu’; did you mean ‘newspaper_removeClienteMenu’? [-Wimplicit-function-declaration]
+   54 |      newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      newspaper_removeClienteMenu
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+14:56:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+14:56:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:08:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_addPublicationMenu’:
+../src/newspaper.c:108:55: warning: passing argument 3 of ‘publication_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+  108 |    publication_add(publication_list, publication_len, &publication_firstLoad, idToSearch);
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~
+      |                                                       |
+      |                                                       int **
+In file included from ../src/newspaper.c:17:
+../src/publication.h:33:77: note: expected ‘int *’ but argument is of type ‘int **’
+   33 | int publication_add(Publication* publication_list,int publication_len, int *publication_firstLoad, int clientId);
+      |                                                                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:54:6: warning: implicit declaration of function ‘newspaper_removeClientMenu’; did you mean ‘newspaper_removeClienteMenu’? [-Wimplicit-function-declaration]
+   54 |      newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      newspaper_removeClienteMenu
+../src/primer_parcial.c:57:62: warning: passing argument 3 of ‘newspaper_addPublicationMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   57 |      newspaper_addPublicationMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
+      |                                                              ^~~~~~~~~~~~~~~~
+      |                                                              |
+      |                                                              int
+In file included from ../src/primer_parcial.c:16:
+../src/newspaper.h:19:75: note: expected ‘int *’ but argument is of type ‘int’
+   19 | int newspaper_addPublicationMenu(Client* client_list, int client_len,int *client_firstLoad, Publication* publication_list, int publication_len, int* publication_firstLoad);
+      |                                                                      ~~~~~^~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:09:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_addPublicationMenu’:
+../src/newspaper.c:108:55: warning: passing argument 3 of ‘publication_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+  108 |    publication_add(publication_list, publication_len, &publication_firstLoad, idToSearch);
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~
+      |                                                       |
+      |                                                       int **
+In file included from ../src/newspaper.c:17:
+../src/publication.h:33:77: note: expected ‘int *’ but argument is of type ‘int **’
+   33 | int publication_add(Publication* publication_list,int publication_len, int *publication_firstLoad, int clientId);
+      |                                                                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:10:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:10:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:13:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_addPublicationMenu’:
+../src/newspaper.c:108:55: warning: passing argument 3 of ‘publication_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+  108 |    publication_add(publication_list, publication_len, &publication_firstLoad, idToSearch);
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~
+      |                                                       |
+      |                                                       int **
+In file included from ../src/newspaper.c:17:
+../src/publication.h:33:77: note: expected ‘int *’ but argument is of type ‘int **’
+   33 | int publication_add(Publication* publication_list,int publication_len, int *publication_firstLoad, int clientId);
+      |                                                                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:13:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:15:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:15:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:20:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+../src/primer_parcial.c: In function ‘main’:
+../src/primer_parcial.c:57:117: warning: passing argument 6 of ‘newspaper_addPublicationMenu’ makes pointer from integer without a cast [-Wint-conversion]
+   57 |      newspaper_addPublicationMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
+      |                                                                                                                     ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                                                                     |
+      |                                                                                                                     int
+In file included from ../src/primer_parcial.c:16:
+../src/newspaper.h:19:149: note: expected ‘int *’ but argument is of type ‘int’
+   19 | int newspaper_addPublicationMenu(Client* client_list, int client_len,int client_firstLoad, Publication* publication_list, int publication_len, int* publication_firstLoad);
+      |                                                                                                                                                ~~~~~^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:28:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:31:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:31:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.

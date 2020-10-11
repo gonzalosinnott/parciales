@@ -1,0 +1,75 @@
+/*
+ ============================================================================
+ Name        : primer_parcial.c
+ Author      : Sinnott Segura Gonzalo
+ Version     :
+ Copyright   : 
+ Description : Primer parcial Programacion - Laboratorio I
+ ============================================================================
+ */
+
+#include <stdio_ext.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+#include "utn.h"
+#include "diario.h"
+#include "cliente.h"
+#include "publicacion.h"
+
+
+#define TRUE 1
+#define FALSE 0
+#define QTY_CLIENTES 100
+#define QTY_PUBLICACIONES 1000
+
+
+int main(void) {
+
+	int choosenOption;
+	int cliente_firstLoad = FALSE;
+	int publicacion_firstLoad = FALSE;
+
+	Cliente arrayClientes[QTY_CLIENTES];
+	Publicacion arrayPublicaciones[QTY_PUBLICACIONES];
+
+	cliente_initArray(arrayClientes, QTY_CLIENTES);
+	publicacion_initArray(arrayPublicaciones, QTY_PUBLICACIONES);
+
+
+	cliente_addHardcode(arrayClientes, QTY_CLIENTES, &cliente_firstLoad);
+	publicacion_addHardcode(arrayPublicaciones, QTY_PUBLICACIONES, &publicacion_firstLoad);
+	do
+		{
+			diario_getMenu(&choosenOption);
+			switch(choosenOption)
+			{
+				case 1://ALTA CLIENTE (LISTO)
+					cliente_alta(arrayClientes, QTY_CLIENTES, &cliente_firstLoad);
+					break;
+				case 2://MODIFICAR CLIENTE (LISTO)
+					cliente_modifyMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad);
+					break;
+				case 3://BAJA CLIENTE (FALTA LINKEAR A PUBLICACIONES)
+					diario_removeClienteMenu(arrayClientes, QTY_CLIENTES, cliente_firstLoad, arrayPublicaciones, QTY_PUBLICACIONES);
+					break;
+				case 4://ALTA PUBLICACION (TEST ALTA PUBLICACION SOLA)
+					break;
+				case 5://PAUSAR PUBLICACION (TEST MODIFICAR PUBLICACION)
+					break;
+				case 6://REANUDAR PUBLICACION (TEST BAJA PUBLICACION)
+					break;
+				case 7://IMPRIMIR CLIENTES (FALTA LINKEAR A PUBLICACIONES) (TEST IMPRIMIR AMBAS)
+					break;
+				case 8://INFORMES
+					publicacion_printAll(arrayPublicaciones, QTY_PUBLICACIONES, publicacion_firstLoad);
+					cliente_printAll(arrayClientes, QTY_CLIENTES, cliente_firstLoad);
+					break;
+			}
+		}while(choosenOption!=9);
+		printf("PROGRAMA TERMINADO");
+		return EXIT_SUCCESS;
+
+
+
+}
