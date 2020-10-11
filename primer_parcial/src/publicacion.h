@@ -17,6 +17,7 @@
 #define PAUSED 0
 #define LONG_DESCRIPTION 65
 
+
 typedef struct
 {
 	int publicacion_id;

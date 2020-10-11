@@ -31,7 +31,7 @@ int publicacion_addHardcode(Publicacion* publicacion_list, int publicacion_len, 
 	int retorno = -1;
 	if(publicacion_list != NULL && publicacion_len >0)
 	{
-		int publicacion_id[]={50,60,70,80,100};
+		int publicacion_id[]={50,60,70,80,1000};
 		int publicacion_category[]={3,2,2,1,4};
 		char publicacion_description[][LONG_DESCRIPTION]={"Se vende casa en la costa,excelente ubicacion. Llamar a 3256890",
 									 	 				  "Venta Ford Ka. 30.000 KM. Tel: 3245546",
@@ -69,8 +69,6 @@ int publicacion_initArray(Publicacion* publicacion_list, int publicacion_len)
 	}
 	return retorno;
 }
-
-
 
 /**
  * \brief publicacion_alta: Asks the user for the student data
@@ -491,19 +489,19 @@ int publicacion_print(Publicacion* publicacion_list, int publicacion_len, int pu
 	{
 		if(publicacion_list != NULL && publicacion_len > 0)
 		{
-			printf("--------------------------------------------------------------------------------------------------------\n");
-			printf("| CATEGORIA       | ID | DESCRIPCION                                                      | ID CLIENTE |\n");
-			printf("--------------------------------------------------------------------------------------------------------\n");
+			printf("----------------------------------------------------------------------------------------------------\n");
+			printf("| CATEGORIA | ID   | DESCRIPCION                                                      | ID CLIENTE |\n");
+			printf("----------------------------------------------------------------------------------------------------\n");
 			for(int i=0;i< publicacion_len ;i++)
 			{
 				if(publicacion_list[i].publicacion_isEmpty == FALSE)
 				{
-					printf("| %-16d| %-3d| %-64s| %-3d |\n",
+					printf("| %-10d| %-5d| %-65s| %-11d|\n",
 							publicacion_list[i].publicacion_category,
 							publicacion_list[i].publicacion_id,
 							publicacion_list[i].publicacion_description,
 							publicacion_list[i].publicacion_idCliente);
-					printf("--------------------------------------------------------------------------------------------------------\n");
+					printf("----------------------------------------------------------------------------------------------------\n");
 				}
 			}
 			retorno = 0;

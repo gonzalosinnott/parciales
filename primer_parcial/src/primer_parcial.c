@@ -30,11 +30,12 @@ int main(void) {
 	int cliente_firstLoad = FALSE;
 	int publicacion_firstLoad = FALSE;
 
-	Publicacion arrayPublicaciones[QTY_CLIENTES];
+	Cliente arrayClientes[QTY_CLIENTES];
+	Publicacion arrayPublicaciones[QTY_PUBLICACIONES];
+
+	cliente_initArray(arrayClientes, QTY_CLIENTES);
 	publicacion_initArray(arrayPublicaciones, QTY_PUBLICACIONES);
 
-	Cliente arrayClientes[QTY_CLIENTES];
-	cliente_initArray(arrayClientes, QTY_CLIENTES);
 
 	cliente_addHardcode(arrayClientes, QTY_CLIENTES, &cliente_firstLoad);
 	publicacion_addHardcode(arrayPublicaciones, QTY_PUBLICACIONES, &publicacion_firstLoad);
