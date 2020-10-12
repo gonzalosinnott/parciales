@@ -56,12 +56,11 @@ int main(void) {
 				case 4://ALTA PUBLICACION (LISTO)
 					newspaper_addPublicationMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
 					break;
-				case 5://PAUSAR PUBLICACION (LISTO)
-				case 6://REANUDAR PUBLICACION (LISTO)
+				case 5://PAUSAR PUBLICACION
+				case 6://REANUDAR PUBLICACION
 					newspaper_publicationStatusMenu(arrayClients, QTY_CLIENTS, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad,choosenOption);
 					break;
-				case 7://IMPRIMIR CLIENTES CON NUMERO DE PUBLICACIONES
-					newspaper_printClientsWithPublications(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+				case 7://IMPRIMIR CLIENTS (FALTA LINKEAR A PUBLICATIONS) (TEST IMPRIMIR AMBAS)
 					break;
 				case 8://INFORMES
 					publication_printAll(arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);

@@ -251,6 +251,7 @@ static int client_findIndexById(Client* client_list, int client_len,int id)
 	return retorno;;
 }
 
+
 /**
  *  \brief client_findById: find a client by Id and returns 0 if ID is found
  * \param Client* client_list: Pointer to array of clients

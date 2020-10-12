@@ -216,7 +216,6 @@ int newspaper_printClientsWithPublications(Client* client_list, int client_len,i
 {
 	int retorno = -1;
 	int publicationCount;
-	int idCliente;
 
 	if(client_firstLoad == FALSE)
 	{
@@ -224,24 +223,23 @@ int newspaper_printClientsWithPublications(Client* client_list, int client_len,i
 	}
 	else
 	{
-		printf("-------------------------------------------------------------------------------------\n");
-		printf("|                 LISTADO DE CLIENTES CON CANTIDAD DE PUBLICACIONES                 |\n");
-		printf("-------------------------------------------------------------------------------------\n");
-		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
-		printf("-------------------------------------------------------------------------------------\n");
+		printf("------------------------------------------------------------------------------------\n");
+		printf("|                LISTADO DE CLIENTES CON CANTIDAD DE PUBLICACIONES                 |\n");
+		printf("------------------------------------------------------------------------------------\n");
+		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS|\n");
+		printf("------------------------------------------------------------------------------------\n");
 		for(int i=0;i< client_len ;i++)
 		{
+			newspaper_publicationCountbyClientId(publication_list, publication_len, client_list[i].client_id, &publicationCount);
 			if(client_list[i].client_isEmpty == FALSE)
 			{
-				idCliente = client_list[i].client_id;
-				newspaper_publicationCountbyClientId(publication_list, publication_len, idCliente, &publicationCount);
-				printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
+				printf("| %-16s| %-16s| %-16s| %-4d | %d \n",
 						client_list[i].client_lastName,
 						client_list[i].client_name,
 						client_list[i].client_cuit,
 						client_list[i].client_id,
 						publicationCount);
-				printf("-------------------------------------------------------------------------------------\n");
+				printf("------------------------------------------------------------------------------------\n");
 			}
 		}
 		retorno = 0;
@@ -252,11 +250,11 @@ int newspaper_printClientsWithPublications(Client* client_list, int client_len,i
 static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount)
 {
 	int retorno = -1;
-	int count = 0;
+	int count;
 
 	for(int i=0;i< publication_len ;i++)
 	{
-		if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE && publication_list[i].publication_idClient == clientId)
+		if(publication_list[i].publication_idClient == clientId)
 		{
 			count++;
 		}

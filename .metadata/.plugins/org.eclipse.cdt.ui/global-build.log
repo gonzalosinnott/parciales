@@ -5590,3 +5590,225 @@ Finished building target: primer_parcial
 19:19:14 **** Incremental Build of configuration Debug for project primer_parcial ****
 make all 
 make: No se hace nada para 'all'.
+19:44:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_printClientsWithPublications’:
+../src/newspaper.c:219:6: warning: unused variable ‘firstLoad’ [-Wunused-variable]
+  219 |  int firstLoad;
+      |      ^~~~~~~~~
+../src/newspaper.c:218:6: warning: unused variable ‘idToSearch’ [-Wunused-variable]
+  218 |  int idToSearch;
+      |      ^~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_publicationCountbyClientId’:
+../src/newspaper.c:257:15: warning: comparison between pointer and integer
+  257 |  for(int i=0;i< publication_list ;i++)
+      |               ^
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/primer_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/primer_parcial.d" -MT"src/primer_parcial.o" -o "src/primer_parcial.o" "../src/primer_parcial.c"
+Finished building: ../src/primer_parcial.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:45:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_publicationCountbyClientId’:
+../src/newspaper.c:255:15: warning: comparison between pointer and integer
+  255 |  for(int i=0;i< publication_list ;i++)
+      |               ^
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:45:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:45:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:47:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:47:04 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:51:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c:262:12: warning: ‘client_findIdByIndex’ defined but not used [-Wunused-function]
+  262 | static int client_findIdByIndex(Client* client_list, int client_len,int id)
+      |            ^~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:51:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:51:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:51:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:51:56 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:51:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:52:35 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:52:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:55:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:55:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:57:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:57:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:59:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:59:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+20:13:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:13:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+21:00:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/newspaper.o ./src/primer_parcial.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+21:00:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.

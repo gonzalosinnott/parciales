@@ -9092,3 +9092,18 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.cdt.codan.core.cxx 4 1 2020-10-11 19:18:48.285
 !MESSAGE Unsupported statement type: CASTCaseStatement.
+
+!ENTRY org.eclipse.ui 4 0 2020-10-11 19:37:55.587
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-10-11 19:40:28.760
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.ui 4 0 2020-10-11 19:40:28.774
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException

@@ -252,6 +252,33 @@ static int client_findIndexById(Client* client_list, int client_len,int id)
 }
 
 /**
+ *  \brief client_findIndexById: find an Employee by Id then returns the index position in array.
+ * \param Employee* client_list: Pointer to array of clients
+ * \param int client_len: Array length
+ * \param int id: id to search
+ * \return Return employee index position or (-1) if ERROR
+ */
+
+static int client_findIdByIndex(Client* client_list, int client_len,int id)
+{
+	int retorno;
+
+	if (client_list != NULL && client_len > 0 && id > 0)
+	{
+		for (int i = 0; i < client_len; i++)
+		{
+			if(client_list[i].client_isEmpty == FALSE && client_list[i].client_id == id )
+			{
+				retorno = i;
+				break;
+			}
+		}
+	}
+	return retorno;;
+}
+
+
+/**
  *  \brief client_findById: find a client by Id and returns 0 if ID is found
  * \param Client* client_list: Pointer to array of clients
  * \param int client_len: Array length

@@ -233,7 +233,7 @@ int newspaper_printClientsWithPublications(Client* client_list, int client_len,i
 		{
 			if(client_list[i].client_isEmpty == FALSE)
 			{
-				idCliente = client_list[i].client_id;
+				idCliente = client_list[i].client_id; //NO FUNCIONA EL CONTAR CANTIDAD DE PUBLICIDADES
 				newspaper_publicationCountbyClientId(publication_list, publication_len, idCliente, &publicationCount);
 				printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
 						client_list[i].client_lastName,
@@ -256,7 +256,7 @@ static int newspaper_publicationCountbyClientId(Publication* publication_list, i
 
 	for(int i=0;i< publication_len ;i++)
 	{
-		if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE && publication_list[i].publication_idClient == clientId)
+		if(publication_list[i].publication_idClient == clientId)
 		{
 			count++;
 		}

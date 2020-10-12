@@ -256,7 +256,7 @@ static int newspaper_publicationCountbyClientId(Publication* publication_list, i
 
 	for(int i=0;i< publication_len ;i++)
 	{
-		if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE && publication_list[i].publication_idClient == clientId)
+		if(publication_list[i].publication_idClient == clientId)
 		{
 			count++;
 		}
