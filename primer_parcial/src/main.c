@@ -64,8 +64,6 @@ int main(void) {
 					newspaper_printClientsWithActivePublications(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
 					break;
 				case 8://INFORMES
-					publication_printAll(arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
-					client_printAll(arrayClients, QTY_CLIENTS, client_firstLoad);
 					newspaper_getReportMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
 					break;
 			}

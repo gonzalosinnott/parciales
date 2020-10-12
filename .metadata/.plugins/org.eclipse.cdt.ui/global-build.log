@@ -9185,3 +9185,1765 @@ Finished building target: primer_parcial
 13:06:11 **** Incremental Build of configuration Debug for project primer_parcial ****
 make all 
 make: No se hace nada para 'all'.
+17:14:04 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:14:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:14:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:14:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:14:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:15:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:15:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:16:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addData’:
+../src/client.c:217:35: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  217 |  sprintf(formatedCUIT,"%.2s-%.10s-", client_cuit, client_cuit+9);
+      |                                   ^
+../src/client.c:217:2: note: ‘sprintf’ output between 3 and 15 bytes into a destination of size 14
+  217 |  sprintf(formatedCUIT,"%.2s-%.10s-", client_cuit, client_cuit+9);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:16:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:16:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:16:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addData’:
+../src/client.c:217:32: warning: format ‘%s’ expects a matching ‘char *’ argument [-Wformat=]
+  217 |  sprintf(formatedCUIT,"%.2s-%.9s-", client_cuit);
+      |                             ~~~^
+      |                                |
+      |                                char *
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:17:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:18:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:19:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:19:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addData’:
+../src/client.c:217:34: warning: ‘-’ directive writing 1 byte into a region of size between 0 and 13 [-Wformat-overflow=]
+  217 |  sprintf(formatedCUIT,"%.2s-%.11s-", client_cuit,client_cuit);
+      |                                  ^
+../src/client.c:217:2: note: ‘sprintf’ output between 3 and 16 bytes into a destination of size 14
+  217 |  sprintf(formatedCUIT,"%.2s-%.11s-", client_cuit,client_cuit);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:19:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addData’:
+../src/client.c:217:35: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  217 |  sprintf(formatedCUIT,"%.2s-%.11s-", client_cuit,client_cuit);
+      |                                   ^
+../src/client.c:217:2: note: ‘sprintf’ output between 3 and 16 bytes into a destination of size 15
+  217 |  sprintf(formatedCUIT,"%.2s-%.11s-", client_cuit,client_cuit);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:19:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:20:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addData’:
+../src/client.c:217:35: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  217 |  sprintf(formatedCUIT,"%.2s-%.11s-", client_cuit,client_cuit+11);
+      |                                   ^
+../src/client.c:217:2: note: ‘sprintf’ output between 3 and 16 bytes into a destination of size 15
+  217 |  sprintf(formatedCUIT,"%.2s-%.11s-", client_cuit,client_cuit+11);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:20:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addData’:
+../src/client.c:217:35: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  217 |  sprintf(formatedCUIT,"%.2s-%.11s-", client_cuit,client_cuit+10);
+      |                                   ^
+../src/client.c:217:2: note: ‘sprintf’ output between 3 and 16 bytes into a destination of size 15
+  217 |  sprintf(formatedCUIT,"%.2s-%.11s-", client_cuit,client_cuit+10);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:20:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:20:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:20:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:23:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:23:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:23:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:23:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:23:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:23:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:27:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_modify’:
+../src/client.c:372:62: warning: passing argument 3 of ‘utn_getAlphaNum’ from incompatible pointer type [-Wincompatible-pointer-types]
+  372 |       if(utn_getAlphaNum("\nCUIT (SIN GUIONES):","\nError. ",&client_cuit,2,LEN_CUIT)==0)
+      |                                                              ^~~~~~~~~~~~
+      |                                                              |
+      |                                                              char (*)[12]
+In file included from ../src/client.c:18:
+../src/utn.h:16:54: note: expected ‘char *’ but argument is of type ‘char (*)[12]’
+   16 | int utn_getAlphaNum(char* msj, char* errorMsj, char* pValue,int retries, int len);
+      |                                                ~~~~~~^~~~~~
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:28:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_modify’:
+../src/client.c:337:7: error: array size missing in ‘client_cuit’
+  337 |  char client_cuit[];
+      |       ^~~~~~~~~~~
+../src/client.c:372:62: warning: passing argument 3 of ‘utn_getAlphaNum’ from incompatible pointer type [-Wincompatible-pointer-types]
+  372 |       if(utn_getAlphaNum("\nCUIT (SIN GUIONES):","\nError. ",&client_cuit,2,LEN_CUIT)==0)
+      |                                                              ^~~~~~~~~~~~
+      |                                                              |
+      |                                                              char (*)[1]
+In file included from ../src/client.c:18:
+../src/utn.h:16:54: note: expected ‘char *’ but argument is of type ‘char (*)[1]’
+   16 | int utn_getAlphaNum(char* msj, char* errorMsj, char* pValue,int retries, int len);
+      |                                                ~~~~~~^~~~~~
+make: *** [src/subdir.mk:32: src/client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:28:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_modify’:
+../src/client.c:372:62: warning: passing argument 3 of ‘utn_getAlphaNum’ from incompatible pointer type [-Wincompatible-pointer-types]
+  372 |       if(utn_getAlphaNum("\nCUIT (SIN GUIONES):","\nError. ",&client_cuit,2,LEN_CUIT)==0)
+      |                                                              ^~~~~~~~~~~~
+      |                                                              |
+      |                                                              char (*)[12]
+In file included from ../src/client.c:18:
+../src/utn.h:16:54: note: expected ‘char *’ but argument is of type ‘char (*)[12]’
+   16 | int utn_getAlphaNum(char* msj, char* errorMsj, char* pValue,int retries, int len);
+      |                                                ~~~~~~^~~~~~
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:28:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+17:28:52 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:11:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:16:
+../src/newspaper.h:26:1: warning: no semicolon at end of struct or union
+   26 | }ClientAuxiliar;
+      | ^
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:326:3: warning: implicit declaration of function ‘maxCount’ [-Wimplicit-function-declaration]
+  326 |   maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~
+../src/newspaper.c:312:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  312 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:311:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  311 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:357:2: error: unknown type name ‘ClientAuxiliar’
+  357 |  ClientAuxiliar arrayClients[auxliliar_len];
+      |  ^~~~~~~~~~~~~~
+../src/newspaper.c:357:17: warning: unused variable ‘arrayClients’ [-Wunused-variable]
+  357 |  ClientAuxiliar arrayClients[auxliliar_len];
+      |                 ^~~~~~~~~~~~
+../src/newspaper.c:352:6: warning: unused variable ‘id’ [-Wunused-variable]
+  352 |  int id;
+      |      ^~
+../src/newspaper.c:351:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  351 |  int retorno = -1;
+      |      ^~~~~~~
+../src/newspaper.c:386:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  386 | }
+      | ^
+At top level:
+../src/newspaper.c:348:12: warning: ‘newspaper_maxCount’ defined but not used [-Wunused-function]
+  348 | static int newspaper_maxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len)
+      |            ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:12:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:326:3: warning: implicit declaration of function ‘maxCount’ [-Wimplicit-function-declaration]
+  326 |   maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~
+../src/newspaper.c:312:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  312 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:311:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  311 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:355:2: error: unknown type name ‘ClientAuxiliar’
+  355 |  ClientAuxiliar arrayClients[100];
+      |  ^~~~~~~~~~~~~~
+../src/newspaper.c:355:17: warning: unused variable ‘arrayClients’ [-Wunused-variable]
+  355 |  ClientAuxiliar arrayClients[100];
+      |                 ^~~~~~~~~~~~
+At top level:
+../src/newspaper.c:348:12: warning: ‘newspaper_maxCount’ defined but not used [-Wunused-function]
+  348 | static int newspaper_maxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len)
+      |            ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:13:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+In file included from ../src/client.c:11:
+../src/client.h:22:22: error: unknown type name ‘Client’
+   22 | int client_initArray(Client* client_list, int client_len);
+      |                      ^~~~~~
+../src/client.h:23:24: error: unknown type name ‘Client’
+   23 | int client_addHardcode(Client* client_list, int client_len, int *client_firstLoad);
+      |                        ^~~~~~
+../src/client.h:24:16: error: unknown type name ‘Client’
+   24 | int client_add(Client* client_list,int client_len, int *client_firstLoad);
+      |                ^~~~~~
+../src/client.h:25:21: error: unknown type name ‘Client’
+   25 | int client_findById(Client* client_list, int client_len,int id);
+      |                     ^~~~~~
+../src/client.h:26:23: error: unknown type name ‘Client’
+   26 | int client_modifyMenu(Client* client_list, int client_len, int client_firstLoad);
+      |                       ^~~~~~
+../src/client.h:27:23: error: unknown type name ‘Client’
+   27 | int client_removeMenu(Client* client_list, int client_len,int *client_firstLoad);
+      |                       ^~~~~~
+../src/client.h:28:19: error: unknown type name ‘Client’
+   28 | int client_remove(Client* client_list, int client_len,int id);
+      |                   ^~~~~~
+../src/client.h:29:21: error: unknown type name ‘Client’
+   29 | int client_printAll(Client* client_list, int client_len,int client_firstLoad);
+      |                     ^~~~~~
+../src/client.h:30:22: error: unknown type name ‘Client’
+   30 | int client_printById(Client* client_list, int client_len, int idClient);
+      |                      ^~~~~~
+../src/client.c:21:40: error: unknown type name ‘Client’
+   21 | static int client_checkFirstEmptyIndex(Client* client_list, int client_len, int *emptyIndex);
+      |                                        ^~~~~~
+../src/client.c:23:27: error: unknown type name ‘Client’
+   23 | static int client_addData(Client* client_list,int client_len,int client_id,char client_name[], char client_lastName[], char client_cuit[]);
+      |                           ^~~~~~
+../src/client.c:24:33: error: unknown type name ‘Client’
+   24 | static int client_findIndexById(Client* client_list, int client_len,int id);
+      |                                 ^~~~~~
+../src/client.c:25:26: error: unknown type name ‘Client’
+   25 | static int client_modify(Client* client_list, int client_len,int id);
+      |                          ^~~~~~
+../src/client.c:37:24: error: unknown type name ‘Client’
+   37 | int client_addHardcode(Client* client_list, int client_len, int *client_firstLoad)
+      |                        ^~~~~~
+../src/client.c:75:22: error: unknown type name ‘Client’
+   75 | int client_initArray(Client* client_list, int client_len)
+      |                      ^~~~~~
+../src/client.c:98:16: error: unknown type name ‘Client’
+   98 | int client_add(Client* client_list,int client_len, int *client_firstLoad)
+      |                ^~~~~~
+../src/client.c:143:40: error: unknown type name ‘Client’
+  143 | static int client_checkFirstEmptyIndex(Client* client_list, int client_len, int *emptyIndex)
+      |                                        ^~~~~~
+../src/client.c:211:27: error: unknown type name ‘Client’
+  211 | static int client_addData(Client* client_list,int client_len,int client_id,char client_name[], char client_lastName[], char client_cuit[])
+      |                           ^~~~~~
+../src/client.c:239:33: error: unknown type name ‘Client’
+  239 | static int client_findIndexById(Client* client_list, int client_len,int id)
+      |                                 ^~~~~~
+../src/client.c:265:21: error: unknown type name ‘Client’
+  265 | int client_findById(Client* client_list, int client_len,int id)
+      |                     ^~~~~~
+../src/client.c:292:23: error: unknown type name ‘Client’
+  292 | int client_modifyMenu(Client* client_list, int client_len, int client_firstLoad)
+      |                       ^~~~~~
+../src/client.c:331:26: error: unknown type name ‘Client’
+  331 | static int client_modify(Client* client_list, int client_len,int id)
+      |                          ^~~~~~
+../src/client.c:402:23: error: unknown type name ‘Client’
+  402 | int client_removeMenu(Client* client_list, int client_len,int *client_firstLoad)
+      |                       ^~~~~~
+../src/client.c:444:19: error: unknown type name ‘Client’
+  444 | int client_remove(Client* client_list, int client_len,int id)
+      |                   ^~~~~~
+../src/client.c:481:21: error: unknown type name ‘Client’
+  481 | int client_printAll(Client* client_list, int client_len, int client_firstLoad)
+      |                     ^~~~~~
+../src/client.c:525:22: error: unknown type name ‘Client’
+  525 | int client_printById(Client* client_list, int client_len, int idClient)
+      |                      ^~~~~~
+../src/client.c:190:12: warning: ‘client_generateNewId’ defined but not used [-Wunused-function]
+  190 | static int client_generateNewId(void)
+      |            ^~~~~~~~~~~~~~~~~~~~
+../src/client.c:170:12: warning: ‘client_getForm’ defined but not used [-Wunused-function]
+  170 | static int client_getForm(char *client_name, char *client_lastName, char *client_cuit)
+      |            ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:14:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:326:3: warning: implicit declaration of function ‘maxCount’ [-Wimplicit-function-declaration]
+  326 |   maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~
+../src/newspaper.c:312:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  312 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:311:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  311 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+At top level:
+../src/newspaper.c:348:12: warning: ‘newspaper_maxCount’ defined but not used [-Wunused-function]
+  348 | static int newspaper_maxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len)
+      |            ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+/usr/bin/ld: ./src/newspaper.o: en la función `newspaper_clientWithMostAds':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/newspaper.c:326: referencia a `maxCount' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: primer_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:14:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:312:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  312 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:311:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  311 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:14:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:16:40 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:312:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  312 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:311:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  311 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:16:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:21:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:325:3: warning: implicit declaration of function ‘newspaper_maxCount’ [-Wimplicit-function-declaration]
+  325 |   newspaper_maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c:311:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  311 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:310:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  310 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: At top level:
+../src/newspaper.c:347:12: error: static declaration of ‘newspaper_maxCount’ follows non-static declaration
+  347 | static int newspaper_maxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len)
+      |            ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c:325:3: note: previous implicit declaration of ‘newspaper_maxCount’ was here
+  325 |   newspaper_maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:355:2: error: unknown type name ‘ClientAuxiliar’
+  355 |  ClientAuxiliar arrayClients[100];
+      |  ^~~~~~~~~~~~~~
+../src/newspaper.c:373:22: error: request for member ‘aux_id’ in something not a structure or union
+  373 |       arrayClients[i].aux_id=client_list[i].client_id;
+      |                      ^
+../src/newspaper.c:374:29: error: request for member ‘aux_name’ in something not a structure or union
+  374 |       strcpy(arrayClients[i].aux_name,client_list[i].client_name);
+      |                             ^
+../src/newspaper.c:375:29: error: request for member ‘aux_lastName’ in something not a structure or union
+  375 |       strcpy(arrayClients[i].aux_lastName,client_list[i].client_lastName);
+      |                             ^
+../src/newspaper.c:376:29: error: request for member ‘aux_cuit’ in something not a structure or union
+  376 |       strcpy(arrayClients[i].aux_cuit,client_list[i].client_cuit);
+      |                             ^
+../src/newspaper.c:377:22: error: request for member ‘aux_publicationNumber’ in something not a structure or union
+  377 |       arrayClients[i].aux_publicationNumber = count;
+      |                      ^
+../src/newspaper.c:386:21: error: request for member ‘aux_publicationNumber’ in something not a structure or union
+  386 |   if(arrayClients[i].aux_publicationNumber == maxCount)
+      |                     ^
+../src/newspaper.c:389:21: error: request for member ‘aux_lastName’ in something not a structure or union
+  389 |      arrayClients[i].aux_lastName,
+      |                     ^
+../src/newspaper.c:390:21: error: request for member ‘aux_name’ in something not a structure or union
+  390 |      arrayClients[i].aux_name,
+      |                     ^
+../src/newspaper.c:391:21: error: request for member ‘aux_cuit’ in something not a structure or union
+  391 |      arrayClients[i].aux_cuit,
+      |                     ^
+../src/newspaper.c:392:21: error: request for member ‘aux_id’ in something not a structure or union
+  392 |      arrayClients[i].aux_id,
+      |                     ^
+../src/newspaper.c:396:1: error: expected declaration or statement at end of input
+  396 | }
+      | ^
+../src/newspaper.c:355:17: warning: variable ‘arrayClients’ set but not used [-Wunused-but-set-variable]
+  355 |  ClientAuxiliar arrayClients[100];
+      |                 ^~~~~~~~~~~~
+../src/newspaper.c:350:6: warning: variable ‘id’ set but not used [-Wunused-but-set-variable]
+  350 |  int id;
+      |      ^~
+../src/newspaper.c:349:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  349 |  int retorno = -1;
+      |      ^~~~~~~
+../src/newspaper.c:396:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  396 | }
+      | ^
+At top level:
+../src/newspaper.c:347:12: warning: ‘newspaper_maxCount’ defined but not used [-Wunused-function]
+  347 | static int newspaper_maxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len)
+      |            ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:22:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:325:3: warning: implicit declaration of function ‘newspaper_maxCount’ [-Wimplicit-function-declaration]
+  325 |   newspaper_maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c:311:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  311 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:310:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  310 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:354:2: error: unknown type name ‘ClientAuxiliar’
+  354 |  ClientAuxiliar arrayClients[100];
+      |  ^~~~~~~~~~~~~~
+../src/newspaper.c:372:22: error: request for member ‘aux_id’ in something not a structure or union
+  372 |       arrayClients[i].aux_id=client_list[i].client_id;
+      |                      ^
+../src/newspaper.c:373:29: error: request for member ‘aux_name’ in something not a structure or union
+  373 |       strcpy(arrayClients[i].aux_name,client_list[i].client_name);
+      |                             ^
+../src/newspaper.c:374:29: error: request for member ‘aux_lastName’ in something not a structure or union
+  374 |       strcpy(arrayClients[i].aux_lastName,client_list[i].client_lastName);
+      |                             ^
+../src/newspaper.c:375:29: error: request for member ‘aux_cuit’ in something not a structure or union
+  375 |       strcpy(arrayClients[i].aux_cuit,client_list[i].client_cuit);
+      |                             ^
+../src/newspaper.c:376:22: error: request for member ‘aux_publicationNumber’ in something not a structure or union
+  376 |       arrayClients[i].aux_publicationNumber = count;
+      |                      ^
+../src/newspaper.c:385:21: error: request for member ‘aux_publicationNumber’ in something not a structure or union
+  385 |   if(arrayClients[i].aux_publicationNumber == maxCount)
+      |                     ^
+../src/newspaper.c:388:21: error: request for member ‘aux_lastName’ in something not a structure or union
+  388 |      arrayClients[i].aux_lastName,
+      |                     ^
+../src/newspaper.c:389:21: error: request for member ‘aux_name’ in something not a structure or union
+  389 |      arrayClients[i].aux_name,
+      |                     ^
+../src/newspaper.c:390:21: error: request for member ‘aux_cuit’ in something not a structure or union
+  390 |      arrayClients[i].aux_cuit,
+      |                     ^
+../src/newspaper.c:391:21: error: request for member ‘aux_id’ in something not a structure or union
+  391 |      arrayClients[i].aux_id,
+      |                     ^
+../src/newspaper.c:395:1: error: expected declaration or statement at end of input
+  395 | }
+      | ^
+../src/newspaper.c:354:17: warning: variable ‘arrayClients’ set but not used [-Wunused-but-set-variable]
+  354 |  ClientAuxiliar arrayClients[100];
+      |                 ^~~~~~~~~~~~
+../src/newspaper.c:349:6: warning: variable ‘id’ set but not used [-Wunused-but-set-variable]
+  349 |  int id;
+      |      ^~
+../src/newspaper.c:348:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  348 |  int retorno = -1;
+      |      ^~~~~~~
+../src/newspaper.c:432: warning: control reaches end of non-void function [-Wreturn-type]
+  432 | }*/
+      | 
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:24:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:334:3: warning: implicit declaration of function ‘newspaper_maxCount’ [-Wimplicit-function-declaration]
+  334 |   newspaper_maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c:320:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  320 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:319:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  319 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:404:1: error: expected declaration or statement at end of input
+  404 | }
+      | ^
+../src/newspaper.c:358:6: warning: variable ‘id’ set but not used [-Wunused-but-set-variable]
+  358 |  int id;
+      |      ^~
+../src/newspaper.c:357:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  357 |  int retorno = -1;
+      |      ^~~~~~~
+../src/newspaper.c:441: warning: control reaches end of non-void function [-Wreturn-type]
+  441 | }*/
+      | 
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:24:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:334:3: warning: implicit declaration of function ‘newspaper_maxCount’ [-Wimplicit-function-declaration]
+  334 |   newspaper_maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c:320:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  320 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:319:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  319 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:358:6: warning: variable ‘id’ set but not used [-Wunused-but-set-variable]
+  358 |  int id;
+      |      ^~
+../src/newspaper.c:357:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  357 |  int retorno = -1;
+      |      ^~~~~~~
+../src/newspaper.c:405:1: warning: control reaches end of non-void function [-Wreturn-type]
+  405 | }
+      | ^
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:25:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:334:3: warning: implicit declaration of function ‘newspaper_maxCount’ [-Wimplicit-function-declaration]
+  334 |   newspaper_maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c:320:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  320 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:319:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  319 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: At top level:
+../src/newspaper.c:355:12: error: static declaration of ‘newspaper_maxCount’ follows non-static declaration
+  355 | static int newspaper_maxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len)
+      |            ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c:334:3: note: previous implicit declaration of ‘newspaper_maxCount’ was here
+  334 |   newspaper_maxCount(client_list, client_len, publication_list,publication_len);
+      |   ^~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:358:6: warning: variable ‘id’ set but not used [-Wunused-but-set-variable]
+  358 |  int id;
+      |      ^~
+../src/newspaper.c:357:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  357 |  int retorno = -1;
+      |      ^~~~~~~
+../src/newspaper.c:405:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  405 | }
+      | ^
+At top level:
+../src/newspaper.c:355:12: warning: ‘newspaper_maxCount’ defined but not used [-Wunused-function]
+  355 | static int newspaper_maxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len)
+      |            ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:26:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:43:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   43 | {
+      | ^
+../src/newspaper.c:68:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   68 | {
+      | ^
+../src/newspaper.c:112:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  112 | {
+      | ^
+../src/newspaper.c:140:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  140 | {
+      | ^
+../src/newspaper.c:164:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  164 | {
+      | ^
+../src/newspaper.c:196:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  196 | {
+      | ^
+../src/newspaper.c:227:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  227 | {
+      | ^
+../src/newspaper.c:264:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  264 | {
+      | ^
+../src/newspaper.c:281:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  281 | {
+      | ^
+../src/newspaper.c:318:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  318 | {
+      | ^
+../src/newspaper.c:357:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  357 | {
+      | ^
+../src/newspaper.c:441: error: expected ‘{’ at end of input
+  441 | }*/
+      | 
+../src/newspaper.c:404:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  404 | }
+      | ^
+../src/newspaper.c: At top level:
+../src/newspaper.c:29:12: warning: ‘newspaper_pauseMenu’ declared ‘static’ but never defined [-Wunused-function]
+   29 | static int newspaper_pauseMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
+      |            ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:30:12: warning: ‘newspaper_activeMenu’ declared ‘static’ but never defined [-Wunused-function]
+   30 | static int newspaper_activeMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
+      |            ^~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:31:12: warning: ‘newspaper_activePublicationCountbyClientId’ declared ‘static’ but never defined [-Wunused-function]
+   31 | static int newspaper_activePublicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:32:12: warning: ‘newspaper_clientWithMostAds’ declared ‘static’ but never defined [-Wunused-function]
+   32 | static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:34:12: warning: ‘newspaper_maxCount’ defined but not used [-Wunused-function]
+   34 | static int newspaper_maxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len)
+      |            ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:26:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:321:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  321 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:320:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  320 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:379:7: error: ‘id’ undeclared (first use in this function); did you mean ‘i’?
+  379 |       id = idClient;
+      |       ^~
+      |       i
+../src/newspaper.c:379:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/newspaper.c:404:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  404 | }
+      | ^
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:27:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:321:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  321 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:320:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  320 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:368:4: error: ‘idClient’ undeclared (first use in this function); did you mean ‘Client’?
+  368 |    idClient = client_list[i].client_id;
+      |    ^~~~~~~~
+      |    Client
+../src/newspaper.c:368:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/newspaper.c:402:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  402 | }
+      | ^
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:27:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:321:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  321 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:320:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  320 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  403 | }
+      | ^
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:27:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:321:6: warning: unused variable ‘idClientMaxCount’ [-Wunused-variable]
+  321 |  int idClientMaxCount;
+      |      ^~~~~~~~~~~~~~~~
+../src/newspaper.c:320:6: warning: unused variable ‘publicationMaxCount’ [-Wunused-variable]
+  320 |  int publicationMaxCount;
+      |      ^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:28:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:28:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:29:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:361:30: error: ‘QTY_CLIENTS’ undeclared (first use in this function)
+  361 |  ClientAuxiliar arrayClients[QTY_CLIENTS];
+      |                              ^~~~~~~~~~~
+../src/newspaper.c:361:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/newspaper.c:361:17: warning: unused variable ‘arrayClients’ [-Wunused-variable]
+  361 |  ClientAuxiliar arrayClients[QTY_CLIENTS];
+      |                 ^~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:30:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_maxCount’:
+../src/newspaper.c:361:30: error: ‘QTY_CLIENTS’ undeclared (first use in this function)
+  361 |  ClientAuxiliar arrayClients[QTY_CLIENTS];
+      |                              ^~~~~~~~~~~
+../src/newspaper.c:361:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/newspaper.c:361:17: warning: unused variable ‘arrayClients’ [-Wunused-variable]
+  361 |  ClientAuxiliar arrayClients[QTY_CLIENTS];
+      |                 ^~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:30:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:31:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:19:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:19:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:20:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:20:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:22:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:22:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:40:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:10: error: ‘(CategoryAuxilar *)&arrayAux’ is a pointer; did you mean to use ‘->’?
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |          ^
+      |          ->
+../src/publication.c:913:26: error: expected expression before ‘[’ token
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                          ^
+../src/publication.c:913:41: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                         ^
+../src/publication.c:913:53: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                                     ^
+../src/publication.c:913:63: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                                               ^
+../src/publication.c:911:18: warning: variable ‘arrayAux’ set but not used [-Wunused-but-set-variable]
+  911 |  CategoryAuxilar arrayAux[QTY_CATEGORIES];
+      |                  ^~~~~~~~
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:40:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:10: error: ‘(CategoryAuxilar *)&arrayAux’ is a pointer; did you mean to use ‘->’?
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |          ^
+      |          ->
+../src/publication.c:913:26: error: expected expression before ‘[’ token
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                          ^
+../src/publication.c:913:41: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                         ^
+../src/publication.c:913:53: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                                     ^
+../src/publication.c:913:63: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux.aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                                               ^
+../src/publication.c:911:18: warning: variable ‘arrayAux’ set but not used [-Wunused-but-set-variable]
+  911 |  CategoryAuxilar arrayAux[QTY_CATEGORIES];
+      |                  ^~~~~~~~
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:40:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:10: error: ‘(CategoryAuxilar *)&arrayAux’ is a pointer; did you mean to use ‘->’?
+  913 |  arrayAux.aux_category = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |          ^
+      |          ->
+../src/publication.c:913:26: error: expected expression before ‘{’ token
+  913 |  arrayAux.aux_category = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                          ^
+../src/publication.c:911:18: warning: variable ‘arrayAux’ set but not used [-Wunused-but-set-variable]
+  911 |  CategoryAuxilar arrayAux[QTY_CATEGORIES];
+      |                  ^~~~~~~~
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:41:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:27: error: expected expression before ‘{’ token
+  913 |  arrayAux->aux_category = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                           ^
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:41:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:27: error: expected expression before ‘[’ token
+  913 |  arrayAux->aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                           ^
+../src/publication.c:913:42: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux->aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                          ^
+../src/publication.c:913:54: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux->aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                                      ^
+../src/publication.c:913:64: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  913 |  arrayAux->aux_category = ["INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"];
+      |                                                                ^
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:43:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:27: error: expected expression before ‘{’ token
+  913 |  arrayAux->aux_category = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                           ^
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:43:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:27: error: expected expression before ‘{’ token
+  913 |  arrayAux->aux_category = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |                           ^
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+../src/publication.c:907:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  907 |  int retorno = -1;
+      |      ^~~~~~~
+../src/publication.c:917:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  917 | }
+      | ^
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:43:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:10: error: ‘(CategoryAuxilar *)&arrayAux’ is a pointer; did you mean to use ‘->’?
+  913 |  arrayAux.aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |          ^
+      |          ->
+../src/publication.c:913:24: error: expected expression before ‘]’ token
+  913 |  arrayAux.aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |                        ^
+../src/publication.c:911:18: warning: variable ‘arrayAux’ set but not used [-Wunused-but-set-variable]
+  911 |  CategoryAuxilar arrayAux[QTY_CATEGORIES];
+      |                  ^~~~~~~~
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+../src/publication.c:907:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  907 |  int retorno = -1;
+      |      ^~~~~~~
+../src/publication.c:917:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  917 | }
+      | ^
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:44:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:10: error: ‘(CategoryAuxilar *)&arrayAux’ is a pointer; did you mean to use ‘->’?
+  913 |  arrayAux.aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |          ^
+      |          ->
+../src/publication.c:913:24: error: expected expression before ‘]’ token
+  913 |  arrayAux.aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                        ^
+../src/publication.c:911:18: warning: variable ‘arrayAux’ set but not used [-Wunused-but-set-variable]
+  911 |  CategoryAuxilar arrayAux[QTY_CATEGORIES];
+      |                  ^~~~~~~~
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:44:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:25: error: expected expression before ‘]’ token
+  913 |  arrayAux->aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                         ^
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:44:30 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:913:25: error: expected expression before ‘]’ token
+  913 |  arrayAux->aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |                         ^
+../src/publication.c:908:6: warning: unused variable ‘max’ [-Wunused-variable]
+  908 |  int max = 0;
+      |      ^~~
+../src/publication.c:907:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  907 |  int retorno = -1;
+      |      ^~~~~~~
+../src/publication.c:917:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  917 | }
+      | ^
+At top level:
+../src/publication.c:905:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  905 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:45:30 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:914:10: error: ‘(CategoryAuxilar *)&arrayAux’ is a pointer; did you mean to use ‘->’?
+  914 |  arrayAux.aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |          ^
+      |          ->
+../src/publication.c:914:40: error: expected expression before ‘{’ token
+  914 |  arrayAux.aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |                                        ^
+../src/publication.c:912:18: warning: variable ‘arrayAux’ set but not used [-Wunused-but-set-variable]
+  912 |  CategoryAuxilar arrayAux[QTY_CATEGORIES];
+      |                  ^~~~~~~~
+../src/publication.c:909:6: warning: unused variable ‘max’ [-Wunused-variable]
+  909 |  int max = 0;
+      |      ^~~
+../src/publication.c:908:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  908 |  int retorno = -1;
+      |      ^~~~~~~
+../src/publication.c:918:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  918 | }
+      | ^
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:45:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:914:10: error: ‘(CategoryAuxilar *)&arrayAux’ is a pointer; did you mean to use ‘->’?
+  914 |  arrayAux.aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |          ^
+      |          ->
+../src/publication.c:914:40: error: expected expression before ‘{’ token
+  914 |  arrayAux.aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |                                        ^
+../src/publication.c:912:18: warning: variable ‘arrayAux’ set but not used [-Wunused-but-set-variable]
+  912 |  CategoryAuxilar arrayAux[QTY_CATEGORIES];
+      |                  ^~~~~~~~
+../src/publication.c:909:6: warning: unused variable ‘max’ [-Wunused-variable]
+  909 |  int max = 0;
+      |      ^~~
+../src/publication.c:908:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  908 |  int retorno = -1;
+      |      ^~~~~~~
+../src/publication.c:918:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  918 | }
+      | ^
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:45:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:914:41: error: expected expression before ‘{’ token
+  914 |  arrayAux->aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |                                         ^
+../src/publication.c:909:6: warning: unused variable ‘max’ [-Wunused-variable]
+  909 |  int max = 0;
+      |      ^~~
+../src/publication.c:908:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  908 |  int retorno = -1;
+      |      ^~~~~~~
+../src/publication.c:918:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  918 | }
+      | ^
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:46:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:914:41: error: expected expression before ‘{’ token
+  914 |  arrayAux->aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                         ^
+../src/publication.c:909:6: warning: unused variable ‘max’ [-Wunused-variable]
+  909 |  int max = 0;
+      |      ^~~
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:46:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:914:41: error: expected expression before ‘{’ token
+  914 |  arrayAux->aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"}
+      |                                         ^
+../src/publication.c:909:6: warning: unused variable ‘max’ [-Wunused-variable]
+  909 |  int max = 0;
+      |      ^~~
+../src/publication.c:908:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  908 |  int retorno = -1;
+      |      ^~~~~~~
+../src/publication.c:918:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  918 | }
+      | ^
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:58:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:910:54: error: excess elements in char array initializer
+  910 |  char aux_category[QTY_CATEGORIES] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                      ^~~~~~~~~~~
+../src/publication.c:910:54: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:66: error: excess elements in char array initializer
+  910 |  char aux_category[QTY_CATEGORIES] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                                  ^~~~~~~~~
+../src/publication.c:910:66: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:76: error: excess elements in char array initializer
+  910 |  char aux_category[QTY_CATEGORIES] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                                            ^~~~~~~~~~~~~~
+../src/publication.c:910:76: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:38: warning: initializer-string for array of chars is too long
+  910 |  char aux_category[QTY_CATEGORIES] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                      ^
+../src/publication.c:917:47: warning: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  917 |   strcpy(arrayAux[i].aux_category,aux_category[i]);
+      |                                   ~~~~~~~~~~~~^~~
+      |                                               |
+      |                                               char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘const char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:59:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:910:52: error: excess elements in char array initializer
+  910 |  char aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                    ^~~~~~~~~~~
+../src/publication.c:910:52: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:64: error: excess elements in char array initializer
+  910 |  char aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                                ^~~~~~~~~
+../src/publication.c:910:64: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:74: error: excess elements in char array initializer
+  910 |  char aux_category[LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                                          ^~~~~~~~~~~~~~
+../src/publication.c:910:74: note: (near initialization for ‘aux_category’)
+../src/publication.c:917:47: warning: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  917 |   strcpy(arrayAux[i].aux_category,aux_category[i]);
+      |                                   ~~~~~~~~~~~~^~~
+      |                                               |
+      |                                               char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘const char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:59:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:910:40: error: excess elements in char array initializer
+  910 |  char aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                        ^~~~~~~~~~~
+../src/publication.c:910:40: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:52: error: excess elements in char array initializer
+  910 |  char aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                    ^~~~~~~~~
+../src/publication.c:910:52: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:62: error: excess elements in char array initializer
+  910 |  char aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                              ^~~~~~~~~~~~~~
+../src/publication.c:910:62: note: (near initialization for ‘aux_category’)
+../src/publication.c:917:47: warning: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  917 |   strcpy(arrayAux[i].aux_category,aux_category[i]);
+      |                                   ~~~~~~~~~~~~^~~
+      |                                               |
+      |                                               char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘const char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:59:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:910:40: error: excess elements in char array initializer
+  910 |  char aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                        ^~~~~~~~~~~
+../src/publication.c:910:40: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:52: error: excess elements in char array initializer
+  910 |  char aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                    ^~~~~~~~~
+../src/publication.c:910:52: note: (near initialization for ‘aux_category’)
+../src/publication.c:910:62: error: excess elements in char array initializer
+  910 |  char aux_category[] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+      |                                                              ^~~~~~~~~~~~~~
+../src/publication.c:910:62: note: (near initialization for ‘aux_category’)
+../src/publication.c:917:47: warning: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  917 |   strcpy(arrayAux[i].aux_category,aux_category[i]);
+      |                                   ~~~~~~~~~~~~^~~
+      |                                               |
+      |                                               char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘const char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:00:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:919:22: warning: comparison between pointer and integer
+  919 |   if(aux_category[i] >= max)
+      |                      ^~
+At top level:
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:01:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c:906:12: warning: ‘publication_countMaxCategory’ defined but not used [-Wunused-function]
+  906 | static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:06:51 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:933:25: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘int’ [-Wformat=]
+  933 |    printf("| %-12s| %-29s|\n",
+      |                     ~~~~^
+      |                         |
+      |                         char *
+      |                     %-29d
+  934 |      arrayAux[i].aux_category,
+  935 |      arrayAux[i].aux_categoryNumber);
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 |
+      |                 int
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:07:04 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+20:07:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.

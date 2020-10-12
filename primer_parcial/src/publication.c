@@ -15,6 +15,15 @@
 #include "utn.h"
 #include "publication.h"
 
+typedef struct
+{
+	char aux_category[LEN_CATEGORY];
+	int aux_categoryNumber;
+}CategoryAuxilar;
+
+#define QTY_CATEGORIES 4
+#define LEN_CATEGORY 20
+
 static int publication_generateNewId(void);
 static int publication_checkFirstEmptyIndex(Publication* publication_list, int publication_len, int *emptyIndex);
 static int publication_getForm(int *publication_category, char *publication_description);
@@ -97,9 +106,7 @@ int publication_add(Publication* publication_list,int publication_len, int *publ
 			publication_id=publication_generateNewId();
 			if(publication_addData(publication_list, publication_len, publication_id, publication_category, publication_description, publication_idCliente)==0)
 			{
-				printf("\nEl ID para: %s es: %d\n",
-						publication_description,
-						publication_id);
+				publication_printById(publication_list, publication_len, publication_id);
 				*publication_firstLoad = TRUE;
 				retorno=0;
 			}
@@ -900,30 +907,37 @@ static int publication_countMaxCategory(int countInmobiliario,int countAutomotor
 {
 	int retorno = -1;
 	int max = 0;
-	char maxCategory[LEN_CATEGORY];
+	char aux_category[QTY_CATEGORIES][LEN_CATEGORY] = {"INMOBILIARIO","AUTOMOTOR","EMPLEOS","COMPRA/VENTA"};
+	int aux_categoryNumber[QTY_CATEGORIES] = {countInmobiliario,countAutomotor,countEmpleos,countCompraVenta};
 
-	if(countInmobiliario > countAutomotor && countInmobiliario > countEmpleos && countInmobiliario > countCompraVenta)
+	CategoryAuxilar arrayAux[QTY_CATEGORIES];
+
+	for(int i = 0; i < QTY_CATEGORIES; i++)
 	{
-		strcpy(maxCategory,"INMOBILIARIO");
-		max = countInmobiliario;
+		strcpy(arrayAux[i].aux_category,aux_category[i]);
+		arrayAux[i].aux_categoryNumber=aux_categoryNumber[i];
+		if(arrayAux[i].aux_categoryNumber >= max)
+		{
+			max = arrayAux[i].aux_categoryNumber;
+		}
 	}
-	else if(countAutomotor > countInmobiliario && countAutomotor > countEmpleos && countAutomotor > countCompraVenta)
+	printf("-----------------------------------------------\n");
+	printf("| LISTADO DE CATEGORIAS CON MAS PUBLICACIONES |\n");
+	printf("-----------------------------------------------\n");
+	printf("|  CATEGORIA  | CANTIDAD                      |\n");
+	printf("-----------------------------------------------\n");
+	for(int i=0;i< QTY_CATEGORIES ;i++)
 	{
-		strcpy(maxCategory,"AUTOMOTOR");
-		max = countAutomotor;
+		if(arrayAux[i].aux_categoryNumber==max)
+		{
+			printf("| %-12s| %-30d|\n",
+					arrayAux[i].aux_category,
+					arrayAux[i].aux_categoryNumber);
+			printf("-----------------------------------------------\n");
+		}
 	}
-	else if(countEmpleos > countInmobiliario && countEmpleos > countAutomotor && countEmpleos > countCompraVenta)
-	{
-		strcpy(maxCategory,"EMPLEOS");
-		max = countEmpleos;
-	}
-	else if(countCompraVenta > countInmobiliario && countCompraVenta > countAutomotor && countCompraVenta > countEmpleos)
-	{
-		strcpy(maxCategory,"COMPRA/VENTA");
-		max = countCompraVenta;
-	}
-	printf("\nLA CATEGORIA CON MAS ANUNCIOS ES %s CON %d ANUNCIOS.\n", maxCategory, max);
-	retorno = 0;
+
+
 	return retorno;
 }
 

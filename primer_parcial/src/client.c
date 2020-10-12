@@ -50,7 +50,7 @@ int client_addHardcode(Client* client_list, int client_len, int *client_firstLoa
 											"Pereira Iraola",
 											"Guzman",
 											"Bianchi"};
-		char client_cuit[][LEN_CUIT]={"23304560989",
+		char client_cuit[][LEN_CUIT]={"23347974749",
 									  "26249359947",
 									  "21450453475",
 									  "27103649264",
@@ -212,6 +212,9 @@ static int client_addData(Client* client_list,int client_len,int client_id,char 
 {
 	int retorno = -1;
 	int emptyIndex;
+	char formatedCUIT[LEN_FORMATEDCUIT];
+
+	sprintf(formatedCUIT,"%.2s-%.8s-%s", client_cuit,client_cuit+2,client_cuit+10);
 
 	if(client_checkFirstEmptyIndex(client_list, client_len, &emptyIndex)==0)
 	{
@@ -219,7 +222,7 @@ static int client_addData(Client* client_list,int client_len,int client_id,char 
 		client_list[emptyIndex].client_isEmpty=FALSE;
 		strcpy(client_list[emptyIndex].client_name,client_name);
 		strcpy(client_list[emptyIndex].client_lastName,client_lastName);
-		strcpy(client_list[emptyIndex].client_cuit,client_cuit);
+		strcpy(client_list[emptyIndex].client_cuit,formatedCUIT);
 		retorno=0;
 	}
     return retorno;
@@ -331,6 +334,9 @@ static int client_modify(Client* client_list, int client_len,int id)
 	int choosenOption;
 	char answer;
 	int indexToModify;
+	char client_cuit[LEN_CUIT];
+	char formatedCUIT[LEN_FORMATEDCUIT];
+
 
 	Client bufferClient;
 
@@ -344,28 +350,29 @@ static int client_modify(Client* client_list, int client_len,int id)
 			if(utn_getIntNumber("\nQue campo desea modificar:"
 								"\n 1-Apellido."
 								"\n 2-Nombre."
-								"\n 3-CUIT(SIN GUIONES):"
+								"\n 3-CUIT:"
 								"\n 4-Salir"
 								"\nOpcion:", "\nError.", &choosenOption, 3, 4, 1)==0)
 			{
 				switch(choosenOption)
 				{
 					case 1:
-						if(utn_getString("\nApellido:","\nError. ",bufferClient.client_lastName,2,LEN_NAME)==0)
+						if(utn_getString("\nIngrese Apellido:","\nError. ",bufferClient.client_lastName,2,LEN_NAME)==0)
 						{
 							strcpy(client_list[indexToModify].client_lastName,bufferClient.client_lastName);
 						}
 						break;
 					case 2:
-						if(utn_getString("\nNombre:","\nError. ",bufferClient.client_name,2,LEN_NAME)==0)
+						if(utn_getString("\nIngrese Nombre:","\nError. ",bufferClient.client_name,2,LEN_NAME)==0)
 						{
 							strcpy(client_list[indexToModify].client_name,bufferClient.client_name);
 						}
 						break;
 					case 3:
-						if(utn_getAlphaNum("\nCUIT (SIN GUIONES):","\nError. ",bufferClient.client_cuit,2,LEN_CUIT)==0)
+						if(utn_getAlphaNum("\nIngrese CUIT (SIN GUIONES):","\nError. ", client_cuit,2,LEN_CUIT)==0)
 						{
-							strcpy(client_list[indexToModify].client_cuit,bufferClient.client_cuit);
+							sprintf(formatedCUIT,"%.2s-%.8s-%s", client_cuit,client_cuit+2,client_cuit+10);
+							strcpy(client_list[indexToModify].client_cuit,formatedCUIT);
 						}
 						break;
 					case 4:

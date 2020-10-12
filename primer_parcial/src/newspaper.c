@@ -17,11 +17,21 @@
 #include "publication.h"
 #include "utn.h"
 
+typedef struct
+{
+	int aux_id;
+	char aux_name[LEN_NAME];
+	char aux_lastName[LEN_NAME];
+	char aux_cuit[LEN_FORMATEDCUIT];
+	int aux_publicationNumber;
+}ClientAuxiliar;
+
+#define QTY_CLIENTS 100
+
 static int newspaper_pauseMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
 static int newspaper_activeMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
-static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount);
+static int newspaper_activePublicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount);
 static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
-static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len, int* publicationMaxCount, int* idClientMaxCount);
 
 /**
  * \brief getMenu: Menu for choosing options of the program,
@@ -235,7 +245,7 @@ int newspaper_printClientsWithActivePublications(Client* client_list, int client
 			if(client_list[i].client_isEmpty == FALSE)
 			{
 				idClient = client_list[i].client_id;
-				newspaper_publicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
+				newspaper_activePublicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
 				printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
 						client_list[i].client_lastName,
 						client_list[i].client_name,
@@ -250,7 +260,7 @@ int newspaper_printClientsWithActivePublications(Client* client_list, int client
 	return retorno;
 }
 
-static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount)
+static int newspaper_activePublicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount)
 {
 	int retorno = -1;
 	int count = 0;
@@ -307,8 +317,11 @@ int newspaper_getReportMenu(Client* client_list, int client_len,int client_first
 static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
 {
 	int retorno = -1;
-	int publicationMaxCount;
-	int idClientMaxCount;
+	int count;
+	int maxCount = 0;
+	int idClient;
+
+	ClientAuxiliar arrayAux[QTY_CLIENTS];
 
 	if(publication_firstLoad == FALSE)
 	{
@@ -316,62 +329,52 @@ static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publ
 	}
 	else
 	{
-		printf("-------------------------------------------------------------------------------------\n");
-		printf("|                           CLIENTE CON MAS PUBLICIDADES                            |\n");
-		printf("-------------------------------------------------------------------------------------\n");
-		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
-		printf("-------------------------------------------------------------------------------------\n");
 		for(int i=0;i< client_len ;i++)
 		{
-			newspaper_publicationMaxCount(client_list, client_len, publication_list, publication_len, &publicationMaxCount, &idClientMaxCount);
-			if(client_list[i].client_isEmpty == FALSE && client_list[i].client_id == idClientMaxCount)
+			if(client_list[i].client_isEmpty == FALSE)
 			{
-				printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
-						client_list[i].client_lastName,
-						client_list[i].client_name,
-						client_list[i].client_cuit,
-						client_list[i].client_id,
-						publicationMaxCount);
-				printf("-------------------------------------------------------------------------------------\n");
-			}
-		}
-		retorno = 0;
-	}
-	return retorno;
-}
-
-static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len, int* publicationMaxCount, int* idClientMaxCount)
-{
-	int retorno = -1;
-	int id;
-	int count;
-	int maxCount = 0;
-	int idClient;
-
-	for(int i=0;i< client_len ;i++)
-	{
-		if(client_list[i].client_isEmpty == FALSE)
-		{
-			count = 0;
-			idClient = client_list[i].client_id;
-			for(int i=0;i< publication_len ;i++)
-			{
-
-				if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_idClient == idClient)
+				count = 0;
+				idClient = client_list[i].client_id;
+				for(int j=0;j< publication_len ;j++)
 				{
 
-					count++;
-					if(count>maxCount)
+					if(publication_list[j].publication_isEmpty == FALSE && publication_list[j].publication_idClient == idClient)
 					{
-						maxCount = count;
-						id = idClient;
+						count++;
+						if(count>=maxCount)
+						{
+							maxCount = count;
+							arrayAux[i].aux_id=client_list[i].client_id;
+							strcpy(arrayAux[i].aux_name,client_list[i].client_name);
+							strcpy(arrayAux[i].aux_lastName,client_list[i].client_lastName);
+							strcpy(arrayAux[i].aux_cuit,client_list[i].client_cuit);
+							arrayAux[i].aux_publicationNumber = count;
+						}
 					}
 				}
 			}
 		}
+		printf("-------------------------------------------------------------------------------------\n");
+		printf("|                          CLIENTES CON MAS PUBLICIDADES                            |\n");
+		printf("-------------------------------------------------------------------------------------\n");
+		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
+		printf("-------------------------------------------------------------------------------------\n");
+		for(int i=0;i< 100  ;i++)
+		{
+			if(arrayAux[i].aux_publicationNumber == maxCount)
+			{
+				printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
+						arrayAux[i].aux_lastName,
+						arrayAux[i].aux_name,
+						arrayAux[i].aux_cuit,
+						arrayAux[i].aux_id,
+						maxCount);
+				printf("-------------------------------------------------------------------------------------\n");
+			}
+		}
 	}
-	*publicationMaxCount = maxCount;
-	*idClientMaxCount = id;
-	retorno = 0;
 	return retorno;
 }
+
+
+
