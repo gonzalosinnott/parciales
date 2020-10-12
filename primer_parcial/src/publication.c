@@ -19,8 +19,10 @@ static int publication_generateNewId(void);
 static int publication_checkFirstEmptyIndex(Publication* publication_list, int publication_len, int *emptyIndex);
 static int publication_getForm(int *publication_category, char *publication_description);
 static int publication_addData(Publication* publication_list,int publication_len,int publication_id,int publication_category, char publication_description[], int publication_idCliente);
+static int publication_formatCategory(int publication_category,char* formatedCategory);
 static int publication_modify(Publication* publication_list, int publication_len,int id);
 static int publication_remove(Publication* publication_list, int publication_len,int id);
+static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta);
 
 
 
@@ -156,7 +158,7 @@ static int publication_getForm(int *publication_category, char *publication_desc
 
 	if(publication_category != NULL && publication_description != NULL)
 	{
-		if((utn_getIntNumber("Ingrese rubro:"
+		if((utn_getIntNumber("Ingrese numero de rubro:"
 							 "\n 1-EMPLEOS"
 							 "\n 2-AUTOMOTOR"
 							 "\n 3-INMOBILIARIOS"
@@ -200,19 +202,44 @@ static int publication_addData(Publication* publication_list,int publication_len
 {
 	int retorno = -1;
 	int emptyIndex;
+	char formatedCategory[LEN_CATEGORY];
 
+	publication_formatCategory(publication_category, formatedCategory);
 	if(publication_checkFirstEmptyIndex(publication_list, publication_len, &emptyIndex)==0)
 	{
 		publication_list[emptyIndex].publication_id=publication_id;
 		publication_list[emptyIndex].publication_isEmpty=FALSE;
-		publication_list[emptyIndex].publication_category=publication_category;
+		strcpy(publication_list[emptyIndex].publication_category,formatedCategory);
 		strcpy(publication_list[emptyIndex].publication_description,publication_description);
 		publication_list[emptyIndex].publication_idClient=publication_idClient;
-		publication_list[emptyIndex].publication_status=ACTIVE;
+		strcpy(publication_list[emptyIndex].publication_status,ACTIVE);
 		retorno=0;
 	}
     return retorno;
 }
+
+static int publication_formatCategory(int publication_category,char* formatedCategory)
+{
+	int retorno = -1;
+	switch(publication_category)
+	{
+		case 1:
+			strcpy(formatedCategory,"EMPLEOS");
+			break;
+		case 2:
+			strcpy(formatedCategory,"AUTOMOTOR");
+			break;
+		case 3:
+			strcpy(formatedCategory,"INMOBILIARIOS");
+			break;
+		case 4:
+			strcpy(formatedCategory,"COMPRA/VENTA");
+			break;
+	}
+	retorno = 0;
+	return retorno;
+}
+
 
 /**
  *  \brief publication_findIndexById: find an Employee by Id then returns the index position in array.
@@ -348,7 +375,9 @@ static int publication_modify(Publication* publication_list, int publication_len
 	int retorno = -1;
 	int choosenOption;
 	char answer;
+	int publicationCategory;
 	int indexToModify;
+	char formatedCategory[LEN_CATEGORY];
 
 	Publication bufferPublication;
 
@@ -359,7 +388,7 @@ static int publication_modify(Publication* publication_list, int publication_len
 		do
 		{
 			printf("Publication a modificar\n");
-			printf("Rubro: %d Descripción: %s ID Cliente: %d.\n",
+			printf("Categoria: %s Descripción: %s ID Cliente: %d.\n",
 					publication_list[indexToModify].publication_category,
 					publication_list[indexToModify].publication_description,
 					publication_list[indexToModify].publication_idClient);
@@ -373,15 +402,16 @@ static int publication_modify(Publication* publication_list, int publication_len
 				switch(choosenOption)
 				{
 					case 1:
-						if(utn_getIntNumber("Ingrese rubro:"
+						if(utn_getIntNumber("Ingrese numero de rubro:"
 										   "\n 1-EMPLEOS"
 										   "\n 2-AUTOMOTOR"
 										   "\n 3-INMOBILIARIOS"
 										   "\n 4-COMPRA/VENTA"
 										   "\nOpcion: ",
-										   "Error, ", &bufferPublication.publication_category, 3, 4, 1)==0)
+										   "Error, ", &publicationCategory, 3, 4, 1)==0)
 						{
-							publication_list[indexToModify].publication_category = bufferPublication.publication_category;
+							publication_formatCategory(publicationCategory, formatedCategory);
+							strcpy(publication_list[indexToModify].publication_category,formatedCategory);
 						}
 						break;
 					case 2:
@@ -474,7 +504,7 @@ static int publication_remove(Publication* publication_list, int publication_len
 	if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
 	{
 		printf("Publication a eliminar\n");
-		printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+		printf("Categoria: %s Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
 		utn_getChar("¿Desea eliminar este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
 		switch(answer)
 		{
@@ -544,7 +574,7 @@ int publication_pause(Publication* publication_list, int publication_len,int id)
 		switch(answer)
 		{
 			case 'Y':
-				publication_list[indexToModify].publication_status = PAUSED;
+				strcpy(publication_list[indexToModify].publication_status,PAUSED);
 				printf("\nREGISTRO DE PUBLICIDAD PAUSADO CON EXITO.\n");
 				break;
 			case'N':
@@ -581,7 +611,7 @@ int publication_active(Publication* publication_list, int publication_len,int id
 		switch(answer)
 		{
 			case 'Y':
-				publication_list[indexToModify].publication_status = ACTIVE;
+				strcpy(publication_list[indexToModify].publication_status,ACTIVE);
 				printf("\nREGISTRO DE PUBLICIDAD REANUDADO CON EXITO.\n");
 				break;
 			case'N':
@@ -617,22 +647,22 @@ int publication_printAll(Publication* publication_list, int publication_len, int
 	{
 		if(publication_list != NULL && publication_len > 0)
 		{
-			printf("-------------------------------------------------------------------------------------------------------------\n");
-			printf("|                                          LISTADO DE PUBLICACIONES                                         |\n");
-			printf("-------------------------------------------------------------------------------------------------------------\n");
-			printf("| ID CLIENTE | CATEGORIA | DESCRIPCION                                                      | ESTADO |  ID  |\n");
-			printf("-------------------------------------------------------------------------------------------------------------\n");
+			printf("-----------------------------------------------------------------------------------------------------------------\n");
+			printf("|                                          LISTADO DE PUBLICACIONES                                             |\n");
+			printf("-----------------------------------------------------------------------------------------------------------------\n");
+			printf("| ID CLIENTE |   CATEGORIA   | DESCRIPCION                                                      | ESTADO |  ID  |\n");
+			printf("-----------------------------------------------------------------------------------------------------------------\n");
 			for(int i=0;i< publication_len ;i++)
 			{
 				if(publication_list[i].publication_isEmpty == FALSE)
 				{
-					printf("| %-11d| %-10d| %-65s| %-7d| %-5d|\n",
+					printf("| %-11d| %-14s| %-65s| %-7s| %-5d|\n",
 							publication_list[i].publication_idClient,
 							publication_list[i].publication_category,
 							publication_list[i].publication_description,
 							publication_list[i].publication_status,
 							publication_list[i].publication_id);
-					printf("-------------------------------------------------------------------------------------------------------------\n");
+					printf("-----------------------------------------------------------------------------------------------------------------\n");
 				}
 			}
 			retorno = 0;
@@ -657,21 +687,21 @@ int publication_printActive(Publication* publication_list, int publication_len)
 
 	if(publication_list != NULL && publication_len > 0)
 	{
-		printf("------------------------------------------------------------------------------------------------------\n");
-		printf("|                                  LISTADO DE PUBLICACIONES ACTIVAS                                  |\n");
-		printf("------------------------------------------------------------------------------------------------------\n");
-		printf("|  ID  | CATEGORIA | DESCRIPCION                                                      |  ID CLIENTE  |\n");
-		printf("------------------------------------------------------------------------------------------------------\n");
+		printf("----------------------------------------------------------------------------------------------------------\n");
+		printf("|                                  LISTADO DE PUBLICACIONES ACTIVAS                                      |\n");
+		printf("----------------------------------------------------------------------------------------------------------\n");
+		printf("|  ID  |   CATEGORIA   | DESCRIPCION                                                      |  ID CLIENTE  |\n");
+		printf("----------------------------------------------------------------------------------------------------------\n");
 		for(int i=0;i< publication_len ;i++)
 		{
-			if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE)
+			if(publication_list[i].publication_isEmpty == FALSE && strcmp(publication_list[i].publication_status,ACTIVE)==0)
 			{
-				printf("| %-5d| %-10d| %-65s| %-13d|\n",
+				printf("| %-5d| %-14s| %-65s| %-13d|\n",
 						publication_list[i].publication_id,
 						publication_list[i].publication_category,
 						publication_list[i].publication_description,
 						publication_list[i].publication_idClient);
-				printf("------------------------------------------------------------------------------------------------------\n");
+				printf("----------------------------------------------------------------------------------------------------------\n");
 			}
 		}
 		retorno = 0;
@@ -696,21 +726,21 @@ int publication_printPaused(Publication* publication_list, int publication_len)
 
 	if(publication_list != NULL && publication_len > 0)
 	{
-		printf("------------------------------------------------------------------------------------------------------\n");
-		printf("|                                  LISTADO DE PUBLICACIONES PAUSADAS                                 |\n");
-		printf("------------------------------------------------------------------------------------------------------\n");
-		printf("|  ID  | CATEGORIA | DESCRIPCION                                                      |  ID CLIENTE  |\n");
-		printf("------------------------------------------------------------------------------------------------------\n");
+		printf("----------------------------------------------------------------------------------------------------------\n");
+		printf("|                                 LISTADO DE PUBLICACIONES PAUSADAS                                      |\n");
+		printf("----------------------------------------------------------------------------------------------------------\n");
+		printf("|  ID  |   CATEGORIA   | DESCRIPCION                                                      |  ID CLIENTE  |\n");
+		printf("----------------------------------------------------------------------------------------------------------\n");
 		for(int i=0;i< publication_len ;i++)
 		{
-			if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == PAUSED)
+			if(publication_list[i].publication_isEmpty == FALSE && strcmp(publication_list[i].publication_status,PAUSED)==0)
 			{
-				printf("| %-5d| %-10d| %-65s| %-13d|\n",
+				printf("| %-5d| %-14s| %-65s| %-13d|\n",
 						publication_list[i].publication_id,
 						publication_list[i].publication_category,
 						publication_list[i].publication_description,
 						publication_list[i].publication_idClient);
-				printf("------------------------------------------------------------------------------------------------------\n");
+				printf("----------------------------------------------------------------------------------------------------------\n");
 			}
 		}
 		retorno = 0;
@@ -741,21 +771,21 @@ int publication_printByClientId(Publication* publication_list, int publication_l
 		{
 			if(publication_list != NULL && publication_len > 0)
 			{
-				printf("------------------------------------------------------------------------------------------------------------\n");
-				printf("| PUBLICACIONES DEL CLIENTE ID : %d                                                                        |\n",clientId);
-				printf("------------------------------------------------------------------------------------------------------------\n");
-				printf("| CATEGORIA | ID   | DESCRIPCION                                                      | ESTADO PUBLICACION |\n");
-				printf("------------------------------------------------------------------------------------------------------------\n");
+				printf("----------------------------------------------------------------------------------------------------------------\n");
+				printf("| PUBLICACIONES DEL CLIENTE ID : %-4d                                                                          |\n",clientId);
+				printf("----------------------------------------------------------------------------------------------------------------\n");
+				printf("|   CATEGORIA   | ID   | DESCRIPCION                                                      | ESTADO PUBLICACION |\n");
+				printf("----------------------------------------------------------------------------------------------------------------\n");
 				for(int i=0;i< publication_len ;i++)
 				{
 					if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_idClient == clientId)
 					{
-						printf("| %-10d| %-5d| %-65s| %-19d|\n",
+						printf("| %-14s| %-5d| %-65s| %-19s|\n",
 								publication_list[i].publication_category,
 								publication_list[i].publication_id,
 								publication_list[i].publication_description,
 								publication_list[i].publication_status);
-						printf("------------------------------------------------------------------------------------------------------------\n");
+						printf("----------------------------------------------------------------------------------------------------------------\n");
 						retorno = 0;
 					}
 				}
@@ -782,17 +812,17 @@ int publication_printById(Publication* publication_list, int publication_len,int
 			{
 				if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_id == Id)
 				{
-					printf("------------------------------------------------------------------------------------------------------------\n");
-					printf("| PUBLICACION ID : %-4d                                                                                    |\n",Id);
-					printf("------------------------------------------------------------------------------------------------------------\n");
-					printf("| CATEGORIA | DESCRIPCION                                                            | ESTADO | ID CLIENTE |\n");
-					printf("------------------------------------------------------------------------------------------------------------\n");
-					printf("| %-10d| %-71s| %-8d| %-10d|\n",
+					printf("----------------------------------------------------------------------------------------------------------------\n");
+					printf("| PUBLICACION ID : %-4d                                                                                        |\n",Id);
+					printf("----------------------------------------------------------------------------------------------------------------\n");
+					printf("|   CATEGORIA   | DESCRIPCION                                                            | ESTADO | ID CLIENTE |\n");
+					printf("----------------------------------------------------------------------------------------------------------------\n");
+					printf("| %-14s| %-71s| %-8s| %-10d|\n",
 							publication_list[i].publication_category,
 							publication_list[i].publication_description,
 							publication_list[i].publication_status,
 							publication_list[i].publication_idClient);
-					printf("------------------------------------------------------------------------------------------------------------\n");
+					printf("----------------------------------------------------------------------------------------------------------------\n");
 					retorno = 0;
 				}
 			}
@@ -801,4 +831,100 @@ int publication_printById(Publication* publication_list, int publication_len,int
 	}
 	return retorno;
 }
+
+int publication_countPaused(Publication* publication_list, int publication_len, int publication_firstLoad)
+{
+	int retorno = -1;
+	int count = 0;
+	if(publication_firstLoad == FALSE)
+	{
+		printf("\nNO HAY PUBLICIDADES CARGADAS.\n");
+	}
+	else
+	{
+		for(int i=0;i< publication_len ;i++)
+		{
+			if(publication_list[i].publication_isEmpty == FALSE && strcmp(publication_list[i].publication_status,PAUSED)==0)
+			{
+				count++;
+			}
+		}
+		retorno = 0;
+	}
+	printf("\nEL NUMERO DE PUBLICIDADES PAUSADAS ES: %d\n",count);
+	return retorno;
+}
+
+int publication_countCategory(Publication* publication_list, int publication_len, int publication_firstLoad)
+{
+	int retorno = -1;
+	int countInmobiliario = 0;
+	int countAutomotor = 0;
+	int countEmpleos = 0;
+	int countCompraVenta = 0;
+
+	if(publication_firstLoad == FALSE)
+	{
+		printf("\nNO HAY PUBLICIDADES CARGADAS.\n");
+	}
+	else
+	{
+		for(int i=0;i< publication_len ;i++)
+		{
+
+			if(strcmp(publication_list[i].publication_category,"INMOBILIARIOS")==0)
+			{
+				countInmobiliario++;
+			}
+			else if(strcmp(publication_list[i].publication_category,"AUTOMOTOR")==0)
+			{
+				countAutomotor++;
+			}
+			else if(strcmp(publication_list[i].publication_category,"EMPLEOS")==0)
+			{
+				countEmpleos++;
+			}
+			else if(strcmp(publication_list[i].publication_category,"COMPRA/VENTA")==0)
+			{
+				countCompraVenta++;
+			}
+		}
+		publication_countMaxCategory(countInmobiliario, countAutomotor, countEmpleos, countCompraVenta);
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
+{
+	int retorno = -1;
+	int max = 0;
+	char maxCategory[LEN_CATEGORY];
+
+	if(countInmobiliario > countAutomotor && countInmobiliario > countEmpleos && countInmobiliario > countCompraVenta)
+	{
+		strcpy(maxCategory,"INMOBILIARIO");
+		max = countInmobiliario;
+	}
+	else if(countAutomotor > countInmobiliario && countAutomotor > countEmpleos && countAutomotor > countCompraVenta)
+	{
+		strcpy(maxCategory,"AUTOMOTOR");
+		max = countAutomotor;
+	}
+	else if(countEmpleos > countInmobiliario && countEmpleos > countAutomotor && countEmpleos > countCompraVenta)
+	{
+		strcpy(maxCategory,"EMPLEOS");
+		max = countEmpleos;
+	}
+	else if(countCompraVenta > countInmobiliario && countCompraVenta > countAutomotor && countCompraVenta > countEmpleos)
+	{
+		strcpy(maxCategory,"COMPRA/VENTA");
+		max = countCompraVenta;
+	}
+	printf("\nLA CATEGORIA CON MAS ANUNCIOS ES %s CON %d ANUNCIOS.\n", maxCategory, max);
+	retorno = 0;
+	return retorno;
+}
+
 

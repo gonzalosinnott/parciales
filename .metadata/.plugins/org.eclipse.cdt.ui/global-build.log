@@ -5998,3 +5998,3190 @@ Finished building target: primer_parcial
 22:27:22 **** Incremental Build of configuration Debug for project primer_parcial ****
 make all 
 make: No se hace nada para 'all'.
+09:03:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:23:129: error: unknown type name ‘publication_firstLoad’
+   23 | static int newspaper_clientWithMostAdds(Client* client_list, int client_len, Publication* publication_list, int publication_len,publication_firstLoad)
+      |                                                                                                                                 ^~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_pauseMenu’:
+../src/newspaper.c:163:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  163 |   if(publication_list[indexToModify].publication_status == ACTIVE)
+      |                                                         ^~
+../src/newspaper.c: In function ‘newspaper_activeMenu’:
+../src/newspaper.c:195:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  195 |   if(publication_list[indexToModify].publication_status == PAUSED)
+      |                                                         ^~
+../src/newspaper.c: In function ‘newspaper_publicationCountbyClientId’:
+../src/newspaper.c:258:97: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  258 |   if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE && publication_list[i].publication_idClient == clientId)
+      |                                                                                                 ^~
+../src/newspaper.c: In function ‘newspaper_getReportMenu’:
+../src/newspaper.c:289:6: warning: implicit declaration of function ‘newspaper_clientWithMostAdds’ [-Wimplicit-function-declaration]
+  289 |      newspaper_clientWithMostAdds(client_list, client_len, publication_list, publication_len, publication_firstLoad);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: At top level:
+../src/newspaper.c:303:129: error: unknown type name ‘publication_firstLoad’
+  303 | static int newspaper_clientWithMostAdds(Client* client_list, int client_len, Publication* publication_list, int publication_len,publication_firstLoad)
+      |                                                                                                                                 ^~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:340:12: error: redefinition of ‘newspaper_publicationCountbyClientId’
+  340 | static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:251:12: note: previous definition of ‘newspaper_publicationCountbyClientId’ was here
+  251 | static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:340:12: warning: ‘newspaper_publicationCountbyClientId’ defined but not used [-Wunused-function]
+  340 | static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:04:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:23:129: error: unknown type name ‘publication_firstLoad’
+   23 | static int newspaper_clientWithMostAdds(Client* client_list, int client_len, Publication* publication_list, int publication_len,publication_firstLoad)
+      |                                                                                                                                 ^~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_pauseMenu’:
+../src/newspaper.c:163:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  163 |   if(publication_list[indexToModify].publication_status == ACTIVE)
+      |                                                         ^~
+../src/newspaper.c: In function ‘newspaper_activeMenu’:
+../src/newspaper.c:195:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  195 |   if(publication_list[indexToModify].publication_status == PAUSED)
+      |                                                         ^~
+../src/newspaper.c: In function ‘newspaper_publicationCountbyClientId’:
+../src/newspaper.c:258:97: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  258 |   if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE && publication_list[i].publication_idClient == clientId)
+      |                                                                                                 ^~
+../src/newspaper.c: In function ‘newspaper_getReportMenu’:
+../src/newspaper.c:289:6: warning: implicit declaration of function ‘newspaper_clientWithMostAdds’ [-Wimplicit-function-declaration]
+  289 |      newspaper_clientWithMostAdds(client_list, client_len, publication_list, publication_len, publication_firstLoad);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: At top level:
+../src/newspaper.c:303:12: error: static declaration of ‘newspaper_clientWithMostAdds’ follows non-static declaration
+  303 | static int newspaper_clientWithMostAdds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:289:6: note: previous implicit declaration of ‘newspaper_clientWithMostAdds’ was here
+  289 |      newspaper_clientWithMostAdds(client_list, client_len, publication_list, publication_len, publication_firstLoad);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_clientWithMostAdds’:
+../src/newspaper.c:325:6: warning: implicit declaration of function ‘newspaper_publicationMaxCount’; did you mean ‘newspaper_publicationStatusMenu’? [-Wimplicit-function-declaration]
+  325 |      newspaper_publicationMaxCount(publication_list, publication_len, idCliente, &publicationMaxCount);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      newspaper_publicationStatusMenu
+../src/newspaper.c: At top level:
+../src/newspaper.c:340:12: error: static declaration of ‘newspaper_publicationMaxCount’ follows non-static declaration
+  340 | static int newspaper_publicationMaxCount(Publication* publication_list, int publication_len, int clientId, int* publicationMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:325:6: note: previous implicit declaration of ‘newspaper_publicationMaxCount’ was here
+  325 |      newspaper_publicationMaxCount(publication_list, publication_len, idCliente, &publicationMaxCount);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:340:12: warning: ‘newspaper_publicationMaxCount’ defined but not used [-Wunused-function]
+  340 | static int newspaper_publicationMaxCount(Publication* publication_list, int publication_len, int clientId, int* publicationMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:303:12: warning: ‘newspaper_clientWithMostAdds’ defined but not used [-Wunused-function]
+  303 | static int newspaper_clientWithMostAdds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:05:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_pauseMenu’:
+../src/newspaper.c:164:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  164 |   if(publication_list[indexToModify].publication_status == ACTIVE)
+      |                                                         ^~
+../src/newspaper.c: In function ‘newspaper_activeMenu’:
+../src/newspaper.c:196:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  196 |   if(publication_list[indexToModify].publication_status == PAUSED)
+      |                                                         ^~
+../src/newspaper.c: In function ‘newspaper_publicationCountbyClientId’:
+../src/newspaper.c:259:97: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  259 |   if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE && publication_list[i].publication_idClient == clientId)
+      |                                                                                                 ^~
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:211:50: error: assignment to expression with array type
+  211 |   publication_list[emptyIndex].publication_status=ACTIVE;
+      |                                                  ^
+../src/publication.c: In function ‘publication_pause’:
+../src/publication.c:547:56: error: assignment to expression with array type
+  547 |     publication_list[indexToModify].publication_status = PAUSED;
+      |                                                        ^
+../src/publication.c: In function ‘publication_active’:
+../src/publication.c:584:56: error: assignment to expression with array type
+  584 |     publication_list[indexToModify].publication_status = ACTIVE;
+      |                                                        ^
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:629:40: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
+  629 |      printf("| %-11d| %-10d| %-65s| %-7d| %-5d|\n",
+      |                                     ~~~^
+      |                                        |
+      |                                        int
+      |                                     %-7s
+......
+  633 |        publication_list[i].publication_status,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:667:98: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  667 |    if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE)
+      |                                                                                                  ^~
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:706:98: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  706 |    if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == PAUSED)
+      |                                                                                                  ^~
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:753:41: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
+  753 |       printf("| %-10d| %-5d| %-65s| %-19d|\n",
+      |                                     ~~~~^
+      |                                         |
+      |                                         int
+      |                                     %-19s
+......
+  757 |         publication_list[i].publication_status);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:790:33: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘char *’ [-Wformat=]
+  790 |      printf("| %-10d| %-71s| %-8d| %-10d|\n",
+      |                              ~~~^
+      |                                 |
+      |                                 int
+      |                              %-8s
+......
+  793 |        publication_list[i].publication_status,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:09:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:211:65: error: expected ‘;’ before ‘retorno’
+  211 |   strcpy(publication_list[emptyIndex].publication_status,ACTIVE)
+      |                                                                 ^
+      |                                                                 ;
+  212 |   retorno=0;
+      |   ~~~~~~~                                                        
+../src/publication.c: In function ‘publication_pause’:
+../src/publication.c:547:70: error: expected ‘;’ before ‘printf’
+  547 |     strcpy(publication_list[indexToModify].publication_status,PAUSED)
+      |                                                                      ^
+      |                                                                      ;
+  548 |     printf("\nREGISTRO DE PUBLICIDAD PAUSADO CON EXITO.\n");
+      |     ~~~~~~                                                            
+../src/publication.c: In function ‘publication_active’:
+../src/publication.c:584:5: warning: implicit declaration of function ‘strycpy’; did you mean ‘strncpy’? [-Wimplicit-function-declaration]
+  584 |     strycpy(publication_list[indexToModify].publication_status,ACTIVE)
+      |     ^~~~~~~
+      |     strncpy
+../src/publication.c:584:71: error: expected ‘;’ before ‘printf’
+  584 |     strycpy(publication_list[indexToModify].publication_status,ACTIVE)
+      |                                                                       ^
+      |                                                                       ;
+  585 |     printf("\nREGISTRO DE PUBLICIDAD REANUDADO CON EXITO.\n");
+      |     ~~~~~~                                                             
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:629:40: warning: format ‘%c’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
+  629 |      printf("| %-11d| %-10d| %-65s| %-7c| %-5d|\n",
+      |                                     ~~~^
+      |                                        |
+      |                                        int
+      |                                     %-7s
+......
+  633 |        publication_list[i].publication_status,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:753:41: warning: format ‘%c’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
+  753 |       printf("| %-10d| %-5d| %-65s| %-19c|\n",
+      |                                     ~~~~^
+      |                                         |
+      |                                         int
+      |                                     %-19s
+......
+  757 |         publication_list[i].publication_status);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:790:33: warning: format ‘%c’ expects argument of type ‘int’, but argument 4 has type ‘char *’ [-Wformat=]
+  790 |      printf("| %-10d| %-71s| %-8c| %-10d|\n",
+      |                              ~~~^
+      |                                 |
+      |                                 int
+      |                              %-8s
+......
+  793 |        publication_list[i].publication_status,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:10:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_active’:
+../src/publication.c:584:5: warning: implicit declaration of function ‘strycpy’; did you mean ‘strncpy’? [-Wimplicit-function-declaration]
+  584 |     strycpy(publication_list[indexToModify].publication_status,ACTIVE);
+      |     ^~~~~~~
+      |     strncpy
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:629:40: warning: format ‘%c’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
+  629 |      printf("| %-11d| %-10d| %-65s| %-7c| %-5d|\n",
+      |                                     ~~~^
+      |                                        |
+      |                                        int
+      |                                     %-7s
+......
+  633 |        publication_list[i].publication_status,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:753:41: warning: format ‘%c’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
+  753 |       printf("| %-10d| %-5d| %-65s| %-19c|\n",
+      |                                     ~~~~^
+      |                                         |
+      |                                         int
+      |                                     %-19s
+......
+  757 |         publication_list[i].publication_status);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:790:33: warning: format ‘%c’ expects argument of type ‘int’, but argument 4 has type ‘char *’ [-Wformat=]
+  790 |      printf("| %-10d| %-71s| %-8c| %-10d|\n",
+      |                              ~~~^
+      |                                 |
+      |                                 int
+      |                              %-8s
+......
+  793 |        publication_list[i].publication_status,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+/usr/bin/ld: ./src/publication.o: en la función `publication_active':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/publication.c:584: referencia a `strycpy' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: primer_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:10:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:629:40: warning: format ‘%c’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
+  629 |      printf("| %-11d| %-10d| %-65s| %-7c| %-5d|\n",
+      |                                     ~~~^
+      |                                        |
+      |                                        int
+      |                                     %-7s
+......
+  633 |        publication_list[i].publication_status,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:753:41: warning: format ‘%c’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
+  753 |       printf("| %-10d| %-5d| %-65s| %-19c|\n",
+      |                                     ~~~~^
+      |                                         |
+      |                                         int
+      |                                     %-19s
+......
+  757 |         publication_list[i].publication_status);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:790:33: warning: format ‘%c’ expects argument of type ‘int’, but argument 4 has type ‘char *’ [-Wformat=]
+  790 |      printf("| %-10d| %-71s| %-8c| %-10d|\n",
+      |                              ~~~^
+      |                                 |
+      |                                 int
+      |                              %-8s
+......
+  793 |        publication_list[i].publication_status,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:10:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:11:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:11:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:15:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_pauseMenu’:
+../src/newspaper.c:164:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  164 |   if(publication_list[indexToModify].publication_status == ACTIVE)
+      |                                                         ^~
+../src/newspaper.c: In function ‘newspaper_activeMenu’:
+../src/newspaper.c:196:57: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  196 |   if(publication_list[indexToModify].publication_status == PAUSED)
+      |                                                         ^~
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:16:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:16:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:23:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:23:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:45:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_printClientsWithActivePublications’:
+../src/newspaper.c:237:5: warning: ‘idClient’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  237 |     newspaper_publicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:46:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:46:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:49:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAdds’:
+../src/newspaper.c:317:3: warning: ‘idClient’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  317 |   newspaper_publicationMaxCount(publication_list, publication_len, idClient, &publicationMaxCount, &idClientMaxCount);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:49:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:52:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:52:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:53:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:53:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:55:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_publicationMaxCount’:
+../src/newspaper.c:350:6: warning: unused variable ‘maxCount’ [-Wunused-variable]
+  350 |  int maxCount = 0;
+      |      ^~~~~~~~
+../src/newspaper.c:348:6: warning: unused variable ‘id’ [-Wunused-variable]
+  348 |  int id;
+      |      ^~
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:55:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:58:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_publicationMaxCount’:
+../src/newspaper.c:33:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   33 | {
+      | ^
+../src/newspaper.c:58:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   58 | {
+      | ^
+../src/newspaper.c:102:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  102 | {
+      | ^
+../src/newspaper.c:129:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  129 | {
+      | ^
+../src/newspaper.c:153:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  153 | {
+      | ^
+../src/newspaper.c:185:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  185 | {
+      | ^
+../src/newspaper.c:216:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  216 | {
+      | ^
+../src/newspaper.c:253:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  253 | {
+      | ^
+../src/newspaper.c:270:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  270 | {
+      | ^
+../src/newspaper.c:305:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  305 | {
+      | ^
+../src/newspaper.c:346:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  346 | {
+      | ^
+../src/newspaper.c:369: error: expected ‘{’ at end of input
+  369 | }
+      | 
+../src/newspaper.c:369:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  369 | }
+      | ^
+../src/newspaper.c: At top level:
+../src/newspaper.c:20:12: warning: ‘newspaper_pauseMenu’ declared ‘static’ but never defined [-Wunused-function]
+   20 | static int newspaper_pauseMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
+      |            ^~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:21:12: warning: ‘newspaper_activeMenu’ declared ‘static’ but never defined [-Wunused-function]
+   21 | static int newspaper_activeMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
+      |            ^~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:22:12: warning: ‘newspaper_publicationCountbyClientId’ declared ‘static’ but never defined [-Wunused-function]
+   22 | static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:23:12: warning: ‘newspaper_clientWithMostAdds’ declared ‘static’ but never defined [-Wunused-function]
+   23 | static int newspaper_clientWithMostAdds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:24:12: warning: ‘newspaper_publicationMaxCount’ defined but not used [-Wunused-function]
+   24 | static int newspaper_publicationMaxCount(Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+09:58:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+09:58:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+09:58:34 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:00:40 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:00:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:02:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:02:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:04:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:04:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:05:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:05:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:06:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:06:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:07:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:07:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:08:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:08:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:09:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_publicationMaxCount’:
+../src/newspaper.c:351:6: warning: unused variable ‘maxCount’ [-Wunused-variable]
+  351 |  int maxCount = 0;
+      |      ^~~~~~~~
+../src/newspaper.c:349:6: warning: unused variable ‘id’ [-Wunused-variable]
+  349 |  int id;
+      |      ^~
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:09:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:12:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:12:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:16:17 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:16:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:24:34 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:40:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_formatCategory’:
+../src/publication.c:23:12: error: storage class specified for parameter ‘publication_modify’
+   23 | static int publication_modify(Publication* publication_list, int publication_len,int id);
+      |            ^~~~~~~~~~~~~~~~~~
+../src/publication.c:24:12: error: storage class specified for parameter ‘publication_remove’
+   24 | static int publication_remove(Publication* publication_list, int publication_len,int id);
+      |            ^~~~~~~~~~~~~~~~~~
+../src/publication.c:29:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   29 | {
+      | ^
+../src/publication.c:59:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   59 | {
+      | ^
+../src/publication.c:82:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   82 | {
+      | ^
+../src/publication.c:128:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  128 | {
+      | ^
+../src/publication.c:155:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  155 | {
+      | ^
+../src/publication.c:180:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  180 | {
+      | ^
+../src/publication.c:201:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  201 | {
+      | ^
+../src/publication.c:221:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  221 | {
+      | ^
+../src/publication.c:252:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  252 | {
+      | ^
+../src/publication.c:280:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  280 | {
+      | ^
+../src/publication.c:307:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  307 | {
+      | ^
+../src/publication.c:334:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  334 | {
+      | ^
+../src/publication.c:373:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  373 | {
+      | ^
+../src/publication.c:452:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  452 | {
+      | ^
+../src/publication.c:495:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  495 | {
+      | ^
+../src/publication.c:538:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  538 | {
+      | ^
+../src/publication.c:562:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  562 | {
+      | ^
+../src/publication.c:599:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  599 | {
+      | ^
+../src/publication.c:637:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  637 | {
+      | ^
+../src/publication.c:682:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  682 | {
+      | ^
+../src/publication.c:721:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  721 | {
+      | ^
+../src/publication.c:761:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  761 | {
+      | ^
+../src/publication.c:797:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  797 | {
+      | ^
+../src/publication.c:834:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  834 | {
+      | ^
+../src/publication.c:22:12: error: old-style parameter declarations in prototyped function definition
+   22 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/publication.c:856: error: expected ‘{’ at end of input
+  856 | 
+      | 
+../src/publication.c:854:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  854 | }
+      | ^
+../src/publication.c: At top level:
+../src/publication.c:18:12: warning: ‘publication_generateNewId’ declared ‘static’ but never defined [-Wunused-function]
+   18 | static int publication_generateNewId(void);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/publication.c:19:12: warning: ‘publication_checkFirstEmptyIndex’ declared ‘static’ but never defined [-Wunused-function]
+   19 | static int publication_checkFirstEmptyIndex(Publication* publication_list, int publication_len, int *emptyIndex);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/publication.c:20:12: warning: ‘publication_getForm’ declared ‘static’ but never defined [-Wunused-function]
+   20 | static int publication_getForm(int *publication_category, char *publication_description);
+      |            ^~~~~~~~~~~~~~~~~~~
+../src/publication.c:21:12: warning: ‘publication_addData’ declared ‘static’ but never defined [-Wunused-function]
+   21 | static int publication_addData(Publication* publication_list,int publication_len,int publication_id,int publication_category, char publication_description[], int publication_idCliente);
+      |            ^~~~~~~~~~~~~~~~~~~
+../src/publication.c:22:12: warning: ‘publication_formatCategory’ defined but not used [-Wunused-function]
+   22 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:40:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:204:7: error: array size missing in ‘formatedCategory’
+  204 |  char formatedCategory[];
+      |       ^~~~~~~~~~~~~~~~
+../src/publication.c:206:51: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  206 |  publication_formatCategory(publication_category, &formatedCategory);
+      |                                                   ^~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   char (*)[1]
+../src/publication.c:22:70: note: expected ‘char *’ but argument is of type ‘char (*)[1]’
+   22 | static int publication_formatCategory(int publication_category,char* formatedCategory);
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_formatCategory’:
+../src/publication.c:226:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  226 |    strcpy(*formatedCategory,"EMPLEOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:228:3: error: duplicate case value
+  228 |   case 1:
+      |   ^~~~
+../src/publication.c:225:3: note: previously used here
+  225 |   case 1:
+      |   ^~~~
+../src/publication.c:229:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  229 |    strcpy(*formatedCategory,"AUTOMOTOR");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:231:3: error: duplicate case value
+  231 |   case 1:
+      |   ^~~~
+../src/publication.c:225:3: note: previously used here
+  225 |   case 1:
+      |   ^~~~
+../src/publication.c:232:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  232 |    strcpy(*formatedCategory,"INMOBILIARIOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:234:3: error: duplicate case value
+  234 |   case 1:
+      |   ^~~~
+../src/publication.c:225:3: note: previously used here
+  225 |   case 1:
+      |   ^~~~
+../src/publication.c:235:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  235 |    strcpy(*formatedCategory,"COMPRA/VENTA");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:378:7: error: array size missing in ‘formatedCategory’
+  378 |  char formatedCategory[];
+      |       ^~~~~~~~~~~~~~~~
+../src/publication.c:389:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  389 |    printf("Rubro: %d Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  390 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c:409:25: warning: passing argument 3 of ‘utn_getIntNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  409 |              "Error, ", &bufferPublication.publication_category, 3, 4, 1)==0)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         |
+      |                         char (*)[20]
+In file included from ../src/publication.c:15:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘char (*)[20]’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+../src/publication.c:411:52: warning: passing argument 1 of ‘publication_formatCategory’ makes integer from pointer without a cast [-Wint-conversion]
+  411 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    char *
+../src/publication.c:220:43: note: expected ‘int’ but argument is of type ‘char *’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                       ~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publication.c:411:75: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  411 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                                                           ^~~~~~~~~~~~~~~~~
+      |                                                                           |
+      |                                                                           char (*)[1]
+../src/publication.c:220:70: note: expected ‘char *’ but argument is of type ‘char (*)[1]’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:505:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  505 |   printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:657:27: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  657 |      printf("| %-11d| %-10d| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  658 |        publication_list[i].publication_idClient,
+  659 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:697:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  697 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  698 |       publication_list[i].publication_id,
+  699 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:736:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  736 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  737 |       publication_list[i].publication_id,
+  738 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:781:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  781 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  782 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:818:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  818 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  819 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:40:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:206:51: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  206 |  publication_formatCategory(publication_category, &formatedCategory);
+      |                                                   ^~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   char (*)[20]
+../src/publication.c:22:70: note: expected ‘char *’ but argument is of type ‘char (*)[20]’
+   22 | static int publication_formatCategory(int publication_category,char* formatedCategory);
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_formatCategory’:
+../src/publication.c:226:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  226 |    strcpy(*formatedCategory,"EMPLEOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:228:3: error: duplicate case value
+  228 |   case 1:
+      |   ^~~~
+../src/publication.c:225:3: note: previously used here
+  225 |   case 1:
+      |   ^~~~
+../src/publication.c:229:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  229 |    strcpy(*formatedCategory,"AUTOMOTOR");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:231:3: error: duplicate case value
+  231 |   case 1:
+      |   ^~~~
+../src/publication.c:225:3: note: previously used here
+  225 |   case 1:
+      |   ^~~~
+../src/publication.c:232:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  232 |    strcpy(*formatedCategory,"INMOBILIARIOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:234:3: error: duplicate case value
+  234 |   case 1:
+      |   ^~~~
+../src/publication.c:225:3: note: previously used here
+  225 |   case 1:
+      |   ^~~~
+../src/publication.c:235:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  235 |    strcpy(*formatedCategory,"COMPRA/VENTA");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:378:7: error: array size missing in ‘formatedCategory’
+  378 |  char formatedCategory[];
+      |       ^~~~~~~~~~~~~~~~
+../src/publication.c:389:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  389 |    printf("Rubro: %d Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  390 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c:409:25: warning: passing argument 3 of ‘utn_getIntNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  409 |              "Error, ", &bufferPublication.publication_category, 3, 4, 1)==0)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         |
+      |                         char (*)[20]
+In file included from ../src/publication.c:15:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘char (*)[20]’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+../src/publication.c:411:52: warning: passing argument 1 of ‘publication_formatCategory’ makes integer from pointer without a cast [-Wint-conversion]
+  411 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    char *
+../src/publication.c:220:43: note: expected ‘int’ but argument is of type ‘char *’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                       ~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publication.c:411:75: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  411 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                                                           ^~~~~~~~~~~~~~~~~
+      |                                                                           |
+      |                                                                           char (*)[1]
+../src/publication.c:220:70: note: expected ‘char *’ but argument is of type ‘char (*)[1]’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:505:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  505 |   printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:657:27: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  657 |      printf("| %-11d| %-10d| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  658 |        publication_list[i].publication_idClient,
+  659 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:697:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  697 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  698 |       publication_list[i].publication_id,
+  699 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:736:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  736 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  737 |       publication_list[i].publication_id,
+  738 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:781:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  781 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  782 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:818:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  818 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  819 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+10:41:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:206:51: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  206 |  publication_formatCategory(publication_category, &formatedCategory);
+      |                                                   ^~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   char (*)[20]
+../src/publication.c:22:70: note: expected ‘char *’ but argument is of type ‘char (*)[20]’
+   22 | static int publication_formatCategory(int publication_category,char* formatedCategory);
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_formatCategory’:
+../src/publication.c:226:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  226 |    strcpy(*formatedCategory,"EMPLEOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:229:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  229 |    strcpy(*formatedCategory,"AUTOMOTOR");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:232:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  232 |    strcpy(*formatedCategory,"INMOBILIARIOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:235:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  235 |    strcpy(*formatedCategory,"COMPRA/VENTA");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:389:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  389 |    printf("Rubro: %d Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  390 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c:409:25: warning: passing argument 3 of ‘utn_getIntNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  409 |              "Error, ", &bufferPublication.publication_category, 3, 4, 1)==0)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         |
+      |                         char (*)[20]
+In file included from ../src/publication.c:15:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘char (*)[20]’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+../src/publication.c:411:52: warning: passing argument 1 of ‘publication_formatCategory’ makes integer from pointer without a cast [-Wint-conversion]
+  411 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    char *
+../src/publication.c:220:43: note: expected ‘int’ but argument is of type ‘char *’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                       ~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publication.c:411:75: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  411 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                                                           ^~~~~~~~~~~~~~~~~
+      |                                                                           |
+      |                                                                           char (*)[20]
+../src/publication.c:220:70: note: expected ‘char *’ but argument is of type ‘char (*)[20]’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:505:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  505 |   printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:657:27: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  657 |      printf("| %-11d| %-10d| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  658 |        publication_list[i].publication_idClient,
+  659 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:697:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  697 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  698 |       publication_list[i].publication_id,
+  699 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:736:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  736 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  737 |       publication_list[i].publication_id,
+  738 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:781:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  781 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  782 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:818:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  818 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  819 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:42:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:206:51: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  206 |  publication_formatCategory(publication_category, &formatedCategory);
+      |                                                   ^~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   char (*)[20]
+../src/publication.c:22:70: note: expected ‘char *’ but argument is of type ‘char (*)[20]’
+   22 | static int publication_formatCategory(int publication_category,char* formatedCategory);
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_formatCategory’:
+../src/publication.c:226:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  226 |    strcpy(*formatedCategory,"EMPLEOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:229:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  229 |    strcpy(*formatedCategory,"AUTOMOTOR");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:232:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  232 |    strcpy(*formatedCategory,"INMOBILIARIOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:235:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  235 |    strcpy(*formatedCategory,"COMPRA/VENTA");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %d Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c:412:52: warning: passing argument 1 of ‘publication_formatCategory’ makes integer from pointer without a cast [-Wint-conversion]
+  412 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    char *
+../src/publication.c:220:43: note: expected ‘int’ but argument is of type ‘char *’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                       ~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publication.c:412:75: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  412 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                                                           ^~~~~~~~~~~~~~~~~
+      |                                                                           |
+      |                                                                           char (*)[20]
+../src/publication.c:220:70: note: expected ‘char *’ but argument is of type ‘char (*)[20]’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:658:27: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  658 |      printf("| %-11d| %-10d| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  659 |        publication_list[i].publication_idClient,
+  660 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:698:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  698 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  699 |       publication_list[i].publication_id,
+  700 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:737:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  737 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  738 |       publication_list[i].publication_id,
+  739 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:42:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_formatCategory’:
+../src/publication.c:226:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  226 |    strcpy(*formatedCategory,"EMPLEOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:229:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  229 |    strcpy(*formatedCategory,"AUTOMOTOR");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:232:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  232 |    strcpy(*formatedCategory,"INMOBILIARIOS");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c:235:11: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+  235 |    strcpy(*formatedCategory,"COMPRA/VENTA");
+      |           ^~~~~~~~~~~~~~~~~
+      |           |
+      |           char
+In file included from ../src/publication.c:13:
+/usr/include/string.h:122:14: note: expected ‘char * restrict’ but argument is of type ‘char’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %d Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c:412:52: warning: passing argument 1 of ‘publication_formatCategory’ makes integer from pointer without a cast [-Wint-conversion]
+  412 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    char *
+../src/publication.c:220:43: note: expected ‘int’ but argument is of type ‘char *’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                       ~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publication.c:412:75: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  412 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                                                           ^~~~~~~~~~~~~~~~~
+      |                                                                           |
+      |                                                                           char (*)[20]
+../src/publication.c:220:70: note: expected ‘char *’ but argument is of type ‘char (*)[20]’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:658:27: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  658 |      printf("| %-11d| %-10d| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  659 |        publication_list[i].publication_idClient,
+  660 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:698:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  698 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  699 |       publication_list[i].publication_id,
+  700 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:737:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  737 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  738 |       publication_list[i].publication_id,
+  739 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:43:16 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %d Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c:412:52: warning: passing argument 1 of ‘publication_formatCategory’ makes integer from pointer without a cast [-Wint-conversion]
+  412 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    char *
+../src/publication.c:220:43: note: expected ‘int’ but argument is of type ‘char *’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                       ~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publication.c:412:75: warning: passing argument 2 of ‘publication_formatCategory’ from incompatible pointer type [-Wincompatible-pointer-types]
+  412 |        publication_formatCategory(bufferPublication.publication_category, &formatedCategory);
+      |                                                                           ^~~~~~~~~~~~~~~~~
+      |                                                                           |
+      |                                                                           char (*)[20]
+../src/publication.c:220:70: note: expected ‘char *’ but argument is of type ‘char (*)[20]’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                                                ~~~~~~^~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:658:27: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  658 |      printf("| %-11d| %-10d| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  659 |        publication_list[i].publication_idClient,
+  660 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:698:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  698 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  699 |       publication_list[i].publication_id,
+  700 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:737:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  737 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  738 |       publication_list[i].publication_id,
+  739 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:44:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %c Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c:412:52: warning: passing argument 1 of ‘publication_formatCategory’ makes integer from pointer without a cast [-Wint-conversion]
+  412 |        publication_formatCategory(bufferPublication.publication_category, formatedCategory);
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+      |                                                    |
+      |                                                    char *
+../src/publication.c:220:43: note: expected ‘int’ but argument is of type ‘char *’
+  220 | static int publication_formatCategory(int publication_category,char* formatedCategory)
+      |                                       ~~~~^~~~~~~~~~~~~~~~~~~~
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:658:27: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  658 |      printf("| %-11d| %-10d| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  659 |        publication_list[i].publication_idClient,
+  660 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:698:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  698 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  699 |       publication_list[i].publication_id,
+  700 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:737:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  737 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  738 |       publication_list[i].publication_id,
+  739 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:44:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %c Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %d Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:658:27: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  658 |      printf("| %-11d| %-10d| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  659 |        publication_list[i].publication_idClient,
+  660 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:698:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  698 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  699 |       publication_list[i].publication_id,
+  700 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:737:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  737 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  738 |       publication_list[i].publication_id,
+  739 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:45:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %c Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %c Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printAll’:
+../src/publication.c:658:27: warning: format ‘%c’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  658 |      printf("| %-11d| %-10c| %-65s| %-7s| %-5d|\n",
+      |                       ~~~~^
+      |                           |
+      |                           int
+      |                       %-10s
+  659 |        publication_list[i].publication_idClient,
+  660 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:698:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  698 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  699 |       publication_list[i].publication_id,
+  700 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:737:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  737 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  738 |       publication_list[i].publication_id,
+  739 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:45:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %c Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %c Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printActive’:
+../src/publication.c:698:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  698 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  699 |       publication_list[i].publication_id,
+  700 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:737:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  737 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  738 |       publication_list[i].publication_id,
+  739 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:45:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %c Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %c Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printPaused’:
+../src/publication.c:737:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘char *’ [-Wformat=]
+  737 |     printf("| %-5d| %-10d| %-65s| %-13d|\n",
+      |                     ~~~~^
+      |                         |
+      |                         int
+      |                     %-10s
+  738 |       publication_list[i].publication_id,
+  739 |       publication_list[i].publication_category,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:45:22 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %c Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %c Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printByClientId’:
+../src/publication.c:782:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  782 |       printf("| %-10d| %-5d| %-65s| %-19s|\n",
+      |                 ~~~~^
+      |                     |
+      |                     int
+      |                 %-10s
+  783 |         publication_list[i].publication_category,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:45:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %c Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %c Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+../src/publication.c: In function ‘publication_printById’:
+../src/publication.c:819:20: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  819 |      printf("| %-10d| %-71s| %-8s| %-10d|\n",
+      |                ~~~~^
+      |                    |
+      |                    int
+      |                %-10s
+  820 |        publication_list[i].publication_category,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           char *
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:45:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_modify’:
+../src/publication.c:390:20: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  390 |    printf("Rubro: %c Descripción: %s ID Cliente: %d.\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %s
+  391 |      publication_list[indexToModify].publication_category,
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %c Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:46:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_remove’:
+../src/publication.c:506:23: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+  506 |   printf("Categoria: %c Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
+      |                      ~^                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |                                                                   |
+      |                       int                                                                 char *
+      |                      %s
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:46:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:46:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:49:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:49:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:50:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:50:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:04:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countCategory’:
+../src/publication.c:873:11: error: switch quantity not an integer
+  873 |    switch(publication_list[i].publication_category)
+      |           ^~~~~~~~~~~~~~~~
+../src/publication.c:875:5: error: case label does not reduce to an integer constant
+  875 |     case "INMOBILIARIOS":
+      |     ^~~~
+../src/publication.c:878:5: error: case label does not reduce to an integer constant
+  878 |     case "AUTOMOTOR":
+      |     ^~~~
+../src/publication.c:881:5: error: case label does not reduce to an integer constant
+  881 |     case "EMPLEOS":
+      |     ^~~~
+../src/publication.c:884:5: error: case label does not reduce to an integer constant
+  884 |     case "COMPRA/VENTA":
+      |     ^~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:05:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countCategory’:
+../src/publication.c:873:11: error: switch quantity not an integer
+  873 |    switch(publication_list[i].publication_category)
+      |           ^~~~~~~~~~~~~~~~
+../src/publication.c:875:10: warning: character constant too long for its type
+  875 |     case 'INMOBILIARIOS':
+      |          ^~~~~~~~~~~~~~~
+../src/publication.c:878:10: warning: character constant too long for its type
+  878 |     case 'AUTOMOTOR':
+      |          ^~~~~~~~~~~
+../src/publication.c:881:5: error: case label does not reduce to an integer constant
+  881 |     case "EMPLEOS":
+      |     ^~~~
+../src/publication.c:884:5: error: case label does not reduce to an integer constant
+  884 |     case "COMPRA/VENTA":
+      |     ^~~~
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:10:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:10:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:38:40 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addHardcode’:
+../src/client.c:53:33: warning: initializer-string for array of chars is too long
+   53 |   char client_cuit[][LEN_CUIT]={"23304560989",
+      |                                 ^~~~~~~~~~~~~
+../src/client.c:53:33: note: (near initialization for ‘client_cuit[0]’)
+../src/client.c:54:11: warning: initializer-string for array of chars is too long
+   54 |           "26249359947",
+      |           ^~~~~~~~~~~~~
+../src/client.c:54:11: note: (near initialization for ‘client_cuit[1]’)
+../src/client.c:55:11: warning: initializer-string for array of chars is too long
+   55 |           "21450453475",
+      |           ^~~~~~~~~~~~~
+../src/client.c:55:11: note: (near initialization for ‘client_cuit[2]’)
+../src/client.c:56:11: warning: initializer-string for array of chars is too long
+   56 |           "27103649264",
+      |           ^~~~~~~~~~~~~
+../src/client.c:56:11: note: (near initialization for ‘client_cuit[3]’)
+../src/client.c:57:11: warning: initializer-string for array of chars is too long
+   57 |           "21369834576"};
+      |           ^~~~~~~~~~~~~
+../src/client.c:57:11: note: (near initialization for ‘client_cuit[4]’)
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:902:37: warning: excess elements in scalar initializer
+  902 |  int countMax = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                     ^~~~~~~~~~~~~~
+../src/publication.c:902:37: note: (near initialization for ‘countMax’)
+../src/publication.c:902:53: warning: excess elements in scalar initializer
+  902 |  int countMax = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                                     ^~~~~~~~~~~~
+../src/publication.c:902:53: note: (near initialization for ‘countMax’)
+../src/publication.c:902:67: warning: excess elements in scalar initializer
+  902 |  int countMax = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                                                   ^~~~~~~~~~~~~~~~
+../src/publication.c:902:67: note: (near initialization for ‘countMax’)
+../src/publication.c:908:14: error: subscripted value is neither array nor pointer nor vector
+  908 |   if(countMax[i]>max)
+      |              ^
+../src/publication.c:910:18: error: subscripted value is neither array nor pointer nor vector
+  910 |    max = countMax[i];
+      |                  ^
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:39:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:902:17: error: expected expression before ‘[’ token
+  902 |  int countMax = [countInmobiliario, countAutomotor, countEmpleos, countCompraVenta];
+      |                 ^
+../src/publication.c:902:35: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  902 |  int countMax = [countInmobiliario, countAutomotor, countEmpleos, countCompraVenta];
+      |                                   ^
+../src/publication.c:902:51: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  902 |  int countMax = [countInmobiliario, countAutomotor, countEmpleos, countCompraVenta];
+      |                                                   ^
+../src/publication.c:902:65: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  902 |  int countMax = [countInmobiliario, countAutomotor, countEmpleos, countCompraVenta];
+      |                                                                 ^
+../src/publication.c:908:14: error: subscripted value is neither array nor pointer nor vector
+  908 |   if(countMax[i]>max)
+      |              ^
+../src/publication.c:910:18: error: subscripted value is neither array nor pointer nor vector
+  910 |    max = countMax[i];
+      |                  ^
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:40:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:902:2: error: variable-sized object may not be initialized
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |  ^~~
+../src/publication.c:902:35: warning: excess elements in array initializer
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                   ^~~~~~~~~~~~~~~~~
+../src/publication.c:902:35: note: (near initialization for ‘countMax’)
+../src/publication.c:902:54: warning: excess elements in array initializer
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                                      ^~~~~~~~~~~~~~
+../src/publication.c:902:54: note: (near initialization for ‘countMax’)
+../src/publication.c:902:70: warning: excess elements in array initializer
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                                                      ^~~~~~~~~~~~
+../src/publication.c:902:70: note: (near initialization for ‘countMax’)
+../src/publication.c:902:84: warning: excess elements in array initializer
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                                                                    ^~~~~~~~~~~~~~~~
+../src/publication.c:902:84: note: (near initialization for ‘countMax’)
+../src/publication.c:930:51: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int *’ [-Wformat=]
+  930 |  printf("LA CATEGORIA CON MAS ANUNCIOS ES %s CON %d ANUNCIOS.\n", maxCategory, countMax);
+      |                                                  ~^                            ~~~~~~~~
+      |                                                   |                            |
+      |                                                   int                          int *
+      |                                                  %ls
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:40:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:902:2: error: variable-sized object may not be initialized
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |  ^~~
+../src/publication.c:902:35: warning: excess elements in array initializer
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                   ^~~~~~~~~~~~~~~~~
+../src/publication.c:902:35: note: (near initialization for ‘countMax’)
+../src/publication.c:902:54: warning: excess elements in array initializer
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                                      ^~~~~~~~~~~~~~
+../src/publication.c:902:54: note: (near initialization for ‘countMax’)
+../src/publication.c:902:70: warning: excess elements in array initializer
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                                                      ^~~~~~~~~~~~
+../src/publication.c:902:70: note: (near initialization for ‘countMax’)
+../src/publication.c:902:84: warning: excess elements in array initializer
+  902 |  int countMax[publication_len] = {countInmobiliario, countAutomotor, countEmpleos, countCompraVenta};
+      |                                                                                    ^~~~~~~~~~~~~~~~
+../src/publication.c:902:84: note: (near initialization for ‘countMax’)
+../src/publication.c:930:51: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int *’ [-Wformat=]
+  930 |  printf("LA CATEGORIA CON MAS ANUNCIOS ES %s CON %d ANUNCIOS.\n", maxCategory, countMax);
+      |                                                  ~^                            ~~~~~~~~
+      |                                                   |                            |
+      |                                                   int                          int *
+      |                                                  %ls
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:43:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_countMaxCategory’:
+../src/publication.c:930:51: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int *’ [-Wformat=]
+  930 |  printf("LA CATEGORIA CON MAS ANUNCIOS ES %s CON %d ANUNCIOS.\n", maxCategory, countMax);
+      |                                                  ~^                            ~~~~~~~~
+      |                                                   |                            |
+      |                                                   int                          int *
+      |                                                  %ls
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:43:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:43:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:44:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:44:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:45:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:45:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:50:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:50:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:51:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addHardcode’:
+../src/client.c:53:33: warning: initializer-string for array of chars is too long
+   53 |   char client_cuit[][LEN_CUIT]={"23304560989",
+      |                                 ^~~~~~~~~~~~~
+../src/client.c:53:33: note: (near initialization for ‘client_cuit[0]’)
+../src/client.c:54:11: warning: initializer-string for array of chars is too long
+   54 |           "26249359947",
+      |           ^~~~~~~~~~~~~
+../src/client.c:54:11: note: (near initialization for ‘client_cuit[1]’)
+../src/client.c:55:11: warning: initializer-string for array of chars is too long
+   55 |           "21450453475",
+      |           ^~~~~~~~~~~~~
+../src/client.c:55:11: note: (near initialization for ‘client_cuit[2]’)
+../src/client.c:56:11: warning: initializer-string for array of chars is too long
+   56 |           "27103649264",
+      |           ^~~~~~~~~~~~~
+../src/client.c:56:11: note: (near initialization for ‘client_cuit[3]’)
+../src/client.c:57:11: warning: initializer-string for array of chars is too long
+   57 |           "21369834576"};
+      |           ^~~~~~~~~~~~~
+../src/client.c:57:11: note: (near initialization for ‘client_cuit[4]’)
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:52:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:52:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:53:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:53:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:55:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:55:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:56:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:56:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:05:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAdds’:
+../src/newspaper.c:310:6: warning: unused variable ‘idClient’ [-Wunused-variable]
+  310 |  int idClient;
+      |      ^~~~~~~~
+../src/newspaper.c: In function ‘newspaper_publicationMaxCount’:
+../src/newspaper.c:356:34: warning: passing argument 1 of ‘newspaper_publicationMaxCount’ from incompatible pointer type [-Wincompatible-pointer-types]
+  356 |    newspaper_publicationMaxCount(publication_list, publication_len, idClient, &publicationMaxCount, &idClientMaxCount);
+      |                                  ^~~~~~~~~~~~~~~~
+      |                                  |
+      |                                  Publication * {aka struct <anonymous> *}
+../src/newspaper.c:344:50: note: expected ‘Client *’ {aka ‘struct <anonymous> *’} but argument is of type ‘Publication *’ {aka ‘struct <anonymous> *’}
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |                                          ~~~~~~~~^~~~~~~~~~~
+../src/newspaper.c:356:69: warning: passing argument 3 of ‘newspaper_publicationMaxCount’ makes pointer from integer without a cast [-Wint-conversion]
+  356 |    newspaper_publicationMaxCount(publication_list, publication_len, idClient, &publicationMaxCount, &idClientMaxCount);
+      |                                                                     ^~~~~~~~
+      |                                                                     |
+      |                                                                     int
+../src/newspaper.c:344:92: note: expected ‘Publication *’ {aka ‘struct <anonymous> *’} but argument is of type ‘int’
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |                                                                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+../src/newspaper.c:356:79: warning: passing argument 4 of ‘newspaper_publicationMaxCount’ makes integer from pointer without a cast [-Wint-conversion]
+  356 |    newspaper_publicationMaxCount(publication_list, publication_len, idClient, &publicationMaxCount, &idClientMaxCount);
+      |                                                                               ^~~~~~~~~~~~~~~~~~~~
+      |                                                                               |
+      |                                                                               int **
+../src/newspaper.c:344:114: note: expected ‘int’ but argument is of type ‘int **’
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |                                                                                                              ~~~~^~~~~~~~~~~~~~~
+../src/newspaper.c:356:101: warning: passing argument 5 of ‘newspaper_publicationMaxCount’ makes integer from pointer without a cast [-Wint-conversion]
+  356 |    newspaper_publicationMaxCount(publication_list, publication_len, idClient, &publicationMaxCount, &idClientMaxCount);
+      |                                                                                                     ^~~~~~~~~~~~~~~~~
+      |                                                                                                     |
+      |                                                                                                     int **
+../src/newspaper.c:344:134: note: expected ‘int’ but argument is of type ‘int **’
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |                                                                                                                                  ~~~~^~~~~~~~
+../src/newspaper.c:356:4: error: too few arguments to function ‘newspaper_publicationMaxCount’
+  356 |    newspaper_publicationMaxCount(publication_list, publication_len, idClient, &publicationMaxCount, &idClientMaxCount);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:344:12: note: declared here
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:375:1: error: expected declaration or statement at end of input
+  375 | }
+      | ^
+../src/newspaper.c:375: warning: control reaches end of non-void function [-Wreturn-type]
+  375 | }
+      | 
+At top level:
+../src/newspaper.c:344:12: warning: ‘newspaper_publicationMaxCount’ defined but not used [-Wunused-function]
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:06:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAdds’:
+../src/newspaper.c:310:6: warning: unused variable ‘idClient’ [-Wunused-variable]
+  310 |  int idClient;
+      |      ^~~~~~~~
+../src/newspaper.c: In function ‘newspaper_publicationMaxCount’:
+../src/newspaper.c:350:6: error: ‘idClient’ redeclared as different kind of symbol
+  350 |  int idClient;
+      |      ^~~~~~~~
+../src/newspaper.c:344:134: note: previous definition of ‘idClient’ was here
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |                                                                                                                                  ~~~~^~~~~~~~
+../src/newspaper.c:375:1: error: expected declaration or statement at end of input
+  375 | }
+      | ^
+../src/newspaper.c:375: warning: control reaches end of non-void function [-Wreturn-type]
+  375 | }
+      | 
+At top level:
+../src/newspaper.c:344:12: warning: ‘newspaper_publicationMaxCount’ defined but not used [-Wunused-function]
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:06:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAdds’:
+../src/newspaper.c:310:6: warning: unused variable ‘idClient’ [-Wunused-variable]
+  310 |  int idClient;
+      |      ^~~~~~~~
+../src/newspaper.c: In function ‘newspaper_publicationMaxCount’:
+../src/newspaper.c:350:6: error: ‘idClient’ redeclared as different kind of symbol
+  350 |  int idClient;
+      |      ^~~~~~~~
+../src/newspaper.c:344:134: note: previous definition of ‘idClient’ was here
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |                                                                                                                                  ~~~~^~~~~~~~
+At top level:
+../src/newspaper.c:344:12: warning: ‘newspaper_publicationMaxCount’ defined but not used [-Wunused-function]
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,int idClient, int* publicationMaxCount, int* idClientMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:08:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:24:130: error: expected declaration specifiers or ‘...’ before ‘,’ token
+   24 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,, int* publicationMaxCount, int* idClientMaxCount);
+      |                                                                                                                                  ^
+../src/newspaper.c: In function ‘newspaper_clientWithMostAdds’:
+../src/newspaper.c:310:6: warning: unused variable ‘idClient’ [-Wunused-variable]
+  310 |  int idClient;
+      |      ^~~~~~~~
+../src/newspaper.c: At top level:
+../src/newspaper.c:344:130: error: expected declaration specifiers or ‘...’ before ‘,’ token
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len,, int* publicationMaxCount, int* idClientMaxCount)
+      |                                                                                                                                  ^
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:08:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAdds’:
+../src/newspaper.c:310:6: warning: unused variable ‘idClient’ [-Wunused-variable]
+  310 |  int idClient;
+      |      ^~~~~~~~
+At top level:
+../src/newspaper.c:344:12: warning: ‘newspaper_publicationMaxCount’ defined but not used [-Wunused-function]
+  344 | static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len, int* publicationMaxCount, int* idClientMaxCount)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c: In function ‘newspaper_clientWithMostAdds’:
+../src/newspaper.c:328:46: warning: ‘idClientMaxCount’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  328 |    if(client_list[i].client_isEmpty == FALSE && client_list[i].client_id == idClientMaxCount)
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/newspaper.c:330:5: warning: ‘publicationMaxCount’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  330 |     printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  331 |       client_list[i].client_lastName,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  332 |       client_list[i].client_name,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  333 |       client_list[i].client_cuit,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  334 |       client_list[i].client_id,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~
+  335 |       publicationMaxCount);
+      |       ~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:09:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:09:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:11:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:11:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:12:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:12:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:13:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:13:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:14:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:14:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:17:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:17:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:53:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:53:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:54:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+12:54:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:55:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:55:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+12:55:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:01:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:06:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+13:06:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.

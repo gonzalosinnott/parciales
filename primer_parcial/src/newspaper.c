@@ -20,6 +20,8 @@
 static int newspaper_pauseMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
 static int newspaper_activeMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
 static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount);
+static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
+static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len, int* publicationMaxCount, int* idClientMaxCount);
 
 /**
  * \brief getMenu: Menu for choosing options of the program,
@@ -32,7 +34,7 @@ int newspaper_getMenu(int* choosenOption)
 	int retorno = -1;
 	if(utn_getIntNumber("\nIngrese una opción:"
 					   "\n 1-Alta de cliente."
-					   "\n 2-Modificar datos del client."
+					   "\n 2-Modificar datos del cliente."
 					   "\n 3-Baja de cliente."
 					   "\n 4-Publicar."
 					   "\n 5-Pausar publicación."
@@ -108,6 +110,7 @@ int newspaper_addPublicationMenu(Client* client_list, int client_len,int client_
 	}
 	else
 	{
+		client_printAll(client_list, client_len, client_firstLoad);
 		if(utn_getIntNumber("Ingrese el ID del Cliente:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
 		   client_findById(client_list, client_len, idToSearch)== 0)
 		{
@@ -159,7 +162,7 @@ static int newspaper_pauseMenu(Client* client_list, int client_len, Publication*
 	   publication_findById(publication_list, publication_len, idToSearch, &clientId)== 0)
 	{
 		indexToModify = publication_findIndexById(publication_list, publication_len, idToSearch);
-		if(publication_list[indexToModify].publication_status == ACTIVE)
+		if(strcmp(publication_list[indexToModify].publication_status,ACTIVE)==0)
 		{
 			publication_printById(publication_list, publication_len, idToSearch);
 			client_printById(client_list, client_len, clientId);
@@ -191,7 +194,7 @@ static int newspaper_activeMenu(Client* client_list, int client_len, Publication
 	   publication_findById(publication_list, publication_len, idToSearch, &clientId)== 0)
 	{
 		indexToModify = publication_findIndexById(publication_list, publication_len, idToSearch);
-		if(publication_list[indexToModify].publication_status == PAUSED)
+		if(strcmp(publication_list[indexToModify].publication_status,PAUSED)==0)
 		{
 			publication_printById(publication_list, publication_len, idToSearch);
 			client_printById(client_list, client_len, clientId);
@@ -214,7 +217,7 @@ int newspaper_printClientsWithActivePublications(Client* client_list, int client
 {
 	int retorno = -1;
 	int publicationCount;
-	int idCliente;
+	int idClient;
 
 	if(client_firstLoad == FALSE)
 	{
@@ -225,14 +228,14 @@ int newspaper_printClientsWithActivePublications(Client* client_list, int client
 		printf("-------------------------------------------------------------------------------------\n");
 		printf("|             LISTADO DE CLIENTES CON CANTIDAD DE PUBLICACIONES ACTIVAS             |\n");
 		printf("-------------------------------------------------------------------------------------\n");
-		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
+		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  |   ANUNCIOS ACTIVOS   |\n");
 		printf("-------------------------------------------------------------------------------------\n");
 		for(int i=0;i< client_len ;i++)
 		{
 			if(client_list[i].client_isEmpty == FALSE)
 			{
-				idCliente = client_list[i].client_id;
-				newspaper_publicationCountbyClientId(publication_list, publication_len, idCliente, &publicationCount);
+				idClient = client_list[i].client_id;
+				newspaper_publicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
 				printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
 						client_list[i].client_lastName,
 						client_list[i].client_name,
@@ -254,7 +257,7 @@ static int newspaper_publicationCountbyClientId(Publication* publication_list, i
 
 	for(int i=0;i< publication_len ;i++)
 	{
-		if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_status == ACTIVE && publication_list[i].publication_idClient == clientId)
+		if(publication_list[i].publication_isEmpty == FALSE && strcmp(publication_list[i].publication_status,ACTIVE)==0 && publication_list[i].publication_idClient == clientId)
 		{
 			count++;
 		}
@@ -269,24 +272,106 @@ int newspaper_getReportMenu(Client* client_list, int client_len,int client_first
 	int retorno = -1;
 	int choosenOption;
 
-	if(utn_getIntNumber("\nIngrese una opción:"
-					   "\n 1-Cliente con mas avisos."
-					   "\n 2-Cantidad de avisos pausados."
-					   "\n 3-Rubro con mas avisos."
-					   "\n 4-Salir."
-					   "\nOpcion:", "\nError.", &choosenOption, 3, 4, 1)==0)
+	if(client_firstLoad == FALSE)
 	{
-		switch(choosenOption)
+		printf("\nERROR. NO HAY CLIENTES INGRESADOS.\n");
+	}
+	else
+	{
+		if(utn_getIntNumber("\nIngrese una opción:"
+		         			"\n 1-Cliente con mas avisos."
+						    "\n 2-Cantidad de avisos pausados."
+						    "\n 3-Rubro con mas avisos."
+						    "\n 4-Salir."
+						    "\nOpcion:", "\nError.", &choosenOption, 3, 4, 1)==0)
 		{
-			case 1:
-				break;
-			case 2:
-				break;
-			case 3:
-				break;
+			switch(choosenOption)
+			{
+				case 1:
+					newspaper_clientWithMostAds(client_list, client_len, publication_list, publication_len, publication_firstLoad);
+					break;
+				case 2:
+					publication_countPaused(publication_list,publication_len,publication_firstLoad);
+					break;
+				case 3:
+					publication_countCategory(publication_list, publication_len, publication_firstLoad);
+					break;
+			}
+			retorno =0;
 		}
-		retorno =0;
 	}
 
+		return retorno;
+}
+
+static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
+{
+	int retorno = -1;
+	int publicationMaxCount;
+	int idClientMaxCount;
+
+	if(publication_firstLoad == FALSE)
+	{
+		printf("\nERROR. NO HAY PUBLICIDADES INGRESADAS.\n");
+	}
+	else
+	{
+		printf("-------------------------------------------------------------------------------------\n");
+		printf("|                           CLIENTE CON MAS PUBLICIDADES                            |\n");
+		printf("-------------------------------------------------------------------------------------\n");
+		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
+		printf("-------------------------------------------------------------------------------------\n");
+		for(int i=0;i< client_len ;i++)
+		{
+			newspaper_publicationMaxCount(client_list, client_len, publication_list, publication_len, &publicationMaxCount, &idClientMaxCount);
+			if(client_list[i].client_isEmpty == FALSE && client_list[i].client_id == idClientMaxCount)
+			{
+				printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
+						client_list[i].client_lastName,
+						client_list[i].client_name,
+						client_list[i].client_cuit,
+						client_list[i].client_id,
+						publicationMaxCount);
+				printf("-------------------------------------------------------------------------------------\n");
+			}
+		}
+		retorno = 0;
+	}
+	return retorno;
+}
+
+static int newspaper_publicationMaxCount(Client* client_list, int client_len, Publication* publication_list, int publication_len, int* publicationMaxCount, int* idClientMaxCount)
+{
+	int retorno = -1;
+	int id;
+	int count;
+	int maxCount = 0;
+	int idClient;
+
+	for(int i=0;i< client_len ;i++)
+	{
+		if(client_list[i].client_isEmpty == FALSE)
+		{
+			count = 0;
+			idClient = client_list[i].client_id;
+			for(int i=0;i< publication_len ;i++)
+			{
+
+				if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_idClient == idClient)
+				{
+
+					count++;
+					if(count>maxCount)
+					{
+						maxCount = count;
+						id = idClient;
+					}
+				}
+			}
+		}
+	}
+	*publicationMaxCount = maxCount;
+	*idClientMaxCount = id;
+	retorno = 0;
 	return retorno;
 }

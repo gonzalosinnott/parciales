@@ -51,10 +51,10 @@ int client_addHardcode(Client* client_list, int client_len, int *client_firstLoa
 											"Guzman",
 											"Bianchi"};
 		char client_cuit[][LEN_CUIT]={"23304560989",
-										"26249359947",
-										"21450453475",
-										"27103649264",
-										"21369834576"};
+									  "26249359947",
+									  "21450453475",
+									  "27103649264",
+									  "21369834576"};
 		for(int i = 0; i < 5; i++)
 		{
 			client_addData(client_list, client_len, client_id[i], client_name[i], client_lastName[i], client_cuit[i]);
@@ -297,6 +297,7 @@ int client_modifyMenu(Client* client_list, int client_len, int client_firstLoad)
 	}
 	else
 	{
+		client_printAll(client_list, client_len, client_firstLoad);
 		if(utn_getIntNumber("Ingrese el ID a modificar:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
 		   client_findById(client_list, client_len, idToSearch)== 0)
 		{
@@ -339,11 +340,7 @@ static int client_modify(Client* client_list, int client_len,int id)
 	{
 		do
 		{
-			printf("Client a modificar\n");
-			printf("Apellido y Nombre: %s %s CUIT: %s.\n",
-					client_list[indexToModify].client_lastName,
-					client_list[indexToModify].client_name,
-					client_list[indexToModify].client_cuit);
+			client_printById(client_list, client_len, id);
 			if(utn_getIntNumber("\nQue campo desea modificar:"
 								"\n 1-Apellido."
 								"\n 2-Nombre."
@@ -529,7 +526,7 @@ int client_printById(Client* client_list, int client_len, int idClient)
 			if(client_list[i].client_isEmpty == FALSE && client_list[i].client_id == idClient)
 			{
 				printf("-------------------------------------------------------\n");
-				printf("| DATOS DEL CLIENTE ID: %d                            |\n",idClient);
+				printf("| DATOS DEL CLIENTE ID: %-4d                          |\n",idClient);
 				printf("-------------------------------------------------------\n");
 				printf("| APELLIDO        | NOMBRE          | CUIT            |\n");
 				printf("-------------------------------------------------------\n");

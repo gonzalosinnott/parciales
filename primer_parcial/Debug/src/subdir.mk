@@ -5,22 +5,22 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/client.c \
+../src/main.c \
 ../src/newspaper.c \
-../src/primer_parcial.c \
 ../src/publication.c \
 ../src/utn.c 
 
 OBJS += \
 ./src/client.o \
+./src/main.o \
 ./src/newspaper.o \
-./src/primer_parcial.o \
 ./src/publication.o \
 ./src/utn.o 
 
 C_DEPS += \
 ./src/client.d \
+./src/main.d \
 ./src/newspaper.d \
-./src/primer_parcial.d \
 ./src/publication.d \
 ./src/utn.d 
 

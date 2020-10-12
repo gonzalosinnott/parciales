@@ -14,8 +14,8 @@
 #define TRUE 1
 #define FALSE 0
 #define LEN_NAME 50
-#define LEN_CUIT 13 //1-11111111-1
-
+#define LEN_CUIT 12 //11111111111
+#define LEN_FORMATEDCUIT 14 //11-11111111-1
 
 typedef struct
 {
@@ -23,7 +23,7 @@ typedef struct
 	int client_isEmpty;
 	char client_name[LEN_NAME];
 	char client_lastName[LEN_NAME];
-	char client_cuit[LEN_CUIT];
+	char client_cuit[LEN_FORMATEDCUIT];
 }Client;
 
 int client_initArray(Client* client_list, int client_len);
@@ -35,9 +35,5 @@ int client_removeMenu(Client* client_list, int client_len,int *client_firstLoad)
 int client_remove(Client* client_list, int client_len,int id);
 int client_printAll(Client* client_list, int client_len,int client_firstLoad);
 int client_printById(Client* client_list, int client_len, int idClient);
-
-
-
-
 
 #endif /* CLIENT_H_ */

@@ -13,19 +13,19 @@
 
 #define TRUE 1
 #define FALSE 0
-#define ACTIVE 1
-#define PAUSED 0
+#define ACTIVE "ACTIVA"
+#define PAUSED "PAUSADA"
 #define LEN_DESCRIPTION 65
-
+#define LEN_CATEGORY 20
 
 typedef struct
 {
 	int publication_id;
 	int publication_isEmpty;
-	int publication_category;
+	char publication_category[LEN_CATEGORY];
 	char publication_description[LEN_DESCRIPTION];
 	int publication_idClient;
-	int publication_status;
+	char publication_status[8];
 }Publication;
 
 int publication_initArray(Publication* publication_list, int publication_len);
@@ -38,6 +38,8 @@ int publication_findIndexById(Publication* publication_list, int publication_len
 int publication_removebyClientId(Publication* publication_list, int publication_len,int clientId);
 int publication_pause(Publication* publication_list, int publication_len,int id);
 int publication_active(Publication* publication_list, int publication_len,int id);
+int publication_countPaused(Publication* publication_list, int publication_len, int publication_firstLoad);
+int publication_countCategory(Publication* publication_list, int publication_len, int publication_firstLoad);
 int publication_printAll(Publication* publication_list, int publication_len,int publication_firstLoad);
 int publication_printActive(Publication* publication_list, int publication_len);
 int publication_printPaused(Publication* publication_list, int publication_len);
