@@ -21,6 +21,8 @@ static int newspaper_pauseMenu(Client* client_list, int client_len, Publication*
 static int newspaper_activeMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
 static int newspaper_publicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount);
 
+
+
 /**
  * \brief getMenu: Menu for choosing options of the program,
  * \param choosenOption* list: Pointer to variable that stores choosen option
@@ -210,7 +212,7 @@ static int newspaper_activeMenu(Client* client_list, int client_len, Publication
 	return retorno;
 }
 
-int newspaper_printClientsWithActivePublications(Client* client_list, int client_len,int client_firstLoad, Publication* publication_list, int publication_len)
+int newspaper_printClientsWithPublications(Client* client_list, int client_len,int client_firstLoad, Publication* publication_list, int publication_len)
 {
 	int retorno = -1;
 	int publicationCount;
@@ -223,7 +225,7 @@ int newspaper_printClientsWithActivePublications(Client* client_list, int client
 	else
 	{
 		printf("-------------------------------------------------------------------------------------\n");
-		printf("|             LISTADO DE CLIENTES CON CANTIDAD DE PUBLICACIONES ACTIVAS             |\n");
+		printf("              LISTADO DE CLIENTES CON CANTIDAD DE PUBLICACIONES ACTIVAS             |\n");
 		printf("-------------------------------------------------------------------------------------\n");
 		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
 		printf("-------------------------------------------------------------------------------------\n");
@@ -261,32 +263,5 @@ static int newspaper_publicationCountbyClientId(Publication* publication_list, i
 	}
 	*publicationCount = count;
 	retorno = 0;
-	return retorno;
-}
-
-int newspaper_getReportMenu(Client* client_list, int client_len,int client_firstLoad, Publication* publication_list, int publication_len, int publication_firstLoad)
-{
-	int retorno = -1;
-	int choosenOption;
-
-	if(utn_getIntNumber("\nIngrese una opción:"
-					   "\n 1-Cliente con mas avisos."
-					   "\n 2-Cantidad de avisos pausados."
-					   "\n 3-Rubro con mas avisos."
-					   "\n 4-Salir."
-					   "\nOpcion:", "\nError.", &choosenOption, 3, 4, 1)==0)
-	{
-		switch(choosenOption)
-		{
-			case 1:
-				break;
-			case 2:
-				break;
-			case 3:
-				break;
-		}
-		retorno =0;
-	}
-
 	return retorno;
 }

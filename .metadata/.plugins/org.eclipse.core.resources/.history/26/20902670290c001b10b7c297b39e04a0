@@ -61,12 +61,11 @@ int main(void) {
 					newspaper_publicationStatusMenu(arrayClients, QTY_CLIENTS, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad,choosenOption);
 					break;
 				case 7://IMPRIMIR CLIENTES CON NUMERO DE PUBLICACIONES
-					newspaper_printClientsWithActivePublications(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+					newspaper_printClientsWithPublications(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
 					break;
 				case 8://INFORMES
 					publication_printAll(arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
 					client_printAll(arrayClients, QTY_CLIENTS, client_firstLoad);
-					newspaper_getReportMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
 					break;
 			}
 		}while(choosenOption!=9);

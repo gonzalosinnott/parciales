@@ -223,7 +223,7 @@ int newspaper_printClientsWithActivePublications(Client* client_list, int client
 	else
 	{
 		printf("-------------------------------------------------------------------------------------\n");
-		printf("|             LISTADO DE CLIENTES CON CANTIDAD DE PUBLICACIONES ACTIVAS             |\n");
+		printf("              LISTADO DE CLIENTES CON CANTIDAD DE PUBLICACIONES ACTIVAS             |\n");
 		printf("-------------------------------------------------------------------------------------\n");
 		printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
 		printf("-------------------------------------------------------------------------------------\n");
