@@ -413,7 +413,7 @@ static int client_modify(Client* client_list, int client_len,int id)
 				}
 				if(choosenOption!=4)
 				{
-					utn_getChar("\n¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+					utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
 				}
 			}while(answer!='N');
 			retorno = 0;

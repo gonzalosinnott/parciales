@@ -401,10 +401,6 @@ static int client_modify(Client* client_list, int client_len,int id)
 							{
 								strcpy(client_list[indexToModify].client_cuit,bufferClient.client_cuit);
 							}
-							else
-							{
-								printf("\nERROR, EL CUIT INGRESADO PERTENECE A OTRO CLIENTE.\n");
-							}
 							break;
 						case 4:
 							answer = 'N';
@@ -413,7 +409,7 @@ static int client_modify(Client* client_list, int client_len,int id)
 				}
 				if(choosenOption!=4)
 				{
-					utn_getChar("\n¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+					utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
 				}
 			}while(answer!='N');
 			retorno = 0;
