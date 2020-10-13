@@ -14,8 +14,8 @@
 #define TRUE 1
 #define FALSE 0
 #define LEN_NAME 50
-#define LEN_CUIT 12 //11111111111
-#define LEN_FORMATEDCUIT 14 //11-11111111-1
+#define LEN_CUIT 12
+#define LEN_FORMATEDCUIT 14
 
 typedef struct
 {

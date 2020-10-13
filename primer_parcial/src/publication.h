@@ -31,8 +31,6 @@ typedef struct
 int publication_initArray(Publication* publication_list, int publication_len);
 int publication_addHardcode(Publication* publication_list, int publication_len, int *publication_firstLoad);
 int publication_add(Publication* publication_list,int publication_len, int *publication_firstLoad, int clientId);
-int publication_modifyMenu(Publication* publication_list, int publication_len, int publication_firstLoad);
-int publication_removeMenu(Publication* publication_list, int publication_len,int *publication_firstLoad);
 int publication_findById(Publication* publication_list, int publication_len,int id, int* clientId);
 int publication_findIndexById(Publication* publication_list, int publication_len,int id);
 int publication_removebyClientId(Publication* publication_list, int publication_len,int clientId);

@@ -29,11 +29,15 @@ static int publication_checkFirstEmptyIndex(Publication* publication_list, int p
 static int publication_getForm(int *publication_category, char *publication_description);
 static int publication_addData(Publication* publication_list,int publication_len,int publication_id,int publication_category, char publication_description[], int publication_idCliente);
 static int publication_formatCategory(int publication_category,char* formatedCategory);
-static int publication_modify(Publication* publication_list, int publication_len,int id);
-static int publication_remove(Publication* publication_list, int publication_len,int id);
 static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta);
 
-
+/**
+ * \brief publication_addHardcode: Adds Hardcoded data for testing purposes
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int publication_firstLoad: Pointer to space in memory where is the variable to indicate if publications array is empty
+ * \return (-1) Error / (0) Ok
+ */
 
 int publication_addHardcode(Publication* publication_list, int publication_len, int *publication_firstLoad)
 {
@@ -59,9 +63,9 @@ int publication_addHardcode(Publication* publication_list, int publication_len, 
 
 /**
  * \brief publication_initArray: To indicate that all positions in the array are empty,
- * \this function put the flag (publication_isEmpty) in TRUE in all position of the array
- * \param sEmployee* publication_list: Pointer to array of employees
- * \param int publication_len: Array length
+ * \this function puts the flag (publication_isEmpty) in TRUE in all position of the array
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
  * \return (-1) Error / (0) Ok
  */
 
@@ -80,10 +84,10 @@ int publication_initArray(Publication* publication_list, int publication_len)
 }
 
 /**
- * \brief publication_add: Asks the user for the student data
- * \param Publication* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int publication_firstLoad: Pointer to space in memory where is the
+ * \brief publication_add: Asks the user for the publication data
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int publication_firstLoad: Pointer to space in memory where is the variable to indicate if publications array is empty
  * \variable to indicate if an entry is loaded
  * \return (-1) Error / (0) Ok
  */
@@ -99,7 +103,8 @@ int publication_add(Publication* publication_list,int publication_len, int *publ
 
 	publication_idCliente = clientId;
 
-	if(publication_list != NULL && publication_len > 0 && publication_firstLoad >0 && publication_checkFirstEmptyIndex(publication_list, publication_len, &index)==0)
+	if(publication_list != NULL && publication_len > 0 &&
+	   publication_checkFirstEmptyIndex(publication_list, publication_len, &index)==0)
 	{
 		if(publication_getForm(&publication_category, publication_description)== 0)
 		{
@@ -113,12 +118,12 @@ int publication_add(Publication* publication_list,int publication_len, int *publ
 		}
 		else
 		{
-			printf("\nERROR EN LA CARGA DEL EMPLEADO.\n");
+			printf("\nERROR EN LA CARGA DE PUBLICIDAD.\n");
 		}
 	}
 	else
 	{
-		printf("\nNO SE PUEDEN CARGAR MAS REGISTROS.\n");
+		printf("\nNO SE PUEDEN CARGAR MAS PUBLICIDADES.\n");
 	}
 	return retorno;
 }
@@ -126,8 +131,8 @@ int publication_add(Publication* publication_list,int publication_len, int *publ
 /**
  * \brief publication_checkFirstEmptyIndex: Checks first empty index in the array
  * \this function search the array for the first index with the value TRUE in the publication_isEmpty item
- * \param sEmployee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
  * \param int *EmptyIndex: Pointer to position of first empty index.
  * \return (-1) Error / (0) Ok
  */
@@ -152,10 +157,8 @@ static int publication_checkFirstEmptyIndex(Publication* publication_list, int p
 
 /**
  * \brief publication_getForm: Brings up a menu for the user to complete with info
- * \param char *publication_name: Pointer to place to store publication_name
- * \param char *lastName: Pointer to place to store last publication_name
- * \param float *salary: Pointer to place to store salary
- * \param int *sector: Pointer to place to store sector
+ * \param int *publication_category: Pointer to place to store publication_category
+ * \param char *publication_description: Pointer to place to store publication_description
  * \return (-1) Error / (0) Ok
  */
 
@@ -181,7 +184,7 @@ static int publication_getForm(int *publication_category, char *publication_desc
 }
 
 /**
- *  \brief generateNewId: Generates a new ID that's +1 from previous loaded employee ID.
+ *  \brief publication_generateNewId: Generates a new ID that's +1 from previous loaded ID.
  */
 
 static int publication_generateNewId(void)
@@ -193,65 +196,79 @@ static int publication_generateNewId(void)
 }
 
 /**
- *  \brief publication_addData: add in a existing publication_list of clients the values received
- *  as parameters in the first empty position.
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int id: id generated by generateNewId() function
- * \param char publication_name[]: Input by user from getEmployeeForm
- * \param char lastName[]: Input by user from getEmployeeForm
- * \param float salary: Input by user from getEmployeeForm
- * \param int sector: Input by user from getEmployeeForm
+ * \brief publication_addData: add in a existing list of publications the values received as parameters in the first empty position.
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int publication_id: id generated by publication_generateNewId() function
+ * \param int *publication_category: Input by user from getEmployeeForm
+ * \param char *publication_description: Input by user from getEmployeeForm
+ * \param int publication_idClient: ID given by user from by user from newspaper_addPublicationMenu()
  * \return (-1) Error / (0) Ok
  */
 
-static int publication_addData(Publication* publication_list,int publication_len,int publication_id,int publication_category, char publication_description[], int publication_idClient)
+static int publication_addData(Publication* publication_list,int publication_len,int publication_id,int publication_category, char *publication_description, int publication_idClient)
 {
 	int retorno = -1;
 	int emptyIndex;
 	char formatedCategory[LEN_CATEGORY];
 
-	publication_formatCategory(publication_category, formatedCategory);
-	if(publication_checkFirstEmptyIndex(publication_list, publication_len, &emptyIndex)==0)
+	if(publication_list != NULL && publication_len > 0 &&
+       publication_id > 0 && publication_category > 0 &&
+	   publication_description != NULL && publication_idClient > 0)
 	{
-		publication_list[emptyIndex].publication_id=publication_id;
-		publication_list[emptyIndex].publication_isEmpty=FALSE;
-		strcpy(publication_list[emptyIndex].publication_category,formatedCategory);
-		strcpy(publication_list[emptyIndex].publication_description,publication_description);
-		publication_list[emptyIndex].publication_idClient=publication_idClient;
-		strcpy(publication_list[emptyIndex].publication_status,ACTIVE);
-		retorno=0;
+		publication_formatCategory(publication_category, formatedCategory);
+		if(publication_checkFirstEmptyIndex(publication_list, publication_len, &emptyIndex)==0)
+		{
+			publication_list[emptyIndex].publication_id=publication_id;
+			publication_list[emptyIndex].publication_isEmpty=FALSE;
+			strcpy(publication_list[emptyIndex].publication_category,formatedCategory);
+			strcpy(publication_list[emptyIndex].publication_description,publication_description);
+			publication_list[emptyIndex].publication_idClient=publication_idClient;
+			strcpy(publication_list[emptyIndex].publication_status,ACTIVE);
+			retorno=0;
+		}
 	}
     return retorno;
 }
 
+/**
+ * \brief publication_formatCategory: Converts the data given by publication_category to string form
+ * \param int publication_category: Input by user from getEmployeeForm
+ * \param char *formatedCategory: Pointer to space in memory where formated value will be stored.
+ * \return (-1) Error / (0) Ok
+ */
+
 static int publication_formatCategory(int publication_category,char* formatedCategory)
 {
 	int retorno = -1;
-	switch(publication_category)
+
+	if(publication_category > 0 && formatedCategory != NULL)
 	{
-		case 1:
-			strcpy(formatedCategory,"EMPLEOS");
-			break;
-		case 2:
-			strcpy(formatedCategory,"AUTOMOTOR");
-			break;
-		case 3:
-			strcpy(formatedCategory,"INMOBILIARIOS");
-			break;
-		case 4:
-			strcpy(formatedCategory,"COMPRA/VENTA");
-			break;
+		switch(publication_category)
+		{
+			case 1:
+				strcpy(formatedCategory,"EMPLEOS");
+				break;
+			case 2:
+				strcpy(formatedCategory,"AUTOMOTOR");
+				break;
+			case 3:
+				strcpy(formatedCategory,"INMOBILIARIOS");
+				break;
+			case 4:
+				strcpy(formatedCategory,"COMPRA/VENTA");
+				break;
+		}
+		retorno = 0;
 	}
-	retorno = 0;
 	return retorno;
 }
 
 
 /**
- *  \brief publication_findIndexById: find an Employee by Id then returns the index position in array.
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
+ * \brief publication_findIndexById: find an publication by Id then returns the index position in array.
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
  * \param int id: id to search
  * \return Return employee index position or (-1) if ERROR
  */
@@ -276,9 +293,9 @@ int publication_findIndexById(Publication* publication_list, int publication_len
 
 
 /**
- *  \brief publication_findById: find a publication by Id and returns 0 if ID is found
+ * \brief publication_findById: find a publication by Id and returns 0 if ID is found
  * \param Publication* publication_list: Pointer to array of publications
- * \param int publication_len: Array length
+ * \param int publication_len: Publication Array length
  * \param int id: id to search
  * \param int* clientId: Pointer to place to store client ID associated to publication ID
  * \return Return 0 if ID exists or (-1) if ERROR
@@ -304,9 +321,9 @@ int publication_findById(Publication* publication_list, int publication_len,int 
 }
 
 /**
- *  \brief publication_findByClienteId: find a publication by Cliente Id and returns 0 if ID is found
+ * \brief publication_findByClienteId: find a publication by Client Id and returns 0 if ID is found
  * \param Publication* publication_list: Pointer to array of publications
- * \param int publication_len: Array length
+ * \param int publication_len: Publication Array length
  * \param int id: id to search
  * \return Return 0 if ID exists or (-1) if ERROR
  */
@@ -329,240 +346,37 @@ static int publication_findByClienteId(Publication* publication_list, int public
 	return retorno;;
 }
 
-/**
- * \brief publication_modifyMenu: Modifies the data of an Employee by given Id.
- * Allows to modify individual fields of the employee by a switch
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int publication_firstLoad: variable to check if there is even one entry loaded
- * \return (-1) Error / (0) Ok
- */
-
-int publication_modifyMenu(Publication* publication_list, int publication_len, int publication_firstLoad)
-{
-	int retorno = -1;
-	int idToSearch;
-	int clientId;
-
-	if(publication_firstLoad == FALSE)
-	{
-		printf("\nERROR. NO HAY DATOS INGRESADOS.\n");
-	}
-	else
-	{
-		if(utn_getIntNumber("Ingrese el ID a modificar:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
-		   publication_findById(publication_list, publication_len, idToSearch, &clientId)== 0)
-		{
-			if(publication_modify(publication_list,publication_len,idToSearch)==0)
-			{
-				printf("\nREGISTRO DE CLIENTE MODIFICADO CON EXITO.\n");
-				retorno = 0;
-			}
-
-		}
-		else
-		{
-			printf("\nERROR, ID INEXISTENTE.\n");
-		}
-	}
-	return retorno;
-}
 
 /**
- * \brief publication_modify: Modifies the data of an Employee by given Id.
- * Allows to modify individual fields of the employee by a switch
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int publication_firstLoad: variable to check if there is even one entry loaded
- * \return (-1) Error / (0) Ok
- */
-
-static int publication_modify(Publication* publication_list, int publication_len,int id)
-{
-	int retorno = -1;
-	int choosenOption;
-	char answer;
-	int publicationCategory;
-	int indexToModify;
-	char formatedCategory[LEN_CATEGORY];
-
-	Publication bufferPublication;
-
-	indexToModify = publication_findIndexById(publication_list, publication_len, id);
-
-	if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
-	{
-		do
-		{
-			printf("Publication a modificar\n");
-			printf("Categoria: %s Descripción: %s ID Cliente: %d.\n",
-					publication_list[indexToModify].publication_category,
-					publication_list[indexToModify].publication_description,
-					publication_list[indexToModify].publication_idClient);
-			if(utn_getIntNumber("\nQue campo desea modificar:"
-								"\n 1-RUBRO."
-								"\n 2-DESCRIPCION."
-								"\n 3-ID CLIENTE:"
-								"\n 4-Salir"
-								"\nOpcion:", "\nError.", &choosenOption, 3, 4, 1)==0)
-			{
-				switch(choosenOption)
-				{
-					case 1:
-						if(utn_getIntNumber("Ingrese numero de rubro:"
-										   "\n 1-EMPLEOS"
-										   "\n 2-AUTOMOTOR"
-										   "\n 3-INMOBILIARIOS"
-										   "\n 4-COMPRA/VENTA"
-										   "\nOpcion: ",
-										   "Error, ", &publicationCategory, 3, 4, 1)==0)
-						{
-							publication_formatCategory(publicationCategory, formatedCategory);
-							strcpy(publication_list[indexToModify].publication_category,formatedCategory);
-						}
-						break;
-					case 2:
-						if(utn_getAlphaNum("Ingrese Descripción:", "Error. ", bufferPublication.publication_description, 3, LEN_DESCRIPTION)==0)
-						{
-							strcpy(publication_list[indexToModify].publication_description,bufferPublication.publication_description);
-						}
-						break;
-					case 3:
-						if(utn_getIntNumber("Ingrese ID del Cliente:", "Error. ", &bufferPublication.publication_idClient, 3, INT_MAX, 1)==0)
-						{
-							publication_list[indexToModify].publication_idClient = bufferPublication.publication_idClient;
-						}
-						break;
-					case 4:
-						answer = 'N';
-						break;
-				}
-			}
-			if(choosenOption!=4)
-			{
-				utn_getChar("¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
-			}
-		}while(answer!='N');
-		retorno = 0;
-	}
-	return retorno;
-}
-
-/**
- * \brief publication_removeMenu: Remove a Employee by Id (put publication_isEmpty Flag in TRUE)
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int *publication_firstLoad: variable to check if there is even one entry loaded and
- *  safeguard to prevent errors if all data is erased
- * \return (-1) Error / (0) Ok
- */
-
-int publication_removeMenu(Publication* publication_list, int publication_len,int *publication_firstLoad)
-{
-	int retorno = -1;
-	int idToSearch;
-	int clientId;
-
-	if(*publication_firstLoad == FALSE)
-	{
-		printf("\nERROR. NO HAY DATOS INGRESADOS.\n");
-	}
-	else
-	{
-		if(utn_getIntNumber("Ingrese el ID a eliminar:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
-		   publication_findById(publication_list, publication_len, idToSearch, &clientId)== 0 &&
-		   publication_remove(publication_list,publication_len,idToSearch)== 0)
-		{
-			for(int i = 0; i < publication_len; i++)
-			{
-				if(publication_list[i].publication_isEmpty == TRUE)
-				{
-					*publication_firstLoad = FALSE;
-				}
-				else
-				{
-					*publication_firstLoad = TRUE;
-					break;
-				}
-			}
-			retorno = 0;
-		}
-	}
-	return retorno;
-}
-
-/**
- * \brief publication_remove: Remove a Employee by Id (put publication_isEmpty Flag in TRUE)
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int id: id value of entry to remove
- *  safeguard to prevent errors if all data is erased
- * \return (-1) Error / (0) Ok
- */
-
-static int publication_remove(Publication* publication_list, int publication_len,int id)
-{
-	int retorno = -1;
-	int indexToModify;
-	char answer;
-
-	indexToModify = publication_findIndexById(publication_list, publication_len, id);
-
-	if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
-	{
-		printf("Publication a eliminar\n");
-		printf("Categoria: %s Descripcion: %s ID Cliente: %d\n", publication_list[indexToModify].publication_category,publication_list[indexToModify].publication_description,publication_list[indexToModify].publication_idClient);
-		utn_getChar("¿Desea eliminar este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
-		switch(answer)
-		{
-			case 'Y':
-				publication_list[indexToModify].publication_isEmpty = TRUE;
-				printf("\nREGISTRO DE PUBLICIDAD BORRADO CON EXITO.\n");
-				break;
-			case'N':
-				printf("\nREGISTRO NO BORRADO\n");
-				break;
-			default:
-				printf("\nERROR, INGRESE 'Y' PARA BORRAR EL REGISTRO.\n");
-		}
-		retorno = 0;
-	}
-	else
-	{
-		printf("\nERROR, ID INEXISTENTE.\n");
-	}
-	return retorno;
-}
-
-/**
- * \brief publication_remove: Remove a Employee by Id (put publication_isEmpty Flag in TRUE)
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int id: id value of entry to remove
- *  safeguard to prevent errors if all data is erased
+ * \brief publication_removebyClientId: Remove a publication associated by given client ID (put publication_isEmpty Flag in TRUE)
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int id: id value of Client
  * \return (-1) Error / (0) Ok
  */
 
 int publication_removebyClientId(Publication* publication_list, int publication_len,int idClient)
 {
 	int retorno = -1;
-
-	for(int i=0;i< publication_len ;i++)
+	if (publication_list != NULL && publication_len > 0 && idClient > 0)
 	{
-		if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_idClient == idClient)
+		for(int i=0;i< publication_len ;i++)
 		{
-			publication_list[i].publication_isEmpty = TRUE;
-			retorno = 0;
+			if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_idClient == idClient)
+			{
+				publication_list[i].publication_isEmpty = TRUE;
+				retorno = 0;
+			}
 		}
 	}
 	return retorno;
 }
 
 /**
- * \brief publication_remove: Remove a Employee by Id (put publication_isEmpty Flag in TRUE)
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int id: id value of entry to remove
+ * \brief publication_pause: Pauses a publication(put publication_status Flag in PAUSED)
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int id: id value of publication to pause
  *  safeguard to prevent errors if all data is erased
  * \return (-1) Error / (0) Ok
  */
@@ -573,33 +387,35 @@ int publication_pause(Publication* publication_list, int publication_len,int id)
 	int indexToModify;
 	char answer;
 
-	indexToModify = publication_findIndexById(publication_list, publication_len, id);
-
-	if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
+	if (publication_list != NULL && publication_len > 0 && id > 0)
 	{
-		utn_getChar("\n¿Desea pausar esta publicacion?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
-		switch(answer)
+		indexToModify = publication_findIndexById(publication_list, publication_len, id);
+		if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
 		{
-			case 'Y':
-				strcpy(publication_list[indexToModify].publication_status,PAUSED);
-				printf("\nREGISTRO DE PUBLICIDAD PAUSADO CON EXITO.\n");
-				break;
-			case'N':
-				printf("\nREGISTRO NO PAUSADO\n");
-				break;
-			default:
-				printf("\nERROR, INGRESE 'Y' PARA PAUSAR EL REGISTRO.\n");
+			utn_getChar("\n¿Desea pausar esta publicacion?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+			switch(answer)
+			{
+				case 'Y':
+					strcpy(publication_list[indexToModify].publication_status,PAUSED);
+					printf("\nREGISTRO DE PUBLICIDAD PAUSADO CON EXITO.\n");
+					break;
+				case'N':
+					printf("\nREGISTRO NO PAUSADO\n");
+					break;
+				default:
+					printf("\nERROR, INGRESE 'Y' PARA PAUSAR EL REGISTRO.\n");
+			}
+			retorno = 0;
 		}
-		retorno = 0;
 	}
 	return retorno;
 }
 
 /**
- * \brief publication_remove: Remove a Employee by Id (put publication_isEmpty Flag in TRUE)
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int id: id value of entry to remove
+ * \brief publication_active: Activates a previously paused publication(put publication_status Flag in ACTIVE)
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int id: id value of publication to pause
  *  safeguard to prevent errors if all data is erased
  * \return (-1) Error / (0) Ok
  */
@@ -610,67 +426,23 @@ int publication_active(Publication* publication_list, int publication_len,int id
 	int indexToModify;
 	char answer;
 
-	indexToModify = publication_findIndexById(publication_list, publication_len, id);
-
-	if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
+	if (publication_list != NULL && publication_len > 0 && id > 0)
 	{
-		utn_getChar("\n¿Desea reanudar esta publicacion?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
-		switch(answer)
+		indexToModify = publication_findIndexById(publication_list, publication_len, id);
+		if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
 		{
-			case 'Y':
-				strcpy(publication_list[indexToModify].publication_status,ACTIVE);
-				printf("\nREGISTRO DE PUBLICIDAD REANUDADO CON EXITO.\n");
-				break;
-			case'N':
-				printf("\nREGISTRO NO REANUDADO\n");
-				break;
-			default:
-				printf("\nERROR, INGRESE 'Y' PARA REANUDAR EL REGISTRO.\n");
-		}
-		retorno = 0;
-	}
-	return retorno;
-}
-
-
-/**
- * \brief publication_printAll: print the content of publicationes array
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int publication_firstLoad: Pointer to space in memory where is the
- * \variable to indicate if an entry is loaded
- * \return (-1) Error / (0) Ok*
- */
-
-int publication_printAll(Publication* publication_list, int publication_len, int publication_firstLoad)
-{
-	int retorno = -1;
-
-	if(publication_firstLoad == FALSE)
-	{
-		printf("\nERROR. NO HAY DATOS INGRESADOS.\n");
-	}
-	else
-	{
-		if(publication_list != NULL && publication_len > 0)
-		{
-			printf("-----------------------------------------------------------------------------------------------------------------\n");
-			printf("|                                          LISTADO DE PUBLICACIONES                                             |\n");
-			printf("-----------------------------------------------------------------------------------------------------------------\n");
-			printf("| ID CLIENTE |   CATEGORIA   | DESCRIPCION                                                      | ESTADO |  ID  |\n");
-			printf("-----------------------------------------------------------------------------------------------------------------\n");
-			for(int i=0;i< publication_len ;i++)
+			utn_getChar("\n¿Desea reanudar esta publicacion?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
+			switch(answer)
 			{
-				if(publication_list[i].publication_isEmpty == FALSE)
-				{
-					printf("| %-11d| %-14s| %-65s| %-7s| %-5d|\n",
-							publication_list[i].publication_idClient,
-							publication_list[i].publication_category,
-							publication_list[i].publication_description,
-							publication_list[i].publication_status,
-							publication_list[i].publication_id);
-					printf("-----------------------------------------------------------------------------------------------------------------\n");
-				}
+				case 'Y':
+					strcpy(publication_list[indexToModify].publication_status,ACTIVE);
+					printf("\nREGISTRO DE PUBLICIDAD REANUDADO CON EXITO.\n");
+					break;
+				case'N':
+					printf("\nREGISTRO NO REANUDADO\n");
+					break;
+				default:
+					printf("\nERROR, INGRESE 'Y' PARA REANUDAR EL REGISTRO.\n");
 			}
 			retorno = 0;
 		}
@@ -678,12 +450,58 @@ int publication_printAll(Publication* publication_list, int publication_len, int
 	return retorno;
 }
 
+
 /**
- * \brief publication_printAll: print the content of publicationes array
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int publication_firstLoad: Pointer to space in memory where is the
- * \variable to indicate if an entry is loaded
+ * \brief publication_printAll: prints the content of publications array
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int publication_firstLoad: Pointer to space in memory where is the variable to indicate if publications array is empty
+ * \return (-1) Error / (0) Ok*
+ */
+
+int publication_printAll(Publication* publication_list, int publication_len, int publication_firstLoad)
+{
+	int retorno = -1;
+
+	if(publication_list != NULL && publication_len >0)
+	{
+		if(publication_firstLoad == FALSE)
+		{
+			printf("\nERROR. NO HAY DATOS INGRESADOS.\n");
+		}
+		else
+		{
+			if(publication_list != NULL && publication_len > 0)
+			{
+				printf("-----------------------------------------------------------------------------------------------------------------\n");
+				printf("|                                          LISTADO DE PUBLICACIONES                                             |\n");
+				printf("-----------------------------------------------------------------------------------------------------------------\n");
+				printf("| ID CLIENTE |   CATEGORIA   | DESCRIPCION                                                      | ESTADO |  ID  |\n");
+				printf("-----------------------------------------------------------------------------------------------------------------\n");
+				for(int i=0;i< publication_len ;i++)
+				{
+					if(publication_list[i].publication_isEmpty == FALSE)
+					{
+						printf("| %-11d| %-14s| %-65s| %-7s| %-5d|\n",
+								publication_list[i].publication_idClient,
+								publication_list[i].publication_category,
+								publication_list[i].publication_description,
+								publication_list[i].publication_status,
+								publication_list[i].publication_id);
+						printf("-----------------------------------------------------------------------------------------------------------------\n");
+					}
+				}
+				retorno = 0;
+			}
+		}
+	}
+	return retorno;
+}
+
+/**
+ * \brief publication_printActive: prints only the active publications
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
  * \return (-1) Error / (0) Ok*
  */
 
@@ -718,11 +536,9 @@ int publication_printActive(Publication* publication_list, int publication_len)
 }
 
 /**
- * \brief publication_printAll: print the content of publicationes array
- * \param Employee* publication_list: Pointer to array of clients
- * \param int publication_len: Array length
- * \param int publication_firstLoad: Pointer to space in memory where is the
- * \variable to indicate if an entry is loaded
+ * \brief publication_printPaused: prints only the paused publications
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
  * \return (-1) Error / (0) Ok*
  */
 
@@ -759,9 +575,9 @@ int publication_printPaused(Publication* publication_list, int publication_len)
 
 /**
  * \brief publication_printByClienteId: print the content of a given publication by client ID
- * \param Employee* publication_list: Pointer to array of publications
- * \param int publication_len: Array length
- * \param int publication_firstLoad: Pointer to space in memory where is the variable to indicate if an entry is loaded
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int publication_firstLoad: Pointer to space in memory where is the variable to indicate if publications array is empty
  * \param int idCliente: Value to search and print asociated info
  * \return (-1) Error / (0) Ok*
  */
@@ -770,6 +586,8 @@ int publication_printByClientId(Publication* publication_list, int publication_l
 {
 	int retorno = -1;
 
+	if (publication_list != NULL && publication_len > 0 && clientId > 0)
+	{
 		if(publication_findByClienteId(publication_list, publication_len, clientId) != 0)
 		{
 			printf("\nNO POSEE PUBLICACIONES INGRESADAS.\n");
@@ -796,71 +614,99 @@ int publication_printByClientId(Publication* publication_list, int publication_l
 						retorno = 0;
 					}
 				}
-
 			}
 		}
-		return retorno;
+	}
+	return retorno;
 }
+
+/**
+ * \brief publication_printById: print the publication associated to the id given
+ * \param Publication* client_list: Pointer to array of publications
+ * \param int client_len: Publication Array length
+ * \param int id: Value to search and print associated info
+ * \return (-1) Error / (0) Ok*
+ */
 
 int publication_printById(Publication* publication_list, int publication_len,int Id)
 {
 	int retorno = -1;
 	int clientId;
-
-	if(publication_findById(publication_list, publication_len, Id, &clientId) != 0)
+	if (publication_list != NULL && publication_len > 0 && Id > 0)
 	{
-		printf("\nERROR, ID DE PUBLICACION INEXISTENTE.\n");
-	}
-	else
-	{
-		if(publication_list != NULL && publication_len > 0)
+		if(publication_findById(publication_list, publication_len, Id, &clientId) != 0)
 		{
-			for(int i=0;i< publication_len ;i++)
+			printf("\nERROR, ID DE PUBLICACION INEXISTENTE.\n");
+		}
+		else
+		{
+			if(publication_list != NULL && publication_len > 0)
 			{
-				if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_id == Id)
+				for(int i=0;i< publication_len ;i++)
 				{
-					printf("----------------------------------------------------------------------------------------------------------------\n");
-					printf("| PUBLICACION ID : %-4d                                                                                        |\n",Id);
-					printf("----------------------------------------------------------------------------------------------------------------\n");
-					printf("|   CATEGORIA   | DESCRIPCION                                                            | ESTADO | ID CLIENTE |\n");
-					printf("----------------------------------------------------------------------------------------------------------------\n");
-					printf("| %-14s| %-71s| %-8s| %-10d|\n",
-							publication_list[i].publication_category,
-							publication_list[i].publication_description,
-							publication_list[i].publication_status,
-							publication_list[i].publication_idClient);
-					printf("----------------------------------------------------------------------------------------------------------------\n");
-					retorno = 0;
+					if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_id == Id)
+					{
+						printf("----------------------------------------------------------------------------------------------------------------\n");
+						printf("| PUBLICACION ID : %-4d                                                                                        |\n",Id);
+						printf("----------------------------------------------------------------------------------------------------------------\n");
+						printf("|   CATEGORIA   | DESCRIPCION                                                            | ESTADO | ID CLIENTE |\n");
+						printf("----------------------------------------------------------------------------------------------------------------\n");
+						printf("| %-14s| %-71s| %-8s| %-10d|\n",
+								publication_list[i].publication_category,
+								publication_list[i].publication_description,
+								publication_list[i].publication_status,
+								publication_list[i].publication_idClient);
+						printf("----------------------------------------------------------------------------------------------------------------\n");
+						retorno = 0;
+					}
 				}
-			}
 
+			}
 		}
 	}
 	return retorno;
 }
+
+/**
+ * \brief publication_countPaused: counts the number of paused publications
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int publication_firstLoad: Pointer to space in memory where is the variable to indicate if publications array is empty
+ */
 
 int publication_countPaused(Publication* publication_list, int publication_len, int publication_firstLoad)
 {
 	int retorno = -1;
 	int count = 0;
-	if(publication_firstLoad == FALSE)
+
+	if (publication_list != NULL && publication_len > 0)
 	{
-		printf("\nNO HAY PUBLICIDADES CARGADAS.\n");
-	}
-	else
-	{
-		for(int i=0;i< publication_len ;i++)
+		if(publication_firstLoad == FALSE)
 		{
-			if(publication_list[i].publication_isEmpty == FALSE && strcmp(publication_list[i].publication_status,PAUSED)==0)
+			printf("\nNO HAY PUBLICIDADES CARGADAS.\n");
+		}
+		else
+		{
+			for(int i=0;i< publication_len ;i++)
 			{
-				count++;
+				if(publication_list[i].publication_isEmpty == FALSE && strcmp(publication_list[i].publication_status,PAUSED)==0)
+				{
+					count++;
+				}
 			}
 		}
+		printf("\nEL NUMERO DE PUBLICIDADES PAUSADAS ES: %d\n",count);
 		retorno = 0;
 	}
-	printf("\nEL NUMERO DE PUBLICIDADES PAUSADAS ES: %d\n",count);
 	return retorno;
 }
+
+/**
+ * \brief publication_countCategory: counts the number of publications of each category
+ * \param Publication* publication_list: Pointer to array of publications
+ * \param int publication_len: Publication Array length
+ * \param int publication_firstLoad: Pointer to space in memory where is the variable to indicate if publications array is empty
+ */
 
 int publication_countCategory(Publication* publication_list, int publication_len, int publication_firstLoad)
 {
@@ -870,38 +716,48 @@ int publication_countCategory(Publication* publication_list, int publication_len
 	int countEmpleos = 0;
 	int countCompraVenta = 0;
 
-	if(publication_firstLoad == FALSE)
+	if (publication_list != NULL && publication_len > 0)
 	{
-		printf("\nNO HAY PUBLICIDADES CARGADAS.\n");
-	}
-	else
-	{
-		for(int i=0;i< publication_len ;i++)
+		if(publication_firstLoad == FALSE)
 		{
-
-			if(strcmp(publication_list[i].publication_category,"INMOBILIARIOS")==0)
-			{
-				countInmobiliario++;
-			}
-			else if(strcmp(publication_list[i].publication_category,"AUTOMOTOR")==0)
-			{
-				countAutomotor++;
-			}
-			else if(strcmp(publication_list[i].publication_category,"EMPLEOS")==0)
-			{
-				countEmpleos++;
-			}
-			else if(strcmp(publication_list[i].publication_category,"COMPRA/VENTA")==0)
-			{
-				countCompraVenta++;
-			}
+			printf("\nNO HAY PUBLICIDADES CARGADAS.\n");
 		}
-		publication_countMaxCategory(countInmobiliario, countAutomotor, countEmpleos, countCompraVenta);
-		retorno = 0;
-	}
+		else
+		{
+			for(int i=0;i< publication_len ;i++)
+			{
 
+				if(strcmp(publication_list[i].publication_category,"INMOBILIARIOS")==0)
+				{
+					countInmobiliario++;
+				}
+				else if(strcmp(publication_list[i].publication_category,"AUTOMOTOR")==0)
+				{
+					countAutomotor++;
+				}
+				else if(strcmp(publication_list[i].publication_category,"EMPLEOS")==0)
+				{
+					countEmpleos++;
+				}
+				else if(strcmp(publication_list[i].publication_category,"COMPRA/VENTA")==0)
+				{
+					countCompraVenta++;
+				}
+			}
+			publication_countMaxCategory(countInmobiliario, countAutomotor, countEmpleos, countCompraVenta);
+			retorno = 0;
+		}
+	}
 	return retorno;
 }
+
+/**
+ * \brief publication_countMaxCategory: returns the value and amount of catehory with most publications
+ * \param int countInmobiliario: amount of publications of said category
+ * \param int countAutomotor: amount of publications of said category
+ * \param int countEmpleos: amount of publications of said category
+ * \param int countCompraVenta: amount of publications of said category
+ */
 
 static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
 {
@@ -936,9 +792,5 @@ static int publication_countMaxCategory(int countInmobiliario,int countAutomotor
 			printf("-----------------------------------------------\n");
 		}
 	}
-
-
 	return retorno;
 }
-
-

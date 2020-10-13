@@ -35,39 +35,39 @@ int main(void) {
 	Publication arrayPublications[QTY_PUBLICATIONS];
 	publication_initArray(arrayPublications, QTY_PUBLICATIONS);
 
-
+	//UNCOMMENT FOR TESTING PURPOSES
 	client_addHardcode(arrayClients, QTY_CLIENTS, &client_firstLoad);
 	publication_addHardcode(arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
 
 	do
+	{
+		newspaper_getMenu(&choosenOption);
+		switch(choosenOption)
 		{
-			newspaper_getMenu(&choosenOption);
-			switch(choosenOption)
-			{
-				case 1://ALTA CLIENTE (LISTO)
-					client_add(arrayClients, QTY_CLIENTS, &client_firstLoad);
-					break;
-				case 2://MODIFICAR CLIENTE (LISTO)
-					client_modifyMenu(arrayClients, QTY_CLIENTS, client_firstLoad);
-					break;
-				case 3://BAJA CLIENTE (LISTO)
-					newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
-					break;
-				case 4://ALTA PUBLICACION (LISTO)
-					newspaper_addPublicationMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
-					break;
-				case 5://PAUSAR PUBLICACION (LISTO)
-				case 6://REANUDAR PUBLICACION (LISTO)
-					newspaper_publicationStatusMenu(arrayClients, QTY_CLIENTS, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad,choosenOption);
-					break;
-				case 7://IMPRIMIR CLIENTES CON NUMERO DE PUBLICACIONES
-					newspaper_printClientsWithActivePublications(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
-					break;
-				case 8://INFORMES
-					newspaper_getReportMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
-					break;
-			}
-		}while(choosenOption!=9);
-		printf("PROGRAMA TERMINADO");
-		return EXIT_SUCCESS;
+			case 1://ALTA CLIENTE
+				client_add(arrayClients, QTY_CLIENTS, &client_firstLoad);
+				break;
+			case 2://MODIFICAR CLIENTE
+				client_modifyMenu(arrayClients, QTY_CLIENTS, client_firstLoad);
+				break;
+			case 3://BAJA CLIENTE
+				newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+				break;
+			case 4://ALTA PUBLICACION
+				newspaper_addPublicationMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
+				break;
+			case 5://PAUSAR PUBLICACION
+			case 6://REANUDAR PUBLICACION
+				newspaper_publicationStatusMenu(arrayClients, QTY_CLIENTS, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad,choosenOption);
+				break;
+			case 7://IMPRIMIR CLIENTES CON NUMERO DE PUBLICACIONES ACTIVAS
+				newspaper_printClientsWithActivePublications(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+				break;
+			case 8://INFORMES
+				newspaper_getReportMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
+				break;
+		}
+	}while(choosenOption!=9);
+	printf("PROGRAMA TERMINADO");
+	return EXIT_SUCCESS;
 }

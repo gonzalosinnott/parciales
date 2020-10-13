@@ -114,20 +114,23 @@ static int isInt(char* string)
 	int retorno = 1;
 	int i = 0;
 
-	if(string[0] == '-')
+	if(string != NULL)
 	{
-		i = 1;
-	}
-	if(string != NULL && strlen(string) > 0)
-	{
-		while(string[i] != '\0')
+		if(string[0] == '-')
 		{
-			if(string[i] < '0' || string[i] > '9' )
+			i = 1;
+		}
+		if(string != NULL && strlen(string) > 0)
+		{
+			while(string[i] != '\0')
 			{
-				retorno = 0;
-				break;
+				if(string[i] < '0' || string[i] > '9' )
+				{
+					retorno = 0;
+					break;
+				}
+				i++;
 			}
-			i++;
 		}
 	}
 	return retorno;
@@ -139,7 +142,7 @@ static int isInt(char* string)
  * \param char* errorMsj: Error message
  * \param int* pValue: Pointer to store value given by user
  * \param int retries: amount of retries permitted
- * \param int len: lenght allowed for the value entered.
+ * \param int len: length allowed for the value entered.
  * \return (-1) Error / (0) Ok
  */
 
@@ -175,7 +178,7 @@ int utn_getString(char* msj, char* errorMsj, char* pValue,int retries, int len)
  * \brief checkString: Checks the string for invalid characters
  * Allows upper and lower case letters and spaces
  * \param char* string: Pointer to string to check
- * \param int len: max lenght allowed of the string
+ * \param int len: max length allowed of the string
  * \return (-1) Error / (0) Ok
  */
 
@@ -183,14 +186,17 @@ static int checkString(char* string,int len)
 {
 	int retorno = 0;
 
-	for(int i=0; i<=len && string[i] != '\0';i++)
+	if( string != NULL && len > 0)
 	{
-		if(	(string[i] < 'A' || string[i] > 'Z') &&
-			(string[i] < 'a' || string[i] > 'z') &&
-			 string[i] != ' ')
+		for(int i=0; i<=len && string[i] != '\0';i++)
 		{
-			retorno = -1;
-			break;
+			if(	(string[i] < 'A' || string[i] > 'Z') &&
+				(string[i] < 'a' || string[i] > 'z') &&
+				 string[i] != ' ')
+			{
+				retorno = -1;
+				break;
+			}
 		}
 	}
 	return retorno;
@@ -202,7 +208,7 @@ static int checkString(char* string,int len)
  * \param char* errorMsj: Error message
  * \param int* pValue: Pointer to store value given by user
  * \param int retries: amount of retries permitted
- * \param int len: lenght allowed for the value entered.
+ * \param int len: length allowed for the value entered.
  * \return (-1) Error / (0) Ok
  */
 
@@ -246,7 +252,7 @@ static int checkAlphaNum(char* string, int len)
 {
 	int retorno = 0;
 
-	if(string != NULL)
+	if(string != NULL && len > 0)
 	{
 		for(int i=0; i<=len && string[i] != '\0';i++)
 		{
