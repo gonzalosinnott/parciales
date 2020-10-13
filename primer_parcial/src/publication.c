@@ -221,10 +221,10 @@ static int publication_addData(Publication* publication_list,int publication_len
 		{
 			publication_list[emptyIndex].publication_id=publication_id;
 			publication_list[emptyIndex].publication_isEmpty=FALSE;
-			strcpy(publication_list[emptyIndex].publication_category,formatedCategory);
-			strcpy(publication_list[emptyIndex].publication_description,publication_description);
+			strncpy(publication_list[emptyIndex].publication_category,formatedCategory,LEN_CATEGORY);
+			strncpy(publication_list[emptyIndex].publication_description,publication_description,LEN_DESCRIPTION);
 			publication_list[emptyIndex].publication_idClient=publication_idClient;
-			strcpy(publication_list[emptyIndex].publication_status,ACTIVE);
+			strncpy(publication_list[emptyIndex].publication_status,ACTIVE,LEN_STATUS);
 			retorno=0;
 		}
 	}
@@ -247,16 +247,16 @@ static int publication_formatCategory(int publication_category,char* formatedCat
 		switch(publication_category)
 		{
 			case 1:
-				strcpy(formatedCategory,"EMPLEOS");
+				strncpy(formatedCategory,"EMPLEOS",LEN_CATEGORY);
 				break;
 			case 2:
-				strcpy(formatedCategory,"AUTOMOTOR");
+				strncpy(formatedCategory,"AUTOMOTOR",LEN_CATEGORY);
 				break;
 			case 3:
-				strcpy(formatedCategory,"INMOBILIARIOS");
+				strncpy(formatedCategory,"INMOBILIARIOS",LEN_CATEGORY);
 				break;
 			case 4:
-				strcpy(formatedCategory,"COMPRA/VENTA");
+				strncpy(formatedCategory,"COMPRA/VENTA",LEN_CATEGORY);
 				break;
 		}
 		retorno = 0;
@@ -396,7 +396,7 @@ int publication_pause(Publication* publication_list, int publication_len,int id)
 			switch(answer)
 			{
 				case 'Y':
-					strcpy(publication_list[indexToModify].publication_status,PAUSED);
+					strncpy(publication_list[indexToModify].publication_status,PAUSED,LEN_STATUS);
 					printf("\nREGISTRO DE PUBLICIDAD PAUSADO CON EXITO.\n");
 					break;
 				case'N':
@@ -435,7 +435,7 @@ int publication_active(Publication* publication_list, int publication_len,int id
 			switch(answer)
 			{
 				case 'Y':
-					strcpy(publication_list[indexToModify].publication_status,ACTIVE);
+					strncpy(publication_list[indexToModify].publication_status,ACTIVE,LEN_STATUS);
 					printf("\nREGISTRO DE PUBLICIDAD REANUDADO CON EXITO.\n");
 					break;
 				case'N':
@@ -770,7 +770,7 @@ static int publication_countMaxCategory(int countInmobiliario,int countAutomotor
 
 	for(int i = 0; i < QTY_CATEGORIES; i++)
 	{
-		strcpy(arrayAux[i].aux_category,aux_category[i]);
+		strncpy(arrayAux[i].aux_category,aux_category[i],LEN_CATEGORY);
 		arrayAux[i].aux_categoryNumber=aux_categoryNumber[i];
 		if(arrayAux[i].aux_categoryNumber >= max)
 		{

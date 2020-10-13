@@ -100,7 +100,7 @@ int client_add(Client* client_list,int client_len, int *client_firstLoad)
 	int client_id;
 	char client_name[LEN_NAME];
 	char client_lastName[LEN_NAME];
-	char client_cuit[LEN_CUIT];
+	char client_cuit[LEN_FORMATEDCUIT];
 	int index;
 
 	if(client_list != NULL && client_len > 0 &&
@@ -218,9 +218,9 @@ static int client_addData(Client* client_list,int client_len,int client_id,char 
 			{
 				client_list[emptyIndex].client_id=client_id;
 				client_list[emptyIndex].client_isEmpty=FALSE;
-				strcpy(client_list[emptyIndex].client_name,client_name);
-				strcpy(client_list[emptyIndex].client_lastName,client_lastName);
-				strcpy(client_list[emptyIndex].client_cuit,client_cuit);
+				strncpy(client_list[emptyIndex].client_name,client_name,LEN_NAME);
+				strncpy(client_list[emptyIndex].client_lastName,client_lastName,LEN_NAME);
+				strncpy(client_list[emptyIndex].client_cuit,client_cuit,LEN_FORMATEDCUIT);
 				retorno=0;
 			}
 		}
@@ -386,20 +386,20 @@ static int client_modify(Client* client_list, int client_len,int id)
 						case 1:
 							if(utn_getString("\nIngrese Apellido:","\nError. ",bufferClient.client_lastName,2,LEN_NAME)==0)
 							{
-								strcpy(client_list[indexToModify].client_lastName,bufferClient.client_lastName);
+								strncpy(client_list[indexToModify].client_lastName,bufferClient.client_lastName,LEN_NAME);
 							}
 							break;
 						case 2:
 							if(utn_getString("\nIngrese Nombre:","\nError. ",bufferClient.client_name,2,LEN_NAME)==0)
 							{
-								strcpy(client_list[indexToModify].client_name,bufferClient.client_name);
+								strncpy(client_list[indexToModify].client_name,bufferClient.client_name,LEN_NAME);
 							}
 							break;
 						case 3:
 							if(utn_getCuit("\nIngrese CUIT (SIN GUIONES):","\nError. ", bufferClient.client_cuit,2,LEN_CUIT)==0 &&
 							   client_findByCuit(client_list, client_len, bufferClient.client_cuit) !=0)
 							{
-								strcpy(client_list[indexToModify].client_cuit,bufferClient.client_cuit);
+								strncpy(client_list[indexToModify].client_cuit,bufferClient.client_cuit,LEN_FORMATEDCUIT);
 							}
 							else
 							{

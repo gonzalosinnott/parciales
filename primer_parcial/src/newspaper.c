@@ -467,9 +467,9 @@ static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publ
 							{
 								maxCount = count;
 								arrayAux[i].aux_id=client_list[i].client_id;
-								strcpy(arrayAux[i].aux_name,client_list[i].client_name);
-								strcpy(arrayAux[i].aux_lastName,client_list[i].client_lastName);
-								strcpy(arrayAux[i].aux_cuit,client_list[i].client_cuit);
+								strncpy(arrayAux[i].aux_name,client_list[i].client_name,LEN_NAME);
+								strncpy(arrayAux[i].aux_lastName,client_list[i].client_lastName,LEN_NAME);
+								strncpy(arrayAux[i].aux_cuit,client_list[i].client_cuit,LEN_FORMATEDCUIT);
 								arrayAux[i].aux_publicationNumber = count;
 							}
 						}

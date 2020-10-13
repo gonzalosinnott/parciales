@@ -13894,3 +13894,1380 @@ make: No se hace nada para 'all'.
 11:12:19 **** Incremental Build of configuration Debug for project primer_parcial ****
 make all 
 make: No se hace nada para 'all'.
+14:53:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+14:53:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:05:16 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:12:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:226:4: warning: implicit declaration of function ‘stnncpy’; did you mean ‘stpncpy’? [-Wimplicit-function-declaration]
+  226 |    stnncpy(publication_list[emptyIndex].publication_category,formatedCategory,LEN_CATEGORY);
+      |    ^~~~~~~
+      |    stpncpy
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+/usr/bin/ld: ./src/publication.o: en la función `publication_addData':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/primer_parcial/Debug/../src/publication.c:226: referencia a `stnncpy' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: primer_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:12:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:224:4: warning: implicit declaration of function ‘stnncpy’; did you mean ‘stpncpy’? [-Wimplicit-function-declaration]
+  224 |    stnncpy(publication_list[emptyIndex].publication_category,formatedCategory,LEN_CATEGORY);
+      |    ^~~~~~~
+      |    stpncpy
+../src/publication.c: In function ‘publication_active’:
+../src/publication.c:438:6: error: too few arguments to function ‘strncpy’
+  438 |      strncpy(publication_list[indexToModify].publication_status,ACTIVE),LEN_STATUS;
+      |      ^~~~~~~
+In file included from ../src/publication.c:13:
+/usr/include/string.h:125:14: note: declared here
+  125 | extern char *strncpy (char *__restrict __dest,
+      |              ^~~~~~~
+../src/publication.c:438:72: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  438 |      strncpy(publication_list[indexToModify].publication_status,ACTIVE),LEN_STATUS;
+      |                                                                        ^
+../src/publication.c:438:72: warning: statement with no effect [-Wunused-value]
+make: *** [src/subdir.mk:32: src/publication.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:12:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+../src/publication.c: In function ‘publication_addData’:
+../src/publication.c:224:4: warning: implicit declaration of function ‘stnncpy’; did you mean ‘stpncpy’? [-Wimplicit-function-declaration]
+  224 |    stnncpy(publication_list[emptyIndex].publication_category,formatedCategory,LEN_CATEGORY);
+      |    ^~~~~~~
+      |    stpncpy
+Finished building: ../src/publication.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:293:38: warning: missing braces around initializer [-Wmissing-braces]
+  293 |  char value_One[][BUFFER_STRING_LEN]={valueOne};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:294:38: warning: missing braces around initializer [-Wmissing-braces]
+  294 |  char value_Two[][BUFFER_STRING_LEN]={valueTwo};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:300:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:300:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:302:5: error: too few arguments to function ‘strncpy’
+  302 |     strncpy(pValue,bufferChar);
+      |     ^~~~~~~
+In file included from ../src/utn.c:15:
+/usr/include/string.h:125:14: note: declared here
+  125 | extern char *strncpy (char *__restrict __dest,
+      |              ^~~~~~~
+make: *** [src/subdir.mk:32: src/utn.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:13:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:293:38: warning: missing braces around initializer [-Wmissing-braces]
+  293 |  char value_One[][BUFFER_STRING_LEN]={valueOne};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:294:38: warning: missing braces around initializer [-Wmissing-braces]
+  294 |  char value_Two[][BUFFER_STRING_LEN]={valueTwo};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:300:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:300:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:302:5: error: too few arguments to function ‘strncpy’
+  302 |     strncpy(pValue,bufferChar);
+      |     ^~~~~~~
+In file included from ../src/utn.c:15:
+/usr/include/string.h:125:14: note: declared here
+  125 | extern char *strncpy (char *__restrict __dest,
+      |              ^~~~~~~
+make: *** [src/subdir.mk:32: src/utn.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:13:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:293:38: warning: missing braces around initializer [-Wmissing-braces]
+  293 |  char value_One[][BUFFER_STRING_LEN]={valueOne};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:294:38: warning: missing braces around initializer [-Wmissing-braces]
+  294 |  char value_Two[][BUFFER_STRING_LEN]={valueTwo};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:300:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:300:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:14:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:300:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:300:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:15:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:15:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:19:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:19:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:21:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_addData’:
+../src/client.c:221:5: error: too many arguments to function ‘strcpy’
+  221 |     strcpy(client_list[emptyIndex].client_name,client_name,LEN_NAME);
+      |     ^~~~~~
+In file included from ../src/client.c:15:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+make: *** [src/subdir.mk:32: src/client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:21:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:23:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:300:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:300:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  300 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:15:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:24:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:24:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:25:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:25:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:25:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:26:04 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:26:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:26:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:26:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:26:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:30:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_add’:
+../src/client.c:113:12: warning: passing argument 1 to restrict-qualified parameter aliases with argument 3 [-Wrestrict]
+  113 |    sprintf(formatedCUIT,"%.2s-%.8s-%s", formatedCUIT,formatedCUIT+2,formatedCUIT+10);
+      |            ^~~~~~~~~~~~                 ~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c: In function ‘utn_getCuit’:
+../src/utn.c:330:7: warning: unused variable ‘formatedCUIT’ [-Wunused-variable]
+  330 |  char formatedCUIT[14];
+      |       ^~~~~~~~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:31:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_add’:
+../src/client.c:113:37: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  113 |    sprintf(client_cuit,"%.2s-%.8s-%s", formatedCUIT,formatedCUIT+2,formatedCUIT+10);
+      |                                     ^
+../src/client.c:113:4: note: ‘sprintf’ output 3 or more bytes (assuming 13) into a destination of size 12
+  113 |    sprintf(client_cuit,"%.2s-%.8s-%s", formatedCUIT,formatedCUIT+2,formatedCUIT+10);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:32:30 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:32:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_add’:
+../src/client.c:113:37: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  113 |    sprintf(client_cuit,"%.2s-%.8s-%s", formatedCUIT,formatedCUIT+2,formatedCUIT+10);
+      |                                     ^
+../src/client.c:113:4: note: ‘sprintf’ output 3 or more bytes (assuming 13) into a destination of size 12
+  113 |    sprintf(client_cuit,"%.2s-%.8s-%s", formatedCUIT,formatedCUIT+2,formatedCUIT+10);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:32:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:34:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_add’:
+../src/client.c:115:88: error: ‘formatedCUIT’ undeclared (first use in this function)
+  115 |    if(client_addData(client_list, client_len, client_id, client_name, client_lastName, formatedCUIT)==0)
+      |                                                                                        ^~~~~~~~~~~~
+../src/client.c:115:88: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:35:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:35:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:35:17 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:36:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:36:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:36:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:37:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_getForm’:
+../src/client.c:178:80: error: ‘LEN_CUIT’ undeclared (first use in this function)
+  178 |      (utn_getAlphaNum("Ingrese CUIT(SIN GUIONES):", "Error. ", client_cuit, 3, LEN_CUIT)==0))
+      |                                                                                ^~~~~~~~
+../src/client.c:178:80: note: each undeclared identifier is reported only once for each function it appears in
+../src/client.c: In function ‘client_addData’:
+../src/client.c:224:61: error: ‘LEN_CUIT’ undeclared (first use in this function)
+  224 |     strncpy(client_list[emptyIndex].client_name,client_name,LEN_CUIT);
+      |                                                             ^~~~~~~~
+../src/client.c: In function ‘client_modify’:
+../src/client.c:402:95: error: ‘LEN_CUIT’ undeclared (first use in this function)
+  402 |        if(utn_getCuit("\nIngrese CUIT (SIN GUIONES):","\nError. ", bufferClient.client_cuit,2,LEN_CUIT)==0 &&
+      |                                                                                               ^~~~~~~~
+make: *** [src/subdir.mk:32: src/client.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:39:03 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:39:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:39:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:39:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:40:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:40:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:40:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:41:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:41:51 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:43:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:43:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:43:40 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:44:14 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:44:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:46:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c: In function ‘utn_getCuit’:
+../src/utn.c:326:18: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  326 | #define LEN_CUIT 12
+      |                  ^~
+      |                  |
+      |                  int
+../src/utn.c:338:20: note: in expansion of macro ‘LEN_CUIT’
+  338 |   if(strcmp(pValue,LEN_CUIT)==0)
+      |                    ^~~~~~~~
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘int’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:46:34 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:46:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:46:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:50:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c: In function ‘utn_getCuit’:
+../src/utn.c:326:18: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  326 | #define LEN_CUIT 12
+      |                  ^~
+      |                  |
+      |                  int
+../src/utn.c:345:28: note: in expansion of macro ‘LEN_CUIT’
+  345 |     if(strcmp(bufferString,LEN_CUIT)==0)
+      |                            ^~~~~~~~
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘int’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:51:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c: In function ‘utn_getCuit’:
+../src/utn.c:343:28: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  343 |     if(strcmp(bufferString,11)==0)
+      |                            ^~
+      |                            |
+      |                            int
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘int’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:55:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c: In function ‘utn_getCuit’:
+../src/utn.c:333:7: warning: unused variable ‘checkCuitLen’ [-Wunused-variable]
+  333 |  char checkCuitLen[LEN_CUIT];
+      |       ^~~~~~~~~~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:55:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:55:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:55:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:55:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:55:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:55:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:56:49 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+15:58:04 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:58:06 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:00:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:00:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:00:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:02:23 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:02:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:03:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:03:56 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:03:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:04:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:04:52 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:04:54 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:05:51 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:05:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:06:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:06:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.

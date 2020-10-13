@@ -17,6 +17,7 @@
 #define PAUSED "PAUSADA"
 #define LEN_DESCRIPTION 65
 #define LEN_CATEGORY 20
+#define LEN_STATUS 8
 
 typedef struct
 {

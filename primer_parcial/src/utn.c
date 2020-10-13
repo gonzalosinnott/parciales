@@ -8,6 +8,7 @@
  ============================================================================
  */
 
+
 #include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
@@ -288,8 +289,8 @@ int utn_getChar(char* msj,char* errorMsj,char* pValue,char valueOne,char valueTw
 	char bufferChar[BUFFER_STRING_LEN];
 	int retorno = -1;
 
-	char value_One[][BUFFER_STRING_LEN]={valueOne};
-	char value_Two[][BUFFER_STRING_LEN]={valueTwo};
+	char value_One[][BUFFER_STRING_LEN]={{valueOne}};
+	char value_Two[][BUFFER_STRING_LEN]={{valueTwo}};
 
 	if(msj != NULL && errorMsj != NULL &&  pValue != NULL && retries > 0)
 	{
@@ -297,7 +298,7 @@ int utn_getChar(char* msj,char* errorMsj,char* pValue,char valueOne,char valueTw
 			printf("%s", msj);
 			if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
 			{
-				strcpy(pValue,bufferChar);
+				strncpy(pValue,bufferChar,BUFFER_STRING_LEN);
 				retorno = 0;
 				break;
 			}
@@ -321,40 +322,39 @@ int utn_getChar(char* msj,char* errorMsj,char* pValue,char valueOne,char valueTw
  * \return (-1) Error / (0) Ok
  */
 
-#define LEN_CUIT 12
 #define LEN_FORMATEDCUIT 14
+#define LEN_CUIT 11
 
 int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 {
-	char bufferString[BUFFER_STRING_LEN];
+	char bufferString[LEN_FORMATEDCUIT];
 	int retorno = -1;
 	char formatedCUIT[LEN_FORMATEDCUIT];
 
-
-	if(msj != NULL && errorMsj != NULL && pValue != NULL && retries >= 0 && len == LEN_CUIT)
+	if(msj != NULL && errorMsj != NULL && pValue != NULL && retries >= 0 && len >0 )
 	{
+
 		do
 		{
 			printf("%s",msj);
 			if(myGets(bufferString,len) == 0 &&
 			   strnlen(bufferString,sizeof(bufferString)-1)<= len &&
-			   checkAlphaNum(bufferString,len) == 0 )
+			   checkAlphaNum(bufferString,len) == 0 &&
+			   strlen(bufferString)==LEN_CUIT)
 			{
-				sprintf(formatedCUIT,"%.2s-%.8s-%s", bufferString,bufferString+2,bufferString+10);
-				strcpy(pValue,formatedCUIT);
-				retorno = 0;
-				break;
+					sprintf(formatedCUIT,"%.2s-%.8s-%s", bufferString,bufferString+2,bufferString+10);
+					strncpy(pValue,formatedCUIT,LEN_FORMATEDCUIT);
+					retorno = 0;
+					break;
 			}
 			else
 			{
 				printf("%s Quedan %d reintentos\n",errorMsj, retries);
+				printf("INGRESE UN NUMERO DE 11 DIGITOS\n");
 				retries--;
 			}
 		}while(retries >= 0);
-	}
-	else
-	{
-		printf("\nERROR, INGRESE UN NUMERO DE 9 DIGITOS\n");
+
 	}
 	return retorno;
 }
