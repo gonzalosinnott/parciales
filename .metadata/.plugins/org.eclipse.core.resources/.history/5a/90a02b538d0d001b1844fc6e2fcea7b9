@@ -18,6 +18,10 @@
 #include "utn.h"
 
 
+#define LEN_NAME 50
+#define LEN_FORMATEDCUIT 14 //11-11111111-1
+#define QTY_CLIENTS 100
+
 typedef struct
 {
 	int aux_id;
@@ -437,7 +441,7 @@ static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publ
 	int maxCount = 0;
 	int idClient;
 
-	ClientAuxiliar arrayAux[client_len];
+	ClientAuxiliar arrayAux[QTY_CLIENTS];
 
 	if(client_list !=NULL && client_len > 0 && publication_list !=NULL && publication_len > 0)
 	{

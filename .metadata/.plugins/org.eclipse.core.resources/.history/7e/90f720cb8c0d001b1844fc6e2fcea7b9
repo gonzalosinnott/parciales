@@ -415,7 +415,7 @@ static int client_modify(Client* client_list, int client_len,int id)
 				{
 					utn_getIntNumber("\n¿Desea seguir modificando este ID?(1-SI/2-NO):", "Error. ", &answer, 3, 2, 1);
 				}
-			}while(answer==1);
+			}while(answer!=1);
 			retorno = 0;
 		}
 	}

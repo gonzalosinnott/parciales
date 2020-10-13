@@ -361,7 +361,7 @@ static int client_modify(Client* client_list, int client_len,int id)
 {
 	int retorno = -1;
 	int choosenOption;
-	int answer;
+	char answer;
 	int indexToModify;
 
 	Client bufferClient;
@@ -413,9 +413,9 @@ static int client_modify(Client* client_list, int client_len,int id)
 				}
 				if(choosenOption!=4)
 				{
-					utn_getIntNumber("\n¿Desea seguir modificando este ID?(1-SI/2-NO):", "Error. ", &answer, 3, 2, 1);
+					utn_getChar("\n¿Desea seguir modificando este ID?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
 				}
-			}while(answer==1);
+			}while(answer!='N');
 			retorno = 0;
 		}
 	}
@@ -479,21 +479,21 @@ int client_remove(Client* client_list, int client_len,int id)
 {
 	int retorno = -1;
 	int indexToModify;
-	int answer;
+	char answer;
 
 	if(client_list != NULL && client_len > 0 && id > 0)
 	{
 		indexToModify = client_findIndexById(client_list, client_len, id);
 		if(client_list != NULL && client_len>0 && id > 0 && indexToModify > -1)
 		{
-			utn_getIntNumber("\n¿Desea eliminar este ID y sus publicaciones asociadas?(1-SI/2-NO):", "Error. ", &answer, 3, 2, 1);
+			utn_getChar("\n¿Desea eliminar este ID y sus publicaciones asociadas?(Y/N):", "Error. ", &answer, 'Y', 'N', 3);
 			switch(answer)
 			{
-				case 1:
+				case 'Y':
 					client_list[indexToModify].client_isEmpty = TRUE;
 					printf("\nREGISTRO DE CLIENTE BORRADO CON EXITO.\n");
 					break;
-				case 2:
+				case'N':
 					printf("\nREGISTRO NO BORRADO\n");
 					break;
 				default:

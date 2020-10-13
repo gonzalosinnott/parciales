@@ -437,7 +437,7 @@ static int newspaper_clientWithMostAds(Client* client_list, int client_len, Publ
 	int maxCount = 0;
 	int idClient;
 
-	ClientAuxiliar arrayAux[client_len];
+	ClientAuxiliar arrayAux[QTY_CLIENTS];
 
 	if(client_list !=NULL && client_len > 0 && publication_list !=NULL && publication_len > 0)
 	{

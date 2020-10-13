@@ -274,6 +274,42 @@ static int checkAlphaNum(char* string, int len)
 }
 
 /**
+ * \brief utn_getChar : Ask the user to choose between two letters
+ * \param char* msj: Message for the user
+ * \param char* errorMsj: Error message
+ * \param int* pValue: Pointer to store value given by user
+ * \param char valueOne: Option one
+ * \param char valueTwo: Option two
+ * \param int retries: amount of retries permitted
+ * \return (-1) Error / (0) Ok
+ */
+
+int utn_getChar(char* msj,char* errorMsj,char* pValue,char valueOne,char valueTwo,int retries)
+{
+	char bufferChar[BUFFER_STRING_LEN];
+	int retorno = -1;
+
+	if(msj != NULL && errorMsj != NULL &&  pValue != NULL && retries > 0)
+	{
+		do{
+			printf("%s", msj);
+			if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+			{
+				strncpy(pValue,bufferChar,BUFFER_STRING_LEN);
+				retorno = 0;
+				break;
+			}
+			else
+			{
+				printf("%s Te quedan %d reintentos.\n", errorMsj,retries);
+				retries--;
+			}
+		}while(retries >= 0);
+	}
+	return retorno;
+}
+
+/**
  * \brief utn_getCuit: Asks the user for a CUIT value
  * \param char* msj: Message for the user
  * \param char* errorMsj: Error message

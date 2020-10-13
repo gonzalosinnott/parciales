@@ -392,7 +392,7 @@ int publication_pause(Publication* publication_list, int publication_len,int id)
 		indexToModify = publication_findIndexById(publication_list, publication_len, id);
 		if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
 		{
-			utn_getIntNumber("\n¿Desea pausar esta publicidad?(1-SI/2-NO):", "Error. ", &answer, 3, 2, 1);
+			utn_getIntNumber("\n¿Desea seguir modificando este ID?(1-SI/2-NO):", "Error. ", &answer, 3, 2, 1);
 			switch(answer)
 			{
 				case 1:
@@ -403,7 +403,7 @@ int publication_pause(Publication* publication_list, int publication_len,int id)
 					printf("\nREGISTRO NO PAUSADO\n");
 					break;
 				default:
-					printf("\nERROR, INGRESE 1 PARA PAUSAR LA PUBLICIDAD.\n");
+					printf("\nERROR, INGRESE 'Y' PARA PAUSAR EL REGISTRO.\n");
 			}
 			retorno = 0;
 		}
@@ -424,25 +424,25 @@ int publication_active(Publication* publication_list, int publication_len,int id
 {
 	int retorno = -1;
 	int indexToModify;
-	int answer;
+	char answer;
 
 	if (publication_list != NULL && publication_len > 0 && id > 0)
 	{
 		indexToModify = publication_findIndexById(publication_list, publication_len, id);
 		if(publication_list != NULL && publication_len>0 && id > 0 && indexToModify > -1)
 		{
-			utn_getIntNumber("\n¿Desea reanudar esta publicidad?(1-SI/2-NO):", "Error. ", &answer, 3, 2, 1);
+			utn_getChar("\n¿Desea reanudar esta publicacion?(Y/N)", "Error. ", &answer, 'Y', 'N', 3);
 			switch(answer)
 			{
-				case 1:
+				case 'Y':
 					strncpy(publication_list[indexToModify].publication_status,ACTIVE,LEN_STATUS);
 					printf("\nREGISTRO DE PUBLICIDAD REANUDADO CON EXITO.\n");
 					break;
-				case 2:
+				case'N':
 					printf("\nREGISTRO NO REANUDADO\n");
 					break;
 				default:
-					printf("\nERROR, INGRESE 1 PARA REANUDAR EL REGISTRO.\n");
+					printf("\nERROR, INGRESE 'Y' PARA REANUDAR EL REGISTRO.\n");
 			}
 			retorno = 0;
 		}
@@ -531,6 +531,7 @@ int publication_printActive(Publication* publication_list, int publication_len)
 		}
 		retorno = 0;
 	}
+
 	return retorno;
 }
 

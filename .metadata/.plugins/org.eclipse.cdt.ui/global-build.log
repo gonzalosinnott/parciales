@@ -15271,3 +15271,484 @@ make: No se hace nada para 'all'.
 16:06:50 **** Incremental Build of configuration Debug for project primer_parcial ****
 make all 
 make: No se hace nada para 'all'.
+16:25:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:25:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:27:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:27:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:27:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:292:38: warning: missing braces around initializer [-Wmissing-braces]
+  292 |  char value_One[][BUFFER_STRING_LEN]={valueOne};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:293:38: warning: missing braces around initializer [-Wmissing-braces]
+  293 |  char value_Two[][BUFFER_STRING_LEN]={valueTwo};
+      |                                      ^
+      |                                       {       }
+../src/utn.c:299:71: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       |
+      |                                                                       char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:299:107: warning: passing argument 2 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+  299 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char (*)[1000]
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char (*)[1000]’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:27:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:27:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:28:16 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:28:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:29:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:296:71: error: ‘value_One’ undeclared (first use in this function); did you mean ‘valueOne’?
+  296 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                       ^~~~~~~~~
+      |                                                                       valueOne
+../src/utn.c:296:71: note: each undeclared identifier is reported only once for each function it appears in
+../src/utn.c:296:107: error: ‘value_Two’ undeclared (first use in this function); did you mean ‘valueTwo’?
+  296 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,value_One)== 0 || strcmp(bufferChar,value_Two)== 0 ))
+      |                                                                                                           ^~~~~~~~~
+      |                                                                                                           valueTwo
+make: *** [src/subdir.mk:32: src/utn.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:30:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+../src/utn.c: In function ‘utn_getChar’:
+../src/utn.c:296:71: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  296 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,valueOne)== 0 || strcmp(bufferChar,valueTwo)== 0 ))
+      |                                                                       ^~~~~~~~
+      |                                                                       |
+      |                                                                       char
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+../src/utn.c:296:106: warning: passing argument 2 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+  296 |    if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,valueOne)== 0 || strcmp(bufferChar,valueTwo)== 0 ))
+      |                                                                                                          ^~~~~~~~
+      |                                                                                                          |
+      |                                                                                                          char
+In file included from ../src/utn.c:14:
+/usr/include/string.h:137:50: note: expected ‘const char *’ but argument is of type ‘char’
+  137 | extern int strcmp (const char *__s1, const char *__s2)
+      |                                      ~~~~~~~~~~~~^~~~
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:30:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:30:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:31:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:31:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:32:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:33:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:33:56 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:34:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:34:38 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:40:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘client_remove’:
+../src/client.c:489:107: warning: passing argument 3 of ‘utn_getIntNumber’ from incompatible pointer type [-Wincompatible-pointer-types]
+  489 |    utn_getIntNumber("\n¿Desea eliminar este ID y sus publicaciones asociadas?(1-SI / 2-NO):", "Error. ", &answer, 3, 2, 1);
+      |                                                                                                           ^~~~~~~
+      |                                                                                                           |
+      |                                                                                                           char *
+In file included from ../src/client.c:18:
+../src/utn.h:14:54: note: expected ‘int *’ but argument is of type ‘char *’
+   14 | int utn_getIntNumber(char* msj, char* errorMsj, int* pValue,int retries,int max,int min);
+      |                                                 ~~~~~^~~~~~
+Finished building: ../src/client.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:40:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:40:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:44:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:44:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:44:48 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:44:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:45:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:45:37 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:46:32 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:46:35 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:49:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c:21: warning: "LEN_NAME" redefined
+   21 | #define LEN_NAME 50
+      | 
+In file included from ../src/newspaper.c:16:
+../src/client.h:16: note: this is the location of the previous definition
+   16 | #define LEN_NAME 60
+      | 
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:50:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:50:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:51:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:51:34 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:51:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:52:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+../src/newspaper.c: In function ‘newspaper_clientWithMostAds’:
+../src/newspaper.c:440:26: error: ‘QTY_CLIENTS’ undeclared (first use in this function)
+  440 |  ClientAuxiliar arrayAux[QTY_CLIENTS];
+      |                          ^~~~~~~~~~~
+../src/newspaper.c:440:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/newspaper.c:440:17: warning: unused variable ‘arrayAux’ [-Wunused-variable]
+  440 |  ClientAuxiliar arrayAux[QTY_CLIENTS];
+      |                 ^~~~~~~~
+make: *** [src/subdir.mk:32: src/newspaper.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+16:52:56 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:52:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:56:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/newspaper.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/newspaper.d" -MT"src/newspaper.o" -o "src/newspaper.o" "../src/newspaper.c"
+Finished building: ../src/newspaper.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/main.o ./src/newspaper.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+16:56:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:56:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+16:56:57 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
