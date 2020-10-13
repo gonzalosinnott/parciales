@@ -6,23 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="strcpy"/>
 		<list key="findhistory">
+			<item value="strcpy"/>
+			<item value="strcmp"/>
+			<item value="publication_countCategory"/>
 			<item value="cliente"/>
 			<item value="LONG"/>
 			<item value="alta"/>
 			<item value="publicacion"/>
 			<item value="Publicacion"/>
-			<item value="Cliente"/>
-			<item value="diario"/>
-			<item value="Publicaciones"/>
-			<item value="PUBLICACIONES"/>
-			<item value="PPUBLICACIONES"/>
-			<item value="CLIENTES"/>
-			<item value="employees"/>
-			<item value="pantalla"/>
-			<item value="Pantalla"/>
-			<item value="publicidad"/>
 		</list>
 		<list key="replacehistory">
 			<item value="client"/>
