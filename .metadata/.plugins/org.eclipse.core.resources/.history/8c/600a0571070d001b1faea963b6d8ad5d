@@ -36,7 +36,6 @@ static int client_modify(Client* client_list, int client_len,int id);
 int client_addHardcode(Client* client_list, int client_len, int *client_firstLoad)
 {
 	int retorno = -1;
-
 	if(client_list != NULL && client_len >0)
 	{
 		int client_id[]={50,60,70,80,100};
@@ -50,11 +49,11 @@ int client_addHardcode(Client* client_list, int client_len, int *client_firstLoa
 											"Pereira Iraola",
 											"Guzman",
 											"Bianchi"};
-		char client_cuit[][LEN_FORMATEDCUIT]={"23-34797474-9",
-											  "26-24935994-7",
-											  "21-45045347-5",
-											  "27-10364926-4",
-											  "21-36983457-6"};
+		char client_cuit[][LEN_CUIT]={"23347974749",
+									  "26249359947",
+									  "21450453475",
+									  "27103649264",
+									  "21369834576"};
 		for(int i = 0; i < 5; i++)
 		{
 			client_addData(client_list, client_len, client_id[i], client_name[i], client_lastName[i], client_cuit[i]);
@@ -172,7 +171,7 @@ static int client_getForm(char *client_name, char *client_lastName, char *client
 	{
 		if((utn_getString("Ingrese Apellido:", "Error. ", client_lastName, 3, LEN_NAME)==0) &&
 		   (utn_getString("Ingrese Nombre:", "Error. ", client_name, 3, LEN_NAME)==0) &&
-		   (utn_getCuit("Ingrese CUIT(SIN GUIONES):", "Error. ", client_cuit, 3, LEN_CUIT)==0))
+		   (utn_getAlphaNum("Ingrese CUIT(SIN GUIONES):", "Error. ", client_cuit, 3, LEN_CUIT)==0))
 		{
 
 			retorno = 0;
@@ -209,24 +208,20 @@ static int client_addData(Client* client_list,int client_len,int client_id,char 
 {
 	int retorno = -1;
 	int emptyIndex;
+	char formatedCUIT[LEN_FORMATEDCUIT];
 
 	if(client_list != NULL && client_len >0 && client_id > 0 && client_name != NULL && client_lastName != NULL && client_cuit != NULL )
 	{
-		if(client_findByCuit(client_list, client_len, client_cuit)!=0)
+		sprintf(formatedCUIT,"%.2s-%.8s-%s", client_cuit,client_cuit+2,client_cuit+10);
+		if(!clie)
+		if(client_checkFirstEmptyIndex(client_list, client_len, &emptyIndex)==0)
 		{
-			if(client_checkFirstEmptyIndex(client_list, client_len, &emptyIndex)==0)
-			{
-				client_list[emptyIndex].client_id=client_id;
-				client_list[emptyIndex].client_isEmpty=FALSE;
-				strcpy(client_list[emptyIndex].client_name,client_name);
-				strcpy(client_list[emptyIndex].client_lastName,client_lastName);
-				strcpy(client_list[emptyIndex].client_cuit,client_cuit);
-				retorno=0;
-			}
-		}
-		else
-		{
-			printf("\nERROR, EL CUIT INGRESADO PERTENECE A OTRO CLIENTE.\n");
+			client_list[emptyIndex].client_id=client_id;
+			client_list[emptyIndex].client_isEmpty=FALSE;
+			strcpy(client_list[emptyIndex].client_name,client_name);
+			strcpy(client_list[emptyIndex].client_lastName,client_lastName);
+			strcpy(client_list[emptyIndex].client_cuit,formatedCUIT);
+			retorno=0;
 		}
 	}
     return retorno;
@@ -265,15 +260,15 @@ static int client_findIndexById(Client* client_list, int client_len,int id)
  * \return Return 0 if cuit exists or (-1) if ERROR
  */
 
-int client_findByCuit(Client* client_list, int client_len,char *cuit)
+int client_findByCuit(Client* client_list, int client_len,int cuit)
 {
 	int retorno = -1;
 
-	if (client_list != NULL && client_len > 0 && cuit > 0)
+	if (client_list != NULL && client_len > 0 && id > 0)
 	{
 		for (int i = 0; i < client_len; i++)
 		{
-			if(client_list[i].client_isEmpty == FALSE && strcmp(client_list[i].client_cuit,cuit) == 0)
+			if(client_list[i].client_isEmpty == FALSE && client_list[i].client_cuit == cuit )
 			{
 				retorno = 0;
 				break;
@@ -363,6 +358,8 @@ static int client_modify(Client* client_list, int client_len,int id)
 	int choosenOption;
 	char answer;
 	int indexToModify;
+	char client_cuit[LEN_CUIT];
+	char formatedCUIT[LEN_FORMATEDCUIT];
 
 	Client bufferClient;
 
@@ -396,9 +393,10 @@ static int client_modify(Client* client_list, int client_len,int id)
 							}
 							break;
 						case 3:
-							if(utn_getCuit("\nIngrese CUIT (SIN GUIONES):","\nError. ", bufferClient.client_cuit,2,LEN_CUIT)==0)
+							if(utn_getAlphaNum("\nIngrese CUIT (SIN GUIONES):","\nError. ", client_cuit,2,LEN_CUIT)==0)
 							{
-								strcpy(client_list[indexToModify].client_cuit,bufferClient.client_cuit);
+								sprintf(formatedCUIT,"%.2s-%.8s-%s", client_cuit,client_cuit+2,client_cuit+10);
+								strcpy(client_list[indexToModify].client_cuit,formatedCUIT);
 							}
 							break;
 						case 4:

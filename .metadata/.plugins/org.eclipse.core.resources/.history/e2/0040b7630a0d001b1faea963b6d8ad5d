@@ -320,8 +320,7 @@ int utn_getChar(char* msj,char* errorMsj,char* pValue,char valueOne,char valueTw
  * \param int len: length allowed for the value entered.
  * \return (-1) Error / (0) Ok
  */
-
-#define LEN_CUIT 12
+#define LEN_CUIT
 #define LEN_FORMATEDCUIT 14
 
 int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
@@ -336,12 +335,12 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 		do
 		{
 			printf("%s",msj);
-			if(myGets(bufferString,len) == 0 &&
+			if(myGets(bufferString,BUFFER_STRING_LEN) == 0 &&
 			   strnlen(bufferString,sizeof(bufferString)-1)<= len &&
 			   checkAlphaNum(bufferString,len) == 0 )
 			{
-				sprintf(formatedCUIT,"%.2s-%.8s-%s", bufferString,bufferString+2,bufferString+10);
-				strcpy(pValue,formatedCUIT);
+				sprintf(formatedCUIT,"%.2s-%.8s-%s", client_cuit,client_cuit+2,client_cuit+10);
+				strncpy(pValue,bufferString,len);
 				retorno = 0;
 				break;
 			}
@@ -351,10 +350,6 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 				retries--;
 			}
 		}while(retries >= 0);
-	}
-	else
-	{
-		printf("\nERROR, INGRESE UN NUMERO DE 9 DIGITOS\n");
 	}
 	return retorno;
 }

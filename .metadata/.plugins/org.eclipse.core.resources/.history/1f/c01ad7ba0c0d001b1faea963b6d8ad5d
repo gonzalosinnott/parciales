@@ -336,7 +336,7 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 		do
 		{
 			printf("%s",msj);
-			if(myGets(bufferString,len) == 0 &&
+			if(myGets(bufferString,LEN_CUIT) == 0 &&
 			   strnlen(bufferString,sizeof(bufferString)-1)<= len &&
 			   checkAlphaNum(bufferString,len) == 0 )
 			{
@@ -351,10 +351,6 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 				retries--;
 			}
 		}while(retries >= 0);
-	}
-	else
-	{
-		printf("\nERROR, INGRESE UN NUMERO DE 9 DIGITOS\n");
 	}
 	return retorno;
 }

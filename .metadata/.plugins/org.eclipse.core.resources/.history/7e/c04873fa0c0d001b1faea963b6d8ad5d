@@ -352,10 +352,6 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 			}
 		}while(retries >= 0);
 	}
-	else
-	{
-		printf("\nERROR, INGRESE UN NUMERO DE 9 DIGITOS\n");
-	}
 	return retorno;
 }
 

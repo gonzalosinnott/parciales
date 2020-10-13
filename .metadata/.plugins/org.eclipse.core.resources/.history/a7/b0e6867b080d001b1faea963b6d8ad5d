@@ -30,7 +30,7 @@ int client_initArray(Client* client_list, int client_len);
 int client_addHardcode(Client* client_list, int client_len, int *client_firstLoad);
 int client_add(Client* client_list,int client_len, int *client_firstLoad);
 int client_findById(Client* client_list, int client_len,int id);
-int client_findByCuit(Client* client_list, int client_len,char *cuit);
+int client_findByCuit(Client* client_list, int client_len,int *cuit);
 int client_modifyMenu(Client* client_list, int client_len, int client_firstLoad);
 int client_removeMenu(Client* client_list, int client_len,int *client_firstLoad);
 int client_remove(Client* client_list, int client_len,int id);

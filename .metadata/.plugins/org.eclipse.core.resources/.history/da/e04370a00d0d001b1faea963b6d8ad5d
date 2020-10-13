@@ -331,7 +331,7 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 	char formatedCUIT[LEN_FORMATEDCUIT];
 
 
-	if(msj != NULL && errorMsj != NULL && pValue != NULL && retries >= 0 && len == LEN_CUIT)
+	if(msj != NULL && errorMsj != NULL && pValue != NULL && retries >= 0 && len >= LEN_CUIT && len <= LEN_CUIT )
 	{
 		do
 		{

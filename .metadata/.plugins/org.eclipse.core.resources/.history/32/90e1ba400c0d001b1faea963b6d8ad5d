@@ -50,11 +50,11 @@ int client_addHardcode(Client* client_list, int client_len, int *client_firstLoa
 											"Pereira Iraola",
 											"Guzman",
 											"Bianchi"};
-		char client_cuit[][LEN_FORMATEDCUIT]={"23-34797474-9",
-											  "26-24935994-7",
-											  "21-45045347-5",
-											  "27-10364926-4",
-											  "21-36983457-6"};
+		char client_cuit[][LEN_CUIT]={"23-34797474-9",
+									  "26-24935994-7",
+									  "21-45045347-5",
+									  "27-10364926-4",
+									  "21-36983457-6"};
 		for(int i = 0; i < 5; i++)
 		{
 			client_addData(client_list, client_len, client_id[i], client_name[i], client_lastName[i], client_cuit[i]);
