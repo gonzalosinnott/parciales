@@ -291,7 +291,7 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 {
 	int retorno = -1;
 	char formatedCUIT[LEN_FORMATEDCUIT];
-	char bufferString[len];
+	char bufferString[LEN_CUIT];
 
 	if(msj != NULL && errorMsj != NULL && pValue != NULL && retries >= 0 && len >0 )
 	{
@@ -307,7 +307,6 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 				{
 					printf("%s Quedan %d reintentos\n",errorMsj, retries);
 					printf("INGRESE UN NUMERO DE 11 DIGITOS\n");
-					retries--;
 				}
 				else
 				{

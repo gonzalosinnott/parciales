@@ -16,7 +16,6 @@
 
 #define BUFFER_STRING_LEN 1000
 
-
 static int myGets(char *string, int len);
 static int getInt(int *pValue);
 static int isInt(char* string);
@@ -289,9 +288,9 @@ static int checkAlphaNum(char* string, int len)
 
 int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 {
+	char bufferString[LEN_FORMATEDCUIT];
 	int retorno = -1;
 	char formatedCUIT[LEN_FORMATEDCUIT];
-	char bufferString[len];
 
 	if(msj != NULL && errorMsj != NULL && pValue != NULL && retries >= 0 && len >0 )
 	{
@@ -299,15 +298,15 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 		do
 		{
 			printf("%s",msj);
-			if(myGets(bufferString,len) == 0 &&
-			   strnlen(bufferString,sizeof(len)-1) <= len &&
-			   checkAlphaNum(bufferString,len) == 0)
+			if(myGets(bufferString,len) == 0 && checkAlphaNum(bufferString,len) == 0)
 			{
-				if(strlen(bufferString) > (len-1) || strlen(bufferString) < (len-1))
+				printf("%zu",strlen(bufferString));
+				if(strlen(bufferString) != LEN_CUIT)
 				{
 					printf("%s Quedan %d reintentos\n",errorMsj, retries);
 					printf("INGRESE UN NUMERO DE 11 DIGITOS\n");
 					retries--;
+
 				}
 				else
 				{
