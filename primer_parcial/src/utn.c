@@ -300,20 +300,24 @@ int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 			printf("%s",msj);
 			if(myGets(bufferString,len) == 0 &&
 			   strnlen(bufferString,sizeof(bufferString)-1)<= len &&
-			   checkAlphaNum(bufferString,len) == 0 &&
-			   strlen(bufferString)==LEN_CUIT)
+			   checkAlphaNum(bufferString,len) == 0)
 			{
+				if(strlen(bufferString) < LEN_CUIT && strlen(bufferString) > LEN_CUIT)
+				{
+					printf("%s Quedan %d reintentos\n",errorMsj, retries);
+					printf("INGRESE UN NUMERO DE 11 DIGITOS\n");
+					retries--;
+
+				}
+				else
+				{
 					sprintf(formatedCUIT,"%.2s-%.8s-%s", bufferString,bufferString+2,bufferString+10);
 					strncpy(pValue,formatedCUIT,LEN_FORMATEDCUIT);
 					retorno = 0;
 					break;
+				}
 			}
-			else
-			{
-				printf("%s Quedan %d reintentos\n",errorMsj, retries);
-				printf("INGRESE UN NUMERO DE 11 DIGITOS\n");
-				retries--;
-			}
+
 		}while(retries >= 0);
 
 	}

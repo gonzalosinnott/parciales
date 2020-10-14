@@ -8,6 +8,7 @@
  ============================================================================
  */
 
+
 #include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,8 +21,6 @@ static int getInt(int *pValue);
 static int isInt(char* string);
 static int checkString(char* string,int len);
 static int checkAlphaNum(char* string, int len);
-static int checkChar(char* string,int len,char valueOne, char valueTwo);
-
 
 /**
  * \brief myGets: Reads from stdin until a '\n' (finalization character)
@@ -116,20 +115,23 @@ static int isInt(char* string)
 	int retorno = 1;
 	int i = 0;
 
-	if(string[0] == '-')
+	if(string != NULL)
 	{
-		i = 1;
-	}
-	if(string != NULL && strlen(string) > 0)
-	{
-		while(string[i] != '\0')
+		if(string[0] == '-')
 		{
-			if(string[i] < '0' || string[i] > '9' )
+			i = 1;
+		}
+		if(string != NULL && strlen(string) > 0)
+		{
+			while(string[i] != '\0')
 			{
-				retorno = 0;
-				break;
+				if(string[i] < '0' || string[i] > '9' )
+				{
+					retorno = 0;
+					break;
+				}
+				i++;
 			}
-			i++;
 		}
 	}
 	return retorno;
@@ -141,7 +143,7 @@ static int isInt(char* string)
  * \param char* errorMsj: Error message
  * \param int* pValue: Pointer to store value given by user
  * \param int retries: amount of retries permitted
- * \param int len: lenght allowed for the value entered.
+ * \param int len: length allowed for the value entered.
  * \return (-1) Error / (0) Ok
  */
 
@@ -177,7 +179,7 @@ int utn_getString(char* msj, char* errorMsj, char* pValue,int retries, int len)
  * \brief checkString: Checks the string for invalid characters
  * Allows upper and lower case letters and spaces
  * \param char* string: Pointer to string to check
- * \param int len: max lenght allowed of the string
+ * \param int len: max length allowed of the string
  * \return (-1) Error / (0) Ok
  */
 
@@ -185,14 +187,17 @@ static int checkString(char* string,int len)
 {
 	int retorno = 0;
 
-	for(int i=0; i<=len && string[i] != '\0';i++)
+	if( string != NULL && len > 0)
 	{
-		if(	(string[i] < 'A' || string[i] > 'Z') &&
-			(string[i] < 'a' || string[i] > 'z') &&
-			 string[i] != ' ')
+		for(int i=0; i<=len && string[i] != '\0';i++)
 		{
-			retorno = -1;
-			break;
+			if(	(string[i] < 'A' || string[i] > 'Z') &&
+				(string[i] < 'a' || string[i] > 'z') &&
+				 string[i] != ' ')
+			{
+				retorno = -1;
+				break;
+			}
 		}
 	}
 	return retorno;
@@ -204,7 +209,7 @@ static int checkString(char* string,int len)
  * \param char* errorMsj: Error message
  * \param int* pValue: Pointer to store value given by user
  * \param int retries: amount of retries permitted
- * \param int len: lenght allowed for the value entered.
+ * \param int len: length allowed for the value entered.
  * \return (-1) Error / (0) Ok
  */
 
@@ -248,11 +253,14 @@ static int checkAlphaNum(char* string, int len)
 {
 	int retorno = 0;
 
-	if(string != NULL)
+	if(string != NULL && len > 0)
 	{
 		for(int i=0; i<=len && string[i] != '\0';i++)
 		{
 			if((string[i] != ' ') &&
+			   (string[i] != '.') &&
+			   (string[i] != '-') &&
+			   (string[i] != '@') &&
 			   (string[i] < 'a' || string[i] > 'z') &&
 			   (string[i] < 'A' || string[i] > 'Z') &&
 			   (string[i] < '0' || string[i] > '9'))
@@ -266,64 +274,53 @@ static int checkAlphaNum(char* string, int len)
 }
 
 /**
- * \brief utn_getChar : Ask the user to choose between two letters
+ * \brief utn_getCuit: Asks the user for a CUIT value
  * \param char* msj: Message for the user
  * \param char* errorMsj: Error message
  * \param int* pValue: Pointer to store value given by user
- * \param char valueOne: Option one
- * \param char valueTwo: Option two
  * \param int retries: amount of retries permitted
+ * \param int len: length allowed for the value entered.
  * \return (-1) Error / (0) Ok
  */
 
-int utn_getChar(char* msj,char* errorMsj,char* pValue,char valueOne,char valueTwo,int retries)
+#define LEN_FORMATEDCUIT 14
+#define LEN_CUIT 11
+
+int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len)
 {
-	char bufferChar[BUFFER_STRING_LEN];
+	char bufferString[LEN_FORMATEDCUIT];
 	int retorno = -1;
+	char formatedCUIT[LEN_FORMATEDCUIT];
 
-	if(msj != NULL && errorMsj != NULL &&  pValue != NULL && retries > 0)
+	if(msj != NULL && errorMsj != NULL && pValue != NULL && retries >= 0 && len >0 )
 	{
-		do{
-			printf("%s", msj);
-			if(myGets(bufferChar,BUFFER_STRING_LEN) == 0 && (strcmp(bufferChar,valueOne)== 0 || strcmp(bufferChar,valueTwo)== 0 ))
-			{
-				strcpy(pValue,bufferChar);
-				retorno = 0;
-				break;
-			}
-			else
-			{
-				printf("%s Te quedan %d reintentos.\n", errorMsj,retries);
-				retries--;
-			}
-		}while(retries >= 0);
-	}
-	return retorno;
-}
 
-/**
- * \brief checkChar: Checks the character given and compares it with
- * \ the two given option by utn_getChar
- * \param char* string: Pointer to string to check
- * \param int len: max lenght allowed of the string
- * \param char valueOne: Option one
- * \param char valueTwo: Option two
- * \return (-1) Error / (0) Ok
- */
-
-static int checkChar(char* string,int len,char valueOne, char valueTwo)
-{
-	int retorno = -1;
-
-	for(int i=0; i<=len && string[i] != '\0';i++)
-	{
-		if(strcmp(string,valueOne)== 0 || strcmp(string,valueTwo)== 0 )
+		do
 		{
-			retorno = 0;
-			break;
-		}
+			printf("%s",msj);
+			if(myGets(bufferString,len) == 0 &&
+			   strnlen(bufferString,sizeof(bufferString)-1)<= len &&
+			   checkAlphaNum(bufferString,len) == 0)
+			{
+				if(strlen(bufferString) < LEN_CUIT && strlen(bufferString) > LEN_CUIT)
+				{
+					printf("%s Quedan %d reintentos\n",errorMsj, retries);
+					printf("INGRESE UN NUMERO DE 11 DIGITOS\n");
+					retries--;
+
+				}
+				else
+				{
+					sprintf(formatedCUIT,"%.2s-%.8s-%s", bufferString,bufferString+2,bufferString+10);
+					strncpy(pValue,formatedCUIT,LEN_FORMATEDCUIT);
+					retorno = 0;
+					break;
+				}
+			}
+
+		}while(retries >= 0);
+
 	}
 	return retorno;
 }
-
 
