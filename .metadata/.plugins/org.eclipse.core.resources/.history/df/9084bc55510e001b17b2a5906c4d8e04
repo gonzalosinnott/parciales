@@ -432,7 +432,7 @@ static int info_clientWithMostAds(Client* client_list, int client_len, Publicati
 {
 	int retorno = -1;
 	int count;
-	int maxCount;
+	int maxCount = 0;
 	int idClient;
 
 	ClientAuxiliar arrayAux[client_len];
@@ -451,8 +451,7 @@ static int info_clientWithMostAds(Client* client_list, int client_len, Publicati
 				{
 					maxCount = 0;
 				}
-
-				if(client_list[i].client_isEmpty == FALSE)
+				else(client_list[i].client_isEmpty == FALSE)
 				{
 					count = 0;
 					idClient = client_list[i].client_id;
