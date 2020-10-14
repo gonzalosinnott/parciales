@@ -15,6 +15,15 @@
 #include "utn.h"
 #include "publication.h"
 
+typedef struct
+{
+	char aux_category[LEN_CATEGORY];
+	int aux_categoryNumber;
+}CategoryAuxilar;
+
+#define QTY_CATEGORIES 4
+#define LEN_CATEGORY 20
+
 static int publication_generateNewId(void);
 static int publication_checkFirstEmptyIndex(Publication* publication_list, int publication_len, int *emptyIndex);
 static int publication_getForm(int *publication_category, char *publication_description);
@@ -750,15 +759,6 @@ int publication_countCategory(Publication* publication_list, int publication_len
  * \param int countEmpleos: amount of publications of said category
  * \param int countCompraVenta: amount of publications of said category
  */
-
-#define QTY_CATEGORIES 4
-#define LEN_CATEGORY 20
-
-typedef struct
-{
-	char aux_category[LEN_CATEGORY];
-	int aux_categoryNumber;
-}CategoryAuxilar;
 
 static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
 {

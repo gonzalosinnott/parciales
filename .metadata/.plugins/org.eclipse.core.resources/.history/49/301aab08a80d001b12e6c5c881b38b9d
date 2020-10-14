@@ -15,6 +15,15 @@
 #include "utn.h"
 #include "publication.h"
 
+typedef struct
+{
+	char aux_category[LEN_CATEGORY];
+	int aux_categoryNumber;
+}CategoryAuxilar;
+
+#define QTY_CATEGORIES 4
+#define LEN_CATEGORY 20
+
 static int publication_generateNewId(void);
 static int publication_checkFirstEmptyIndex(Publication* publication_list, int publication_len, int *emptyIndex);
 static int publication_getForm(int *publication_category, char *publication_description);
@@ -586,21 +595,21 @@ int publication_printByClientId(Publication* publication_list, int publication_l
 		{
 			if(publication_list != NULL && publication_len > 0)
 			{
-				printf("------------------------------------------------------------------------------------------------------\n");
-				printf("| PUBLICACIONES DEL CLIENTE ID : %-4d                                                                |\n",clientId);
-				printf("------------------------------------------------------------------------------------------------------\n");
-				printf("|   CATEGORIA   | ID   | DESCRIPCION                                                      |  ESTADO  |\n");
-				printf("------------------------------------------------------------------------------------------------------\n");
+				printf("----------------------------------------------------------------------------------------------------------------\n");
+				printf("| PUBLICACIONES DEL CLIENTE ID : %-4d                                                                          |\n",clientId);
+				printf("----------------------------------------------------------------------------------------------------------------\n");
+				printf("|   CATEGORIA   | ID   | DESCRIPCION                                                      | ESTADO PUBLICACION |\n");
+				printf("----------------------------------------------------------------------------------------------------------------\n");
 				for(int i=0;i< publication_len ;i++)
 				{
 					if(publication_list[i].publication_isEmpty == FALSE && publication_list[i].publication_idClient == clientId)
 					{
-						printf("| %-14s| %-5d| %-65s|  %-8s|\n",
+						printf("| %-14s| %-5d| %-65s| %-19s|\n",
 								publication_list[i].publication_category,
 								publication_list[i].publication_id,
 								publication_list[i].publication_description,
 								publication_list[i].publication_status);
-						printf("------------------------------------------------------------------------------------------------------\n");
+						printf("----------------------------------------------------------------------------------------------------------------\n");
 						retorno = 0;
 					}
 				}
@@ -716,24 +725,22 @@ int publication_countCategory(Publication* publication_list, int publication_len
 		{
 			for(int i=0;i< publication_len ;i++)
 			{
-				if(publication_list[i].publication_isEmpty==FALSE)
+
+				if(strcmp(publication_list[i].publication_category,"INMOBILIARIOS")==0)
 				{
-					if(strcmp(publication_list[i].publication_category,"INMOBILIARIOS")==0)
-					{
-						countInmobiliario++;
-					}
-					else if(strcmp(publication_list[i].publication_category,"AUTOMOTOR")==0)
-					{
-						countAutomotor++;
-					}
-					else if(strcmp(publication_list[i].publication_category,"EMPLEOS")==0)
-					{
-						countEmpleos++;
-					}
-					else if(strcmp(publication_list[i].publication_category,"COMPRA/VENTA")==0)
-					{
-						countCompraVenta++;
-					}
+					countInmobiliario++;
+				}
+				else if(strcmp(publication_list[i].publication_category,"AUTOMOTOR")==0)
+				{
+					countAutomotor++;
+				}
+				else if(strcmp(publication_list[i].publication_category,"EMPLEOS")==0)
+				{
+					countEmpleos++;
+				}
+				else if(strcmp(publication_list[i].publication_category,"COMPRA/VENTA")==0)
+				{
+					countCompraVenta++;
 				}
 			}
 			publication_countMaxCategory(countInmobiliario, countAutomotor, countEmpleos, countCompraVenta);
@@ -750,15 +757,6 @@ int publication_countCategory(Publication* publication_list, int publication_len
  * \param int countEmpleos: amount of publications of said category
  * \param int countCompraVenta: amount of publications of said category
  */
-
-#define QTY_CATEGORIES 4
-#define LEN_CATEGORY 20
-
-typedef struct
-{
-	char aux_category[LEN_CATEGORY];
-	int aux_categoryNumber;
-}CategoryAuxilar;
 
 static int publication_countMaxCategory(int countInmobiliario,int countAutomotor,int countEmpleos,int countCompraVenta)
 {
@@ -782,19 +780,19 @@ static int publication_countMaxCategory(int countInmobiliario,int countAutomotor
 			max = arrayAux[i].aux_categoryNumber;
 		}
 	}
-	printf("-------------------------------------------\n");
-	printf("| LISTADO DE RUBROS CON MAS PUBLICACIONES |\n");
-	printf("-------------------------------------------\n");
-	printf("|  CATEGORIA  | CANTIDAD                  |\n");
-	printf("-------------------------------------------\n");
+	printf("-----------------------------------------------\n");
+	printf("| LISTADO DE CATEGORIAS CON MAS PUBLICACIONES |\n");
+	printf("-----------------------------------------------\n");
+	printf("|  CATEGORIA  | CANTIDAD                      |\n");
+	printf("-----------------------------------------------\n");
 	for(int i=0;i< QTY_CATEGORIES ;i++)
 	{
 		if(arrayAux[i].aux_categoryNumber==max)
 		{
-			printf("| %-12s| %-26d|\n",
+			printf("| %-12s| %-30d|\n",
 					arrayAux[i].aux_category,
 					arrayAux[i].aux_categoryNumber);
-			printf("-------------------------------------------\n");
+			printf("-----------------------------------------------\n");
 		}
 	}
 	return retorno;

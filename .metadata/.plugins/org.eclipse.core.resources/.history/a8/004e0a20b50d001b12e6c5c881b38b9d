@@ -13,7 +13,7 @@
 #include <string.h>
 #include <limits.h>
 #include "utn.h"
-#include "info.h"
+#include "newspaper.h"
 #include "client.h"
 #include "publication.h"
 
@@ -41,7 +41,7 @@ int main(void) {
 
 	do
 	{
-		info_getMenu(&choosenOption);
+		newspaper_getMenu(&choosenOption);
 		switch(choosenOption)
 		{
 			case 1://ALTA CLIENTE
@@ -51,20 +51,20 @@ int main(void) {
 				client_modifyMenu(arrayClients, QTY_CLIENTS, client_firstLoad);
 				break;
 			case 3://BAJA CLIENTE
-				info_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+				newspaper_removeClientMenu(arrayClients, QTY_CLIENTS, &client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
 				break;
 			case 4://ALTA PUBLICACION
-				info_addPublicationMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
+				newspaper_addPublicationMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, &publication_firstLoad);
 				break;
 			case 5://PAUSAR PUBLICACION
 			case 6://REANUDAR PUBLICACION
-				info_publicationStatusMenu(arrayClients, QTY_CLIENTS, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad,choosenOption);
+				newspaper_publicationStatusMenu(arrayClients, QTY_CLIENTS, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad,choosenOption);
 				break;
 			case 7://IMPRIMIR CLIENTES CON NUMERO DE PUBLICACIONES ACTIVAS
-				info_printClientsWithActivePublications(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
+				newspaper_printClientsWithActivePublications(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS);
 				break;
 			case 8://INFORMES
-				info_getReportMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
+				newspaper_getReportMenu(arrayClients, QTY_CLIENTS, client_firstLoad, arrayPublications, QTY_PUBLICATIONS, publication_firstLoad);
 				break;
 		}
 	}while(choosenOption!=9);
