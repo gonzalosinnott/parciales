@@ -20,7 +20,6 @@
 typedef struct
 {
 	int aux_id;
-	int aux_isEmpty;
 	char aux_name[LEN_NAME];
 	char aux_lastName[LEN_NAME];
 	char aux_cuit[LEN_FORMATEDCUIT];
@@ -329,7 +328,6 @@ int info_printClientsWithActivePublications(Client* client_list, int client_len,
 	int sorted;
 
 	ClientAuxiliar arrayAux[client_len];
-	ClientAuxiliar bufferAux;
 
 	if(client_list !=NULL && client_len > 0 && publication_list !=NULL && publication_len > 0)
 	{
@@ -341,27 +339,27 @@ int info_printClientsWithActivePublications(Client* client_list, int client_len,
 		{
 			for(int i = 0; i < client_len; i++)
 			{
+				if(client_list[i].client_isEmpty == FALSE)
+				{
 					idClient = client_list[i].client_id;
 					info_activePublicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
-
 					arrayAux[i].aux_id=client_list[i].client_id;
-					arrayAux[i].aux_isEmpty=client_list[i].client_isEmpty;
 					strncpy(arrayAux[i].aux_name,client_list[i].client_name,LEN_NAME);
 					strncpy(arrayAux[i].aux_lastName,client_list[i].client_lastName,LEN_NAME);
 					strncpy(arrayAux[i].aux_cuit,client_list[i].client_cuit,LEN_FORMATEDCUIT);
 					arrayAux[i].aux_publicationNumber = publicationCount;
+				}
 			}
-
 			do
 			{
 				sorted = TRUE;
 				for(int i = 0; i < (client_len-1); i++)
 				{
-					if(arrayAux[i].aux_publicationNumber  < arrayAux[i + 1].aux_publicationNumber)
+					if(arrayAux[i].publ > arrayAux[i + 1].client_id
 					{
-						bufferAux = arrayAux[i];
-						arrayAux[i] = arrayAux[i + 1];
-						arrayAux[i + 1] = bufferAux;
+						bufferClient = client_list[i];
+						client_list[i] = client_list[i + 1];
+						client_list[i + 1] = bufferClient;
 						sorted = FALSE;
 					}
 				}
@@ -374,18 +372,20 @@ int info_printClientsWithActivePublications(Client* client_list, int client_len,
 			printf("-------------------------------------------------------------------------------------\n");
 			for(int i=0;i< client_len ;i++)
 			{
-				if(arrayAux[i].aux_isEmpty == FALSE)
+				if(client_list[i].client_isEmpty == FALSE)
 				{
+					idClient = client_list[i].client_id;
+					info_activePublicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
 					printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
-							arrayAux[i].aux_lastName,
-							arrayAux[i].aux_name,
-							arrayAux[i].aux_cuit,
-							arrayAux[i].aux_id,
-							arrayAux[i].aux_publicationNumber);
+							client_list[i].client_lastName,
+							client_list[i].client_name,
+							client_list[i].client_cuit,
+							client_list[i].client_id,
+							publicationCount);
 					printf("-------------------------------------------------------------------------------------\n");
-					retorno = 0;
 				}
 			}
+			retorno = 0;
 		}
 	}
 	return retorno;

@@ -17,16 +17,6 @@
 #include "publication.h"
 #include "utn.h"
 
-typedef struct
-{
-	int aux_id;
-	int aux_isEmpty;
-	char aux_name[LEN_NAME];
-	char aux_lastName[LEN_NAME];
-	char aux_cuit[LEN_FORMATEDCUIT];
-	int aux_publicationNumber;
-}ClientAuxiliar;
-
 static int info_pauseMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
 static int info_activeMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
 static int info_activePublicationCountbyClientId(Publication* publication_list, int publication_len, int clientId, int* publicationCount);
@@ -220,37 +210,26 @@ static int info_pauseMenu(Client* client_list, int client_len, Publication* publ
 
 	if(client_list !=NULL && client_len > 0 && publication_list !=NULL && publication_len > 0)
 	{
-		if(publication_printActive(publication_list, publication_len)==0)
+		publication_printActive(publication_list, publication_len);
+		if(utn_getIntNumber("\nIngrese el ID de publicacion a pausar:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
+		   publication_findById(publication_list, publication_len, idToSearch, &clientId)== 0)
 		{
-			printf("----------------------------------------------------------------------------------------------------------\n");
-			printf("|                                  LISTADO DE PUBLICACIONES ACTIVAS                                      |\n");
-			printf("----------------------------------------------------------------------------------------------------------\n");
-			printf("|  ID  |   CATEGORIA   | DESCRIPCION                                                      |  ID CLIENTE  |\n");
-			printf("----------------------------------------------------------------------------------------------------------\n");
-			if(utn_getIntNumber("\nIngrese el ID de publicacion a pausar:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
-			   publication_findById(publication_list, publication_len, idToSearch, &clientId)== 0)
+			indexToModify = publication_findIndexById(publication_list, publication_len, idToSearch);
+			if(strcmp(publication_list[indexToModify].publication_status,ACTIVE)==0)
 			{
-				indexToModify = publication_findIndexById(publication_list, publication_len, idToSearch);
-				if(strcmp(publication_list[indexToModify].publication_status,ACTIVE)==0)
-				{
-					publication_printById(publication_list, publication_len, idToSearch);
-					client_printById(client_list, client_len, clientId);
-					publication_pause(publication_list, publication_len, idToSearch);
-					retorno = 0;
-				}
-				else
-				{
-					printf("\nERROR, PUBLICIDAD YA PAUSADA.\n");
-				}
+				publication_printById(publication_list, publication_len, idToSearch);
+				client_printById(client_list, client_len, clientId);
+				publication_pause(publication_list, publication_len, idToSearch);
+				retorno = 0;
 			}
 			else
 			{
-				printf("\nERROR, ID DE PUBLICACION INEXISTENTE.\n");
+				printf("\nERROR, PUBLICIDAD YA PAUSADA.\n");
 			}
 		}
 		else
 		{
-			printf("\nNO EXISTEN PUBLICACIONES ACTIVAS.\n");
+			printf("\nERROR, ID DE PUBLICACION INEXISTENTE.\n");
 		}
 	}
 	return retorno;
@@ -274,38 +253,37 @@ static int info_activeMenu(Client* client_list, int client_len, Publication* pub
 
 	if(client_list !=NULL && client_len > 0 && publication_list !=NULL && publication_len > 0)
 	{
-
-		if(publication_printPaused(publication_list, publication_len)==0)
+		for(int i = 0 ; i < publication_len; i++)
 		{
-			printf("----------------------------------------------------------------------------------------------------------\n");
-			printf("|                                 LISTADO DE PUBLICACIONES PAUSADAS                                      |\n");
-			printf("----------------------------------------------------------------------------------------------------------\n");
-			printf("|  ID  |   CATEGORIA   | DESCRIPCION                                                      |  ID CLIENTE  |\n");
-			printf("----------------------------------------------------------------------------------------------------------\n");
-			if(utn_getIntNumber("\nIngrese el ID de publicacion a reanudar:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
-			publication_findById(publication_list, publication_len, idToSearch, &clientId)== 0)
+			if(publication_list[i].publication_status == PAUSED)
 			{
-				indexToModify = publication_findIndexById(publication_list, publication_len, idToSearch);
-				if(strcmp(publication_list[indexToModify].publication_status,PAUSED)==0)
+				publication_printPaused(publication_list, publication_len);
+				if(utn_getIntNumber("\nIngrese el ID de publicacion a reanudar:","Error, no es un ID valido. ",&idToSearch,3,INT_MAX,1)==0 &&
+				   publication_findById(publication_list, publication_len, idToSearch, &clientId)== 0)
 				{
-					publication_printById(publication_list, publication_len, idToSearch);
-					client_printById(client_list, client_len, clientId);
-					publication_active(publication_list, publication_len, idToSearch);
-					retorno = 0;
+					indexToModify = publication_findIndexById(publication_list, publication_len, idToSearch);
+					if(strcmp(publication_list[indexToModify].publication_status,PAUSED)==0)
+					{
+						publication_printById(publication_list, publication_len, idToSearch);
+						client_printById(client_list, client_len, clientId);
+						publication_active(publication_list, publication_len, idToSearch);
+						retorno = 0;
+					}
+					else
+					{
+						printf("\nERROR, PUBLICIDAD YA ACTIVA.\n");
+					}
 				}
 				else
 				{
-					printf("\nERROR, PUBLICIDAD YA ACTIVA.\n");
+					printf("\nERROR, ID DE PUBLICACION INEXISTENTE.\n");
 				}
+				break;
 			}
 			else
 			{
-				printf("\nERROR, ID DE PUBLICACION INEXISTENTE.\n");
+				printf("\nNO EXISTEN PUBLICACIONES PAUSADAS.\n");
 			}
-		}
-		else
-		{
-			printf("\nNO EXISTEN PUBLICACIONES PAUSADAS.\n");
 		}
 	}
 	return retorno;
@@ -326,11 +304,6 @@ int info_printClientsWithActivePublications(Client* client_list, int client_len,
 	int retorno = -1;
 	int publicationCount;
 	int idClient;
-	int sorted;
-
-	ClientAuxiliar arrayAux[client_len];
-	ClientAuxiliar bufferAux;
-
 	if(client_list !=NULL && client_len > 0 && publication_list !=NULL && publication_len > 0)
 	{
 		if(client_firstLoad == FALSE)
@@ -339,34 +312,6 @@ int info_printClientsWithActivePublications(Client* client_list, int client_len,
 		}
 		else
 		{
-			for(int i = 0; i < client_len; i++)
-			{
-					idClient = client_list[i].client_id;
-					info_activePublicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
-
-					arrayAux[i].aux_id=client_list[i].client_id;
-					arrayAux[i].aux_isEmpty=client_list[i].client_isEmpty;
-					strncpy(arrayAux[i].aux_name,client_list[i].client_name,LEN_NAME);
-					strncpy(arrayAux[i].aux_lastName,client_list[i].client_lastName,LEN_NAME);
-					strncpy(arrayAux[i].aux_cuit,client_list[i].client_cuit,LEN_FORMATEDCUIT);
-					arrayAux[i].aux_publicationNumber = publicationCount;
-			}
-
-			do
-			{
-				sorted = TRUE;
-				for(int i = 0; i < (client_len-1); i++)
-				{
-					if(arrayAux[i].aux_publicationNumber  < arrayAux[i + 1].aux_publicationNumber)
-					{
-						bufferAux = arrayAux[i];
-						arrayAux[i] = arrayAux[i + 1];
-						arrayAux[i + 1] = bufferAux;
-						sorted = FALSE;
-					}
-				}
-			}while(sorted == FALSE);
-
 			printf("-------------------------------------------------------------------------------------\n");
 			printf("|             LISTADO DE CLIENTES CON CANTIDAD DE PUBLICACIONES ACTIVAS             |\n");
 			printf("-------------------------------------------------------------------------------------\n");
@@ -374,18 +319,20 @@ int info_printClientsWithActivePublications(Client* client_list, int client_len,
 			printf("-------------------------------------------------------------------------------------\n");
 			for(int i=0;i< client_len ;i++)
 			{
-				if(arrayAux[i].aux_isEmpty == FALSE)
+				if(client_list[i].client_isEmpty == FALSE)
 				{
+					idClient = client_list[i].client_id;
+					info_activePublicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
 					printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
-							arrayAux[i].aux_lastName,
-							arrayAux[i].aux_name,
-							arrayAux[i].aux_cuit,
-							arrayAux[i].aux_id,
-							arrayAux[i].aux_publicationNumber);
+							client_list[i].client_lastName,
+							client_list[i].client_name,
+							client_list[i].client_cuit,
+							client_list[i].client_id,
+							publicationCount);
 					printf("-------------------------------------------------------------------------------------\n");
-					retorno = 0;
 				}
 			}
+			retorno = 0;
 		}
 	}
 	return retorno;
@@ -483,6 +430,14 @@ int info_getReportMenu(Client* client_list, int client_len,int client_firstLoad,
  * \return (-1) Error / (0) Ok
  */
 
+typedef struct
+{
+	int aux_id;
+	char aux_name[LEN_NAME];
+	char aux_lastName[LEN_NAME];
+	char aux_cuit[LEN_FORMATEDCUIT];
+	int aux_publicationNumber;
+}ClientAuxiliar;
 
 static int info_clientWithMostAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
 {

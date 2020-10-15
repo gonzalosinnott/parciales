@@ -341,15 +341,17 @@ int info_printClientsWithActivePublications(Client* client_list, int client_len,
 		{
 			for(int i = 0; i < client_len; i++)
 			{
+				if(client_list[i].client_isEmpty == FALSE)
+				{
 					idClient = client_list[i].client_id;
 					info_activePublicationCountbyClientId(publication_list, publication_len, idClient, &publicationCount);
-
 					arrayAux[i].aux_id=client_list[i].client_id;
 					arrayAux[i].aux_isEmpty=client_list[i].client_isEmpty;
 					strncpy(arrayAux[i].aux_name,client_list[i].client_name,LEN_NAME);
 					strncpy(arrayAux[i].aux_lastName,client_list[i].client_lastName,LEN_NAME);
 					strncpy(arrayAux[i].aux_cuit,client_list[i].client_cuit,LEN_FORMATEDCUIT);
 					arrayAux[i].aux_publicationNumber = publicationCount;
+				}
 			}
 
 			do

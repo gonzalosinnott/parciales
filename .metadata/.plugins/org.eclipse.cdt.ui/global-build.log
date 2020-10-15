@@ -1228,3 +1228,234 @@ Invoking: GCC C Linker
 gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
 Finished building target: primer_parcial
  
+10:37:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:37:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:48:16 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_activeMenu’:
+../src/info.c:258:46: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  258 |    if(publication_list[i].publication_status == PAUSED)
+      |                                              ^~
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:48:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:49:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_activeMenu’:
+../src/info.c:258:46: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  258 |    if(publication_list[i].publication_status == PAUSED)
+      |                                              ^~
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:49:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:49:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:53:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:53:52 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+10:59:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+10:59:04 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:03:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:03:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:03:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:20:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:21:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:23:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:23:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:26:10 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:26:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:28:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:28:21 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:28:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:28:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:29:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:29:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:30:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:30:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+11:32:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
