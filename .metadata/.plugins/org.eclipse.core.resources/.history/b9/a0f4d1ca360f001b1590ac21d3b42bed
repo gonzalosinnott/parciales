@@ -387,7 +387,7 @@ int publication_pause(Publication* publication_list, int publication_len,int id)
 			switch(answer)
 			{
 				case 1:
-					strcpy(publication_list[indexToModify].publication_status,PAUSED);
+					strncpy(publication_list[indexToModify].publication_status,PAUSED,LEN_STATUS);
 					printf("\nREGISTRO DE PUBLICIDAD PAUSADO CON EXITO.\n");
 					break;
 				case 2:
@@ -426,7 +426,7 @@ int publication_active(Publication* publication_list, int publication_len,int id
 			switch(answer)
 			{
 				case 1:
-					strcpy(publication_list[indexToModify].publication_status,ACTIVE);
+					strncpy(publication_list[indexToModify].publication_status,ACTIVE,LEN_STATUS);
 					printf("\nREGISTRO DE PUBLICIDAD REANUDADO CON EXITO.\n");
 					break;
 				case 2:

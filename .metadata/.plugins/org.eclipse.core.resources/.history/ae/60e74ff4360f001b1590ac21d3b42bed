@@ -28,7 +28,7 @@ typedef struct
 	char aux_lastName[LEN_NAME];
 	char aux_cuit[LEN_FORMATEDCUIT];
 	char aux_status[LEN_STATUS];
-	char aux_publicationNumber;
+	int aux_publicationNumber;
 }ClientAuxiliar;
 
 static int info_pauseMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
@@ -631,7 +631,7 @@ static int info_clientWithMostActiveAds(Client* client_list, int client_len, Pub
 								strncpy(arrayAux[i].aux_name,client_list[i].client_name,LEN_NAME);
 								strncpy(arrayAux[i].aux_lastName,client_list[i].client_lastName,LEN_NAME);
 								strncpy(arrayAux[i].aux_cuit,client_list[i].client_cuit,LEN_FORMATEDCUIT);
-								strcpy(arrayAux[i].aux_status,publication_list[j].publication_status);
+								strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
 								arrayAux[i].aux_publicationNumber = count;
 								retorno = 0;
 							}
@@ -723,7 +723,7 @@ static int info_clientWithMostPausedAds(Client* client_list, int client_len, Pub
 								strncpy(arrayAux[i].aux_name,client_list[i].client_name,LEN_NAME);
 								strncpy(arrayAux[i].aux_lastName,client_list[i].client_lastName,LEN_NAME);
 								strncpy(arrayAux[i].aux_cuit,client_list[i].client_cuit,LEN_FORMATEDCUIT);
-								strcpy(arrayAux[i].aux_status,publication_list[j].publication_status);
+								strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
 								arrayAux[i].aux_publicationNumber = count;
 								retorno = 0;
 							}
@@ -741,7 +741,7 @@ static int info_clientWithMostPausedAds(Client* client_list, int client_len, Pub
 				for(int i=0;i< AUX_LEN  ;i++)
 				{
 					if(arrayAux[i].aux_isEmpty == FALSE &&
-					   arrayAux[i].aux_publicationNumber == maxCount &&
+					   arrayAux[i].aux_publicationNumber == maxCount
 					   strcmp(arrayAux[i].aux_status,PAUSED)==0)
 
 					{
@@ -778,6 +778,7 @@ static int reset_auxArray(ClientAuxiliar* aux_list, int aux_len)
 		for(int i=0;i<aux_len;i++)
 		{
 			aux_list[i].aux_isEmpty = TRUE;
+			strcpy(aux_list[i].aux_status,NULL);
 		}
 		retorno = 0;
 	}

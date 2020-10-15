@@ -741,7 +741,7 @@ static int info_clientWithMostPausedAds(Client* client_list, int client_len, Pub
 				for(int i=0;i< AUX_LEN  ;i++)
 				{
 					if(arrayAux[i].aux_isEmpty == FALSE &&
-					   arrayAux[i].aux_publicationNumber == maxCount &&
+					   arrayAux[i].aux_publicationNumber == maxCount
 					   strcmp(arrayAux[i].aux_status,PAUSED)==0)
 
 					{

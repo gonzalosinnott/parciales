@@ -13,8 +13,6 @@
 
 #define TRUE 1
 #define FALSE 0
-#define ACTIVE "ACTIVA"
-#define PAUSED "PAUSADA"
 
 #include "client.h"
 #include "publication.h"

@@ -1,6 +1,6 @@
-11:32:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+19:39:20 **** Incremental Build of configuration Debug for project primer_parcial ****
 make all 
 make: No se hace nada para 'all'.
 
-11:32:29 Build Finished. 0 errors, 0 warnings. (took 573ms)
+19:39:21 Build Finished. 0 errors, 0 warnings. (took 632ms)
 

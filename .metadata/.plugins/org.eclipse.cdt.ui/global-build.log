@@ -1459,3 +1459,617 @@ make: No se hace nada para 'all'.
 11:32:29 **** Incremental Build of configuration Debug for project primer_parcial ****
 make all 
 make: No se hace nada para 'all'.
+11:56:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+Finished building: ../src/client.c
+ 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+11:56:11 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:50:24 **** Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_getReportMenu’:
+../src/info.c:473:6: error: duplicate case value
+  473 |      case 3:
+      |      ^~~~
+../src/info.c:470:6: note: previously used here
+  470 |      case 3:
+      |      ^~~~
+../src/info.c:476:6: error: duplicate case value
+  476 |      case 3:
+      |      ^~~~
+../src/info.c:470:6: note: previously used here
+  470 |      case 3:
+      |      ^~~~
+../src/info.c:477:7: warning: implicit declaration of function ‘info_clientWithMostPausedAds’; did you mean ‘info_clientWithMostActiveAds’? [-Wimplicit-function-declaration]
+  477 |       info_clientWithMostPausedAds(client_list, client_len, publication_list, publication_len, publication_firstLoad);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |       info_clientWithMostActiveAds
+../src/info.c: At top level:
+../src/info.c:663:12: error: static declaration of ‘info_clientWithMostPausedAds’ follows non-static declaration
+  663 | static int info_clientWithMostPausedAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/info.c:477:7: note: previous implicit declaration of ‘info_clientWithMostPausedAds’ was here
+  477 |       info_clientWithMostPausedAds(client_list, client_len, publication_list, publication_len, publication_firstLoad);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/info.c:663:12: warning: ‘info_clientWithMostPausedAds’ defined but not used [-Wunused-function]
+  663 | static int info_clientWithMostPausedAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:50:39 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_getReportMenu’:
+../src/info.c:477:7: warning: implicit declaration of function ‘info_clientWithMostPausedAds’; did you mean ‘info_clientWithMostActiveAds’? [-Wimplicit-function-declaration]
+  477 |       info_clientWithMostPausedAds(client_list, client_len, publication_list, publication_len, publication_firstLoad);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |       info_clientWithMostActiveAds
+../src/info.c: At top level:
+../src/info.c:663:12: error: static declaration of ‘info_clientWithMostPausedAds’ follows non-static declaration
+  663 | static int info_clientWithMostPausedAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/info.c:477:7: note: previous implicit declaration of ‘info_clientWithMostPausedAds’ was here
+  477 |       info_clientWithMostPausedAds(client_list, client_len, publication_list, publication_len, publication_firstLoad);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/info.c:663:12: warning: ‘info_clientWithMostPausedAds’ defined but not used [-Wunused-function]
+  663 | static int info_clientWithMostPausedAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:51:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:51:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:54:13 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:54:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:55:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:56:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:56:41 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:56:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:59:42 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+18:59:46 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:02:15 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:02:17 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:05:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:05:35 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:09:12 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostActiveAds’:
+../src/info.c:630:9: warning: statement with no effect [-Wunused-value]
+  630 |         retorno 0;
+      |         ^~~~~~~
+../src/info.c:630:16: error: expected ‘;’ before numeric constant
+  630 |         retorno 0;
+      |                ^~
+      |                ;
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:716:9: warning: statement with no effect [-Wunused-value]
+  716 |         retorno 0;
+      |         ^~~~~~~
+../src/info.c:716:16: error: expected ‘;’ before numeric constant
+  716 |         retorno 0;
+      |                ^~
+      |                ;
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:09:31 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:09:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:10:43 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:722:8: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  722 |    if (retorno = 0)
+      |        ^~~~~~~
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:10:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:11:59 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:12:02 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:15:35 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:15:45 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:15:50 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:15:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:18:27 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:18:30 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:19:07 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:19:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:26:05 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:26:08 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+19:35:58 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostActiveAds’:
+../src/info.c:634:38: error: assignment to expression with array type
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:634:9: error: too few arguments to function ‘strcpy’
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:726:38: error: assignment to expression with array type
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:726:9: error: too few arguments to function ‘strcpy’
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c:744:54: error: expected ‘)’ before ‘strcmp’
+  744 |         arrayAux[i].aux_publicationNumber == maxCount
+      |                                                      ^
+      |                                                      )
+  745 |         strcmp(arrayAux[i].aux_status,PAUSED)==0)
+      |         ~~~~~~                                        
+../src/info.c:743:8: note: to match this ‘(’
+  743 |      if(arrayAux[i].aux_isEmpty == FALSE &&
+      |        ^
+../src/info.c: In function ‘reset_auxArray’:
+../src/info.c:781:4: warning: null argument where non-null required (argument 2) [-Wnonnull]
+  781 |    strcpy(aux_list[i].aux_status,NULL);
+      |    ^~~~~~
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:36:00 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostActiveAds’:
+../src/info.c:634:38: error: assignment to expression with array type
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:634:9: error: too few arguments to function ‘strcpy’
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:726:38: error: assignment to expression with array type
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:726:9: error: too few arguments to function ‘strcpy’
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c:744:54: error: expected ‘)’ before ‘strcmp’
+  744 |         arrayAux[i].aux_publicationNumber == maxCount
+      |                                                      ^
+      |                                                      )
+  745 |         strcmp(arrayAux[i].aux_status,PAUSED)==0)
+      |         ~~~~~~                                        
+../src/info.c:743:8: note: to match this ‘(’
+  743 |      if(arrayAux[i].aux_isEmpty == FALSE &&
+      |        ^
+../src/info.c: In function ‘reset_auxArray’:
+../src/info.c:781:4: warning: null argument where non-null required (argument 2) [-Wnonnull]
+  781 |    strcpy(aux_list[i].aux_status,NULL);
+      |    ^~~~~~
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:36:19 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostActiveAds’:
+../src/info.c:634:38: error: assignment to expression with array type
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:634:9: error: too few arguments to function ‘strcpy’
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:726:38: error: assignment to expression with array type
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:726:9: error: too few arguments to function ‘strcpy’
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c:744:54: error: expected ‘)’ before ‘strcmp’
+  744 |         arrayAux[i].aux_publicationNumber == maxCount
+      |                                                      ^
+      |                                                      )
+  745 |         strcmp(arrayAux[i].aux_status,PAUSED)==0)
+      |         ~~~~~~                                        
+../src/info.c:743:8: note: to match this ‘(’
+  743 |      if(arrayAux[i].aux_isEmpty == FALSE &&
+      |        ^
+../src/info.c: In function ‘reset_auxArray’:
+../src/info.c:781:4: warning: null argument where non-null required (argument 2) [-Wnonnull]
+  781 |    strcpy(aux_list[i].aux_status,NULL);
+      |    ^~~~~~
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:37:09 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostActiveAds’:
+../src/info.c:634:38: error: assignment to expression with array type
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:634:9: error: too few arguments to function ‘strcpy’
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:726:38: error: assignment to expression with array type
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:726:9: error: too few arguments to function ‘strcpy’
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c:744:54: error: expected ‘)’ before ‘strcmp’
+  744 |         arrayAux[i].aux_publicationNumber == maxCount
+      |                                                      ^
+      |                                                      )
+  745 |         strcmp(arrayAux[i].aux_status,PAUSED)==0)
+      |         ~~~~~~                                        
+../src/info.c:743:8: note: to match this ‘(’
+  743 |      if(arrayAux[i].aux_isEmpty == FALSE &&
+      |        ^
+../src/info.c: In function ‘reset_auxArray’:
+../src/info.c:781:4: warning: null argument where non-null required (argument 2) [-Wnonnull]
+  781 |    strcpy(aux_list[i].aux_status,NULL);
+      |    ^~~~~~
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:37:30 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostActiveAds’:
+../src/info.c:634:38: error: assignment to expression with array type
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:634:9: error: too few arguments to function ‘strcpy’
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:726:38: error: assignment to expression with array type
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |                                      ^
+../src/info.c:726:9: error: too few arguments to function ‘strcpy’
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[i].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c:744:54: error: expected ‘)’ before ‘strcmp’
+  744 |         arrayAux[i].aux_publicationNumber == maxCount
+      |                                                      ^
+      |                                                      )
+  745 |         strcmp(arrayAux[i].aux_status,PAUSED)==0)
+      |         ~~~~~~                                        
+../src/info.c:743:8: note: to match this ‘(’
+  743 |      if(arrayAux[i].aux_isEmpty == FALSE &&
+      |        ^
+../src/info.c: In function ‘reset_auxArray’:
+../src/info.c:781:4: warning: null argument where non-null required (argument 2) [-Wnonnull]
+  781 |    strcpy(aux_list[i].aux_status,NULL);
+      |    ^~~~~~
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:38:26 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostActiveAds’:
+../src/info.c:634:38: error: assignment to expression with array type
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[j].publication_status);
+      |                                      ^
+../src/info.c:634:9: error: too few arguments to function ‘strcpy’
+  634 |         strcpy(arrayAux[i].aux_status=publication_list[j].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:726:38: error: assignment to expression with array type
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[j].publication_status);
+      |                                      ^
+../src/info.c:726:9: error: too few arguments to function ‘strcpy’
+  726 |         strcpy(arrayAux[i].aux_status=publication_list[j].publication_status);
+      |         ^~~~~~
+In file included from ../src/info.c:13:
+/usr/include/string.h:122:14: note: declared here
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |              ^~~~~~
+../src/info.c:744:54: error: expected ‘)’ before ‘strcmp’
+  744 |         arrayAux[i].aux_publicationNumber == maxCount
+      |                                                      ^
+      |                                                      )
+  745 |         strcmp(arrayAux[i].aux_status,PAUSED)==0)
+      |         ~~~~~~                                        
+../src/info.c:743:8: note: to match this ‘(’
+  743 |      if(arrayAux[i].aux_isEmpty == FALSE &&
+      |        ^
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:38:44 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+../src/info.c: In function ‘info_clientWithMostPausedAds’:
+../src/info.c:744:54: error: expected ‘)’ before ‘strcmp’
+  744 |         arrayAux[i].aux_publicationNumber == maxCount
+      |                                                      ^
+      |                                                      )
+  745 |         strcmp(arrayAux[i].aux_status,PAUSED)==0)
+      |         ~~~~~~                                        
+../src/info.c:743:8: note: to match this ‘(’
+  743 |      if(arrayAux[i].aux_isEmpty == FALSE &&
+      |        ^
+make: *** [src/subdir.mk:32: src/info.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:39:01 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/info.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/info.d" -MT"src/info.o" -o "src/info.o" "../src/info.c"
+Finished building: ../src/info.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:16:
+../src/info.h:18: warning: "NULL" redefined
+   18 | #define NULL "SIN ESTADO"
+      | 
+In file included from /usr/include/string.h:33,
+                 from ../src/main.c:13:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:395: note: this is the location of the previous definition
+  395 | #define NULL ((void *)0)
+      | 
+Finished building: ../src/main.c
+ 
+Building file: ../src/publication.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/publication.d" -MT"src/publication.o" -o "src/publication.o" "../src/publication.c"
+Finished building: ../src/publication.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:39:18 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: primer_parcial
+Invoking: GCC C Linker
+gcc  -o "primer_parcial"  ./src/client.o ./src/info.o ./src/main.o ./src/publication.o ./src/utn.o   
+Finished building target: primer_parcial
+ 
+19:39:20 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.

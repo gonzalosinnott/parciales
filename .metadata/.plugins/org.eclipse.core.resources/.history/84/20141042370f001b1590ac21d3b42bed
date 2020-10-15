@@ -15,6 +15,7 @@
 #define FALSE 0
 #define ACTIVE "ACTIVA"
 #define PAUSED "PAUSADA"
+#define NULL "SIN ESTADO"
 
 #include "client.h"
 #include "publication.h"

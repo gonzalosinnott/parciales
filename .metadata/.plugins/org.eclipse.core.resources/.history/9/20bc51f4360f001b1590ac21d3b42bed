@@ -26,7 +26,7 @@ typedef struct
 	char publication_category[LEN_CATEGORY];
 	char publication_description[LEN_DESCRIPTION];
 	int publication_idClient;
-	char publication_status[LEN_STATUS];
+	char publication_status[8];
 }Publication;
 
 int publication_initArray(Publication* publication_list, int publication_len);

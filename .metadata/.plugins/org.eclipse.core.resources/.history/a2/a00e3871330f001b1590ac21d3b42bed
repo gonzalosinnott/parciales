@@ -17,9 +17,6 @@
 #include "publication.h"
 #include "utn.h"
 
-
-#define AUX_LEN 100
-
 typedef struct
 {
 	int aux_id;
@@ -27,8 +24,7 @@ typedef struct
 	char aux_name[LEN_NAME];
 	char aux_lastName[LEN_NAME];
 	char aux_cuit[LEN_FORMATEDCUIT];
-	char aux_status[LEN_STATUS];
-	char aux_publicationNumber;
+	int aux_publicationNumber;
 }ClientAuxiliar;
 
 static int info_pauseMenu(Client* client_list, int client_len, Publication* publication_list, int publication_len);
@@ -37,7 +33,6 @@ static int info_activePublicationCountbyClientId(Publication* publication_list, 
 static int info_clientWithMostAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
 static int info_clientWithMostActiveAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
 static int info_clientWithMostPausedAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
-static int reset_auxArray(ClientAuxiliar* aux_list, int aux_len);
 
 
 
@@ -558,7 +553,7 @@ static int info_clientWithMostAds(Client* client_list, int client_len, Publicati
 			printf("-------------------------------------------------------------------------------------\n");
 			printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
 			printf("-------------------------------------------------------------------------------------\n");
-			for(int i=0;i < AUX_LEN ;i++)
+			for(int i=0;i< 100  ;i++)
 			{
 				if(arrayAux[i].aux_publicationNumber == maxCount)
 				{
@@ -578,7 +573,7 @@ static int info_clientWithMostAds(Client* client_list, int client_len, Publicati
 
 
 /**
- * \brief info_clientWithMostActiveAds: Prints the information of the clients with the most ACTIVE publications
+ * \brief info_clientWithMostAds: Prints the information of the clients with the most publications
  * \param Client* client_list: Pointer to array of clients
  * \param int client_len: Clients Array length
  * \param Publication* publication_list: Pointer to array of publications
@@ -620,7 +615,7 @@ static int info_clientWithMostActiveAds(Client* client_list, int client_len, Pub
 					{
 						if(publication_list[j].publication_isEmpty == FALSE &&
 						   publication_list[j].publication_idClient == idClient &&
-						   strncmp(publication_list[j].publication_status,ACTIVE,LEN_CATEGORY)==0)
+						   strcmp(publication_list[j].publication_status,ACTIVE)==0)
 						{
 							count++;
 							if(count>=maxCount)
@@ -631,7 +626,6 @@ static int info_clientWithMostActiveAds(Client* client_list, int client_len, Pub
 								strncpy(arrayAux[i].aux_name,client_list[i].client_name,LEN_NAME);
 								strncpy(arrayAux[i].aux_lastName,client_list[i].client_lastName,LEN_NAME);
 								strncpy(arrayAux[i].aux_cuit,client_list[i].client_cuit,LEN_FORMATEDCUIT);
-								strcpy(arrayAux[i].aux_status,publication_list[j].publication_status);
 								arrayAux[i].aux_publicationNumber = count;
 								retorno = 0;
 							}
@@ -639,39 +633,33 @@ static int info_clientWithMostActiveAds(Client* client_list, int client_len, Pub
 					}
 				}
 			}
-			if (retorno == 0)
+			printf("-------------------------------------------------------------------------------------\n");
+			printf("|                          CLIENTES CON MAS PUBLICIDADES ACTIVAS                    |\n");
+			printf("-------------------------------------------------------------------------------------\n");
+			printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
+			printf("-------------------------------------------------------------------------------------\n");
+			for(int i=0;i< 100  ;i++)
 			{
-				printf("-------------------------------------------------------------------------------------\n");
-				printf("|                          CLIENTES CON MAS PUBLICIDADES ACTIVAS                    |\n");
-				printf("-------------------------------------------------------------------------------------\n");
-				printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
-				printf("-------------------------------------------------------------------------------------\n");
-				for(int i=0;i< AUX_LEN  ;i++)
+				if(arrayAux[i].aux_isEmpty == FALSE && arrayAux[i].aux_publicationNumber == maxCount)
 				{
-					if(arrayAux[i].aux_isEmpty == FALSE &&
-					   arrayAux[i].aux_publicationNumber == maxCount &&
-					   strcmp(arrayAux[i].aux_status,ACTIVE)==0)
-					{
-						printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
-								arrayAux[i].aux_lastName,
-								arrayAux[i].aux_name,
-								arrayAux[i].aux_cuit,
-								arrayAux[i].aux_id,
-								maxCount);
-						printf("-------------------------------------------------------------------------------------\n");
-					}
+					printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
+							arrayAux[i].aux_lastName,
+							arrayAux[i].aux_name,
+							arrayAux[i].aux_cuit,
+							arrayAux[i].aux_id,
+							maxCount);
+					printf("-------------------------------------------------------------------------------------\n");
 				}
 			}
 		}
 	}
-	reset_auxArray(arrayAux, AUX_LEN);
 	return retorno;
 }
 
 
 
 /**
- * \brief info_clientWithMostPausedAds: Prints the information of the clients with the most PAUSED publications
+ * \brief info_clientWithMostAds: Prints the information of the clients with the most publications
  * \param Client* client_list: Pointer to array of clients
  * \param int client_len: Clients Array length
  * \param Publication* publication_list: Pointer to array of publications
@@ -679,6 +667,7 @@ static int info_clientWithMostActiveAds(Client* client_list, int client_len, Pub
  * \param int publication_firstLoad: Pointer to space in memory where is the variable to indicate if publications array is empty
  * \return (-1) Error / (0) Ok
  */
+
 
 static int info_clientWithMostPausedAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad)
 {
@@ -712,7 +701,7 @@ static int info_clientWithMostPausedAds(Client* client_list, int client_len, Pub
 					{
 						if(publication_list[j].publication_isEmpty == FALSE &&
 						   publication_list[j].publication_idClient == idClient &&
-						   strncmp(publication_list[j].publication_status,PAUSED,LEN_CATEGORY)==0)
+						   strcmp(publication_list[j].publication_status,PAUSED)==0)
 						{
 							count++;
 							if(count>=maxCount)
@@ -723,7 +712,6 @@ static int info_clientWithMostPausedAds(Client* client_list, int client_len, Pub
 								strncpy(arrayAux[i].aux_name,client_list[i].client_name,LEN_NAME);
 								strncpy(arrayAux[i].aux_lastName,client_list[i].client_lastName,LEN_NAME);
 								strncpy(arrayAux[i].aux_cuit,client_list[i].client_cuit,LEN_FORMATEDCUIT);
-								strcpy(arrayAux[i].aux_status,publication_list[j].publication_status);
 								arrayAux[i].aux_publicationNumber = count;
 								retorno = 0;
 							}
@@ -731,19 +719,16 @@ static int info_clientWithMostPausedAds(Client* client_list, int client_len, Pub
 					}
 				}
 			}
-			if (retorno == 0)
+			if (retorno = 0)
 			{
 				printf("-------------------------------------------------------------------------------------\n");
 				printf("|                          CLIENTES CON MAS PUBLICIDADES PAUSADAS                   |\n");
 				printf("-------------------------------------------------------------------------------------\n");
 				printf("| APELLIDO        | NOMBRE          | CUIT            |  ID  | CANTIDAD DE ANUNCIOS |\n");
 				printf("-------------------------------------------------------------------------------------\n");
-				for(int i=0;i< AUX_LEN  ;i++)
+				for(int i=0;i< 100  ;i++)
 				{
-					if(arrayAux[i].aux_isEmpty == FALSE &&
-					   arrayAux[i].aux_publicationNumber == maxCount &&
-					   strcmp(arrayAux[i].aux_status,PAUSED)==0)
-
+					if(arrayAux[i].aux_isEmpty == FALSE && arrayAux[i].aux_publicationNumber == maxCount)
 					{
 						printf("| %-16s| %-16s| %-16s| %-4d | %-21d|\n",
 								arrayAux[i].aux_lastName,
@@ -756,30 +741,6 @@ static int info_clientWithMostPausedAds(Client* client_list, int client_len, Pub
 				}
 			}
 		}
-	}
-	reset_auxArray(arrayAux, AUX_LEN);
-	return retorno;
-}
-
-
-/**
- * \brief reset_auxArray: resets auxliary array,
- * \this function puts the flag (client_isEmpty) in TRUE in all position of the array
- * \param ClientAuxiliar* aux_list: Pointer to array of clients
- * \param int aux_len: Array length
- * \return (-1) Error / (0) Ok
- */
-
-static int reset_auxArray(ClientAuxiliar* aux_list, int aux_len)
-{
-	int retorno = -1;
-	if(aux_list != NULL && aux_len > 0)
-	{
-		for(int i=0;i<aux_len;i++)
-		{
-			aux_list[i].aux_isEmpty = TRUE;
-		}
-		retorno = 0;
 	}
 	return retorno;
 }
