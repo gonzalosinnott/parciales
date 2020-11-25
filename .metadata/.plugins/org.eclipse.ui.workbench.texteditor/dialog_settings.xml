@@ -6,8 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="info"/>
+		<item key="selection" value="Sale"/>
 		<list key="findhistory">
+			<item value="Client"/>
+			<item value="client"/>
+			<item value="employee"/>
+			<item value="Employee"/>
+			<item value="post"/>
+			<item value="Post"/>
 			<item value="newspaper"/>
 			<item value="getChar"/>
 			<item value="LEN_NAME"/>
@@ -19,21 +25,21 @@
 			<item value="alta"/>
 		</list>
 		<list key="replacehistory">
-			<item value="info"/>
+			<item value="Sale"/>
+			<item value="sale"/>
 			<item value="client"/>
+			<item value="Client"/>
+			<item value="user"/>
+			<item value="User"/>
+			<item value="Post"/>
+			<item value="post"/>
+			<item value="info"/>
 			<item value="LEN"/>
 			<item value="add"/>
 			<item value="publication"/>
 			<item value="Publication"/>
-			<item value="Client"/>
 			<item value="newspaper"/>
 			<item value="Publications"/>
-			<item value="PUBLICATIONS"/>
-			<item value="CLIENTS"/>
-			<item value="Publicacion"/>
-			<item value="publicacion"/>
-			<item value="clients"/>
-			<item value="cliente"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -8,8 +8,6 @@
  ============================================================================
  */
 
-#include "client.h"
-
 #include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
@@ -255,7 +253,7 @@ static int client_findIndexById(Client* client_list, int client_len,int id)
 			}
 		}
 	}
-	return retorno;;
+	return retorno;
 }
 /**
  * \brief client_findByCuit: find a client by CUIT and returns 0 if CUIT is found

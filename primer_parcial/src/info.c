@@ -37,9 +37,6 @@ static int info_activePublicationCountbyClientId(Publication* publication_list, 
 static int info_clientWithMostAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
 static int info_clientWithMostActiveAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
 static int info_clientWithMostPausedAds(Client* client_list, int client_len, Publication* publication_list, int publication_len,int publication_firstLoad);
-static int reset_auxArray(ClientAuxiliar* aux_list, int aux_len);
-
-
 
 /**
  * \brief info_getMenu: Menu for choosing options of the program,
@@ -664,7 +661,6 @@ static int info_clientWithMostActiveAds(Client* client_list, int client_len, Pub
 			}
 		}
 	}
-	reset_auxArray(arrayAux, AUX_LEN);
 	return retorno;
 }
 
@@ -756,30 +752,6 @@ static int info_clientWithMostPausedAds(Client* client_list, int client_len, Pub
 				}
 			}
 		}
-	}
-	reset_auxArray(arrayAux, AUX_LEN);
-	return retorno;
-}
-
-
-/**
- * \brief reset_auxArray: resets auxliary array,
- * \this function puts the flag (client_isEmpty) in TRUE in all position of the array
- * \param ClientAuxiliar* aux_list: Pointer to array of clients
- * \param int aux_len: Array length
- * \return (-1) Error / (0) Ok
- */
-
-static int reset_auxArray(ClientAuxiliar* aux_list, int aux_len)
-{
-	int retorno = -1;
-	if(aux_list != NULL && aux_len > 0)
-	{
-		for(int i=0;i<aux_len;i++)
-		{
-			aux_list[i].aux_isEmpty = TRUE;
-		}
-		retorno = 0;
 	}
 	return retorno;
 }

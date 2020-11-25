@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:primer_parcial
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:simulacro_MyBook,org.eclipse.launchbar.core.descriptorType.default\:primer_parcial,org.eclipse.launchbar.core.descriptorType.default\:segundo_parcial
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:primer_parcial/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:primer_parcial/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
