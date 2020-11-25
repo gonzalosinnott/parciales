@@ -17,6 +17,7 @@ Description : Header for Library Client.c
 #define TRUE 1
 #define FALSE 0
 #define LEN_NAME 4096
+#define LEN_CUIT 12
 #define LEN_FORMATEDCUIT 14
 
 typedef struct
@@ -45,6 +46,8 @@ int client_getName(Client* this,char* client_name);
 
 int client_setCuit(Client* this,char* client_cuit);
 int client_getCuit(Client* this,char* client_cuit);
+int client_cuitExists(LinkedList* this, char* cuit);
+
 
 int client_printSingleWithMap(void* pClient);
 

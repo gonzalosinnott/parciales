@@ -264,8 +264,9 @@ int client_setCuit(Client* this,char* client_cuit)
 	int output = -1;
 	if (this != NULL && client_cuit != NULL && client_isValidCuit(client_cuit, LEN_FORMATEDCUIT)==0)
 	{
-		strncpy(this->client_cuit, client_cuit, LEN_FORMATEDCUIT);
-		output = 0;
+
+			strncpy(this->client_cuit, client_cuit, LEN_FORMATEDCUIT);
+			output = 0;
 	}
 	return output;
 }
@@ -367,6 +368,31 @@ static int client_isValidInt(char* string, int len)
 			{
 				output = -1;
 				break;
+			}
+		}
+	}
+	return output;
+}
+
+int client_cuitExists(LinkedList* this, char* cuit)
+{
+	int output = -1;
+	char bufferCuit[LEN_FORMATEDCUIT];
+	Client* pClient;
+
+	if(this !=  NULL && cuit != NULL)
+	{
+		for (int i = 0; i < ll_len(this); i++)
+		{
+			pClient = (Client*)ll_get(this,i);
+			if(pClient!= NULL)
+			{
+				client_getCuit(pClient,bufferCuit);
+				if (strncmp(bufferCuit,cuit,LEN_FORMATEDCUIT)==0)
+				{
+					output = 0;
+					break;
+				}
 			}
 		}
 	}

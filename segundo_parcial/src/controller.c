@@ -72,7 +72,38 @@ int controller_loadSalesFromText(char* path, LinkedList* pArrayList)
 	return output;
 }
 
+int controller_addClient(LinkedList* pArrayList)
+{
+	int output = -1;
+	Client* pClient;
+	Client bufferClient;
 
+	if (pArrayList != NULL)
+	{
+		pClient = client_new();
+		if(pClient != NULL &&
+		   utn_getString("Ingrese Apellido: ", "Error", bufferClient.client_lastName, 3, sizeof(bufferClient.client_lastName)) == 0 &&
+		   utn_getString("Ingrese Nombre: ", "Error", bufferClient.client_name, 3, sizeof(bufferClient.client_name)) == 0 &&
+		   utn_getCuit("Ingrese CUIT (SIN GUIONES): ", "Error", bufferClient.client_cuit, 3,LEN_CUIT) == 0)
+		{
+			bufferClient.client_id = client_generateNewId(pArrayList);
+			if (client_cuitExists(pArrayList, bufferClient.client_cuit) != 0)
+			{
+				client_setLastName(pClient, bufferClient.client_lastName);
+				client_setName(pClient, bufferClient.client_name);
+				client_setCuit(pClient, bufferClient.client_cuit);
+				client_setId(pClient,bufferClient.client_id);
+				output = ll_add(pArrayList, pClient);
+			}
+			else
+			{
+				printf("\nERROR, EL CUIT INGRESADO YA PERTENECE A UN CLIENTE REGISTRADO\n");
+				client_delete(pClient);
+			}
+		}
+	}
+	return output;
+}
 
 
 

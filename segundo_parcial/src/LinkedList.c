@@ -558,6 +558,7 @@ int ll_map(LinkedList* this, int (*pFunc)(void*))
 			pElement = ll_get(this, i);
 			pFunc(pElement);
 		}
+		output = 0;
 	}
 	return output;
 }

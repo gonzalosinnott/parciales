@@ -1,8 +1,8 @@
-17:09:43 **** Clean-only build of configuration Debug for project segundo_parcial ****
+17:35:43 **** Clean-only build of configuration Debug for project segundo_parcial ****
 make clean 
 rm -rf  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o  ./src/LinkedList.d ./src/clients.d ./src/controller.d ./src/menu.d ./src/parser.d ./src/sales.d ./src/segundo_parcial.d ./src/utn.d  segundo_parcial
  
-17:09:46 **** Build of configuration Debug for project segundo_parcial ****
+17:35:45 **** Build of configuration Debug for project segundo_parcial ****
 make all 
 Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
@@ -37,6 +37,10 @@ Finished building: ../src/sales.c
 Building file: ../src/segundo_parcial.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+../src/segundo_parcial.c: In function ‘main’:
+../src/segundo_parcial.c:29:6: warning: unused variable ‘choosenoption’ [-Wunused-variable]
+   29 |  int choosenoption;
+      |      ^~~~~~~~~~~~~
 Finished building: ../src/segundo_parcial.c
  
 Building file: ../src/utn.c
@@ -49,25 +53,10 @@ Invoking: GCC C Linker
 gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
 Finished building target: segundo_parcial
  
-17:09:49 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:35:57 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 make: No se hace nada para 'all'.
-17:10:11 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:12:44 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:12:46 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:13:13 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:13:16 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:13:49 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:36:53 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 Building file: ../src/controller.c
 Invoking: GCC C Compiler
@@ -79,178 +68,501 @@ Invoking: GCC C Linker
 gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
 Finished building target: segundo_parcial
  
-17:13:52 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:36:57 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 make: No se hace nada para 'all'.
-17:14:56 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:14:58 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:37:01 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 make: No se hace nada para 'all'.
-17:15:48 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:15:50 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:16:30 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:16:32 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:20:57 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:37:14 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 Building file: ../src/controller.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
 Finished building: ../src/controller.c
  
-Building file: ../src/sales.c
+Building file: ../src/segundo_parcial.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-../src/sales.c: In function ‘sale_printSingleWithMap’:
-../src/sales.c:520:44: warning: format ‘%s’ expects argument of type ‘char *’, but argument 6 has type ‘int’ [-Wformat=]
-  520 |   printf("| %-5d| %-25s| %-9d | %-9s | %-11s | %-11d |\n",
-      |                                        ~~~~^
-      |                                            |
-      |                                            char *
-      |                                        %-11d
-......
-  525 |     bufferStatus,
-      |     ~~~~~~~~~~~~                            
-      |     |
-      |     int
-Finished building: ../src/sales.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+../src/segundo_parcial.c: In function ‘main’:
+../src/segundo_parcial.c:29:6: warning: unused variable ‘choosenoption’ [-Wunused-variable]
+   29 |  int choosenoption;
+      |      ^~~~~~~~~~~~~
+Finished building: ../src/segundo_parcial.c
  
 Building target: segundo_parcial
 Invoking: GCC C Linker
 gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
 Finished building target: segundo_parcial
  
-17:21:12 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:21:15 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:37:17 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 make: No se hace nada para 'all'.
-17:24:55 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:37:36 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
-Building file: ../src/sales.c
+Building file: ../src/segundo_parcial.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+../src/segundo_parcial.c: In function ‘main’:
+../src/segundo_parcial.c:28:6: warning: unused variable ‘choosenoption’ [-Wunused-variable]
+   28 |  int choosenoption;
+      |      ^~~~~~~~~~~~~
+Finished building: ../src/segundo_parcial.c
  
 Building target: segundo_parcial
 Invoking: GCC C Linker
 gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
 Finished building target: segundo_parcial
  
-17:25:56 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:26:12 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-../src/sales.c: In function ‘sale_printSingleWithMap’:
-../src/sales.c:520:36: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘char *’ [-Wformat=]
-  520 |   printf("| %-5d| %-25s| %-9d | %-9d | %-11s | %-11d |\n",
-      |                                 ~~~^
-      |                                    |
-      |                                    int
-      |                                 %-9s
-......
-  524 |     bufferStatusformatted,
-      |     ~~~~~~~~~~~~~~~~~~~~~           
-      |     |
-      |     char *
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:26:25 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:26:28 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:37:39 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 make: No se hace nada para 'all'.
-17:27:23 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:37:48 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
-Building file: ../src/sales.c
+Building file: ../src/segundo_parcial.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+../src/segundo_parcial.c: In function ‘main’:
+../src/segundo_parcial.c:28:6: warning: unused variable ‘choosenoption’ [-Wunused-variable]
+   28 |  int choosenoption;
+      |      ^~~~~~~~~~~~~
+Finished building: ../src/segundo_parcial.c
  
 Building target: segundo_parcial
 Invoking: GCC C Linker
 gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
 Finished building target: segundo_parcial
  
-17:27:27 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:37:51 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 make: No se hace nada para 'all'.
-17:28:01 **** Incremental Build of configuration Debug for project segundo_parcial ****
+17:45:06 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+17:45:12 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/menu.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menu.d" -MT"src/menu.o" -o "src/menu.o" "../src/menu.c"
+Finished building: ../src/menu.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+17:46:19 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/menu.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menu.d" -MT"src/menu.o" -o "src/menu.o" "../src/menu.c"
+Finished building: ../src/menu.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+17:46:21 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:46:57 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/menu.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menu.d" -MT"src/menu.o" -o "src/menu.o" "../src/menu.c"
+Finished building: ../src/menu.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+17:46:59 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:59:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+17:59:48 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+../src/controller.c: In function ‘controller_addClient’:
+../src/controller.c:87:58: warning: passing argument 3 of ‘utn_getCuit’ from incompatible pointer type [-Wincompatible-pointer-types]
+   87 |      utn_getCuit("Ingrese CUIT (SIN GUIONES: ", "Error", &bufferClient.client_cuit, 3,sizeof(bufferClient.client_cuit)) == 0)
+      |                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          char (*)[14]
+In file included from ../src/controller.c:19:
+../src/utn.h:18:50: note: expected ‘char *’ but argument is of type ‘char (*)[14]’
+   18 | int utn_getCuit(char* msj, char* errorMsj, char* pValue,int retries, int len);
+      |                                            ~~~~~~^~~~~~
+Finished building: ../src/controller.c
+ 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+../src/segundo_parcial.c: In function ‘main’:
+../src/segundo_parcial.c:47:9: warning: implicit declaration of function ‘controller_addClient’; did you mean ‘controller_ListClients’? [-Wimplicit-function-declaration]
+   47 |      if(controller_addClient(clientsList)==0)
+      |         ^~~~~~~~~~~~~~~~~~~~
+      |         controller_ListClients
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:00:28 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:00:29 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:00:32 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:02:24 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:02:25 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+Finished building: ../src/clients.c
+ 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
+ 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:02:28 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:19:36 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:19:37 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c: In function ‘client_cuitExists’:
+../src/clients.c:391:30: warning: passing argument 1 of ‘ll_len’ from incompatible pointer type [-Wincompatible-pointer-types]
+  391 |   for (int i = 0; i < ll_len(this); i++)
+      |                              ^~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:38:24: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   38 | int ll_len(LinkedList* this);
+      |            ~~~~~~~~~~~~^~~~
+../src/clients.c:393:30: warning: passing argument 1 of ‘ll_get’ from incompatible pointer type [-Wincompatible-pointer-types]
+  393 |    pClient = (Client*)ll_get(this,i);
+      |                              ^~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:42:7: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   42 | void* ll_get(LinkedList* this, int index);
+      |       ^~~~~~
+Finished building: ../src/clients.c
+ 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
+ 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:20:25 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:20:26 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c: In function ‘client_cuitExists’:
+../src/clients.c:391:30: warning: passing argument 1 of ‘ll_len’ from incompatible pointer type [-Wincompatible-pointer-types]
+  391 |   for (int i = 0; i < ll_len(pClient); i++)
+      |                              ^~~~~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:38:24: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   38 | int ll_len(LinkedList* this);
+      |            ~~~~~~~~~~~~^~~~
+../src/clients.c:393:30: warning: passing argument 1 of ‘ll_get’ from incompatible pointer type [-Wincompatible-pointer-types]
+  393 |    pClient = (Client*)ll_get(pClient,i);
+      |                              ^~~~~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:42:7: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   42 | void* ll_get(LinkedList* this, int index);
+      |       ^~~~~~
+Finished building: ../src/clients.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:20:38 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:20:53 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:20:54 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c: In function ‘client_cuitExists’:
+../src/clients.c:391:30: warning: passing argument 1 of ‘ll_len’ from incompatible pointer type [-Wincompatible-pointer-types]
+  391 |   for (int i = 0; i < ll_len(this); i++)
+      |                              ^~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:38:24: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   38 | int ll_len(LinkedList* this);
+      |            ~~~~~~~~~~~~^~~~
+../src/clients.c:393:30: warning: passing argument 1 of ‘ll_get’ from incompatible pointer type [-Wincompatible-pointer-types]
+  393 |    pClient = (Client*)ll_get(this,i);
+      |                              ^~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:42:7: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   42 | void* ll_get(LinkedList* this, int index);
+      |       ^~~~~~
+Finished building: ../src/clients.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:20:57 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:21:13 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:21:55 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:21:56 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c: In function ‘client_cuitExists’:
+../src/clients.c:387:30: warning: passing argument 1 of ‘ll_len’ from incompatible pointer type [-Wincompatible-pointer-types]
+  387 |   for (int i = 0; i < ll_len(this); i++)
+      |                              ^~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:38:24: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   38 | int ll_len(LinkedList* this);
+      |            ~~~~~~~~~~~~^~~~
+../src/clients.c:389:30: warning: passing argument 1 of ‘ll_get’ from incompatible pointer type [-Wincompatible-pointer-types]
+  389 |    pClient = (Client*)ll_get(this,i);
+      |                              ^~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:42:7: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   42 | void* ll_get(LinkedList* this, int index);
+      |       ^~~~~~
+Finished building: ../src/clients.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:22:04 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:22:29 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:22:30 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c: In function ‘client_cuitExists’:
+../src/clients.c:391:30: warning: passing argument 1 of ‘ll_len’ from incompatible pointer type [-Wincompatible-pointer-types]
+  391 |   for (int i = 0; i < ll_len(this); i++)
+      |                              ^~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:38:24: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   38 | int ll_len(LinkedList* this);
+      |            ~~~~~~~~~~~~^~~~
+../src/clients.c:393:30: warning: passing argument 1 of ‘ll_get’ from incompatible pointer type [-Wincompatible-pointer-types]
+  393 |    pClient = (Client*)ll_get(this,i);
+      |                              ^~~~
+      |                              |
+      |                              Client * {aka struct <anonymous> *}
+In file included from ../src/clients.h:11,
+                 from ../src/clients.c:15:
+../src/LinkedList.h:42:7: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   42 | void* ll_get(LinkedList* this, int index);
+      |       ^~~~~~
+Finished building: ../src/clients.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:23:33 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:23:34 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c:383:5: error: conflicting types for ‘client_cuitExists’
+  383 | int client_cuitExists(LinkedList* this, char* cuit)
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ../src/clients.c:15:
+../src/clients.h:49:5: note: previous declaration of ‘client_cuitExists’ was here
+   49 | int client_cuitExists(Client* this, char* cuit);
+      |     ^~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:41: src/clients.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:23:56 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:23:57 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c: In function ‘client_setCuit’:
+../src/clients.c:267:24: warning: passing argument 1 of ‘client_cuitExists’ from incompatible pointer type [-Wincompatible-pointer-types]
+  267 |   if(client_cuitExists(this, client_cuit)!=0)
+      |                        ^~~~
+      |                        |
+      |                        Client * {aka struct <anonymous> *}
+In file included from ../src/clients.c:15:
+../src/clients.h:49:35: note: expected ‘LinkedList *’ {aka ‘struct LinkedList *’} but argument is of type ‘Client *’ {aka ‘struct <anonymous> *’}
+   49 | int client_cuitExists(LinkedList* this, char* cuit);
+      |                       ~~~~~~~~~~~~^~~~
+Finished building: ../src/clients.c
+ 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
+ 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+18:24:26 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:29:47 **** Incremental Build of configuration Debug for project primer_parcial ****
+make all 
+make: No se hace nada para 'all'.
+18:29:48 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+Finished building: ../src/clients.c
+ 
 Building file: ../src/controller.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
@@ -261,53 +573,6 @@ Invoking: GCC C Linker
 gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
 Finished building target: segundo_parcial
  
-17:28:03 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:28:31 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
-Finished building: ../src/controller.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:29:21 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
-Finished building: ../src/controller.c
- 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:29:22 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-make: No se hace nada para 'all'.
-17:29:39 **** Incremental Build of configuration Debug for project segundo_parcial ****
-make all 
-Building file: ../src/sales.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sales.d" -MT"src/sales.o" -o "src/sales.o" "../src/sales.c"
-Finished building: ../src/sales.c
- 
-Building target: segundo_parcial
-Invoking: GCC C Linker
-gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
-Finished building target: segundo_parcial
- 
-17:29:47 **** Incremental Build of configuration Debug for project segundo_parcial ****
+18:29:51 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 make: No se hace nada para 'all'.

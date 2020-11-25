@@ -16,8 +16,8 @@
 #include "utn.h"
 
 
-#define MAINMENU_HEADER "|                               REGISTRO DE EMPLEADOS                          |\n"
-#define MAINMENU_MSJ "\nIngrese una opción:\n 1-Cargar los datos de los empleados desde el archivo(modo texto).\n 2-Cargar los datos de los empleados desde el archivo (modo binario).\n 3-Alta de empleado.\n 4-Modificar datos de empleado.\n 5-Baja de empleado.\n 6-Listar empleados.\n 7-Ordenar empleados.\n 8-Guardar los datos de los empleados en el archivo (modo texto).\n 9-Guardar los datos de los empleados en el archivo (modo binario).\n 10-Salir.\nOpcion:"
+#define MAINMENU_HEADER "|     REGISTRO DE CLIENTES Y VENTAS     |\n"
+#define MAINMENU_MSJ "\nIngrese una opción:\n 1-Agregar cliente.\n 2-Vender afiches.\n 3-Modificar venta.\n 4-Cobrar venta.\n 5-Generar informe de cobros.\n 6-Generar informe de deudas.\n 7-Generar estadisticas.\n 8-Guardar los datos y salir.\nOpcion:"
 #define MODIFYMENU_MSJ "\nIngrese campo a modificar: \n 1-Nombre: \n 2-Horas trabajadas: \n 3-Sueldo: \n 4-Volver al menu principal\nOpcion: "
 #define ERROR_MSJ "ERROR, INGRESE UNA OPCION VALIDA. "
 #define SORTMENU "\nIngrese campo a ordenar:\n 1-Id\n 2-Nombre\n 3-Horas trabajadas\n 4-Sueldo\n 5-Volver al menu principal\n\nOpcion:"
@@ -36,16 +36,16 @@ int menu_getMainMenu(int* choosenOption)
 	int output = -1;
 	if(choosenOption !=NULL)
 	{
-		printf("\n--------------------------------------------------------------------------------\n");
+		printf("\n-----------------------------------------\n");
 		printf(MAINMENU_HEADER);
-		printf("--------------------------------------------------------------------------------\n");
-		if(utn_getIntNumber(MAINMENU_MSJ,ERROR_MSJ, choosenOption, 3, 10, 1)==0)
+		printf("-----------------------------------------\n");
+		if(utn_getIntNumber(MAINMENU_MSJ,ERROR_MSJ, choosenOption, 3, 8, 1)==0)
 		{
 			output =0;
 		}
 		else
 		{
-			*choosenOption = 10;
+			*choosenOption = 8;
 		}
 	}
 	return output;
