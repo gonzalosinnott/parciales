@@ -23,7 +23,7 @@ int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 int controller_createPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
 int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
 int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
-
+int controller_generateStatistics(LinkedList* pListClients,LinkedList* pListSales);
 
 int controller_ListClients(LinkedList* pArrayListClients);
 int controller_ListSales(LinkedList* pArrayListClients);

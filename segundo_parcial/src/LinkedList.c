@@ -587,3 +587,21 @@ int ll_filter(LinkedList * this, int (*pFunc)(void*))
 	}
 	return output;
 }
+
+int ll_reduceInt(LinkedList* this, int (*pFunc)(void*,int value), int id)
+{
+	int len = ll_len(this);
+	int acumulator=-1;
+	void* pElement=NULL;
+	if(this!=NULL && pFunc!=NULL && len>-1)
+	{
+		acumulator = 0;
+		for(int i = 0; i<len;i++)
+		{
+			pElement = ll_get(this, i);
+			acumulator+= pFunc(pElement, id);
+		}
+	}
+	return acumulator;
+}
+

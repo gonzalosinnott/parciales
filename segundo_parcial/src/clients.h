@@ -37,6 +37,8 @@ void client_delete();
 int client_setIdFromTxtFile(Client* this,char* client_id);
 int client_setId(Client* this, int client_id);
 int client_getId(Client* this,int* client_id);
+int client_getId2(Client* this);
+
 int client_generateNewId(LinkedList* pArrayListClient);
 int client_findMaxId(LinkedList* pArrayListClient);
 
@@ -61,6 +63,7 @@ void* client_findById(LinkedList* list, int id);
 int client_printSingleWithMap(void* pClient);
 int client_printPaidWithMap(void* pClient);
 int client_printNotPaidWithMap(void* pClient);
+
 
 
 #endif // CLIENT_H_INCLUDED

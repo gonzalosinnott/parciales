@@ -23,6 +23,10 @@ Description : Library Controller.c
 #define SALE_HEADER "--------------------------------------------------------------------------------------\n|  ID  | ARCHIVO                  | CANTIDAD  |  ESTADO   |    ZONA     | ID CLIENTE |\n--------------------------------------------------------------------------------------\n"
 #define MODIFYERROR_MSJ "ERROR, EL CAMPO NO PUDO SER MODIFICADO"
 
+static int controller_findClientPostersSold(LinkedList* clientList,LinkedList* salesList, int order);
+static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* salesList, int order);
+
+
 /*
  * \brief controller_loadFromText: Carga los datos de los empleados desde el archivo data.csv (modo texto).
  * \param path char*: ruta del archivo a cargar
@@ -429,12 +433,162 @@ int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pAr
 	}
 	else
 	{
-		printf("NO EXISTEN VENTAS PAGAS");
+		printf("NO EXISTEN VENTAS IMPAGAS");
 	}
 	ll_clear(salesNotPaidList);
 	ll_deleteLinkedList(salesNotPaidList);
 	ll_clear(clientNotPaidList);
 	ll_deleteLinkedList(clientNotPaidList);
+	return output;
+}
+
+int controller_generateStatistics(LinkedList* pListClients,LinkedList* pListSales)
+{
+	int output = -1;
+	int choosenOption;
+
+	LinkedList* salesPaidList = ll_clone(pListSales);
+
+	if (pListClients != NULL && pListSales != NULL &&
+		ll_filter(salesPaidList, sale_filterByPayed)==0)
+	{
+		do
+		{
+			menu_getStatisticsMenu(&choosenOption);
+			switch(choosenOption)
+			{
+				case 1:
+				case 2:
+					controller_findClientPostersSold(pListClients,salesPaidList,choosenOption);
+					break;
+				case 3:
+					controller_findSalePostersSold(pListClients,salesPaidList,choosenOption);
+					break;
+				}
+		}while(choosenOption != 4);
+		output = 0;
+	}
+	else
+	{
+		printf("NO EXISTEN VENTAS PAGAS");
+	}
+	return output;
+}
+
+
+static int controller_findClientPostersSold(LinkedList* clientList,LinkedList* salesList, int order)
+{
+	int output = -1;
+	int clientsLen = ll_len(clientList);
+	int acumulator;
+	int maxValue;
+	int client_id;
+	Client* bufferClient;
+	LinkedList* newList = ll_newLinkedList();
+	if(clientList!=NULL && salesList!=NULL)
+	{
+		for (int i = 0; i< clientsLen;i++)
+		{
+			bufferClient = ll_get(clientList, i);
+			if(bufferClient != NULL)
+			{
+				client_getId(bufferClient, &client_id);
+				acumulator = ll_reduceInt(salesList, sale_getPostersbyId,client_id);
+				if(i == 0)
+				{
+					ll_add(newList, bufferClient);
+					maxValue = acumulator;
+				}
+				else
+				{
+					if((order == 1 && acumulator > maxValue) ||
+					   (order == 2 && acumulator < maxValue))
+					{
+						ll_clear(newList);
+						ll_add(newList, bufferClient);
+						maxValue = acumulator;
+					}
+					else if(acumulator == maxValue)
+					{
+						ll_add(newList, bufferClient);
+					}
+				}
+			}
+		}
+		if(order ==1)
+		{
+			printf("\nCLIENTES CON MAS AFICHES PAGOS\n");
+		}
+		else
+		{
+			printf("\nCLIENTES CON MENOS AFICHES PAGOS\n");
+		}
+		printf("\nCANTIDAD: %d\n",maxValue);
+		printf("\n-------------------------------------------------------------\n");
+		printf("|                    LISTADO DE CLIENTES                    |\n");
+		printf(CLIENT_HEADER);
+		ll_map(newList,client_printSingleWithMap);
+		output = 0;
+	}
+	ll_clear(newList);
+	ll_deleteLinkedList(newList);
+	return output;
+}
+
+static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* salesList, int order)
+{
+	int output = -1;
+	int salesLen = ll_len(salesList);
+	int maxValue;
+	int flagFirstSale = TRUE;
+	Sale* bufferSale;
+	LinkedList* newList = ll_newLinkedList();
+	if(clientList!=NULL && salesList!=NULL)
+	{
+		for (int i = 0; i< salesLen;i++)
+		{
+			bufferSale = ll_get(salesList, i);
+			if(bufferSale != NULL)
+			{
+				if(flagFirstSale == TRUE)
+				{
+					maxValue = sale_getAmount2(bufferSale);
+					ll_add(newList, bufferSale);
+					flagFirstSale = FALSE;
+				}
+				else
+				{
+					if((order == 3 && sale_getAmount2(bufferSale) > maxValue) ||
+					   (order == 4 && sale_getAmount2(bufferSale) < maxValue))
+					{
+						ll_clear(newList);
+						ll_add(newList, bufferSale);
+						maxValue = sale_getAmount2(bufferSale);
+					}
+					else if(sale_getAmount2(bufferSale) == maxValue)
+					{
+						ll_add(newList, bufferSale);
+					}
+				}
+			}
+		}
+		if(order ==3)
+		{
+			printf("\nVENTA CON MAS AFICHES PAGOS\n");
+		}
+		else
+		{
+			printf("\nVENTA CON MENOS AFICHES PAGOS\n");
+		}
+		printf("\nCANTIDAD: %d\n",maxValue);
+		printf("--------------------------------------------------------------------------------------\n");
+		printf("|                                 LISTADO DE VENTAS                                  |\n");
+		printf(SALE_HEADER);
+		ll_map(newList,sale_printSingleWithMap);
+		output = 0;
+	}
+	ll_clear(newList);
+	ll_deleteLinkedList(newList);
 	return output;
 }
 

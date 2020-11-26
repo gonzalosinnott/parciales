@@ -13,7 +13,7 @@
 
 int menu_getMainMenu(int* choosenOption);
 int menu_getModifyMenu(int* choosenOption);
-int menu_getSortMenu(int* choosenOption, int* choosenOrder);
+int menu_getStatisticsMenu(int* choosenOption);
 int menu_exitMenu(int* choosenOption);
 
 #endif /* MENU_H_ */

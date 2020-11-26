@@ -128,6 +128,12 @@ int client_getId(Client* this,int* client_id)
     return output;
 }
 
+int client_getId2(Client* this)
+{
+	return this->client_id;
+}
+
+
 /*
  * \brief client_findMaxId: Busca en el array el maximo id existente
  * \param pArrayListClient LinkedList* puntero al array de empleados
@@ -333,7 +339,6 @@ int client_getNotPaidSales(Client* this,int* notPaidSales)
 	}
 	return output;
 }
-
 
 /*
  * \brief client_isValidNombre:Valida que la cadena recibida solo tenga letras, espacios o guiones
@@ -568,3 +573,5 @@ int client_printNotPaidWithMap(void* pClient)
 	}
 	return output;
 }
+
+

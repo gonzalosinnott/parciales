@@ -110,16 +110,18 @@ int main(void)
 						printf(REPORTERROR);
 					}
 					break;
-
-				case 7://CONTROL DE LISTAS
-					controller_ListClients(clientsList);
-					controller_ListSales(salesList);
+				case 7:
+					if(controller_generateStatistics(clientsList,salesList)==0)
+					{
+						printf(REPORTSUCCESS);
+					}
+					else
+					{
+						printf(REPORTERROR);
+					}
 					break;
-
 			}
-
 		}while(choosenOption!=8);
-
 
 	}
 

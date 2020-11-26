@@ -45,10 +45,12 @@ int sale_findMaxId(LinkedList* pArrayListSale);
 int sale_setClientIdFromTxtFile(Sale* this,char* sale_clientId);
 int sale_setClientId(Sale* this, int sale_clientId);
 int sale_getClientId(Sale* this,int* sale_clientId);
+int sale_getClientId2(Sale* this);
 
 int sale_setAmountFromTxtFile(Sale* this,char* sale_amount);
 int sale_setAmount(Sale* this, int sale_amount);
 int sale_getAmount(Sale* this,int* sale_amount);
+int sale_getAmount2(Sale* this);
 
 int sale_setFileName(Sale* this,char* sale_fileName);
 int sale_getFileName(Sale* this,char* sale_fileName);
@@ -64,6 +66,7 @@ int sale_getStatus(Sale* this,int* sale_status);
 int sale_filterByNotPayed (void* pSale);
 int sale_filterByPayed (void* pSale);
 int sale_getSalesByClientId(LinkedList* listSale,int clientId,int* salesQuantity);
+int sale_getPostersbyId(void* this, int idClient);
 
 void* sales_findById(LinkedList* list, int id);
 int sale_printSingleWithMap(void* pSale);

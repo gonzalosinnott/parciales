@@ -236,6 +236,10 @@ int sale_getClientId(Sale* this,int* sale_clientId)
     return output;
 }
 
+int sale_getClientId2(Sale* this)
+{
+	return this->sale_clientId;
+}
 
 /*
  * \brief sale_setClientIdFromTxtFile: Carga el id  del cliente aosciado obtenido como texto en el campo de la  venta
@@ -289,6 +293,11 @@ int sale_getAmount(Sale* this,int* sale_amount)
         output = 0;
     }
     return output;
+}
+
+int sale_getAmount2(Sale* this)
+{
+	return this->sale_amount;
 }
 
 
@@ -616,6 +625,26 @@ int sale_getSalesByClientId(LinkedList* listSale,int clientId,int* salesQuantity
 	}
 	return output;
 }
+
+int sale_getPostersbyId(void* this, int idClient)
+{
+	int output = -1;
+	int sale_clientId;
+	int sale_amount;
+	if(this != NULL && idClient > 0)
+	{
+		output = 0;
+		sale_getClientId(this, &sale_clientId);
+		if(sale_clientId == idClient)
+		{
+			sale_getAmount(this, &sale_amount);
+			output = sale_amount;
+		}
+	}
+	return output;
+}
+
+
 
 void* sales_findById(LinkedList* list, int id)
 {
