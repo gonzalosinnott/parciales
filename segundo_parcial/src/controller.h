@@ -14,23 +14,22 @@ Description : Header for Library Controller.c
 #include "LinkedList.h"
 
 
-int controller_loadClientsFromText(char* path , LinkedList* pArrayList);
-int controller_loadSalesFromText(char* path, LinkedList* pArrayList);
-int controller_saveClientsToText(char* path, LinkedList* pArrayList);
-int controller_saveSalesToText(char* path, LinkedList* pArrayList);
+ int controller_loadClientsFromText(char* path , LinkedList* List);
+ int controller_loadSalesFromText(char* path, LinkedList* List);
+ int controller_saveClientsToText(char* path, LinkedList* List);
+ int controller_saveSalesToText(char* path, LinkedList* List);
 
 
-int controller_addClient(LinkedList* pArrayList);
-int controller_addSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
-int controller_modifySale(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
-int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
-int controller_createPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
-int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
-int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
-int controller_generateStatistics(LinkedList* pListClients,LinkedList* pListSales);
+ int controller_addClient(LinkedList* List);
+ int controller_addSale(LinkedList* ListClients,LinkedList* ListSales);
+ int controller_modifySale(LinkedList* ListClients,LinkedList* ListSales);
+ int controller_chargeSale(LinkedList* ListClients,LinkedList* ListSales);
+ int controller_createPaidReport(LinkedList* ListClients,LinkedList* ListSales);
+ int controller_createNotPaidReport(LinkedList* ListClients,LinkedList* ListSales);
+int controller_generateStatistics(LinkedList* ListClients,LinkedList* ListSales);
 
-int controller_ListClients(LinkedList* pArrayListClients);
-int controller_ListSales(LinkedList* pArrayListClients);
+ int controller_ListClients(LinkedList* ListClients);
+ int controller_ListSales(LinkedList* ListSales);
 
 
 

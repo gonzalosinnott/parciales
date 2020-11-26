@@ -13,12 +13,12 @@
 
 #include "LinkedList.h"
 
-int parser_ClientFromText(FILE* pFile , LinkedList* pArrayListClient);
-int parser_SalesFromText(FILE* pFile , LinkedList* pArrayListClient);
-int parser_paidListToText(FILE* pFile , LinkedList* pArrayListEmployee);
-int parser_notPaidListToText(FILE* pFile , LinkedList* pArrayListEmployee);
-int parser_ClientToText(FILE* pFile , LinkedList* pArrayListClient);
-int parser_SalesToText(FILE* pFile , LinkedList* pArrayListSales);
+ int parser_ClientFromText(FILE* pFile , LinkedList* ListClient);
+ int parser_SalesFromText(FILE* pFile , LinkedList* ListClient);
+ int parser_paidListToText(FILE* pFile , LinkedList* ListPaid);
+int parser_notPaidListToText(FILE* pFile , LinkedList* ListNotPaid);
+int parser_ClientToText(FILE* pFile , LinkedList* ListClient);
+int parser_SalesToText(FILE* pFile , LinkedList* ListSales);
 
 
 #endif /* PARSER_H_ */

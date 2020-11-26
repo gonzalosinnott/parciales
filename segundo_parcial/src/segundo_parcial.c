@@ -40,6 +40,7 @@
 int main(void)
 {
 	int choosenOption;
+	int loadedFiles = FALSE;
 
 
 	LinkedList* clientsList = ll_newLinkedList();
@@ -57,6 +58,7 @@ int main(void)
 					if(controller_addClient(clientsList)==0)
 					{
 						printf(ADDCLIENTSUCCESS);
+						loadedFiles = TRUE;
 					}
 					else
 					{
@@ -124,7 +126,8 @@ int main(void)
 					}
 					break;
 				case 8://GUARDAR Y SALIR
-					if(controller_saveClientsToText(PATHCLIENTS, clientsList)== 0 &&
+					if(loadedFiles == TRUE &&
+					   controller_saveClientsToText(PATHCLIENTS, clientsList)== 0 &&
 					   controller_saveSalesToText(PATHSALES, salesList)== 0)
 					{
 						printf(SAVESUCCESS);
@@ -136,7 +139,5 @@ int main(void)
 					break;
 			}
 		}while(choosenOption!=8);
-
 	}
-
 }

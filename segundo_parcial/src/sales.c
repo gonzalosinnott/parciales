@@ -19,7 +19,7 @@ static int formatdata(int data1, int data2, char* data1Formatted, char* data2for
 
 
 /*
- * \brief sale_new:Pide memoria para generar un nuevo registro de empleado
+ * \brief sale_new:Pide memoria para generar un nuevo registro de
  * \param void:
  * \return puntero con espacio de memoria con tipo Sale*
  */
@@ -30,11 +30,13 @@ Sale* sale_new(void)
 }
 
 /*
- * \brief sale_newParametros: Pide memoria para un nuevo empleado y sus campos correspondientes
- * \param id char*: campo id
- * \param nombre char*: campo nombre
- * \param horasTrabajadas char*: campo Horas trabajadas
- * \param sueldo char*: campo sueldo
+ * \brief sale_newParametros: Pide memoria para un nuevo venta y sus campos correspondientes
+ * \param sale_id char*: campo id
+ * \param sale_clientId char*: campo idCliente
+ * \param sale_amount char*: campo cantidad de afiches
+ * \param sale_fileName char*: campo nombre del archivo
+ * \param sale_zone char*: campo zona de venta
+ * \param sale_status char*: campo estado de venta
  * \return int Return puntero con espacio de memoria con tipo Sale* con el espacio para los campos correspondientes
  */
 
@@ -65,8 +67,8 @@ Sale* sale_newParametros(char* sale_id,char* sale_clientId,char* sale_amount,cha
 }
 
 /*
- * \brief sale_delete: Libera espacio de memoria de un empleado
- * \param this Sale*: puntero a empleado
+ * \brief sale_delete: Libera espacio de memoria de un venta
+ * \param this Sale*: puntero a venta
  * \return void
  */
 
@@ -76,9 +78,9 @@ void sale_delete(Sale* this)
 }
 
 /*
- * \brief sale_setIdFromTxtFile: Carga el id obtenido como texto en el campo del empleado
- * \param this Sale*: puntero a empleado
- * \param id char*: puntero al id que va a cargar
+ * \brief sale_setIdFromTxtFile: Carga el id obtenido desde un archivo txt en el campo del venta
+ * \param this Sale*: puntero a venta
+ * \param sale_id char*: puntero al id que va a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -94,9 +96,9 @@ int sale_setIdFromTxtFile(Sale* this, char* sale_id)
 }
 
 /*
- * \brief sale_setId: Carga el id en el campo del empleado
- * \param this Sale*: puntero a empleado
- * \param id int: id a cargar
+ * \brief sale_setId: Carga el id en el campo del venta
+ * \param this Sale*: puntero a venta
+ * \param sale_id int: id a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -113,9 +115,9 @@ int sale_setId(Sale* this, int sale_id)
 
 
 /*
- * \brief sale_getId: Obtiene el id del empleado
- * \param this Sale*: puntero a empleado
- * \param id int*: puntero al espacio donde va a guardar el id obtenido
+ * \brief sale_getId: Obtiene el id de la venta
+ * \param this Sale*: puntero a venta
+ * \param sale_id int*: puntero al espacio donde va a guardar el id obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -132,11 +134,11 @@ int sale_getId(Sale* this,int* sale_id)
 
 /*
  * \brief sale_findMaxId: Busca en el array el maximo id existente
- * \param pArrayListSale LinkedList* puntero al array de empleados
+ * \param pArrayListSale LinkedList* puntero al array de ventas
  * \return (-1) Error / (0) Ok
  */
 
-int sale_findMaxId(LinkedList* pArrayListSale)
+int sale_findMaxId(LinkedList* ListSale)
 {
 	Sale* pSale;
 	int len;
@@ -144,12 +146,12 @@ int sale_findMaxId(LinkedList* pArrayListSale)
 	int max;
 	int id = -1;
 
-	if(pArrayListSale != NULL)
+	if(ListSale != NULL)
 	{
-		len = ll_len(pArrayListSale);
+		len = ll_len(ListSale);
 		for(i=0;i<len;i++)
 		{
-			pSale = ll_get(pArrayListSale,i);
+			pSale = ll_get(ListSale,i);
 			sale_getId(pSale,&id);
 			if (i == 0 || id > max)
 			{
@@ -162,20 +164,20 @@ int sale_findMaxId(LinkedList* pArrayListSale)
 }
 
 /*
- * \brief sale_generateNewId:Genera un nuevo id para una nuevo empleado
+ * \brief sale_generateNewId:Genera un nuevo id para una nuevo venta
  * \param pArrayListSale LinkedList* puntero al array de ventas
  * \return (-1) Error / (0) Ok
  */
 
-int sale_generateNewId(LinkedList* pArrayListSale)
+int sale_generateNewId(LinkedList* ListSale)
 {
     static int id = -1;
 
-    if(pArrayListSale != NULL)
+    if(ListSale != NULL)
     {
-    	if(ll_isEmpty(pArrayListSale)==0)
+    	if(ll_isEmpty(ListSale)==0)
     	{
-    		id = sale_findMaxId(pArrayListSale);
+    		id = sale_findMaxId(ListSale);
     		id++;
     	}
     }
@@ -183,9 +185,9 @@ int sale_generateNewId(LinkedList* pArrayListSale)
 }
 
 /*
- * \brief sale_setClientIdFromTxtFile: Carga el id  del cliente aosciado obtenido como texto en el campo de la  venta
+ * \brief sale_setClientIdFromTxtFile: Carga el id  del cliente asociado desde un archivo txt en el campo de la venta
  * \param this Sale*: puntero a venta
- * \param id char*: puntero al id que va a cargar
+ * \param sale_clientId char*: puntero al id que va a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -202,8 +204,8 @@ int sale_setClientIdFromTxtFile(Sale* this, char* sale_clientId)
 
 /*
  * \brief sale_setClientId: Carga el id del cliente en el campo de la venta
- * \param this Sale*: puntero a empleado
- * \param id int: id a cargar
+ * \param this Sale*: puntero a venta
+ * \param sale_clientId int: id a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -219,9 +221,9 @@ int sale_setClientId(Sale* this, int sale_clientId)
 }
 
 /*
- * \brief sale_getClientId: Obtiene el id del empleado
- * \param this Sale*: puntero a empleado
- * \param id int*: puntero al espacio donde va a guardar el id obtenido
+ * \brief sale_getClientId: Obtiene el id del venta
+ * \param this Sale*: puntero a venta
+ * \param sale_clientId int*: puntero al espacio donde va a guardar el id obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -236,15 +238,10 @@ int sale_getClientId(Sale* this,int* sale_clientId)
     return output;
 }
 
-int sale_getClientId2(Sale* this)
-{
-	return this->sale_clientId;
-}
-
 /*
- * \brief sale_setClientIdFromTxtFile: Carga el id  del cliente aosciado obtenido como texto en el campo de la  venta
+ * \brief sale_setAmountFromTxtFile: Carga la cantidad de afiches desde un archivo txt  en el campo de la  venta
  * \param this Sale*: puntero a venta
- * \param id char*: puntero al id que va a cargar
+ * \param sale_amount char*: puntero al id que va a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -261,8 +258,8 @@ int sale_setAmountFromTxtFile(Sale* this, char* sale_amount)
 
 /*
  * \brief sale_setClientId: Carga el id del cliente en el campo de la venta
- * \param this Sale*: puntero a empleado
- * \param id int: id a cargar
+ * \param this Sale*: puntero a venta
+ * \param sale_amount int: id a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -278,8 +275,8 @@ int sale_setAmount(Sale* this, int sale_amount)
 }
 
 /*
- * \brief sale_getClientId: Obtiene el id del empleado
- * \param this Sale*: puntero a empleado
+ * \brief sale_getClientId: Obtiene el id del venta
+ * \param this Sale*: puntero a venta
  * \param id int*: puntero al espacio donde va a guardar el id obtenido
  * \return (-1) Error / (0) Ok
  */
@@ -295,16 +292,10 @@ int sale_getAmount(Sale* this,int* sale_amount)
     return output;
 }
 
-int sale_getAmount2(Sale* this)
-{
-	return this->sale_amount;
-}
-
-
 /*
- * \brief sale_setLastName: Carga el Apellido en el campo del empleado
- * \param this Sale*: puntero a empleado
- * \param nombre char*: nombre a cargar
+ * \brief sale_setFileName: Carga el nombre de la publicidad en el campo de venta
+ * \param this Sale*: puntero a venta
+ * \param sale_fileName char*: nombre a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -320,9 +311,9 @@ int sale_setFileName(Sale* this,char* sale_fileName)
 }
 
 /*
- * \brief sale_getLastName: Obtiene el Apellido del empleado
- * \param this Sale*: puntero a empleado
- * \param nombre char*: puntero al espacio donde va a guardar el nombre obtenido
+ * \brief sale_getFileName: Obtiene el nombre de la publicidad en el campo de venta
+ * \param this Sale*: puntero a venta
+ * \param sale_fileName char*: puntero al espacio donde va a guardar el nombre obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -337,6 +328,12 @@ int sale_getFileName(Sale* this,char* sale_fileName)
     return output;
 }
 
+/*
+ * \brief sale_setZoneFromTxtFile: Carga la zona desde un archivo txt  en el campo de la  venta
+ * \param this Sale*: puntero a venta
+ * \param sale_zone char*: puntero a la zona que va a cargar
+ * \return (-1) Error / (0) Ok
+ */
 
 int sale_setZoneFromTxtFile(Sale* this, char* sale_zone)
 {
@@ -350,9 +347,9 @@ int sale_setZoneFromTxtFile(Sale* this, char* sale_zone)
 }
 
 /*
- * \brief sale_setId: Carga el id en el campo del empleado
- * \param this Sale*: puntero a empleado
- * \param id int: id a cargar
+ * \brief sale_setZone: Carga la zona en el campo del venta
+ * \param this Sale*: puntero a venta
+ * \param id int: zona a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -368,9 +365,9 @@ int sale_setZone(Sale* this, int sale_zone)
 }
 
 /*
- * \brief sale_getName: Obtiene el Nombre del empleado
- * \param this Sale*: puntero a empleado
- * \param nombre char*: puntero al espacio donde va a guardar el nombre obtenido
+ * \brief sale_getZone: Obtiene la zona de la venta
+ * \param this Sale*: puntero a venta
+ * \param sale_zone char*: puntero al espacio donde va a guardar el dato obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -386,9 +383,9 @@ int sale_getZone(Sale* this,int* sale_zone)
 }
 
 /*
- * \brief sale_setCuit: Carga el cuit en el campo del empleado
- * \param this Sale*: puntero a empleado
- * \param nombre char*: nombre a cargar
+ * \brief sale_setStatusFromTxtFile: Carga el estado de venta desde un archivo txt  en el campo de la  venta
+ * \param this Sale*: puntero a venta
+ * \param sale_status char*: puntero al estado que va a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -404,9 +401,9 @@ int sale_setStatusFromTxtFile(Sale* this, char* sale_status)
 }
 
 /*
- * \brief sale_setId: Carga el id en el campo del empleado
- * \param this Sale*: puntero a empleado
- * \param id int: id a cargar
+ * \brief sale_setStatus: Carga el estado en el campo del venta
+ * \param this Sale*: puntero a venta
+ * \param sale_status int: estado a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -422,9 +419,9 @@ int sale_setStatus(Sale* this, int sale_status)
 }
 
 /*
- * \brief sale_getName: Obtiene el Nombre del empleado
- * \param this Sale*: puntero a empleado
- * \param nombre char*: puntero al espacio donde va a guardar el nombre obtenido
+ * \brief sale_getStatus: Obtiene el estado de la venta
+ * \param this Sale*: puntero a venta
+ * \param nombre char*: puntero al espacio donde va a guardar el dato obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -439,10 +436,8 @@ int sale_getStatus(Sale* this,int* sale_status)
     return output;
 }
 
-
-
 /*
- * \brief sale_isValidNombre:Valida que la cadena recibida solo tenga letras, espacios o guiones
+ * \brief sale_isValidName que la cadena recibida sea alfanumerica
  * \param string char*: puntero a la cadena a validar
  * \param len int: largo de la cadena a validar
  * \return (0) FALSE (1) TRUE (-1) ERROR
@@ -501,6 +496,11 @@ static int sale_isValidInt(char* string, int len)
 	return output;
 }
 
+/*
+ * \brief sale_printSingleWithMap: Imprime una venta a partir de su puntero
+ * \param pClient void*: puntero a venta
+ * \return (-1) Error / (0) Ok
+ */
 
 int sale_printSingleWithMap(void* pSale)
 {
@@ -540,6 +540,15 @@ int sale_printSingleWithMap(void* pSale)
 	return output;
 }
 
+/*
+ * \brief formatdata: Formatea los datos numericos a palabras equivlaentes para su facil lectura en patanlla
+ * \param data1 int: dato a formatear
+ * \param data2 int: dato a formatear
+ * \param data1Formatted int*: puntero a dato formateado
+ * \param data2Formatted int*: puntero a dato formateado
+ * \return (-1) Error / (0) Ok
+ */
+
 static int formatdata(int data1, int data2, char* data1Formatted, char* data2Formatted)
 {
 	int output = -1;
@@ -570,6 +579,12 @@ static int formatdata(int data1, int data2, char* data1Formatted, char* data2For
 	return output;
 }
 
+/*
+ * \brief sale_filterByNotPayed: Busca una venta a partir de su estado
+ * \param pSale void*: puntero a venta
+ * \return (-1) Error / (0) Ok
+ */
+
 int sale_filterByNotPayed (void* pSale)
 {
 	int output = -1;
@@ -583,6 +598,12 @@ int sale_filterByNotPayed (void* pSale)
 	}
 	return output;
 }
+
+/*
+ * \brief sale_filterByPayed: Busca una venta a partir de su estado
+ * \param pSale void*: puntero a venta
+ * \return (-1) Error / (0) Ok
+ */
 
 int sale_filterByPayed (void* pSale)
 {
@@ -598,6 +619,13 @@ int sale_filterByPayed (void* pSale)
 	return output;
 }
 
+/*
+ * \brief sale_getSalesByClientId: busca cantidad de ventas asociadas a un ID
+ * \param pSale void*: puntero a venta
+ * \param clientId int: Id al cual buscar ventas asociadas
+ * \param salesQuantity int*: puntero a cantidad de ventas del ID pasado com argumento
+ * \return (-1) Error / (0) Ok
+ */
 
 int sale_getSalesByClientId(LinkedList* listSale,int clientId,int* salesQuantity)
 {
@@ -626,6 +654,14 @@ int sale_getSalesByClientId(LinkedList* listSale,int clientId,int* salesQuantity
 	return output;
 }
 
+
+/*
+ * \brief sale_getSalesByClientId: busca cantidad de afiches asociadas a un ID
+ * \param pSale void*: puntero a venta
+ * \param clientId int: Id al cual buscar ventas asociadas
+ * \return (-1) Error / Cantidad de afichjes del ID
+ */
+
 int sale_getPostersbyId(void* this, int idClient)
 {
 	int output = -1;
@@ -644,9 +680,14 @@ int sale_getPostersbyId(void* this, int idClient)
 	return output;
 }
 
+/*
+ * \brief sales_findById: Busca una venta  a partir de un ID dado
+ * \param this Client*: puntero a venta
+ * \param id int: ID a comparar
+ * \return (NULL) NO EXISTE / (pElement) EXISTE
+ */
 
-
-void* sales_findById(LinkedList* list, int id)
+void* sales_findById(LinkedList* ListSale, int id)
 {
 	void* result = NULL;
 	void* pElement;
@@ -654,20 +695,15 @@ void* sales_findById(LinkedList* list, int id)
 	int bufferId;
 	int resultAux;
 
-
-	for (i = 0; i < ll_len(list); i++)
+	for (i = 0; i < ll_len(ListSale); i++)
 	{
-
-		pElement = (Sale*)ll_get(list,i);
+		pElement = (Sale*)ll_get(ListSale,i);
 		resultAux = sale_getId(pElement,&bufferId);
-
-
 		if(resultAux == 0 && bufferId == id)
 		{
 			result = pElement;
 			break;
 		}
-
 	}
 	return result;
 }

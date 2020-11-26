@@ -1,0 +1,12 @@
+ID,APELLIDO,NOMBRE,CUIT,CANTIDAD DE VENTAS PAGAS
+1,Upjohn,Mei,50-49047324-8,3
+2,Rudd,Madge,59-87253576-0,1
+3,MacSwayde,Anson,10-83101959-4,1
+4,Rebeiro,Orelie,57-13332425-9,1
+5,Goggin,Odille,71-47940391-4,1
+6,Vasin,Rancell,15-58464120-0,1
+7,Ead,Abbie,17-79115576-8,0
+8,Matyja,Tristam,41-71687977-5,1
+9,Relf,Salomone,48-85472687-4,0
+10,Mulliner,Sheela,29-79665510-8,0
+11,Sinnott,Gonzalo,23-34797474-9,0

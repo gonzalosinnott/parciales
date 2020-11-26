@@ -20,11 +20,11 @@
 /*
  * \brief parser_ClientFromText: Parsea los datos de los clientes desde el archivo clientes.txt (modo texto).
  * \param pFile FILE* puntero al archivo a cargar
- * \param pArrayListEmployee LinkedList*: puntero al array de empleados
+ * \param ListClient LinkedList*: puntero al array de empleados
  * \return (-1) Error / (0) Ok
  */
 
-int parser_ClientFromText(FILE* pFile , LinkedList* pArrayListClient)
+int parser_ClientFromText(FILE* pFile , LinkedList* ListClient)
 {
 	int output = -1;
 	Client* pClient;
@@ -34,7 +34,7 @@ int parser_ClientFromText(FILE* pFile , LinkedList* pArrayListClient)
 	char bufferName[BUFFER_LEN];
 	char bufferCuit[BUFFER_LEN];
 
-	if (pFile != NULL && pArrayListClient != NULL)
+	if (pFile != NULL && ListClient != NULL)
 	{
 		fscanf(pFile, "%[^\n]\n", bufferHeader);
 		do
@@ -44,7 +44,7 @@ int parser_ClientFromText(FILE* pFile , LinkedList* pArrayListClient)
 				pClient = client_newParametros(bufferId, bufferLastName, bufferName, bufferCuit);
 				if (pClient != NULL)
 				{
-					output = ll_add(pArrayListClient, pClient);
+					output = ll_add(ListClient, pClient);
 				}
 				else
 				{
@@ -57,8 +57,14 @@ int parser_ClientFromText(FILE* pFile , LinkedList* pArrayListClient)
 	return output;
 }
 
+/*
+ * \brief parser_SalesFromText: Parsea los datos de las ventas desde el archivo ventas.txt (modo texto).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param ListSales LinkedList*: puntero al array de empleados
+ * \return (-1) Error / (0) Ok
+ */
 
-int parser_SalesFromText(FILE* pFile , LinkedList* pArrayListSales)
+int parser_SalesFromText(FILE* pFile , LinkedList* ListSales)
 {
 	int output = -1;
 	Sale* pSale;
@@ -70,7 +76,7 @@ int parser_SalesFromText(FILE* pFile , LinkedList* pArrayListSales)
 	char bufferZone[BUFFER_LEN];
 	char bufferStatus[BUFFER_LEN];
 
-	if (pFile != NULL && pArrayListSales != NULL)
+	if (pFile != NULL && ListSales != NULL)
 	{
 		fscanf(pFile, "%[^\n]\n", bufferHeader);
 		do
@@ -81,7 +87,7 @@ int parser_SalesFromText(FILE* pFile , LinkedList* pArrayListSales)
 				pSale = sale_newParametros(bufferId, bufferClientId, bufferAmount, bufferFileName, bufferZone, bufferStatus);
 				if (pSale != NULL)
 				{
-					output = ll_add(pArrayListSales, pSale);
+					output = ll_add(ListSales, pSale);
 				}
 				else
 				{
@@ -94,8 +100,15 @@ int parser_SalesFromText(FILE* pFile , LinkedList* pArrayListSales)
 	return output;
 }
 
+/*
+ * \brief parser_paidListToText: Parsea los datos de los clientes con cantidad de ventas pagas
+ * hacia el archivo ventaspagas.txt (modo texto).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param ListPaid LinkedList*: puntero al array de empleados
+ * \return (-1) Error / (0) Ok
+ */
 
-int parser_paidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
+int parser_paidListToText(FILE* pFile , LinkedList* ListPaid)
 {
 	int output = -1;
 	Client *pClient;
@@ -106,13 +119,13 @@ int parser_paidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	int bufferPaidSales;
 	int len;
 
-	if (pFile != NULL && pArrayListEmployee != NULL)
+	if (pFile != NULL && ListPaid != NULL)
 	{
-		len = ll_len(pArrayListEmployee);
+		len = ll_len(ListPaid);
 		fprintf(pFile, "ID,APELLIDO,NOMBRE,CUIT,CANTIDAD DE VENTAS PAGAS\n");
 		for (int i = 0; i < len; i++)
 		{
-			pClient = (Client*)ll_get(pArrayListEmployee, i);
+			pClient = (Client*)ll_get(ListPaid, i);
 			if (pClient != NULL &&
 				client_getId(pClient, &bufferId) == 0 &&
 				client_getLastName(pClient, BufferLastName) == 0 &&
@@ -128,7 +141,15 @@ int parser_paidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	return output;
 }
 
-int parser_notPaidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
+/*
+ * \brief parser_notPaidListToText: Parsea los datos de los clientes con cantidad de ventas no pagas
+ * hacia el archivo ventasnopagas.txt (modo texto).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param ListPaid LinkedList*: puntero al array de empleados
+ * \return (-1) Error / (0) Ok
+ */
+
+int parser_notPaidListToText(FILE* pFile , LinkedList* ListNotPaid)
 {
 	int output = -1;
 	Client *pClient;
@@ -139,13 +160,13 @@ int parser_notPaidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	int bufferNotPaidSales;
 	int len;
 
-	if (pFile != NULL && pArrayListEmployee != NULL)
+	if (pFile != NULL && ListNotPaid != NULL)
 	{
-		len = ll_len(pArrayListEmployee);
+		len = ll_len(ListNotPaid);
 		fprintf(pFile, "ID,APELLIDO,NOMBRE,CUIT,CANTIDAD DE VENTAS IMPAGASPAGAS\n");
 		for (int i = 0; i < len; i++)
 		{
-			pClient = (Client*)ll_get(pArrayListEmployee, i);
+			pClient = (Client*)ll_get(ListNotPaid, i);
 			if (pClient != NULL &&
 				client_getId(pClient, &bufferId) == 0 &&
 				client_getLastName(pClient, BufferLastName) == 0 &&
@@ -161,7 +182,14 @@ int parser_notPaidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	return output;
 }
 
-int parser_ClientToText(FILE* pFile , LinkedList* pArrayListClient)
+/*
+ * \brief parser_ClientToText: Parsea los datos de los clientes hacia el archivo clientes.txt (modo texto).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param ListClient LinkedList*: puntero al array de empleados
+ * \return (-1) Error / (0) Ok
+ */
+
+int parser_ClientToText(FILE* pFile , LinkedList* ListClient)
 {
 	int output = -1;
 	Client* pClient;
@@ -169,14 +197,14 @@ int parser_ClientToText(FILE* pFile , LinkedList* pArrayListClient)
 	char bufferLastName[BUFFER_LEN];
 	char bufferName[BUFFER_LEN];
 	char bufferCuit[BUFFER_LEN];
-	int len = ll_len(pArrayListClient);
+	int len = ll_len(ListClient);
 
-	if (pFile != NULL && pArrayListClient != NULL)
+	if (pFile != NULL && ListClient != NULL)
 	{
 		fprintf(pFile,"ID,APELLIDO,NOMBRE,CUIT\n");
 		for(int i = 0; i < len; i++)
 		{
-			pClient = (Client*) ll_get(pArrayListClient,i);
+			pClient = (Client*) ll_get(ListClient,i);
 			if(pClient != NULL &&
 			   client_getId(pClient, &bufferId)==0 &&
 			   client_getLastName(pClient, bufferLastName)==0 &&
@@ -191,8 +219,14 @@ int parser_ClientToText(FILE* pFile , LinkedList* pArrayListClient)
 	return output;
 }
 
+/*
+ * \brief parser_SalesToText: Parsea los datos de las ventas hacia el archivo ventas.txt (modo texto).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param ListSales LinkedList*: puntero al array de empleados
+ * \return (-1) Error / (0) Ok
+ */
 
-int parser_SalesToText(FILE* pFile , LinkedList* pArrayListSales)
+int parser_SalesToText(FILE* pFile , LinkedList* ListSales)
 {
 	int output = -1;
 	Sale* pSale;
@@ -202,14 +236,14 @@ int parser_SalesToText(FILE* pFile , LinkedList* pArrayListSales)
 	char bufferFileName[BUFFER_LEN];
 	int bufferZone;
 	int bufferStatus;
-	int len = ll_len(pArrayListSales);
+	int len = ll_len(ListSales);
 
-	if (pFile != NULL && pArrayListSales != NULL)
+	if (pFile != NULL && ListSales != NULL)
 	{
 		fprintf(pFile, "ID,NOMBRE ARCHIVO,CANTIDAD,ZONA,ESTADO,ID CLIENTE");
 		for(int i = 0; i < len ; i++)
 		{
-			pSale = (Sale*) ll_get(pArrayListSales,i);
+			pSale = (Sale*) ll_get(ListSales,i);
 			if(pSale != NULL &&
 			   sale_getId(pSale, &bufferId)==0 &&
 			   sale_getFileName(pSale, bufferFileName)==0 &&

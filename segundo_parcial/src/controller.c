@@ -29,25 +29,25 @@ static int controller_printSalesWithClientInfo(LinkedList* ListClients,LinkedLis
 
 
 /*
- * \brief controller_loadFromText: Carga los datos de los empleados desde el archivo data.csv (modo texto).
+ * \brief controller_loadClientsFromText: Carga los datos de los clientes desde el archivo clientes.TXT (modo texto).
  * \param path char*: ruta del archivo a cargar
- * \param pArrayListEmployee LinkedList*: puntero al array de empleados
+ * \param List LinkedList*: puntero al array de clientes
  * \return (-1) Error / (0) Ok
  */
 
-int controller_loadClientsFromText(char* path, LinkedList* pArrayList)
+int controller_loadClientsFromText(char* path , LinkedList* List)
 {
 	int output = -1;
 	FILE *pArch;
 
-	ll_clear(pArrayList);
+	ll_clear(List);
 
-	if (path != NULL && pArrayList != NULL)
+	if (path != NULL && List != NULL)
 	{
 		pArch = fopen(path, "r");
 		if (pArch != NULL)
 		{
-			output = parser_ClientFromText(pArch, pArrayList);
+			output = parser_ClientFromText(pArch, List);
 		}
 		else
 		{
@@ -58,19 +58,26 @@ int controller_loadClientsFromText(char* path, LinkedList* pArrayList)
 	return output;
 }
 
-int controller_loadSalesFromText(char* path, LinkedList* pArrayList)
+/*
+ * \brief controller_loadSalesFromText: Carga los datos de las ventas desde el archivo ventas.TXT (modo texto).
+ * \param path char*: ruta del archivo a cargar
+ * \param List LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (0) Ok
+ */
+
+int controller_loadSalesFromText(char* path, LinkedList* List)
 {
 	int output = -1;
 	FILE *pArch;
 
-	ll_clear(pArrayList);
+	ll_clear(List);
 
-	if (path != NULL && pArrayList != NULL)
+	if (path != NULL && List != NULL)
 	{
 		pArch = fopen(path, "r");
 		if (pArch != NULL)
 		{
-			output = parser_SalesFromText(pArch, pArrayList);
+			output = parser_SalesFromText(pArch, List);
 		}
 		else
 		{
@@ -81,17 +88,24 @@ int controller_loadSalesFromText(char* path, LinkedList* pArrayList)
 	return output;
 }
 
-int controller_saveClientsToText(char* path, LinkedList* pArrayList)
+/*
+ * \brief controller_saveClientsToText: Carga los datos de los clientes hacia el archivo clientes.TXT (modo texto).
+ * \param path char*: ruta del archivo a cargar
+ * \param List LinkedList*: puntero al array de clientes
+ * \return (-1) Error / (0) Ok
+ */
+
+int controller_saveClientsToText(char* path, LinkedList* List)
 {
 	int output = -1;
 	FILE *pArch;
 
-	if (path != NULL && pArrayList != NULL)
+	if (path != NULL && List != NULL)
 	{
 		pArch = fopen(path, "w");
 		if (pArch != NULL)
 		{
-			output = parser_ClientToText(pArch, pArrayList);
+			output = parser_ClientToText(pArch, List);
 		}
 		else
 		{
@@ -102,18 +116,24 @@ int controller_saveClientsToText(char* path, LinkedList* pArrayList)
 	return output;
 }
 
+/*
+ * \brief controller_saveSalesToText: Carga los datos de las ventas hacia el archivo ventas.TXT (modo texto).
+ * \param path char*: ruta del archivo a cargar
+ * \param List LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (0) Ok
+ */
 
-int controller_saveSalesToText(char* path, LinkedList* pArrayList)
+int controller_saveSalesToText(char* path, LinkedList* List)
 {
 	int output = -1;
 	FILE *pArch;
 
-	if (path != NULL && pArrayList != NULL)
+	if (path != NULL && List != NULL)
 	{
 		pArch = fopen(path, "w");
 		if (pArch != NULL)
 		{
-			output = parser_SalesToText(pArch, pArrayList);
+			output = parser_SalesToText(pArch, List);
 		}
 		else
 		{
@@ -125,46 +145,57 @@ int controller_saveSalesToText(char* path, LinkedList* pArrayList)
 }
 
 /** \brief controller_ListClients: Imprime la lista de clientes
- * \param pArrayListEmployee LinkedList*: puntero al array de empleados
+ * \param ListClients LinkedList*: puntero al array de clientes
  * \return (-1) Error / (0) Ok
  */
 
-int controller_ListClients(LinkedList* pArrayListClients)
+int controller_ListClients(LinkedList* ListClients)
 {
     int output = -1;
 
-    if(pArrayListClients != NULL)
+    if(ListClients != NULL)
     {
     	printf("-------------------------------------------------------------\n");
 		printf("|                    LISTADO DE CLIENTES                    |\n");
 		printf(CLIENT_HEADER);
-		output = ll_map(pArrayListClients, client_printSingleWithMap);
+		output = ll_map(ListClients, client_printSingleWithMap);
     }
 	return output;
 }
 
+/*
+ * \brief controller_ListSales: Imprime la lista de ventas
+ * \param ListClients LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (0) Ok
+ */
 
-int controller_ListSales(LinkedList* pArrayListSales)
+int controller_ListSales(LinkedList* ListSales)
 {
     int output = -1;
 
-    if(pArrayListSales != NULL)
+    if(ListSales != NULL)
     {
 		printf("--------------------------------------------------------------------------------------\n");
 		printf("|                                 LISTADO DE VENTAS                                  |\n");
 		printf(SALE_HEADER);
-   		output = ll_map(pArrayListSales, sale_printSingleWithMap);
+   		output = ll_map(ListSales, sale_printSingleWithMap);
     }
 	return output;
 }
 
-int controller_addClient(LinkedList* pArrayList)
+/*
+ * \brief controller_addClient: Alta de cliente
+ * \param List LinkedList*: puntero al array de clientes
+ * \return (-1) Error / (0) Ok
+ */
+
+int controller_addClient(LinkedList* List)
 {
 	int output = -1;
 	Client* pClient;
 	Client bufferClient;
 
-	if (pArrayList != NULL)
+	if (List != NULL)
 	{
 		pClient = client_new();
 		if(pClient != NULL &&
@@ -172,14 +203,14 @@ int controller_addClient(LinkedList* pArrayList)
 		   utn_getString("Ingrese Nombre: ", "Error", bufferClient.client_name, 3, sizeof(bufferClient.client_name)) == 0 &&
 		   utn_getCuit("Ingrese CUIT (SIN GUIONES): ", "Error", bufferClient.client_cuit, 3,LEN_CUIT) == 0)
 		{
-			bufferClient.client_id = client_generateNewId(pArrayList);
-			if (client_cuitExists(pArrayList, bufferClient.client_cuit) != 0)
+			bufferClient.client_id = client_generateNewId(List);
+			if (client_cuitExists(List, bufferClient.client_cuit) != 0)
 			{
 				client_setLastName(pClient, bufferClient.client_lastName);
 				client_setName(pClient, bufferClient.client_name);
 				client_setCuit(pClient, bufferClient.client_cuit);
 				client_setId(pClient,bufferClient.client_id);
-				output = ll_add(pArrayList, pClient);
+				output = ll_add(List, pClient);
 			}
 			else
 			{
@@ -191,33 +222,41 @@ int controller_addClient(LinkedList* pArrayList)
 	return output;
 }
 
-int controller_addSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
+/*
+ * \brief controller_addSale: Alta de venta
+ * \param ListClients LinkedList*: puntero al array de clientes
+ * \param ListSales LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (0) Ok
+ */
+
+
+int controller_addSale(LinkedList* ListClients,LinkedList* ListSales)
 {
 	int output = -1;
 	int clientId;
 	Sale* pSale;
 	Sale bufferSale;
 
-	if (pArrayListClients != NULL && pArrayListSales != NULL  )
+	if (ListClients != NULL && ListSales != NULL  )
 	{
 		pSale = sale_new();
-		controller_ListClients(pArrayListClients);
-		utn_getIntNumber("Ingrese ID del Cliente: ", "Error, ", &clientId, 3, client_findMaxId(pArrayListClients), 1);
-		if(client_findById(pArrayListClients, clientId)!=NULL)
+		controller_ListClients(ListClients);
+		utn_getIntNumber("Ingrese ID del Cliente: ", "Error, ", &clientId, 3, client_findMaxId(ListClients), 1);
+		if(client_findById(ListClients, clientId)!=NULL)
 		{
 			if(pSale != NULL &&
 			   utn_getAlphaNum("Ingrese Nombre del archivo: ", "Error", bufferSale.sale_fileName, 3, sizeof(bufferSale.sale_fileName)) == 0 &&
 			   utn_getIntNumber("Ingrese cantidad de Afiches: ", "Error", &bufferSale.sale_amount, 3, INT_MAX, 1) == 0 &&
 			   utn_getIntNumber("Ingrese zona (1-CABA, 2-ZONA SUR, 3-ZONA OESTE): ", "Error", &bufferSale.sale_zone, 3, 3, 1) == 0)
 			{
-				bufferSale.sale_id = sale_generateNewId(pArrayListSales);
+				bufferSale.sale_id = sale_generateNewId(ListSales);
 				sale_setId(pSale, bufferSale.sale_id);
 				sale_setAmount(pSale, bufferSale.sale_amount);
 				sale_setClientId(pSale, clientId);
 				sale_setFileName(pSale,bufferSale.sale_fileName);
 				sale_setStatus(pSale,TO_PAY);
 				sale_setZone(pSale,bufferSale.sale_zone);
-				output = ll_add(pArrayListSales, pSale);
+				output = ll_add(ListSales, pSale);
 
 			}
 			output = 0;
@@ -231,7 +270,14 @@ int controller_addSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales
 	return output;
 }
 
-int controller_modifySale(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
+/*
+ * \brief controller_modifySale: Modificar datos de venta
+ * \param ListClients LinkedList*: puntero al array de clientes
+ * \param ListSales LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (i) Ok
+ */
+
+int controller_modifySale(LinkedList* ListClients,LinkedList* ListSales)
 {
 	int output = -1;
 	int Id;
@@ -243,9 +289,9 @@ int controller_modifySale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 	Sale bufferSale;
 	Client* pClient;
 
-	if (pArrayListClients != NULL && pArrayListSales != NULL  )
+	if (ListClients != NULL && ListSales != NULL  )
 	{
-		toPayList = ll_clone(pArrayListSales);
+		toPayList = ll_clone(ListSales);
 		if(toPayList!=NULL)
 		{
 			if(ll_filter(toPayList, sale_filterByNotPayed)==0)
@@ -256,7 +302,7 @@ int controller_modifySale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 				if(pSale!=NULL)
 				{
 					sale_getClientId(pSale, &bufferSale.sale_clientId);
-					pClient = client_findById(pArrayListClients, bufferSale.sale_clientId);
+					pClient = client_findById(ListClients, bufferSale.sale_clientId);
 					printf("\nLa publicacion: \n");
 					printf(SALE_HEADER);
 					sale_printSingleWithMap(pSale);
@@ -316,8 +362,14 @@ int controller_modifySale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 	return output;
 }
 
+/*
+ * \brief controller_chargeSale: Modifica el estado de la venta a PAGADO
+ * \param ListClients LinkedList*: puntero al array de clientes
+ * \param ListSales LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (i) Ok
+ */
 
-int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
+int controller_chargeSale(LinkedList* ListClients,LinkedList* ListSales)
 {
 	int output = -1;
 	int Id;
@@ -329,9 +381,9 @@ int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 	Sale bufferSale;
 	Client* pClient;
 
-	if (pArrayListClients != NULL && pArrayListSales != NULL  )
+	if (ListClients != NULL && ListSales != NULL  )
 	{
-		toPayList = ll_clone(pArrayListSales);
+		toPayList = ll_clone(ListSales);
 		if(toPayList!=NULL)
 		{
 			if(ll_filter(toPayList, sale_filterByNotPayed)==0)
@@ -342,7 +394,7 @@ int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 				if(pSale!=NULL)
 				{
 					sale_getClientId(pSale, &bufferSale.sale_clientId);
-					pClient = client_findById(pArrayListClients, bufferSale.sale_clientId);
+					pClient = client_findById(ListClients, bufferSale.sale_clientId);
 					printf("\nLa publicacion: \n");
 					printf(SALE_HEADER);
 					sale_printSingleWithMap(pSale);
@@ -368,23 +420,30 @@ int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 	return output;
 }
 
-int controller_createPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
+/*
+ * \brief controller_createPaidReport: Crea un archivo txt con la cantidad de ventas pagadas por cliente
+ * \param ListClients LinkedList*: puntero al array de clientes
+ * \param ListSales LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (i) Ok
+ */
+
+int controller_createPaidReport(LinkedList* ListClients,LinkedList* ListSales)
 {
 	int output = -1;
 	int bufferClientId;
 	int salesQuantity = 0;
 	Client* pClient;
 
-	LinkedList* salesPaidList = ll_clone(pArrayListSales);
+	LinkedList* salesPaidList = ll_clone(ListSales);
 	LinkedList* clientPaidList = ll_newLinkedList();
 
 
-	if (pArrayListClients != NULL && pArrayListSales != NULL &&
+	if (ListClients != NULL && ListSales != NULL &&
 		ll_filter(salesPaidList, sale_filterByPayed)==0)
 	{
-		for(int i = 0; i < ll_len(pArrayListClients);i++)
+		for(int i = 0; i < ll_len(ListClients);i++)
 		{
-			if((pClient = (Client*) ll_get(pArrayListClients,i))!=NULL)
+			if((pClient = (Client*) ll_get(ListClients,i))!=NULL)
 			{
 
 				client_getId(pClient, &bufferClientId);
@@ -426,24 +485,30 @@ int controller_createPaidReport(LinkedList* pArrayListClients,LinkedList* pArray
 	return output;
 }
 
+/*
+ * \brief controller_createNotPaidReport: Crea un archivo txt con la cantidad de ventas no pagadas por cliente
+ * \param ListClients LinkedList*: puntero al array de clientes
+ * \param ListSales LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (i) Ok
+ */
 
-int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
+int controller_createNotPaidReport(LinkedList* ListClients,LinkedList* ListSales)
 {
 	int output = -1;
 	int bufferClientId;
 	int salesQuantity = 0;
 	Client* pClient;
 
-	LinkedList* salesNotPaidList = ll_clone(pArrayListSales);
+	LinkedList* salesNotPaidList = ll_clone(ListSales);
 	LinkedList* clientNotPaidList = ll_newLinkedList();
 
 
-	if (pArrayListClients != NULL && pArrayListSales != NULL &&
+	if (ListClients != NULL && ListSales != NULL &&
 		ll_filter(salesNotPaidList, sale_filterByNotPayed)==0)
 	{
-		for(int i = 0; i < ll_len(pArrayListClients);i++)
+		for(int i = 0; i < ll_len(ListClients);i++)
 		{
-			if((pClient = (Client*) ll_get(pArrayListClients,i))!=NULL)
+			if((pClient = (Client*) ll_get(ListClients,i))!=NULL)
 			{
 
 				client_getId(pClient, &bufferClientId);
@@ -485,14 +550,21 @@ int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pAr
 	return output;
 }
 
-int controller_generateStatistics(LinkedList* pListClients,LinkedList* pListSales)
+/*
+ * \brief controller_generateStatistics: Genera reportes a imprimir en pantalla
+ * \param ListClients LinkedList*: puntero al array de clientes
+ * \param ListSales LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (i) Ok
+ */
+
+int controller_generateStatistics(LinkedList* ListClients,LinkedList* ListSales)
 {
 	int output = -1;
 	int choosenOption;
 
-	LinkedList* salesPaidList = ll_clone(pListSales);
+	LinkedList* salesPaidList = ll_clone(ListSales);
 
-	if (pListClients != NULL && pListSales != NULL &&
+	if (ListClients != NULL && ListSales != NULL &&
 		ll_filter(salesPaidList, sale_filterByPayed)==0)
 	{
 		do
@@ -502,10 +574,10 @@ int controller_generateStatistics(LinkedList* pListClients,LinkedList* pListSale
 			{
 				case 1:
 				case 2:
-					controller_findClientPostersSold(pListClients,salesPaidList,choosenOption);
+					controller_findClientPostersSold(ListClients,salesPaidList,choosenOption);
 					break;
 				case 3:
-					controller_findSalePostersSold(pListClients,salesPaidList,choosenOption);
+					controller_findSalePostersSold(ListClients,salesPaidList,choosenOption);
 					break;
 				}
 		}while(choosenOption != 4);
@@ -518,6 +590,14 @@ int controller_generateStatistics(LinkedList* pListClients,LinkedList* pListSale
 	return output;
 }
 
+/*
+ * \brief controller_findClientPostersSold: Genera reportes a imprimir en pantalla con los clientes con mas afichos pagos
+ * o con menos afichos pagos
+ * \param clientList LinkedList*: puntero al array de clientes
+ * \param salesList LinkedList*: puntero al array de ventas
+ * \param order int: Determina criterio de busqueda 1(MAX) o 2(MIN)
+ * \return (-1) Error / (i) Ok
+ */
 
 static int controller_findClientPostersSold(LinkedList* clientList,LinkedList* salesList, int order)
 {
@@ -578,6 +658,14 @@ static int controller_findClientPostersSold(LinkedList* clientList,LinkedList* s
 	return output;
 }
 
+/*
+ * \brief controller_findSalePostersSold: Genera reporte a imprimir en pantalla con l mayor venta de afiches pagos
+ * \param clientList LinkedList*: puntero al array de clientes
+ * \param salesList LinkedList*: puntero al array de ventas
+ * \param order int: Determina criterio de busqueda 3(MAX) o 4(MIN)
+ * \return (-1) Error / (i) Ok
+ */
+
 static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* salesList, int order)
 {
 	int output = -1;
@@ -601,8 +689,8 @@ static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* sal
 				}
 				else
 				{
-					if((order == 3 && sale_getAmount2(bufferSale) > maxValue) ||
-					   (order == 4 && sale_getAmount2(bufferSale) < maxValue))
+					if((order == 3 && sale_amount > maxValue) ||
+					   (order == 4 && sale_amount < maxValue))
 					{
 						ll_clear(newList);
 						ll_add(newList, bufferSale);
@@ -632,6 +720,12 @@ static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* sal
 	return output;
 }
 
+/*
+ * \brief controller_printSalesWithClientInfo: Genera reporte a imprimir en pantalla con ID y nombre de Publicidad con su CUIT asociado
+ * \param ListClients LinkedList*: puntero al array de clientes
+ * \param ListSales LinkedList*: puntero al array de ventas
+ * \return (-1) Error / (i) Ok
+ */
 
 static int controller_printSalesWithClientInfo(LinkedList* ListClients,LinkedList* ListSales)
 {
@@ -660,9 +754,7 @@ static int controller_printSalesWithClientInfo(LinkedList* ListClients,LinkedLis
 			client_getCuit(bufferClient, client_cuit);
 			printf("| %-9d| %-25s| %-15s| ",sale_id, sale_fileName, client_cuit);
 			printf("\n--------------------------------------------------------\n");
-
 		}
-
 		output = 0;
 	}
     return output;

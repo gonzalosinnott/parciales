@@ -267,8 +267,6 @@ int ll_clear(LinkedList* this)
     return output;
 }
 
-
-
 /** \brief Elimina todos los elementos de la lista y la lista
  *
  * \param this LinkedList* Puntero a la lista
@@ -276,6 +274,7 @@ int ll_clear(LinkedList* this)
                         ( 0) Si funciono correctamente
  *
  */
+
 int ll_deleteLinkedList(LinkedList* this)
 {
     int output = -1;
@@ -300,6 +299,7 @@ int ll_deleteLinkedList(LinkedList* this)
                         (indice del elemento) Si funciono correctamente
  *
  */
+
 int ll_indexOf(LinkedList* this, void* pElement)
 {
     int output = -1;
@@ -542,8 +542,13 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
     return output;
 }
 
-//Recorre una lista  y le paso una funcion para que haga algo con esa lista
-
+/*
+ * \brief ll_map: Recorre todos los elementos de la LinkedList para utilizar una función criterio en cada elemento de cada nodo
+ * \param pList LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion criterio
+ * \return int Retorna  (-1) Error: si el puntero a la listas es NULL
+                        ( 0) Ok
+ */
 
 int ll_map(LinkedList* this, int (*pFunc)(void*))
 {
@@ -563,6 +568,14 @@ int ll_map(LinkedList* this, int (*pFunc)(void*))
 	return output;
 }
 
+/*
+ * \brief ll_filter: Recorre todos los elementos de la LinkedList para utilizar una función criterio en cada elemento de cada nodo
+ *  y eliminar de la lista a lo que la funcion criterio retorne como 0
+ * \param pList LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion criterio
+ * \return int Retorna  (-1) Error: si el puntero a la listas es NULL si pFunc es NULL o si len <= 0
+                        ( 0) Ok
+ */
 
 int ll_filter(LinkedList * this, int (*pFunc)(void*))
 {
@@ -587,6 +600,16 @@ int ll_filter(LinkedList * this, int (*pFunc)(void*))
 	}
 	return output;
 }
+
+/*
+ * \brief ll_reduceInt: Recorre todos los elementos de la LinkedList para utilizar una función criterio
+ *  en cada elemento de cada nodo y almacenar en un acumulador los retornos de estas funciones
+ * \param pList LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion criterio
+ * \param id int
+ * \return int Retorna  (-1) Error: si el puntero a la listas es NULL si pFunc es NULL o si len <= 0 o si newLen != 0
+                        ( 0) Ok
+ */
 
 int ll_reduceInt(LinkedList* this, int (*pFunc)(void*,int value), int id)
 {

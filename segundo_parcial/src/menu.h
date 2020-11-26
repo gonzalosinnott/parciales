@@ -14,6 +14,5 @@
 int menu_getMainMenu(int* choosenOption);
 int menu_getModifyMenu(int* choosenOption);
 int menu_getStatisticsMenu(int* choosenOption);
-int menu_exitMenu(int* choosenOption);
 
 #endif /* MENU_H_ */

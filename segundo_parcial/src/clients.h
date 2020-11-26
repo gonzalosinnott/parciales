@@ -37,10 +37,9 @@ void client_delete();
 int client_setIdFromTxtFile(Client* this,char* client_id);
 int client_setId(Client* this, int client_id);
 int client_getId(Client* this,int* client_id);
-int client_getId2(Client* this);
 
-int client_generateNewId(LinkedList* pArrayListClient);
-int client_findMaxId(LinkedList* pArrayListClient);
+int client_generateNewId(LinkedList* ListClient);
+int client_findMaxId(LinkedList* ListClient);
 
 int client_setLastName(Client* this,char* client_lastName);
 int client_getLastName(Client* this,char* client_lastName);
@@ -58,7 +57,7 @@ int client_setNotPaidSales(Client* this, int notPaidSales);
 int client_getNotPaidSales(Client* this,int* notPaidSales);
 
 int client_cuitExists(LinkedList* this, char* cuit);
-void* client_findById(LinkedList* list, int id);
+void* client_findById(LinkedList* ListClient, int id);
 int client_findByIdInt(LinkedList* ListClients, int id);
 
 int client_printSingleWithMap(void* pClient);

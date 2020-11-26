@@ -19,7 +19,7 @@ static int client_isValidCuit(char* string, int len);
 static int client_isValidInt(char* string, int len);
 
 /*
- * \brief client_new:Pide memoria para generar un nuevo registro de empleado
+ * \brief client_new:Pide memoria para generar un nuevo registro de cliente
  * \param void:
  * \return puntero con espacio de memoria con tipo Client*
  */
@@ -30,11 +30,11 @@ Client* client_new(void)
 }
 
 /*
- * \brief client_newParametros: Pide memoria para un nuevo empleado y sus campos correspondientes
- * \param id char*: campo id
- * \param nombre char*: campo nombre
- * \param horasTrabajadas char*: campo Horas trabajadas
- * \param sueldo char*: campo sueldo
+ * \brief client_newParametros: Pide memoria para un nuevo cliente y sus campos correspondientes
+ * \param client_id char*: campo id
+ * \param client_lastName char*: campo apellido
+ * \param client_name char*: campo nombre
+ * \param client_cuit char*: campo cuit
  * \return int Return puntero con espacio de memoria con tipo Client* con el espacio para los campos correspondientes
  */
 
@@ -63,8 +63,8 @@ Client* client_newParametros(char* client_id,char* client_lastName,char* client_
 }
 
 /*
- * \brief client_delete: Libera espacio de memoria de un empleado
- * \param this Client*: puntero a empleado
+ * \brief client_delete: Libera espacio de memoria de un cliente
+ * \param this Client*: puntero a cliente
  * \return void
  */
 
@@ -74,9 +74,9 @@ void client_delete(Client* this)
 }
 
 /*
- * \brief client_setIdFromTxtFile: Carga el id obtenido como texto en el campo del empleado
- * \param this Client*: puntero a empleado
- * \param id char*: puntero al id que va a cargar
+ * \brief client_setIdFromTxtFile: Carga el id obtenido desde un archivo txt en el campo del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_id char*: puntero al id que va a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -92,9 +92,9 @@ int client_setIdFromTxtFile(Client* this, char* client_id)
 }
 
 /*
- * \brief client_setId: Carga el id en el campo del empleado
- * \param this Client*: puntero a empleado
- * \param id int: id a cargar
+ * \brief client_setId: Carga el id en el campo del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_id int: id a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -111,9 +111,9 @@ int client_setId(Client* this, int client_id)
 
 
 /*
- * \brief client_getId: Obtiene el id del empleado
- * \param this Client*: puntero a empleado
- * \param id int*: puntero al espacio donde va a guardar el id obtenido
+ * \brief client_getId: Obtiene el id del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_id int*: puntero al espacio donde va a guardar el id obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -128,19 +128,14 @@ int client_getId(Client* this,int* client_id)
     return output;
 }
 
-int client_getId2(Client* this)
-{
-	return this->client_id;
-}
-
 
 /*
  * \brief client_findMaxId: Busca en el array el maximo id existente
- * \param pArrayListClient LinkedList* puntero al array de empleados
+ * \param ListClient LinkedList* puntero al array de clientes
  * \return (-1) Error / (0) Ok
  */
 
-int client_findMaxId(LinkedList* pArrayListClient)
+int client_findMaxId(LinkedList* ListClient)
 {
 	Client* pClient;
 	int len;
@@ -148,12 +143,12 @@ int client_findMaxId(LinkedList* pArrayListClient)
 	int max;
 	int id = -1;
 
-	if(pArrayListClient != NULL)
+	if(ListClient != NULL)
 	{
-		len = ll_len(pArrayListClient);
+		len = ll_len(ListClient);
 		for(i=0;i<len;i++)
 		{
-			pClient = ll_get(pArrayListClient,i);
+			pClient = ll_get(ListClient,i);
 			client_getId(pClient,&id);
 			if (i == 0 || id > max)
 			{
@@ -166,20 +161,20 @@ int client_findMaxId(LinkedList* pArrayListClient)
 }
 
 /*
- * \brief client_generateNewId:Genera un nuevo id para un nuevo empleado
- * \param pArrayListClient LinkedList* puntero al array de empleados
+ * \brief client_generateNewId:Genera un nuevo id para un nuevo cliente
+ * \param ListClient LinkedList* puntero al array de clientes
  * \return (-1) Error / (0) Ok
  */
 
-int client_generateNewId(LinkedList* pArrayListClient)
+int client_generateNewId(LinkedList* ListClient)
 {
     static int id = -1;
 
-    if(pArrayListClient != NULL)
+    if(ListClient != NULL)
     {
-    	if(ll_isEmpty(pArrayListClient)==0)
+    	if(ll_isEmpty(ListClient)==0)
     	{
-    		id = client_findMaxId(pArrayListClient);
+    		id = client_findMaxId(ListClient);
     		id++;
     	}
     }
@@ -187,9 +182,9 @@ int client_generateNewId(LinkedList* pArrayListClient)
 }
 
 /*
- * \brief client_setLastName: Carga el Apellido en el campo del empleado
- * \param this Client*: puntero a empleado
- * \param nombre char*: nombre a cargar
+ * \brief client_setLastName: Carga el Apellido en el campo del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_lastName char*: apellido a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -205,9 +200,9 @@ int client_setLastName(Client* this,char* client_lastName)
 }
 
 /*
- * \brief client_getLastName: Obtiene el Apellido del empleado
- * \param this Client*: puntero a empleado
- * \param nombre char*: puntero al espacio donde va a guardar el nombre obtenido
+ * \brief client_getLastName: Obtiene el Apellido del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_lastName char*: puntero al espacio donde esta el apellido obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -223,9 +218,9 @@ int client_getLastName(Client* this,char* client_lastName)
 }
 
 /*
- * \brief client_setName: Carga el Nombre en el campo del empleado
- * \param this Client*: puntero a empleado
- * \param nombre char*: nombre a cargar
+ * \brief client_setName: Carga el Nombre en el campo del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_name char*: nombre a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -241,9 +236,9 @@ int client_setName(Client* this,char* client_name)
 }
 
 /*
- * \brief client_getName: Obtiene el Nombre del empleado
- * \param this Client*: puntero a empleado
- * \param nombre char*: puntero al espacio donde va a guardar el nombre obtenido
+ * \brief client_getName: Obtiene el Nombre del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_name char*: puntero al espacio donde va esta el nombre obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -259,9 +254,9 @@ int client_getName(Client* this,char* client_name)
 }
 
 /*
- * \brief client_setCuit: Carga el cuit en el campo del empleado
- * \param this Client*: puntero a empleado
- * \param nombre char*: nombre a cargar
+ * \brief client_setCuit: Carga el cuit en el campo del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_cuit char*: nombre a cargar
  * \return (-1) Error / (0) Ok
  */
 
@@ -278,9 +273,9 @@ int client_setCuit(Client* this,char* client_cuit)
 }
 
 /*
- * \brief client_getCuit: Obtiene el Cuit del empleado
- * \param this Client*: puntero a empleado
- * \param nombre char*: puntero al espacio donde va a guardar el nombre obtenido
+ * \brief client_getCuit: Obtiene el Cuit del cliente
+ * \param this Client*: puntero a cliente
+ * \param client_cuit char*: puntero al espacio donde esta el nombre obtenido
  * \return (-1) Error / (0) Ok
  */
 
@@ -296,6 +291,14 @@ int client_getCuit(Client* this,char* client_cuit)
 }
 
 
+/*
+ * \brief client_setPaidSales: Carga las ventas pagadas en el campo del cliente
+ * \param this Client*: puntero a cliente
+ * \param paidSales int*: numero ventas pagas a cargar
+ * \return (-1) Error / (0) Ok
+ */
+
+
 int client_setPaidSales(Client* this, int paidSales)
 {
 	int output = -1;
@@ -306,6 +309,13 @@ int client_setPaidSales(Client* this, int paidSales)
 	}
 	return output;
 }
+
+/*
+ * \brief client_getPaidSales: Obtiene las ventas pagas del cliente
+ * \param this Client*: puntero a cliente
+ * \param paidSales int*: puntero al espacio donde esta el parametro obtenido
+ * \return (-1) Error / (0) Ok
+ */
 
 int client_getPaidSales(Client* this,int* paidSales)
 {
@@ -318,6 +328,13 @@ int client_getPaidSales(Client* this,int* paidSales)
 	return output;
 }
 
+/*
+ * \brief client_setNotPaidSales: Carga las ventas no pagadas en el campo del cliente
+ * \param this Client*: puntero a cliente
+ * \param notPaidSales int*: numero ventas no pagas a cargar
+ * \return (-1) Error / (0) Ok
+ */
+
 int client_setNotPaidSales(Client* this, int notPaidSales)
 {
 	int output = -1;
@@ -328,6 +345,13 @@ int client_setNotPaidSales(Client* this, int notPaidSales)
 	}
 	return output;
 }
+
+/*
+ * \brief client_getNotPaidSales: Obtiene las ventas no pagas del cliente
+ * \param this Client*: puntero a cliente
+ * \param notPaidSales int*: puntero al espacio donde esta el parametro obtenido
+ * \return (-1) Error / (0) Ok
+ */
 
 int client_getNotPaidSales(Client* this,int* notPaidSales)
 {
@@ -344,7 +368,7 @@ int client_getNotPaidSales(Client* this,int* notPaidSales)
  * \brief client_isValidNombre:Valida que la cadena recibida solo tenga letras, espacios o guiones
  * \param string char*: puntero a la cadena a validar
  * \param len int: largo de la cadena a validar
- * \return (0) FALSE (1) TRUE (-1) ERROR
+ * \return (-1) Error / (0) Ok
  */
 
 static int client_isValidName(char* string, int len)
@@ -371,7 +395,7 @@ static int client_isValidName(char* string, int len)
  * \brief client_isValidCuit:Valida que la cadena recibida solo tenga numeros y guiones
  * \param string char*: puntero a la cadena a validar
  * \param len int: largo de la cadena a validar
- * \return (0) FALSE (1) TRUE (-1) ERROR
+ * \return (-1) Error / (0) Ok
  */
 
 static int client_isValidCuit(char* string, int len)
@@ -397,7 +421,7 @@ static int client_isValidCuit(char* string, int len)
  * \brief client_isValidInt: Valida que la cadena recibida solo tenga numeros
  * \param string char*: puntero a la cadena a validar
  * \param len int: largo de la cadena a validar
- * \return (0) FALSE (1) TRUE (-1) ERROR
+ * \return (-1) Error / (0) Ok
  */
 
 static int client_isValidInt(char* string, int len)
@@ -424,6 +448,13 @@ static int client_isValidInt(char* string, int len)
 	return output;
 }
 
+/*
+ * \brief client_cuitExists: Chequea que el cuit ingresado ya no este asignado a algun cliente
+ * \param this Client*: puntero a cliente
+ * \param client_cuit char*: puntero al espacio donde esta el campo obtenido
+ * \return (-1) NO EXISTE / (0) EXISTE
+ */
+
 int client_cuitExists(LinkedList* this, char* cuit)
 {
 	int output = -1;
@@ -449,7 +480,14 @@ int client_cuitExists(LinkedList* this, char* cuit)
 	return output;
 }
 
-void* client_findById(LinkedList* list, int id)
+/*
+ * \brief client_findById: Busca un cliente a partir de un ID dado
+ * \param this Client*: puntero a cliente
+ * \param id int: ID a comparar
+ * \return (NULL) NO EXISTE / (pElement) EXISTE
+ */
+
+void* client_findById(LinkedList* ListClient, int id)
 {
 	void* result = NULL;
 	void* pElement;
@@ -458,10 +496,10 @@ void* client_findById(LinkedList* list, int id)
 	int resultAux;
 
 
-	for (i = 0; i < ll_len(list); i++)
+	for (i = 0; i < ll_len(ListClient); i++)
 	{
 
-		pElement = (Client*)ll_get(list,i);
+		pElement = (Client*)ll_get(ListClient,i);
 		resultAux = client_getId(pElement,&bufferId);
 
 
@@ -474,6 +512,13 @@ void* client_findById(LinkedList* list, int id)
 	}
 	return result;
 }
+
+/*
+ * \brief client_findByIdInt: Busca un cliente a partir de un ID dado
+ * \param this Client*: puntero a cliente
+ * \param id int: ID a comparar
+ * \return (-1) NO EXISTE / (0) EXISTE
+ */
 
 int client_findByIdInt(LinkedList* ListClients, int id)
 {
@@ -500,6 +545,11 @@ int client_findByIdInt(LinkedList* ListClients, int id)
 	return output;
 }
 
+/*
+ * \brief client_printSingleWithMap: Imprime un cliente a partir de su puntero
+ * \param pClient void*: puntero a cliente
+ * \return (-1) Error / (0) Ok
+ */
 
 int client_printSingleWithMap(void* pClient)
 {
@@ -530,6 +580,12 @@ int client_printSingleWithMap(void* pClient)
 	}
 	return output;
 }
+
+/*
+ * \brief client_printPaidWithMap: Imprime un cliente con la cantidad de ventas pagas a partir de su puntero
+ * \param pClient void*: puntero a cliente
+ * \return (-1) Error / (0) Ok
+ */
 
 int client_printPaidWithMap(void* pClient)
 {
@@ -564,6 +620,11 @@ int client_printPaidWithMap(void* pClient)
 	return output;
 }
 
+/*
+ * \brief client_printNotPaidWithMap: Imprime un cliente con la cantidad de ventas no pagas a partir de su puntero
+ * \param pClient void*: puntero a cliente
+ * \return (-1) Error / (0) Ok
+ */
 
 int client_printNotPaidWithMap(void* pClient)
 {

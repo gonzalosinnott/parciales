@@ -73,7 +73,7 @@ int menu_getModifyMenu(int* choosenOption)
 }
 
 /**
- * \brief menu_getSortMenu: Menu para elegir el campo a partir del cual ordenar la lista y el orden de la misma
+ * \brief menu_getSortMenu: Menu para elegir mostrar distintas estadisticas del programa
  * \param choosenOption* int: Puntero a la direccion nde memoria de la variable que almacena la opcion elegida
  * \param choosenOrder* int: Puntero a la direccion nde memoria de la variable que almacena la opcion elegida
  * \return (-1) Error / (0) Ok
