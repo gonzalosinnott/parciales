@@ -488,3 +488,314 @@ Finished building target: segundo_parcial
 13:15:49 **** Incremental Build of configuration Debug for project segundo_parcial ****
 make all 
 make: No se hace nada para 'all'.
+13:21:24 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+13:21:27 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:27:35 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:27:38 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:28:07 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:28:10 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:29:14 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:29:18 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:29:56 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:29:58 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:30:27 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:40:48 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c: In function ‘client_findByIdInt’:
+../src/clients.c:484:29: warning: implicit declaration of function ‘isValidIdClient’ [-Wimplicit-function-declaration]
+  484 |  if (ListClients != NULL && isValidIdClient(id) == 1)
+      |                             ^~~~~~~~~~~~~~~
+../src/clients.c:492:7: warning: implicit declaration of function ‘client_getIdClient’; did you mean ‘client_getCuit’? [-Wimplicit-function-declaration]
+  492 |    if(client_getIdClient(bufferClient) == id)
+      |       ^~~~~~~~~~~~~~~~~~
+      |       client_getCuit
+Finished building: ../src/clients.c
+ 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+../src/controller.c: In function ‘controller_findSalePostersSold’:
+../src/controller.c:584:3: warning: implicit declaration of function ‘controller_printSalesWithClientInfo’ [-Wimplicit-function-declaration]
+  584 |   controller_printSalesWithClientInfo(clientList, newList);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/controller.c
+ 
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
+ 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+/usr/bin/ld: ./src/clients.o: en la función `client_findByIdInt':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/clients.c:484: referencia a `isValidIdClient' sin definir
+/usr/bin/ld: /mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/clients.c:492: referencia a `client_getIdClient' sin definir
+/usr/bin/ld: ./src/controller.o: en la función `controller_findSalePostersSold':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/controller.c:584: referencia a `controller_printSalesWithClientInfo' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: segundo_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:41:16 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+../src/controller.c: In function ‘controller_findSalePostersSold’:
+../src/controller.c:585:3: warning: implicit declaration of function ‘controller_printSalesWithClientInfo’ [-Wimplicit-function-declaration]
+  585 |   controller_printSalesWithClientInfo(clientList, newList);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At top level:
+../src/controller.c:594:12: warning: ‘report_printSalesWithClient’ defined but not used [-Wunused-function]
+  594 | static int report_printSalesWithClient(LinkedList* ListClients,LinkedList* ListSales)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/controller.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+/usr/bin/ld: ./src/clients.o: en la función `client_findByIdInt':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/clients.c:484: referencia a `isValidIdClient' sin definir
+/usr/bin/ld: /mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/clients.c:492: referencia a `client_getIdClient' sin definir
+/usr/bin/ld: ./src/controller.o: en la función `controller_findSalePostersSold':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/controller.c:585: referencia a `controller_printSalesWithClientInfo' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: segundo_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:41:47 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+/usr/bin/ld: ./src/clients.o: en la función `client_findByIdInt':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/clients.c:484: referencia a `isValidIdClient' sin definir
+/usr/bin/ld: /mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/clients.c:492: referencia a `client_getIdClient' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: segundo_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:42:21 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+../src/clients.c: In function ‘client_findByIdInt’:
+../src/clients.c:484:28: error: expected expression before ‘)’ token
+  484 |  if (ListClients != NULL &&)
+      |                            ^
+../src/clients.c:492:7: warning: implicit declaration of function ‘client_getIdClient’; did you mean ‘client_getCuit’? [-Wimplicit-function-declaration]
+  492 |    if(client_getIdClient(bufferClient) == id)
+      |       ^~~~~~~~~~~~~~~~~~
+      |       client_getCuit
+make: *** [src/subdir.mk:41: src/clients.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:43:26 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/clients.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clients.d" -MT"src/clients.o" -o "src/clients.o" "../src/clients.c"
+Finished building: ../src/clients.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+13:43:29 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:54:49 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+../src/controller.c: In function ‘controller_printSalesWithClientInfo’:
+../src/controller.c:618:11: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+  618 |    printf("")
+      |           ^~
+../src/controller.c:618:14: error: expected ‘;’ before ‘printf’
+  618 |    printf("")
+      |              ^
+      |              ;
+  619 |    printf("| %-9d| %-25s| %-13s|\n ",sale_id, sale_fileName, client_cuit);
+      |    ~~~~~~     
+make: *** [src/subdir.mk:41: src/controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:54:58 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building file: ../src/menu.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/menu.d" -MT"src/menu.o" -o "src/menu.o" "../src/menu.c"
+Finished building: ../src/menu.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+13:55:00 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:55:48 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+13:55:51 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+13:56:48 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+14:34:05 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+../src/controller.c: In function ‘controller_saveClientsFromText’:
+../src/controller.c:96:13: warning: implicit declaration of function ‘parser_ClientToText’; did you mean ‘parser_ClientFromText’? [-Wimplicit-function-declaration]
+   96 |    output = parser_ClientToText(pArch, pArrayList);
+      |             ^~~~~~~~~~~~~~~~~~~
+      |             parser_ClientFromText
+Finished building: ../src/controller.c
+ 
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
+ 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+../src/segundo_parcial.c: In function ‘main’:
+../src/segundo_parcial.c:128:9: warning: implicit declaration of function ‘controller_saveSalesFromText’; did you mean ‘controller_loadSalesFromText’? [-Wimplicit-function-declaration]
+  128 |         controller_saveSalesFromText(PATHSALES, salesList)== 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         controller_loadSalesFromText
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+/usr/bin/ld: ./src/segundo_parcial.o: en la función `main':
+/mnt/Datos/Tecnicatura_en_Programación/Laboratorio_y_Programación_I/parciales/segundo_parcial/Debug/../src/segundo_parcial.c:128: referencia a `controller_saveSalesFromText' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:32: segundo_parcial] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:36:22 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+14:36:25 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+14:57:25 **** Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+14:57:27 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+14:57:43 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:00:21 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/segundo_parcial.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/segundo_parcial.d" -MT"src/segundo_parcial.o" -o "src/segundo_parcial.o" "../src/segundo_parcial.c"
+Finished building: ../src/segundo_parcial.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+15:01:06 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:02:49 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.
+15:21:51 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+Building file: ../src/controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/controller.d" -MT"src/controller.o" -o "src/controller.o" "../src/controller.c"
+Finished building: ../src/controller.c
+ 
+Building target: segundo_parcial
+Invoking: GCC C Linker
+gcc  -o "segundo_parcial"  ./src/LinkedList.o ./src/clients.o ./src/controller.o ./src/menu.o ./src/parser.o ./src/sales.o ./src/segundo_parcial.o ./src/utn.o   
+Finished building target: segundo_parcial
+ 
+15:21:54 **** Incremental Build of configuration Debug for project segundo_parcial ****
+make all 
+make: No se hace nada para 'all'.

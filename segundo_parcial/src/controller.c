@@ -25,6 +25,7 @@ Description : Library Controller.c
 
 static int controller_findClientPostersSold(LinkedList* clientList,LinkedList* salesList, int order);
 static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* salesList, int order);
+static int controller_printSalesWithClientInfo(LinkedList* ListClients,LinkedList* ListSales);
 
 
 /*
@@ -80,6 +81,48 @@ int controller_loadSalesFromText(char* path, LinkedList* pArrayList)
 	return output;
 }
 
+int controller_saveClientsToText(char* path, LinkedList* pArrayList)
+{
+	int output = -1;
+	FILE *pArch;
+
+	if (path != NULL && pArrayList != NULL)
+	{
+		pArch = fopen(path, "w");
+		if (pArch != NULL)
+		{
+			output = parser_ClientToText(pArch, pArrayList);
+		}
+		else
+		{
+			printf("\nERROR, NO SE PUDO GUARDAR EL ARCHIVO\n");
+		}
+	}
+	fclose(pArch);
+	return output;
+}
+
+
+int controller_saveSalesToText(char* path, LinkedList* pArrayList)
+{
+	int output = -1;
+	FILE *pArch;
+
+	if (path != NULL && pArrayList != NULL)
+	{
+		pArch = fopen(path, "w");
+		if (pArch != NULL)
+		{
+			output = parser_SalesToText(pArch, pArrayList);
+		}
+		else
+		{
+			printf("\nERROR, NO SE PUDO GUARDAR EL ARCHIVO\n");
+		}
+	}
+	fclose(pArch);
+	return output;
+}
 
 /** \brief controller_ListClients: Imprime la lista de clientes
  * \param pArrayListEmployee LinkedList*: puntero al array de empleados
@@ -540,7 +583,7 @@ static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* sal
 	int output = -1;
 	int salesLen = ll_len(salesList);
 	int maxValue;
-	int flagFirstSale = TRUE;
+	int sale_amount;
 	Sale* bufferSale;
 	LinkedList* newList = ll_newLinkedList();
 	if(clientList!=NULL && salesList!=NULL)
@@ -548,13 +591,13 @@ static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* sal
 		for (int i = 0; i< salesLen;i++)
 		{
 			bufferSale = ll_get(salesList, i);
+			sale_getAmount(bufferSale, &sale_amount);
 			if(bufferSale != NULL)
 			{
-				if(flagFirstSale == TRUE)
+				if(i==0)
 				{
-					maxValue = sale_getAmount2(bufferSale);
+					maxValue = sale_amount;
 					ll_add(newList, bufferSale);
-					flagFirstSale = FALSE;
 				}
 				else
 				{
@@ -563,9 +606,9 @@ static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* sal
 					{
 						ll_clear(newList);
 						ll_add(newList, bufferSale);
-						maxValue = sale_getAmount2(bufferSale);
+						maxValue = sale_amount;
 					}
-					else if(sale_getAmount2(bufferSale) == maxValue)
+					else if(sale_amount == maxValue)
 					{
 						ll_add(newList, bufferSale);
 					}
@@ -574,21 +617,56 @@ static int controller_findSalePostersSold(LinkedList* clientList,LinkedList* sal
 		}
 		if(order ==3)
 		{
-			printf("\nVENTA CON MAS AFICHES PAGOS\n");
+			printf("\nVENTAS CON MAS AFICHES PAGOS\n");
 		}
 		else
 		{
-			printf("\nVENTA CON MENOS AFICHES PAGOS\n");
+			printf("\nVENTAS CON MENOS AFICHES PAGOS\n");
 		}
 		printf("\nCANTIDAD: %d\n",maxValue);
-		printf("--------------------------------------------------------------------------------------\n");
-		printf("|                                 LISTADO DE VENTAS                                  |\n");
-		printf(SALE_HEADER);
-		ll_map(newList,sale_printSingleWithMap);
+		controller_printSalesWithClientInfo(clientList, newList);
 		output = 0;
 	}
 	ll_clear(newList);
 	ll_deleteLinkedList(newList);
 	return output;
 }
+
+
+static int controller_printSalesWithClientInfo(LinkedList* ListClients,LinkedList* ListSales)
+{
+	int output = -1;
+	int indexClient;
+	int sale_clientId;
+	int sale_id;
+	char client_cuit[LEN_FORMATEDCUIT];
+	char sale_fileName[LEN_NAME];
+	int len = ll_len(ListSales);
+	Client* bufferClient;
+	Sale* bufferSale;
+	if(ListSales != NULL && len > 0)
+	{
+		printf("\n--------------------------------------------------------\n");
+		printf("| ID VENTA |      NOMBRE ARCHIVO      |  CUIT CLIENTE  |");
+		printf("\n--------------------------------------------------------\n");
+		for(int i = 0; i < len;i++)
+		{
+			bufferSale = ll_get(ListSales, i);
+			sale_getClientId(bufferSale, &sale_clientId);
+			indexClient = client_findByIdInt(ListClients, sale_clientId);
+			bufferClient = ll_get(ListClients,indexClient);
+			sale_getId(bufferSale, &sale_id);
+			sale_getFileName(bufferSale, sale_fileName);
+			client_getCuit(bufferClient, client_cuit);
+			printf("| %-9d| %-25s| %-15s| ",sale_id, sale_fileName, client_cuit);
+			printf("\n--------------------------------------------------------\n");
+
+		}
+
+		output = 0;
+	}
+    return output;
+}
+
+
 

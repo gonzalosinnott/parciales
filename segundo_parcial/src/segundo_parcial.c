@@ -29,6 +29,10 @@
 #define CHARGESALEERROR "\nVENTA NO COBRADA\n"
 #define REPORTSUCCESS "\nINFORME CREADO CON EXITO\n"
 #define REPORTERROR "\nERROR AL INTENTAR CREAR EL INFORME\n"
+#define REPORTSUCCESS "\nINFORME CREADO CON EXITO\n"
+#define REPORTERROR "\nERROR AL INTENTAR CREAR EL INFORME\n"
+#define SAVESUCCESS "\nARCHIVOS GUARDADOS CON EXITO\n"
+#define SAVEERROR "\nERROR AL GUARDAR LOS ARCHIVOS\n"
 
 #define TRUE 1
 #define FALSE 0
@@ -44,7 +48,6 @@ int main(void)
 	if(controller_loadClientsFromText(PATHCLIENTS, clientsList)== 0 &&
 	   controller_loadSalesFromText(PATHSALES, salesList)== 0)
 	{
-
 		do
 		{
 			menu_getMainMenu(&choosenOption);
@@ -118,6 +121,17 @@ int main(void)
 					else
 					{
 						printf(REPORTERROR);
+					}
+					break;
+				case 8://GUARDAR Y SALIR
+					if(controller_saveClientsToText(PATHCLIENTS, clientsList)== 0 &&
+					   controller_saveSalesToText(PATHSALES, salesList)== 0)
+					{
+						printf(SAVESUCCESS);
+					}
+					else
+					{
+						printf(SAVEERROR);
 					}
 					break;
 			}

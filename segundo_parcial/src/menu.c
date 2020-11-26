@@ -19,7 +19,7 @@
 #define MAINMENU_HEADER "|     REGISTRO DE CLIENTES Y VENTAS     |\n"
 #define MAINMENU_MSJ "\nIngrese una opción:\n 1-Agregar cliente.\n 2-Vender afiches.\n 3-Modificar venta.\n 4-Cobrar venta.\n 5-Generar informe de cobros.\n 6-Generar informe de deudas.\n 7-Generar estadisticas.\n 8-Guardar los datos y salir.\nOpcion:"
 #define MODIFYMENU_MSJ "\nIngrese campo a modificar: \n 1-Nombre del Archivo: \n 2-Cantidad: \n 3-Zona: \n 4-Volver al menu principal\nOpcion: "
-#define STATISTICSMENU_MSJ "\n¿Que desea averiguar?\n 1-Cliente al que se le vendió mas afiches: \n 2-Cliente al que se le vendió menos afiches: \n 3-Venta con mas afiches vendidos: \n 4-Venta con menos afiches vendidos: \n 5-Volver al menu principal\nOpcion: "
+#define STATISTICSMENU_MSJ "\n¿Que desea averiguar?\n 1-Cliente al que se le vendió mas afiches: \n 2-Cliente al que se le vendió menos afiches: \n 3-Venta con mas afiches pagos: \n 4-Volver al menu principal\nOpcion: "
 #define ERROR_MSJ "ERROR, INGRESE UNA OPCION VALIDA. "
 
 

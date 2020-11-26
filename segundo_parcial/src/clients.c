@@ -475,6 +475,30 @@ void* client_findById(LinkedList* list, int id)
 	return result;
 }
 
+int client_findByIdInt(LinkedList* ListClients, int id)
+{
+	int output = -1;
+	int len;
+	int client_id;
+	Client* bufferClient;
+	if (ListClients != NULL)
+	{
+		output = 0;
+		len = ll_len(ListClients);
+
+		for(int i = 0; i < len; i++)
+		{
+			bufferClient = ll_get(ListClients, i);
+			client_getId(bufferClient, &client_id);
+			if(client_id == id)
+			{
+				output = i;
+				break;
+			}
+		}
+	}
+	return output;
+}
 
 
 int client_printSingleWithMap(void* pClient)

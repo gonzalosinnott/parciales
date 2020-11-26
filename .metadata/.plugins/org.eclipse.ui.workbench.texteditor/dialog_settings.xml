@@ -6,28 +6,22 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Sale"/>
+		<item key="selection" value="client_findById"/>
 		<list key="findhistory">
+			<item value="client_findById"/>
+			<item value="employee"/>
+			<item value="amout"/>
 			<item value="Client"/>
 			<item value="client"/>
-			<item value="employee"/>
 			<item value="Employee"/>
 			<item value="post"/>
 			<item value="Post"/>
-			<item value="newspaper"/>
-			<item value="getChar"/>
-			<item value="LEN_NAME"/>
-			<item value="strcpy"/>
-			<item value="strcmp"/>
-			<item value="publication_countCategory"/>
-			<item value="cliente"/>
-			<item value="LONG"/>
-			<item value="alta"/>
 		</list>
 		<list key="replacehistory">
+			<item value="client"/>
+			<item value="amount"/>
 			<item value="Sale"/>
 			<item value="sale"/>
-			<item value="client"/>
 			<item value="Client"/>
 			<item value="user"/>
 			<item value="User"/>
@@ -39,7 +33,6 @@
 			<item value="publication"/>
 			<item value="Publication"/>
 			<item value="newspaper"/>
-			<item value="Publications"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

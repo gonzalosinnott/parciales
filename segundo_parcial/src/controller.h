@@ -16,6 +16,10 @@ Description : Header for Library Controller.c
 
 int controller_loadClientsFromText(char* path , LinkedList* pArrayList);
 int controller_loadSalesFromText(char* path, LinkedList* pArrayList);
+int controller_saveClientsToText(char* path, LinkedList* pArrayList);
+int controller_saveSalesToText(char* path, LinkedList* pArrayList);
+
+
 int controller_addClient(LinkedList* pArrayList);
 int controller_addSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
 int controller_modifySale(LinkedList* pArrayListClients,LinkedList* pArrayListSales);

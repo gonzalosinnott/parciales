@@ -160,3 +160,69 @@ int parser_notPaidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	}
 	return output;
 }
+
+int parser_ClientToText(FILE* pFile , LinkedList* pArrayListClient)
+{
+	int output = -1;
+	Client* pClient;
+	int bufferId;
+	char bufferLastName[BUFFER_LEN];
+	char bufferName[BUFFER_LEN];
+	char bufferCuit[BUFFER_LEN];
+	int len = ll_len(pArrayListClient);
+
+	if (pFile != NULL && pArrayListClient != NULL)
+	{
+		fprintf(pFile,"ID,APELLIDO,NOMBRE,CUIT\n");
+		for(int i = 0; i < len; i++)
+		{
+			pClient = (Client*) ll_get(pArrayListClient,i);
+			if(pClient != NULL &&
+			   client_getId(pClient, &bufferId)==0 &&
+			   client_getLastName(pClient, bufferLastName)==0 &&
+			   client_getName(pClient, bufferName)==0 &&
+			   client_getCuit(pClient, bufferCuit)==0)
+			{
+				fprintf(pFile,"%d,%s,%s,%s\n",bufferId,bufferLastName,bufferName,bufferCuit);
+				output = 0;
+			}
+		}
+	}
+	return output;
+}
+
+
+int parser_SalesToText(FILE* pFile , LinkedList* pArrayListSales)
+{
+	int output = -1;
+	Sale* pSale;
+	int bufferId;
+	int bufferClientId;
+	int bufferAmount;
+	char bufferFileName[BUFFER_LEN];
+	int bufferZone;
+	int bufferStatus;
+	int len = ll_len(pArrayListSales);
+
+	if (pFile != NULL && pArrayListSales != NULL)
+	{
+		fprintf(pFile, "ID,NOMBRE ARCHIVO,CANTIDAD,ZONA,ESTADO,ID CLIENTE");
+		for(int i = 0; i < len ; i++)
+		{
+			pSale = (Sale*) ll_get(pArrayListSales,i);
+			if(pSale != NULL &&
+			   sale_getId(pSale, &bufferId)==0 &&
+			   sale_getFileName(pSale, bufferFileName)==0 &&
+			   sale_getAmount(pSale, &bufferAmount)==0 &&
+			   sale_getZone(pSale, &bufferZone)==0 &&
+			   sale_getStatus(pSale, &bufferStatus)==0 &&
+			   sale_getClientId(pSale, &bufferClientId)==0)
+			{
+				fprintf(pFile, "%d,%s,%d,%d,%d,%d\n",bufferId,bufferFileName,bufferAmount,bufferZone,bufferStatus,bufferClientId);
+				output = 0;
+			}
+		}
+	}
+	return output;
+}
+
