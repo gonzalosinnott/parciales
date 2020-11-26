@@ -93,3 +93,70 @@ int parser_SalesFromText(FILE* pFile , LinkedList* pArrayListSales)
 	}
 	return output;
 }
+
+
+int parser_paidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
+{
+	int output = -1;
+	Client *pClient;
+	int bufferId;
+	char BufferLastName[LEN_NAME];
+	char bufferName[LEN_NAME];
+	char bufferCuit[LEN_FORMATEDCUIT];
+	int bufferPaidSales;
+	int len;
+
+	if (pFile != NULL && pArrayListEmployee != NULL)
+	{
+		len = ll_len(pArrayListEmployee);
+		fprintf(pFile, "ID,APELLIDO,NOMBRE,CUIT,CANTIDAD DE VENTAS PAGAS\n");
+		for (int i = 0; i < len; i++)
+		{
+			pClient = (Client*)ll_get(pArrayListEmployee, i);
+			if (pClient != NULL &&
+				client_getId(pClient, &bufferId) == 0 &&
+				client_getLastName(pClient, BufferLastName) == 0 &&
+				client_getName(pClient, bufferName) == 0 &&
+				client_getCuit(pClient, bufferCuit) == 0 &&
+				client_getPaidSales(pClient, &bufferPaidSales) == 0)
+			{
+				fprintf(pFile, "%d,%s,%s,%s,%d\n", bufferId, BufferLastName, bufferName, bufferCuit,bufferPaidSales);
+				output = 0;
+			}
+		}
+	}
+	return output;
+}
+
+int parser_notPaidListToText(FILE* pFile , LinkedList* pArrayListEmployee)
+{
+	int output = -1;
+	Client *pClient;
+	int bufferId;
+	char BufferLastName[LEN_NAME];
+	char bufferName[LEN_NAME];
+	char bufferCuit[LEN_FORMATEDCUIT];
+	int bufferNotPaidSales;
+	int len;
+
+	if (pFile != NULL && pArrayListEmployee != NULL)
+	{
+		len = ll_len(pArrayListEmployee);
+		fprintf(pFile, "ID,APELLIDO,NOMBRE,CUIT,CANTIDAD DE VENTAS IMPAGASPAGAS\n");
+		for (int i = 0; i < len; i++)
+		{
+			pClient = (Client*)ll_get(pArrayListEmployee, i);
+			if (pClient != NULL &&
+				client_getId(pClient, &bufferId) == 0 &&
+				client_getLastName(pClient, BufferLastName) == 0 &&
+				client_getName(pClient, bufferName) == 0 &&
+				client_getCuit(pClient, bufferCuit) == 0 &&
+				client_getNotPaidSales(pClient, &bufferNotPaidSales) == 0)
+			{
+				fprintf(pFile, "%d,%s,%s,%s,%d\n", bufferId, BufferLastName, bufferName, bufferCuit,bufferNotPaidSales);
+				output = 0;
+			}
+		}
+	}
+	return output;
+}

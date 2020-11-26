@@ -311,7 +311,7 @@ int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 				}
 				else
 				{
-					printf("ERROR EL ID INGRESADO NO SE PUEDE COBRAR);
+					printf("ERROR EL ID INGRESADO NO SE PUEDE COBRAR");
 				}
 			}
 		}
@@ -321,7 +321,120 @@ int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSa
 	return output;
 }
 
+int controller_createPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
+{
+	int output = -1;
+	int bufferClientId;
+	int salesQuantity = 0;
+	Client* pClient;
+
+	LinkedList* salesPaidList = ll_clone(pArrayListSales);
+	LinkedList* clientPaidList = ll_newLinkedList();
 
 
+	if (pArrayListClients != NULL && pArrayListSales != NULL &&
+		ll_filter(salesPaidList, sale_filterByPayed)==0)
+	{
+		for(int i = 0; i < ll_len(pArrayListClients);i++)
+		{
+			if((pClient = (Client*) ll_get(pArrayListClients,i))!=NULL)
+			{
 
+				client_getId(pClient, &bufferClientId);
+				sale_getSalesByClientId(salesPaidList,bufferClientId,&salesQuantity);
+				client_setPaidSales(pClient, salesQuantity);
+				output= ll_add(clientPaidList,pClient);
+			}
+		}
+		printf("\n-----------------------------------------------------------------------------\n");
+		printf("|                LISTADO DE CLIENTES CON NUMERO DE VENTAS PAGAS             |");
+		printf("\n-----------------------------------------------------------------------------\n");
+		printf("|  ID  | APELLIDO        | NOMBRE          | CUIT            | VENTAS PAGAS |");
+	    printf("\n-----------------------------------------------------------------------------\n");
+		ll_map(clientPaidList, client_printPaidWithMap);
+
+		FILE *pArch;
+		if (clientPaidList != NULL)
+		{
+			pArch = fopen("ventaspagas.txt", "w");
+			if (pArch != NULL)
+			{
+				parser_paidListToText(pArch, clientPaidList);
+			}
+			else
+			{
+				printf("\nERROR, NO SE PUDO GUARDAR EL ARCHIVO\n");
+			}
+		}
+		fclose(pArch);
+	}
+	else
+	{
+		printf("NO EXISTEN VENTAS PAGAS");
+	}
+	ll_clear(salesPaidList);
+	ll_deleteLinkedList(salesPaidList);
+	ll_clear(clientPaidList);
+	ll_deleteLinkedList(clientPaidList);
+	return output;
+}
+
+
+int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
+{
+	int output = -1;
+	int bufferClientId;
+	int salesQuantity = 0;
+	Client* pClient;
+
+	LinkedList* salesNotPaidList = ll_clone(pArrayListSales);
+	LinkedList* clientNotPaidList = ll_newLinkedList();
+
+
+	if (pArrayListClients != NULL && pArrayListSales != NULL &&
+		ll_filter(salesNotPaidList, sale_filterByNotPayed)==0)
+	{
+		for(int i = 0; i < ll_len(pArrayListClients);i++)
+		{
+			if((pClient = (Client*) ll_get(pArrayListClients,i))!=NULL)
+			{
+
+				client_getId(pClient, &bufferClientId);
+				sale_getSalesByClientId(salesNotPaidList,bufferClientId,&salesQuantity);
+				client_setNotPaidSales(pClient, salesQuantity);
+				output= ll_add(clientNotPaidList,pClient);
+			}
+		}
+		printf("\n-------------------------------------------------------------------------------\n");
+		printf("|                LISTADO DE CLIENTES CON NUMERO DE VENTAS IMPAGAS             |");
+		printf("\n-------------------------------------------------------------------------------\n");
+		printf("|  ID  | APELLIDO        | NOMBRE          | CUIT            | VENTAS IMPAGAS |");
+		printf("\n-------------------------------------------------------------------------------\n");
+		ll_map(clientNotPaidList, client_printNotPaidWithMap);
+
+		FILE *pArch;
+		if (clientNotPaidList != NULL)
+		{
+			pArch = fopen("ventasnopagas.txt", "w");
+			if (pArch != NULL)
+			{
+				parser_notPaidListToText(pArch, clientNotPaidList);
+			}
+			else
+			{
+				printf("\nERROR, NO SE PUDO GUARDAR EL ARCHIVO\n");
+			}
+		}
+		fclose(pArch);
+	}
+	else
+	{
+		printf("NO EXISTEN VENTAS PAGAS");
+	}
+	ll_clear(salesNotPaidList);
+	ll_deleteLinkedList(salesNotPaidList);
+	ll_clear(clientNotPaidList);
+	ll_deleteLinkedList(clientNotPaidList);
+	return output;
+}
 

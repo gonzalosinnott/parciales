@@ -27,6 +27,8 @@
 #define MODIFYSALEERROR "\nERROR EN LA MODIFICACION DE LA VENTA\n"
 #define CHARGESALESUCCESS "\nREGISTRO DE VENTAS COBRADO CON EXITO\n"
 #define CHARGESALEERROR "\nVENTA NO COBRADA\n"
+#define REPORTSUCCESS "\nINFORME CREADO CON EXITO\n"
+#define REPORTERROR "\nERROR AL INTENTAR CREAR EL INFORME\n"
 
 #define TRUE 1
 #define FALSE 0
@@ -88,6 +90,27 @@ int main(void)
 						printf(CHARGESALEERROR);
 					}
 					break;
+				case 5://Crear informe de ventas cobradas
+					if(controller_createPaidReport(clientsList,salesList)==0)
+					{
+						printf(REPORTSUCCESS);
+					}
+					else
+					{
+						printf(REPORTERROR);
+					}
+					break;
+				case 6://Crear informe de ventas cobradas
+					if(controller_createNotPaidReport(clientsList,salesList)==0)
+					{
+						printf(REPORTSUCCESS);
+					}
+					else
+					{
+						printf(REPORTERROR);
+					}
+					break;
+
 				case 7://CONTROL DE LISTAS
 					controller_ListClients(clientsList);
 					controller_ListSales(salesList);

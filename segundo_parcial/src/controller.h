@@ -20,6 +20,9 @@ int controller_addClient(LinkedList* pArrayList);
 int controller_addSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
 int controller_modifySale(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
 int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
+int controller_createPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
+int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
+int controller_createNotPaidReport(LinkedList* pArrayListClients,LinkedList* pArrayListSales);
 
 
 int controller_ListClients(LinkedList* pArrayListClients);

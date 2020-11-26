@@ -26,6 +26,8 @@ typedef struct
 	char client_lastName[LEN_NAME];
 	char client_name[LEN_NAME];
 	char client_cuit[LEN_FORMATEDCUIT];
+	int paidSales;
+	int notPaidSales;
 }Client;
 
 Client* client_new();
@@ -46,10 +48,19 @@ int client_getName(Client* this,char* client_name);
 
 int client_setCuit(Client* this,char* client_cuit);
 int client_getCuit(Client* this,char* client_cuit);
+
+int client_setPaidSales(Client* this, int paidSales);
+int client_getPaidSales(Client* this,int* paidSales);
+
+int client_setNotPaidSales(Client* this, int notPaidSales);
+int client_getNotPaidSales(Client* this,int* notPaidSales);
+
 int client_cuitExists(LinkedList* this, char* cuit);
 void* client_findById(LinkedList* list, int id);
 
 int client_printSingleWithMap(void* pClient);
+int client_printPaidWithMap(void* pClient);
+int client_printNotPaidWithMap(void* pClient);
 
 
 #endif // CLIENT_H_INCLUDED

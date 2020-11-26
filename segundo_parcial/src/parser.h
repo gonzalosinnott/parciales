@@ -15,6 +15,8 @@
 
 int parser_ClientFromText(FILE* pFile , LinkedList* pArrayListClient);
 int parser_SalesFromText(FILE* pFile , LinkedList* pArrayListClient);
+int parser_paidListToText(FILE* pFile , LinkedList* pArrayListEmployee);
+int parser_notPaidListToText(FILE* pFile , LinkedList* pArrayListEmployee);
 
 
 #endif /* PARSER_H_ */

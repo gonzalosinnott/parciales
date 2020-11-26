@@ -290,6 +290,51 @@ int client_getCuit(Client* this,char* client_cuit)
 }
 
 
+int client_setPaidSales(Client* this, int paidSales)
+{
+	int output = -1;
+	if (this != NULL && paidSales >= 0)
+	{
+		this->paidSales = paidSales;
+		output = 0;
+	}
+	return output;
+}
+
+int client_getPaidSales(Client* this,int* paidSales)
+{
+	int output = -1;
+	if (this != NULL && paidSales != NULL)
+	{
+		*paidSales = this->paidSales;
+		output = 0;
+	}
+	return output;
+}
+
+int client_setNotPaidSales(Client* this, int notPaidSales)
+{
+	int output = -1;
+	if (this != NULL && notPaidSales >= 0)
+	{
+		this->notPaidSales = notPaidSales;
+		output = 0;
+	}
+	return output;
+}
+
+int client_getNotPaidSales(Client* this,int* notPaidSales)
+{
+	int output = -1;
+	if (this != NULL && notPaidSales != NULL)
+	{
+		*notPaidSales = this->notPaidSales;
+		output = 0;
+	}
+	return output;
+}
+
+
 /*
  * \brief client_isValidNombre:Valida que la cadena recibida solo tenga letras, espacios o guiones
  * \param string char*: puntero a la cadena a validar
@@ -457,5 +502,69 @@ int client_printSingleWithMap(void* pClient)
 	return output;
 }
 
+int client_printPaidWithMap(void* pClient)
+{
+	int output = -1;
+	Client* bufferClient;
+	bufferClient = (Client*) pClient;
+
+	int bufferId;
+	char bufferlastName[LEN_NAME];
+	char bufferName[LEN_NAME];
+	char bufferCuit[LEN_FORMATEDCUIT];
+	int bufferPaidSales;
+
+	if(bufferClient != NULL &&
+	   client_getId(bufferClient, &bufferId) ==0 &&
+	   client_getLastName(bufferClient, bufferlastName) ==0 &&
+	   client_getName(bufferClient, bufferName) ==0 &&
+	   client_getPaidSales(bufferClient, &bufferPaidSales) ==0 &&
+	   client_getCuit(bufferClient, bufferCuit)==0 )
+	{
+
+		printf("| %-5d| %-16s| %-16s| %-16s| %-13d|\n",
+				bufferId,
+				bufferlastName,
+				bufferName,
+				bufferCuit,
+				bufferPaidSales);
+	    printf("-----------------------------------------------------------------------------\n");
+		output = 0;
+
+	}
+	return output;
+}
 
 
+int client_printNotPaidWithMap(void* pClient)
+{
+	int output = -1;
+	Client* bufferClient;
+	bufferClient = (Client*) pClient;
+
+	int bufferId;
+	char bufferlastName[LEN_NAME];
+	char bufferName[LEN_NAME];
+	char bufferCuit[LEN_FORMATEDCUIT];
+	int bufferNotPaidSales;
+
+	if(bufferClient != NULL &&
+	   client_getId(bufferClient, &bufferId) ==0 &&
+	   client_getLastName(bufferClient, bufferlastName) ==0 &&
+	   client_getName(bufferClient, bufferName) ==0 &&
+	   client_getNotPaidSales(bufferClient, &bufferNotPaidSales) ==0 &&
+	   client_getCuit(bufferClient, bufferCuit)==0 )
+	{
+
+		printf("| %-5d| %-16s| %-16s| %-16s| %-15d|\n",
+				bufferId,
+				bufferlastName,
+				bufferName,
+				bufferCuit,
+				bufferNotPaidSales);
+		printf("-------------------------------------------------------------------------------\n");
+		output = 0;
+
+	}
+	return output;
+}

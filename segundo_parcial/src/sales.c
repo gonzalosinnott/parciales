@@ -431,6 +431,7 @@ int sale_getStatus(Sale* this,int* sale_status)
 }
 
 
+
 /*
  * \brief sale_isValidNombre:Valida que la cadena recibida solo tenga letras, espacios o guiones
  * \param string char*: puntero a la cadena a validar
@@ -569,6 +570,48 @@ int sale_filterByNotPayed (void* pSale)
 	sale_getStatus(bufferSale, &bufferStatus);
 	if(bufferStatus!=TO_PAY)
 	{
+		output = 0;
+	}
+	return output;
+}
+
+int sale_filterByPayed (void* pSale)
+{
+	int output = -1;
+	Sale* bufferSale;
+	bufferSale = (Sale*) pSale;
+	int bufferStatus;
+	sale_getStatus(bufferSale, &bufferStatus);
+	if(bufferStatus==TO_PAY)
+	{
+		output = 0;
+	}
+	return output;
+}
+
+
+int sale_getSalesByClientId(LinkedList* listSale,int clientId,int* salesQuantity)
+{
+	int output = -1;
+	int counter = 0;
+	Sale* pSale;
+	int bufferIdClient;
+
+	if (listSale != NULL && salesQuantity != NULL && clientId > 0)
+	{
+		for (int i = 0; i < ll_len(listSale); i++)
+		{
+			pSale = (Sale*) ll_get(listSale,i);
+			if(pSale != NULL)
+			{
+				sale_getClientId(pSale,&bufferIdClient);
+				if(bufferIdClient == clientId)
+				{
+					counter++;
+				}
+			}
+		}
+		*salesQuantity = counter;
 		output = 0;
 	}
 	return output;

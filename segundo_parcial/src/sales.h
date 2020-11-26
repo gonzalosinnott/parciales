@@ -62,6 +62,9 @@ int sale_setStatus(Sale* this,int sale_status);
 int sale_getStatus(Sale* this,int* sale_status);
 
 int sale_filterByNotPayed (void* pSale);
+int sale_filterByPayed (void* pSale);
+int sale_getSalesByClientId(LinkedList* listSale,int clientId,int* salesQuantity);
+
 void* sales_findById(LinkedList* list, int id);
 int sale_printSingleWithMap(void* pSale);
 
