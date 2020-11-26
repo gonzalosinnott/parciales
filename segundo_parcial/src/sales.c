@@ -558,6 +558,44 @@ static int formatdata(int data1, int data2, char* data1Formatted, char* data2For
 	}
 
 	return output;
-
 }
 
+int sale_filterByNotPayed (void* pSale)
+{
+	int output = -1;
+	Sale* bufferSale;
+	bufferSale = (Sale*) pSale;
+	int bufferStatus;
+	sale_getStatus(bufferSale, &bufferStatus);
+	if(bufferStatus!=TO_PAY)
+	{
+		output = 0;
+	}
+	return output;
+}
+
+void* sales_findById(LinkedList* list, int id)
+{
+	void* result = NULL;
+	void* pElement;
+	int i;
+	int bufferId;
+	int resultAux;
+
+
+	for (i = 0; i < ll_len(list); i++)
+	{
+
+		pElement = (Sale*)ll_get(list,i);
+		resultAux = sale_getId(pElement,&bufferId);
+
+
+		if(resultAux == 0 && bufferId == id)
+		{
+			result = pElement;
+			break;
+		}
+
+	}
+	return result;
+}

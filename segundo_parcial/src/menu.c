@@ -18,7 +18,7 @@
 
 #define MAINMENU_HEADER "|     REGISTRO DE CLIENTES Y VENTAS     |\n"
 #define MAINMENU_MSJ "\nIngrese una opción:\n 1-Agregar cliente.\n 2-Vender afiches.\n 3-Modificar venta.\n 4-Cobrar venta.\n 5-Generar informe de cobros.\n 6-Generar informe de deudas.\n 7-Generar estadisticas.\n 8-Guardar los datos y salir.\nOpcion:"
-#define MODIFYMENU_MSJ "\nIngrese campo a modificar: \n 1-Nombre: \n 2-Horas trabajadas: \n 3-Sueldo: \n 4-Volver al menu principal\nOpcion: "
+#define MODIFYMENU_MSJ "\nIngrese campo a modificar: \n 1-Nombre del Archivo: \n 2-Cantidad: \n 3-Zona: \n 4-Volver al menu principal\nOpcion: "
 #define ERROR_MSJ "ERROR, INGRESE UNA OPCION VALIDA. "
 #define SORTMENU "\nIngrese campo a ordenar:\n 1-Id\n 2-Nombre\n 3-Horas trabajadas\n 4-Sueldo\n 5-Volver al menu principal\n\nOpcion:"
 #define CRITERIAMENU "\nIngrese el criterio con el que desea ordenar:\n 1-ASCENDENTE\n 0-DESCEDENTE\nOpcion:"

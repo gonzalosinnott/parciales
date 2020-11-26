@@ -61,6 +61,8 @@ int sale_setStatusFromTxtFile(Sale* this,char* sale_status);
 int sale_setStatus(Sale* this,int sale_status);
 int sale_getStatus(Sale* this,int* sale_status);
 
+int sale_filterByNotPayed (void* pSale);
+void* sales_findById(LinkedList* list, int id);
 int sale_printSingleWithMap(void* pSale);
 
 #endif /* SALES_H_ */

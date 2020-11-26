@@ -5,3 +5,4 @@ configDescList=org.eclipse.launchbar.core.descriptorType.default\:simulacro_MyBo
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:primer_parcial/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:primer_parcial/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:segundo_parcial/activeLaunchMode=run

@@ -399,6 +399,33 @@ int client_cuitExists(LinkedList* this, char* cuit)
 	return output;
 }
 
+void* client_findById(LinkedList* list, int id)
+{
+	void* result = NULL;
+	void* pElement;
+	int i;
+	int bufferId;
+	int resultAux;
+
+
+	for (i = 0; i < ll_len(list); i++)
+	{
+
+		pElement = (Client*)ll_get(list,i);
+		resultAux = client_getId(pElement,&bufferId);
+
+
+		if(resultAux == 0 && bufferId == id)
+		{
+			result = pElement;
+			break;
+		}
+
+	}
+	return result;
+}
+
+
 
 int client_printSingleWithMap(void* pClient)
 {

@@ -19,6 +19,10 @@ Description : Library Controller.c
 #include "utn.h"
 #include "menu.h"
 
+#define CLIENT_HEADER "-------------------------------------------------------------\n| APELLIDO        | NOMBRE          | CUIT            | ID  |\n-------------------------------------------------------------\n"
+#define SALE_HEADER "--------------------------------------------------------------------------------------\n|  ID  | ARCHIVO                  | CANTIDAD  |  ESTADO   |    ZONA     | ID CLIENTE |\n--------------------------------------------------------------------------------------\n"
+#define MODIFYERROR_MSJ "ERROR, EL CAMPO NO PUDO SER MODIFICADO"
+
 /*
  * \brief controller_loadFromText: Carga los datos de los empleados desde el archivo data.csv (modo texto).
  * \param path char*: ruta del archivo a cargar
@@ -72,6 +76,41 @@ int controller_loadSalesFromText(char* path, LinkedList* pArrayList)
 	return output;
 }
 
+
+/** \brief controller_ListClients: Imprime la lista de clientes
+ * \param pArrayListEmployee LinkedList*: puntero al array de empleados
+ * \return (-1) Error / (0) Ok
+ */
+
+int controller_ListClients(LinkedList* pArrayListClients)
+{
+    int output = -1;
+
+    if(pArrayListClients != NULL)
+    {
+    	printf("-------------------------------------------------------------\n");
+		printf("|                    LISTADO DE CLIENTES                    |\n");
+		printf(CLIENT_HEADER);
+		output = ll_map(pArrayListClients, client_printSingleWithMap);
+    }
+	return output;
+}
+
+
+int controller_ListSales(LinkedList* pArrayListSales)
+{
+    int output = -1;
+
+    if(pArrayListSales != NULL)
+    {
+		printf("--------------------------------------------------------------------------------------\n");
+		printf("|                                 LISTADO DE VENTAS                                  |\n");
+		printf(SALE_HEADER);
+   		output = ll_map(pArrayListSales, sale_printSingleWithMap);
+    }
+	return output;
+}
+
 int controller_addClient(LinkedList* pArrayList)
 {
 	int output = -1;
@@ -105,49 +144,184 @@ int controller_addClient(LinkedList* pArrayList)
 	return output;
 }
 
-
-
-
-
-
-
-
-
-
-/** \brief controller_ListClients: Imprime la lista de clientes
- * \param pArrayListEmployee LinkedList*: puntero al array de empleados
- * \return (-1) Error / (0) Ok
- */
-
-int controller_ListClients(LinkedList* pArrayListClients)
+int controller_addSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
 {
-    int output = -1;
+	int output = -1;
+	int clientId;
+	Sale* pSale;
+	Sale bufferSale;
 
-    if(pArrayListClients != NULL)
-    {
-    	printf("-------------------------------------------------------------\n");
-		printf("|                    LISTADO DE CLIENTES                    |\n");
-		printf("-------------------------------------------------------------\n");
-		printf("| APELLIDO        | NOMBRE          | CUIT            | ID  |\n");
-		printf("-------------------------------------------------------------\n");
-   		output = ll_map(pArrayListClients, client_printSingleWithMap);
-    }
+	if (pArrayListClients != NULL && pArrayListSales != NULL  )
+	{
+		pSale = sale_new();
+		controller_ListClients(pArrayListClients);
+		utn_getIntNumber("Ingrese ID del Cliente: ", "Error, ", &clientId, 3, client_findMaxId(pArrayListClients), 1);
+		if(client_findById(pArrayListClients, clientId)!=NULL)
+		{
+			if(pSale != NULL &&
+			   utn_getAlphaNum("Ingrese Nombre del archivo: ", "Error", bufferSale.sale_fileName, 3, sizeof(bufferSale.sale_fileName)) == 0 &&
+			   utn_getIntNumber("Ingrese cantidad de Afiches: ", "Error", &bufferSale.sale_amount, 3, INT_MAX, 1) == 0 &&
+			   utn_getIntNumber("Ingrese zona (1-CABA, 2-ZONA SUR, 3-ZONA OESTE): ", "Error", &bufferSale.sale_zone, 3, 3, 1) == 0)
+			{
+				bufferSale.sale_id = sale_generateNewId(pArrayListSales);
+				sale_setId(pSale, bufferSale.sale_id);
+				sale_setAmount(pSale, bufferSale.sale_amount);
+				sale_setClientId(pSale, clientId);
+				sale_setFileName(pSale,bufferSale.sale_fileName);
+				sale_setStatus(pSale,TO_PAY);
+				sale_setZone(pSale,bufferSale.sale_zone);
+				output = ll_add(pArrayListSales, pSale);
+
+			}
+			output = 0;
+		}
+		else
+		{
+			printf("ERROR NO EXISTE EL ID INGRESADO");
+			sale_delete(pSale);
+		}
+	}
+	return output;
+}
+
+int controller_modifySale(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
+{
+	int output = -1;
+	int Id;
+	int choosenOption;
+
+	LinkedList* toPayList = NULL;
+
+	Sale* pSale;
+	Sale bufferSale;
+	Client* pClient;
+
+	if (pArrayListClients != NULL && pArrayListSales != NULL  )
+	{
+		toPayList = ll_clone(pArrayListSales);
+		if(toPayList!=NULL)
+		{
+			if(ll_filter(toPayList, sale_filterByNotPayed)==0)
+			{
+				controller_ListSales(toPayList);
+				utn_getIntNumber("Ingrese ID de la venta a modificar: ", "Error, ", &Id, 3, sale_findMaxId(toPayList), 1);
+				pSale = sales_findById(toPayList, Id);
+				if(pSale!=NULL)
+				{
+					sale_getClientId(pSale, &bufferSale.sale_clientId);
+					pClient = client_findById(pArrayListClients, bufferSale.sale_clientId);
+					printf("\nLa publicacion: \n");
+					printf(SALE_HEADER);
+					sale_printSingleWithMap(pSale);
+					printf("Pertenece al cliente: \n");
+					printf(CLIENT_HEADER);
+					client_printSingleWithMap(pClient);
+					do
+					{
+						menu_getModifyMenu(&choosenOption);
+						switch (choosenOption)
+						{
+							case 1:
+								if (utn_getAlphaNum("Ingrese nombre del archivo: ", "Error", bufferSale.sale_fileName, 3, sizeof(bufferSale.sale_fileName)) == 0)
+								{
+									sale_setFileName(pSale, bufferSale.sale_fileName);
+									output = 0;
+								}
+								else
+								{
+									printf(MODIFYERROR_MSJ);
+								}
+								break;
+							case 2:
+								if (utn_getIntNumber("Ingrese Cantidad: ", "Error", &bufferSale.sale_amount, 3,INT_MAX ,1) == 0)
+								{
+									sale_setAmount(pSale, bufferSale.sale_amount);
+									output = 0;
+								}
+								else
+								{
+									printf(MODIFYERROR_MSJ);
+								}
+								break;
+							case 3:
+								if (utn_getIntNumber("Ingrese zona (1-CABA, 2-ZONA SUR, 3-ZONA OESTE):", "Error", &bufferSale.sale_zone, 3,3 ,1) == 0)
+								{
+									sale_setZone(pSale, bufferSale.sale_zone);
+									output = 0;
+								}
+								else
+								{
+									printf(MODIFYERROR_MSJ);
+								}
+								break;
+						}
+					} while (choosenOption != 4);
+				}
+				else
+				{
+					printf("ERROR EL ID INGRESADO NO SE PUEDE MODIFICAR");
+				}
+			}
+		}
+	}
+	ll_clear(toPayList);
+	ll_deleteLinkedList(toPayList);
 	return output;
 }
 
 
-int controller_ListSales(LinkedList* pArrayListSales)
+int controller_chargeSale(LinkedList* pArrayListClients,LinkedList* pArrayListSales)
 {
-    int output = -1;
+	int output = -1;
+	int Id;
+	int choosenOption;
 
-    if(pArrayListSales != NULL)
-    {
-		printf("--------------------------------------------------------------------------------------\n");
-		printf("|                                 LISTADO DE VENTAS                                  |\n");
-		printf("--------------------------------------------------------------------------------------\n");
-		printf("|  ID  | ARCHIVO                  | CANTIDAD  |  ESTADO   |    ZONA     | ID CLIENTE |\n");
-		printf("--------------------------------------------------------------------------------------\n");
-   		output = ll_map(pArrayListSales, sale_printSingleWithMap);
-    }
+	LinkedList* toPayList = NULL;
+
+	Sale* pSale;
+	Sale bufferSale;
+	Client* pClient;
+
+	if (pArrayListClients != NULL && pArrayListSales != NULL  )
+	{
+		toPayList = ll_clone(pArrayListSales);
+		if(toPayList!=NULL)
+		{
+			if(ll_filter(toPayList, sale_filterByNotPayed)==0)
+			{
+				controller_ListSales(toPayList);
+				utn_getIntNumber("Ingrese ID de la venta a modificar: ", "Error, ", &Id, 3, sale_findMaxId(toPayList), 1);
+				pSale = sales_findById(toPayList, Id);
+				if(pSale!=NULL)
+				{
+					sale_getClientId(pSale, &bufferSale.sale_clientId);
+					pClient = client_findById(pArrayListClients, bufferSale.sale_clientId);
+					printf("\nLa publicacion: \n");
+					printf(SALE_HEADER);
+					sale_printSingleWithMap(pSale);
+					printf("Pertenece al cliente: \n");
+					printf(CLIENT_HEADER);
+					client_printSingleWithMap(pClient);
+					utn_getIntNumber("¿Desea cobrar la venta?\n 1-SI\n 2-NO\nOpcion: ", "Error ", &choosenOption, 3, 2, 1);
+					if(choosenOption== 1)
+					{
+						sale_setStatus(pSale, PAID);
+						output = 0;
+					}
+				}
+				else
+				{
+					printf("ERROR EL ID INGRESADO NO SE PUEDE COBRAR);
+				}
+			}
+		}
+	}
+	ll_clear(toPayList);
+	ll_deleteLinkedList(toPayList);
 	return output;
 }
+
+
+
+
+

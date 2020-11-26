@@ -47,7 +47,7 @@ int client_getName(Client* this,char* client_name);
 int client_setCuit(Client* this,char* client_cuit);
 int client_getCuit(Client* this,char* client_cuit);
 int client_cuitExists(LinkedList* this, char* cuit);
-
+void* client_findById(LinkedList* list, int id);
 
 int client_printSingleWithMap(void* pClient);
 
